@@ -1,7 +1,7 @@
 PLANETS
 =======
 This Software is one of the final products of the longterm preservation-project PLANETS (http://www.planets-project.eu/), that ran from 2006 to 2010 at instiutions in several european countries, most of them libraries, archives or universities, funded by the european commission as FP6 programme.
-Within this context the Universtiy of Cologne (UzK) produced the XCL Softwaresuite.
+Within this context the Universtiy of Cologne (UzK) produced the XCL Softwaresuite (http://planetarium.hki.uni-koeln.de/planets_cms/imprint).
 
 File-format obsolscence and other challenges
 =========
