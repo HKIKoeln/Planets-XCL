@@ -1,0 +1,80 @@
+Image: g03n0g16.tif
+  Format: TIFF (Tagged Image File Format)
+  Class: DirectClass
+  Geometry: 32x32+0+0
+  Resolution: 72x72
+  Print size: 0.444444x0.444444
+  Units: PixelsPerInch
+  Type: Grayscale
+  Base type: Grayscale
+  Endianess: MSB
+  Colorspace: RGB
+  Depth: 16-bit
+  Channel depth:
+    gray: 16-bit
+  Channel statistics:
+    gray:
+      min: 0 (0)
+      max: 65535 (1)
+      mean: 43704.2 (0.666884)
+      standard deviation: 21747 (0.331838)
+  Histogram:
+       243: (51399,51399,51399) #C8C7C8C7C8C7 rgb(78.4298%,78.4298%,78.4298%)
+       168: (    0,    0,    0) #000000000000 black
+       144: (65535,65535,65535) #FFFFFFFFFFFF white
+        16: (19790,19790,19790) #4D4E4D4E4D4E rgb(30.1976%,30.1976%,30.1976%)
+        16: (25186,25186,25186) #626262626262 rgb(98,98,98)
+        16: (29042,29042,29042) #717271727172 rgb(44.3153%,44.3153%,44.3153%)
+        16: (32126,32126,32126) #7D7E7D7E7D7E rgb(49.0211%,49.0211%,49.0211%)
+        16: (34695,34695,34695) #878787878787 grey53
+        16: (37007,37007,37007) #908F908F908F rgb(56.4691%,56.4691%,56.4691%)
+        16: (38807,38807,38807) #979797979797 rgb(151,151,151)
+        16: (40863,40863,40863) #9F9F9F9F9F9F rgb(159,159,159)
+        16: (42405,42405,42405) #A5A5A5A5A5A5 rgb(165,165,165)
+        16: (44203,44203,44203) #ACABACABACAB rgb(67.4495%,67.4495%,67.4495%)
+        16: (45489,45489,45489) #B1B1B1B1B1B1 rgb(177,177,177)
+        16: (47031,47031,47031) #B7B7B7B7B7B7 rgb(183,183,183)
+        16: (48315,48315,48315) #BCBBBCBBBCBB rgb(73.724%,73.724%,73.724%)
+        16: (49601,49601,49601) #C1C1C1C1C1C1 rgb(193,193,193)
+        16: (50885,50885,50885) #C6C5C6C5C6C5 rgb(77.6455%,77.6455%,77.6455%)
+        16: (51913,51913,51913) #CAC9CAC9CAC9 rgb(79.2142%,79.2142%,79.2142%)
+        16: (53199,53199,53199) #CFCFCFCFCFCF grey81
+        16: (54227,54227,54227) #D3D3D3D3D3D3 LightGray
+        16: (55255,55255,55255) #D7D7D7D7D7D7 rgb(215,215,215)
+        16: (56283,56283,56283) #DBDBDBDBDBDB grey86
+        16: (62451,62451,62451) #F3F3F3F3F3F3 rgb(243,243,243)
+        16: (63221,63221,63221) #F6F5F6F5F6F5 rgb(96.4691%,96.4691%,96.4691%)
+        16: (63993,63993,63993) #F9F9F9F9F9F9 rgb(249,249,249)
+        16: (64763,64763,64763) #FCFBFCFBFCFB rgb(98.822%,98.822%,98.822%)
+        15: (59109,59109,59109) #E6E5E6E5E6E5 rgb(90.1946%,90.1946%,90.1946%)
+        15: (59881,59881,59881) #E9E9E9E9E9E9 rgb(233,233,233)
+        15: (60909,60909,60909) #EDEDEDEDEDED grey93
+        14: (57311,57311,57311) #DFDFDFDFDFDF rgb(223,223,223)
+        14: (58081,58081,58081) #E2E1E2E1E2E1 rgb(88.6259%,88.6259%,88.6259%)
+        12: (61679,61679,61679) #F0EFF0EFF0EF rgb(94.1161%,94.1161%,94.1161%)
+  Rendering intent: Undefined
+  Interlace: None
+  Background color: white
+  Border color: rgb(223,223,223)
+  Matte color: grey74
+  Transparent color: black
+  Page geometry: 32x32+0+0
+  Dispose: Undefined
+  Iterations: 0
+  Compression: None
+  Orientation: TopLeft
+  Properties:
+    create-date: 2009-05-06T11:30:20+02:00
+    modify-date: 2009-05-06T11:30:17+02:00
+    signature: e01a0659e8711d661d63da9056506467a01091ec8bee84d989e6243ad2d77006
+    tiff:rows-per-strip: 32
+  Profiles:
+    Profile-8bim: 1688 bytes
+    unknown[77,111]: chrome Halftone Settings
+    Profile-tiff:37724: 36 bytes
+  Artifacts:
+    verbose: true
+  Tainted: False
+  Filesize: 3.89kb
+  Number pixels: 1kb
+  Version: ImageMagick 6.4.5 2008-12-02 Q16 OpenMP http://www.imagemagick.org

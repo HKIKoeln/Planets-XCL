@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XCELDocument xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl
+    schemas/XCELBasicExtension.xsd">
+    <preProcessing/>
+    <formatDescription> </formatDescription>
+    <templates>
+        <item xsi:type="structuringItem" identifier="aRecord">
+            <item xsi:type="structuringItem" identifier="nameRow">
+                <property identifier="nameProp" interpretation="ASCII">
+                    <range>
+                        <startposition xsi:type="sequential"/>
+                        <length xsi:type="fixed">5</length>
+                    </range>
+                    <value>Name:</value>
+                    <name>NameRow</name>
+                </property>
+                <item xsi:type="definitionItem" identifier="nameRowValue">
+                    <symbol identifier="nameRowCahracter" multiple="true" interpretation="ASCII">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="processed"/>
+                        </range>
+                        <nonValidValues>
+                            <value>LINE_END</value>
+                        </nonValidValues>
+                        <name>nameChar</name>
+                    </symbol>
+                    <name>Name</name>
+                </item>
+
+            </item>
+            <item xsi:type="structuringItem" identifier="sexRow">
+                <property identifier="sexProp" interpretation="ASCII">
+                    <range>
+                        <startposition xsi:type="sequential"/>
+                        <length xsi:type="fixed">4</length>
+                    </range>
+                    <value>Sex:</value>
+                    <name>SexRow</name>
+                </property>
+
+                <symbol identifier="sexRowCahracter" multiple="true">
+                    <range>
+                        <startposition xsi:type="sequential"/>
+                        <length xsi:type="fixed">1</length>
+                    </range>
+                    <valueInterpretation>
+                        <valueLabel>male</valueLabel>
+                        <value>m</value>
+                        <valueLabel>female</valueLabel>
+                        <value>f</value>
+                    </valueInterpretation>
+                    <name>sex</name>
+                </symbol>
+
+            </item>
+            <item xsi:type="structuringItem" identifier="companyRow">
+                <property identifier="companyProp" interpretation="ASCII">
+                    <range>
+                        <startposition xsi:type="sequential"/>
+                        <length xsi:type="fixed">7</length>
+                    </range>
+                    <value>Company:</value>
+                    <name>companyRow</name>
+                </property>
+                <item xsi:type="definitionItem" identifier="companyRowValue">
+                    <symbol identifier="companyRowCahracter" multiple="true" interpretation="ASCII">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="processed"/>
+                        </range>
+                        <nonValidValues>
+                            <value>LINE_END</value>
+                        </nonValidValues>
+                        <name>companyChar</name>
+                    </symbol>
+                    <name>Name</name>
+                </item>
+            </item>
+
+            <item xsi:type="structuringItem" identifier="fieldsOfWorkRow">
+                <property identifier="fieldsOfWorkProp" interpretation="ASCII">
+                    <range>
+                        <startposition xsi:type="sequential"/>
+                        <length xsi:type="fixed">7</length>
+                    </range>
+                    <value>Fields Of Work:</value>
+                    <name>fieldsOfWorkRow</name>
+                </property>
+
+                <item xsi:type="structuringItem" identifier="fieldsOfWork" multiple="true">
+                    <symbol identifier="fieldOfWork" multiple="true">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">1</length>
+                        </range>
+                        <nonValidValues>
+                            <value>,</value>
+                        </nonValidValues>
+                        <name>aFieldOfWork</name>
+                    </symbol>
+
+                </item>
+
+            </item>
+        </item>
+    </templates>
+    <postProcessing/>
+</XCELDocument>

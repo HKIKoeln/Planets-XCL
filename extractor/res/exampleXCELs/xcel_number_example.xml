@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XCELDocument xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl
+    schemas/XCELBasicExtension.xsd">
+
+    <preProcessing/>
+    <formatDescription>
+        <item xsi:type="structuringItem" identifier="num_exmp" order="sequence">
+
+            <symbol identifier="aVariable" interpretation="ASCII" multiple="true" length="1">
+                <nonValidValues>
+                    <value>=</value>
+                </nonValidValues>
+            </symbol>
+            
+            <symbol identifier="aE" interpretation="ASCII" length="1" value="="/>
+            
+            <item xsi:type="definitionItem" identifier="aNumber" name="aNumber" encoding="uint32">
+                <symbol identifier="aNr" interpretation="ASCII" multiple="true" length="1">
+                    <nonValidValues>
+                        <value>;</value>
+                    </nonValidValues>
+                </symbol>
+            </item>
+
+            <processing type="pushXCEL" xcelRef="sN">
+                <processingMethod name="setStartPosition">
+                    <param valueRef="aNumber"/>
+                </processingMethod>
+            </processing>
+            
+            <symbol identifier="sN" interpretation="ASCII" multiple="false" length="1"/>
+            <symbol identifier="tN" interpretation="ASCII" multiple="true" length="1"/>
+            
+            <processing type="pushXCEL" xcelRef="fN">
+                <processingMethod name="setStartPosition">
+                    <param valueRef="aNumber"/>
+                </processingMethod>
+            </processing>
+
+         <item xsi:type="definitionItem" identifier="fN" name="HALLO">
+             <symbol identifier="t" interpretation="ASCII" multiple="true" length="1"/>
+          </item>
+
+        </item>
+    </formatDescription>
+    <postProcessing/>
+</XCELDocument>

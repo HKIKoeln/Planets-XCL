@@ -1,0 +1,73 @@
+<XCELDocument xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl
+    schemas/XCELBasicExtension.xsd">
+    <preProcessing> 
+        
+        <item xsi:type="structuringItem" identifier="preproc1">
+            
+            <processing type="configureParser" >
+                <processingMethod name="setSymbolDoesNotMatchHandle">
+                    <param value="skipWhiteSpace"/>
+                </processingMethod>
+            </processing>
+            
+            <processing type="configureParser" >
+                <processingMethod name="unzip">
+                    <param value="targetDir"/>
+                </processingMethod>
+            </processing>
+            
+        </item>
+        
+    </preProcessing>
+    
+    <formatDescription>
+        
+        <item xsi:type="structuringItem" identifier="i1" order="sequence" externalSource="word/document.xml">
+            
+            <item identifier="repeat" multiple="true" xsi:type="structuringItem">
+                <processing type="configureParser">
+                    <processingMethod name="setAddressingScheme">
+                        <param value="separator"/>
+                        <param value="60 119 58 116"/>
+                    </processingMethod>
+                </processing>
+                
+                <processing type="configureParser">
+                    <processingMethod name="goToNextAddress"/>
+                </processing>
+            
+                <processing type="configureParser">
+                    <processingMethod name="setAddressingScheme">
+                        <param value="byte"/>
+                    </processingMethod>
+                </processing>
+                
+                <symbol identifier="xmlTagRest" interpretation="ASCII" length="1" multiple="true">
+                    <nonValidValues>
+                        <value>GT</value>
+                    </nonValidValues>
+                </symbol>
+                
+                <symbol identifier="xmlTagClose" interpretation="ASCII"  length="1" multiple="true" value="GT"/>
+                
+                
+                  <symbol identifier="i2" encoding="utf-8" interpretation="utf-8" name="normData" length="1" multiple="true">
+                      <nonValidValues>
+                          <value>LT</value>
+                          <value>GT</value>
+                      </nonValidValues>
+                  </symbol>
+             
+            </item>
+         
+            
+        </item>
+        
+    </formatDescription>
+    
+    <postProcessing>
+        
+    </postProcessing>
+</XCELDocument>

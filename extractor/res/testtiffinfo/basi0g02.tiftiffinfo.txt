@@ -1,0 +1,56 @@
+TIFF Directory at offset 0x8 (8)
+  Subfile Type: (0 = 0x0)
+  Image Width: 32 Image Length: 32
+  Resolution: 72, 72 pixels/inch
+  Bits/Sample: 8
+  Compression Scheme: None
+  Photometric Interpretation: min-is-black
+  Samples/Pixel: 1
+  Rows/Strip: 32
+  Planar Configuration: single image plane
+  Photoshop Data: <present>, 1744 bytes
+  Tag 37724: 0x41,0x64,0x6f,0x62,0x65,0x20,0x50,0x68,0x6f,0x74,0x6f,0x73,0x68,0x6f,0x70,0x20,0x44,0x6f,0x63,0x75,0x6d,0x65,0x6e,0x74,0x20,0x44,0x61,0x74,0x61,0x20,0x42,0x6c,0x6f,0x63,0x6b,0x0
+Strip 0:
+  00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55
+  aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff
+  00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55
+  aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff
+  00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55
+  aa aa aa aa ff ff ff ff 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00
+  55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa
+  ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00
+  55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa
+  ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00
+  55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 aa aa aa aa ff ff ff ff
+  00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55
+  aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff
+  00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55
+  aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff
+  00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55
+  ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00
+  55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa
+  ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00
+  55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa
+  ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00
+  55 55 55 55 aa aa aa aa 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff
+  00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55
+  aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff
+  00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55
+  aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff
+  00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 55 55 55 55 aa aa aa aa
+  ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00
+  55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa
+  ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00
+  55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa
+  ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00
+  aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff
+  00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55
+  aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff
+  00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55
+  aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff
+  00 00 00 00 55 55 55 55 ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa
+  ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00
+  55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa
+  ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00
+  55 55 55 55 aa aa aa aa ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa
+  ff ff ff ff 00 00 00 00 55 55 55 55 aa aa aa aa

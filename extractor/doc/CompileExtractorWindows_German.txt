@@ -1,0 +1,78 @@
+Diese Kurzanleitung soll das Kompilieren des Extractors unter Windows vereinfachen und nennt auch entsprechende Download-Quellen. Da einige systemspezifische Änderungen notwendig sind, soll diese Anleitung entsprechend helfen.
+
+
+1. "Check Out" des aktuellen SVN, zu finden im gForge unter
+http://gforge.planets-project.eu/svn/xcltools/trunk/extractor
+
+2. Qt muss installiert sein, genauso wie der gcc-Compiler. Netterweise
+stellt die Firma Trolltech beides kombiniert zur Verfügung. So ist die
+Installation entsprechend einfach. In einer bestehenden Compiler-Umgebung
+muss QT installiert werden. Wir haben mit dem Kombipaket von MinGW und
+QT 4.4.3 gearbeitet. Der Download findet sich unter
+ftp://ftp.trolltech.com/qt/source/qt-win-opensource-4.4.3-mingw.exe
+
+3. Installation des Standardpakets mit allen vorgeschlagenen Einstellungen.
+QT befindet sich daraufhin im Ordner C:\QT\4.4.3\, MinGW hingegen unter c:\MinGW\
+
+4. Anpassung der Umgebungsvariablen (Rechte Maustaste auf "Arbeitsplatz", Eigenschaften,
+Erweitert, Umgebungsvariablen)
+Eine neue Variable "QMAKESPEC" wird mit dem Wert "win32-g++" angelegt (ohne
+Anführungszeichen). Die "Path"-Variable wird um folgende Einträge ERWEITERT:
+C:\MinGW\bin
+C:\Qt\4.4.3\bin
+C:\Qt\4.4.3\lib
+
+5. XERCES 2.8 installieren (bzw. Herunterladen) und in den Ordner C:\lib\xercesc\
+kopieren. (Abweichende Pfade funktionieren natürlich, müssen aber dann in der späteren
+Beschreibung angepasst werden.)
+
+6. ZLIB 1.2.3 installieren (bzw. Herunterladen) und in den Ordner C:\lib\zlib-1.2.3\
+kopieren. (Abweichende Pfade funktionieren natürlich, müssen aber dann in der späteren
+Beschreibung angepasst werden.)
+
+7. Eine Konsole öffnen (cmd), NICHT eine der QT-Konsolen, sondern die ganz
+"normale" Windows-Konsole. War die Konsole bereits geöffnet, auf jeden Fall
+neu starten, sonst werden die Umgebungsvariablen nicht übernommen.
+Wechsel in das SVN-Stammverzeichnis. Aufruf des Befehls:
+qmake -project
+
+8. Es wurde im SVN-Stammverzeichnis ein File mit dem Namen extrator.pro erstellt.
+Dieses File editieren. Der Kopf muss folgendermaßen aussehen:
+
+QT+=xml
+CONFIG+=release
+DESTDIR=rel
+OBJECTS_DIR=rel
+TEMPLATE = app
+TARGET =
+LIBS= -L'c:\lib\xercesc\lib' -lxerces-c
+QMAKE_CXXFLAGS+=-DXML_LIBRARY
+QMAKE_CFLAGS+=-DXML_LIBRARY
+
+
+9. Der Bereich DEPENDPATH += muss erweitert werden, als letzte Zeile muss ein
+C:\lib\xercesc\include
+angefügt werden. Auf den Backslash in der VORSTEHENDEN Zeile achten, der muss
+ergänzt werden.
+
+10. Es ist vermutlich ein Bug in einigen Qt-Versionen, aber es kann passieren,
+dass der Bereich INCLUDEPATH leer ist, bis auf die Angabe des aktuellen Verzeichnisses.
+In diesem Fall sollte der gesamte DEPENDPATH-Bereich als INCLUDE-Bereich übernommen
+werden.
+
+
+11. Im Bereich INCLUDEPATH += zwei Zeilen anfügen und den Backslash der
+VORHERIGEN Zeile nicht vergessen:
+C:\lib\zlib-1.2.3 \
+C:\lib\xercesc\include
+
+12. Auf der Konsole wieder ausführen:
+qmake
+
+14. Auf der Konsole wieder ausführen:
+make
+
+Der Extractor sollte nun kompiliert werden.
+
+
+

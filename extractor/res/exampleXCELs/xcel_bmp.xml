@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- BMP file format specification (version 1.1); using  xcel version 1.0--> 
+<!-- date of creation: 2007-01-16-->
+<!-- created by HKI, University at Cologne -->
+<!-- status: incomplete (only bitmap header size: 40 (=win) supported)  -->
+
+<XCELDocument xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl
+	schemas/XCELImageExtension.xsd">
+
+
+	<!-- ********************* pre-processing section    ********************* -->
+	<preProcessing>
+		<!--<processing type="pushXCEL" xcelRef="IDI01">
+			<processingMethod name="setByteOrder">
+				<param value="littleEndian"/>
+			</processingMethod>
+		</processing>-->
+	</preProcessing>
+	<formatDescription>
+		<!-- **********************  end pre-processing section  ********************  -->
+		<item xsi:type="structuringItem" identifier="IDI01" order="sequence">
+			<symbol identifier="IDI01_S01" interpretation="ASCII" originalName="identifier">
+				<range>
+					<startposition xsi:type="fixed">0</startposition>
+					<length xsi:type="fixed">2</length>
+				</range>
+				<validValues>
+					<value>BM</value>
+					<value>BA</value>
+					<value>CI</value>
+					<value>CP</value>
+					<value>IC</value>
+					<value>PT</value>
+				</validValues>
+				<name>identifier</name>
+			</symbol>
+			
+			<processing type="pushXCEL" xcelRef="IDI01">
+				<processingMethod name="setByteOrder">
+					<param value="littleEndian"/>
+				</processingMethod>
+			</processing>
+			
+			<symbol identifier="IDI01_fileSize" interpretation="uint32" originalName="fileSize">
+				<range>
+					<startposition xsi:type="fixed">2</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<name>fileSize</name>
+			</symbol>
+			<symbol identifier="IDI01_reserved" interpretation="uint32" originalName="reserved">
+				<range>
+					<startposition xsi:type="fixed">6</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<name>undefined</name>
+			</symbol>
+			<symbol identifier="IDI01_normDataOffset" interpretation="uint32" originalName="bitmapDataOffset">
+				<range>
+					<startposition xsi:type="fixed">10</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<name>byteOffsetRef</name>
+			</symbol>
+			
+			<processing type="pushXCEL" xcelRef="IDI01_normData">  
+				<processingMethod name="setStartPosition">  
+					<param valueRef="IDI01_normDataOffset"/>
+				</processingMethod>
+			</processing>
+			
+			<symbol identifier="IDI01_headerSize" interpretation="uint32" originalName="bitmapHeaderSize">
+				<range>
+					<startposition xsi:type="fixed">14</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<validValues>
+					<value>12</value> <!-- os/2 1.x-->
+					<value>40</value> <!-- windows 3.1x, 95,nt -->
+					<value>240</value> <!-- os/2 2.x -->
+				</validValues>
+				<name>headerSize</name>
+			</symbol>
+			<symbol identifier="IDI01_width" interpretation="uint32" originalName="width">
+				<range>
+					<startposition xsi:type="fixed">18</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<name>width</name>
+			</symbol>
+			<symbol identifier="IDI01_height" interpretation="uint32" originalName="height">
+				<range>
+					<startposition xsi:type="fixed">22</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<name>height</name>
+			</symbol>
+			<symbol identifier="IDI01_planes" interpretation="uint16" originalName="planes">
+				<range>
+					<startposition xsi:type="fixed">26</startposition>
+					<length xsi:type="fixed">2</length>
+				</range>
+				<name>countStripes</name>
+			</symbol>
+			<!-- 
+			bits Per Pixel:
+			!!!
+			The color table is not present for bitmaps with 24 color bits
+			!!!
+			-->
+			<item xsi:type="structuringItem" identifier="IDI01_bitsPerPixel">
+				
+				<!--
+				<item xsi:type="structuringItem" identifier="IDI01_bitsPerPixel_Choice01">
+					<symbol identifier="IDI01_bitsPerPixel_Choice01_value" interpretation="uint16" originalName="bitsPerPixel">
+						<range>
+							<startposition xsi:type="fixed">28</startposition>
+							<length xsi:type="fixed">2</length>
+						</range>
+						<validValues>
+							<value>24</value>
+							<value>32</value>  
+						</validValues>
+						<name>bitsPerPixel</name>
+					</symbol>-->
+					<!--<processing type="pushXCEL" xcelRef="IDI01_normData">-->
+						<!-- size of bitmap data=    file size - header size - 14    -->
+						<!--<processingMethod name="setLength">
+							<param value="#IDI01_fileSize-#IDI01_headerSize-#14"/>
+							<param value="uint8"/>
+						</processingMethod>
+					</processing>-->
+				<!--</item>-->
+				<item xsi:type="structuringItem" identifier="IDI01_bitsPerPixel_Choice02">
+					<symbol identifier="IDI01_bitsPerPixel_Choice02_value" interpretation="uint16"
+						originalName="bitsPerPixel">
+						<range>
+							<startposition xsi:type="fixed">28</startposition>
+							<length xsi:type="fixed">2</length>
+						</range>
+						<validValues>
+							<value>1</value>
+							<value>4</value>
+							<value>8</value>
+							<value>16</value>
+							<value>24</value>
+							<value>32</value>
+						</validValues>
+						<name>bitsPerPixel</name>
+					</symbol>
+				</item>
+			</item>
+			<symbol identifier="IDI01_compression" interpretation="uint32" originalName="compression">
+				<range>
+					<startposition xsi:type="fixed">30</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<valueInterpretation>
+					<valueLabel>uncompressed</valueLabel>
+					<value>0</value>
+					<valueLabel>RLE8</valueLabel>
+					<value>1</value>
+					<valueLabel>RLE4</valueLabel>
+					<value>2</value>
+					<valueLabel>bitfields</valueLabel>
+					<value>3</value>
+				</valueInterpretation>
+				<name>compression</name>
+			</symbol>
+
+			<!-- 				
+				Size of the bitmap data in bytes:
+				This number must be rounded to the next 4 byte boundary.
+			-->
+			<item xsi:type="structuringItem" identifier="IDI01_I02" order="choice">
+				<item xsi:type="structuringItem" identifier="IDI01_I02_I01">
+					<property identifier="IDI01_I02_I01_S01" interpretation="uint32" originalName="bitmapDataSize">
+						<range>
+							<startposition xsi:type="fixed">34</startposition>
+							<length xsi:type="fixed">4</length>
+						</range>
+						<value>0</value>
+						<name>bitmapDataSize</name>
+					</property>
+				</item>
+				<item xsi:type="structuringItem" identifier="IDI01_I02_I02">
+					<symbol identifier="IDI01_I02_I02_S01" interpretation="uint32" originalName="bitmapDataSize">
+						<range>
+							<startposition xsi:type="fixed">34</startposition>
+							<length xsi:type="fixed">4</length>
+						</range>
+						<validValues>
+							<startRange>1</startRange>
+							<endRange>4294967296</endRange>
+							<!-- das ist der theoretische Höchstwert -->
+						</validValues>
+						<name>bitmapDataSize</name>
+					</symbol>
+					<processing type="pushXCEL" xcelRef="IDI01_normData">
+						<processingMethod name="setLength">
+							<param valueRef="IDI01_I02_I02_S01"/>
+							<param value="uint8"/>
+						</processingMethod>
+					</processing>
+				</item>
+			</item>
+
+			<symbol identifier="IDI01_hResolution" interpretation="uint32" originalName="hResolution">
+				<range>
+					<startposition xsi:type="fixed">38</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<name>resolutionX</name>
+			</symbol>
+			<symbol identifier="IDI01_vResolution" interpretation="uint32" originalName="vResolution">
+				<range>
+					<startposition xsi:type="fixed">42</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<name>resolutionY</name>
+			</symbol>
+			<symbol identifier="IDI01_colors" interpretation="uint32" originalName="colors">
+				<range>
+					<startposition xsi:type="fixed">46</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<name>colors</name>
+				<!-- TODO: insert xcl real name -->
+			</symbol>
+			<symbol identifier="IDI01_importantColors" interpretation="uint32" originalName="importantColors">
+				<range>
+					<startposition xsi:type="fixed">50</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<name>importantColors</name>
+				<!-- TODO: insert xcl real name -->
+			</symbol>
+			
+			<item xsi:type="structuringItem" identifier="IDI01_palette" optional="true" >
+				
+				
+				<processing type="pushXCEL" xcelRef="IDI01_palette_name">
+					<processingMethod name="setLength">
+						<param value="4 * IDI01_bitsPerPixel_Choice02_value" valueType="mathEx"/>
+					</processingMethod>
+				</processing>
+				
+				<item xsi:type="definitionItem" identifier="IDI01_palette_name">
+					<range>
+						<startposition xsi:type="fixed">54</startposition>
+						<length xsi:type="processed"></length>
+					</range>
+					
+					
+					<item xsi:type="structuringItem" identifier="IDI01_palette_paletteEntry" originalName="palette" multiple="true">
+						<range>
+							<startposition xsi:type="sequential"></startposition>
+							<length xsi:type="fixed">4</length>
+						</range>
+						<symbol identifier="IDI01_palette_paletteEntry_blue" interpretation="uint8"
+							originalName="blueComponent">
+							<range>
+								<startposition xsi:type="sequential"/>
+								<length xsi:type="fixed">1</length>
+							</range>
+							<name>blue</name>
+							<!-- TODO: insert xcl real name -->
+						</symbol>
+						<symbol identifier="IDI01_palette_paletteEntry_green" interpretation="uint8"
+							originalName="greenComponent">
+							<range>
+								<startposition xsi:type="sequential"/>
+								<length xsi:type="fixed">1</length>
+							</range>
+							<name>green</name>
+							<!-- TODO: insert xcl real name -->
+						</symbol>
+						<symbol identifier="IDI01_palette_paletteEntry_red" interpretation="uint8"
+							originalName="redComponent">
+							<range>
+								<startposition xsi:type="sequential"/>
+								<length xsi:type="fixed">1</length>
+							</range>
+							<name>red</name>
+							<!-- TODO: insert xcl real name -->
+						</symbol>
+						<property identifier="IDI01_palette_paletteEntry_filler" interpretation="uint8"
+							originalName="filler" >
+							<range>
+								<startposition xsi:type="sequential"/>
+								<length xsi:type="fixed">1</length>
+							</range>
+							<value>0</value>
+							<name>filler</name>
+						</property>
+					</item>
+					<!-- palette entry end -->
+					<name>rgbPaletteWithFiller</name>
+				</item>
+				
+				
+			</item>
+			
+			<symbol identifier="IDI01_normData" originalName="bitmapData">
+				<range>
+					<startposition xsi:type="processed"/>
+					<length xsi:type="processed"/>
+				</range>
+				<name>normData</name>
+			</symbol>
+
+		</item>
+	</formatDescription>
+	<templates/>
+	<postProcessing/>
+</XCELDocument>

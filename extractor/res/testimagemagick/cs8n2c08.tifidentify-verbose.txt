@@ -1,0 +1,90 @@
+Image: cs8n2c08.tif
+  Format: TIFF (Tagged Image File Format)
+  Class: DirectClass
+  Geometry: 32x32+0+0
+  Resolution: 72x72
+  Print size: 0.444444x0.444444
+  Units: PixelsPerInch
+  Type: Palette
+  Base type: TrueColor
+  Endianess: MSB
+  Colorspace: RGB
+  Depth: 8-bit
+  Channel depth:
+    red: 8-bit
+    green: 8-bit
+    blue: 8-bit
+  Channel statistics:
+    red:
+      min: 0 (0)
+      max: 255 (1)
+      mean: 99.7188 (0.391054)
+      standard deviation: 113.245 (0.444098)
+    green:
+      min: 0 (0)
+      max: 255 (1)
+      mean: 191.25 (0.75)
+      standard deviation: 82.8987 (0.325093)
+    blue:
+      min: 0 (0)
+      max: 255 (1)
+      mean: 91.5312 (0.358946)
+      standard deviation: 110.917 (0.434967)
+  Histogram:
+        32: (  0, 32,255) #0020FF rgb(0,32,255)
+        32: (  0, 64,255) #0040FF rgb(0,64,255)
+        32: (  0, 96,255) #0060FF rgb(0,96,255)
+        32: (  0,128,255) #0080FF rgb(0,128,255)
+        32: (  0,160,255) #00A0FF rgb(0,160,255)
+        32: (  0,192,255) #00C0FF rgb(0,192,255)
+        32: (  0,224,255) #00E0FF rgb(0,224,255)
+        32: (  0,255,  0) #00FF00 lime
+        32: (  0,255, 31) #00FF1F rgb(0,255,31)
+        32: (  0,255, 63) #00FF3F rgb(0,255,63)
+        32: (  0,255, 95) #00FF5F rgb(0,255,95)
+        32: (  0,255,127) #00FF7F SpringGreen
+        32: (  0,255,159) #00FF9F rgb(0,255,159)
+        32: (  0,255,191) #00FFBF rgb(0,255,191)
+        32: (  0,255,223) #00FFDF rgb(0,255,223)
+        32: (  0,255,255) #00FFFF cyan
+        32: ( 32,255,  0) #20FF00 rgb(32,255,0)
+        32: ( 64,255,  0) #40FF00 rgb(64,255,0)
+        32: ( 96,255,  0) #60FF00 rgb(96,255,0)
+        32: (128,255,  0) #80FF00 rgb(128,255,0)
+        32: (160,255,  0) #A0FF00 rgb(160,255,0)
+        32: (192,255,  0) #C0FF00 rgb(192,255,0)
+        32: (224,255,  0) #E0FF00 rgb(224,255,0)
+        32: (255,  0,  0) #FF0000 red
+        32: (255, 31,  0) #FF1F00 rgb(255,31,0)
+        32: (255, 63,  0) #FF3F00 rgb(255,63,0)
+        32: (255, 95,  0) #FF5F00 rgb(255,95,0)
+        32: (255,127,  0) #FF7F00 rgb(255,127,0)
+        32: (255,159,  0) #FF9F00 rgb(255,159,0)
+        32: (255,191,  0) #FFBF00 rgb(255,191,0)
+        32: (255,223,  0) #FFDF00 rgb(255,223,0)
+        32: (255,255,  0) #FFFF00 yellow
+  Rendering intent: Undefined
+  Interlace: None
+  Background color: white
+  Border color: rgb(223,223,223)
+  Matte color: grey74
+  Transparent color: black
+  Page geometry: 32x32+0+0
+  Dispose: Undefined
+  Iterations: 0
+  Compression: None
+  Orientation: TopLeft
+  Properties:
+    create-date: 2009-05-06T11:30:18+02:00
+    modify-date: 2009-05-06T11:30:15+02:00
+    signature: f7413c817fa3bd9e5f944dc3eb1ca5277ffbfd03e212b9760c0e90dc9334464a
+    tiff:rows-per-strip: 32
+  Profiles:
+    Profile-8bim: 1412 bytes
+    Profile-tiff:37724: 36 bytes
+  Artifacts:
+    verbose: true
+  Tainted: False
+  Filesize: 4.64kb
+  Number pixels: 1kb
+  Version: ImageMagick 6.4.5 2008-12-02 Q16 OpenMP http://www.imagemagick.org

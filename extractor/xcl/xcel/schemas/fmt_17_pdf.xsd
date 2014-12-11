@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	* fmt_17_pdf.xsd
+       * This module is part of the XCL software system
+       *
+       * Written by Sebastian Beyl, Volker Heydegger, Johanna Puhl, Jan Schnasse, Manfred Thaller, Elona Weiper 2006 - 2009
+       * Nameslib-Webservice by Stefan T. Oertel
+       *
+       * Copyright (C) 2006 - 2009 Sebastian Beyl, Volker Heydegger, Johanna Puhl, Jan Schnasse, Manfred Thaller, Elona Weiper
+       *
+       * This program is free software; you can redistribute it and/or modify
+       * it under the terms of the GNU General Public License as published by
+       * the Free Software Foundation; either version 2 of the License, or
+       * (at your option) any later version.
+       *
+       * This program is distributed in the hope that it will be useful,
+       * but WITHOUT ANY WARRANTY; without even the implied warranty of
+       * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+       * GNU General Public License for more details.
+   	*
+-->
+
+
+<!-- extensible characterisation language: properties' name definitions library for XCDL and XCEL documents -->
+<!-- created by PLANETS, PC2, University of Cologne (HKI ) -->
+<!-- Generation info:
+   Date:                    2009-05-26
+   Time:                    20:37:41
+   Host:                    planetarium.hki.uni-koeln.de
+   Ontology Base URI:       http://planetarium.hki.uni-koeln.de/public/XCL/ontology/XCLOntology.owl#
+   RDF used for extraction: xcl.rdf
+-->
+
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+    xmlns:tns="http://www.planets-project.eu/xcl/schemas/xcl"
+    targetNamespace="http://www.planets-project.eu/xcl/schemas/xcl"
+    elementFormDefault="qualified">
+
+		<xs:simpleType name="fmt_17_pdf" id="properties">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="uppercaseLetters" id="id212">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="BitDepth" id="id11">
+					<xs:annotation>
+						<xs:documentation>
+                       Number of bits per sample component
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="cmyk" id="id213">
+					<xs:annotation>
+						<xs:documentation>
+                       ColourSpaceName
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="colourSpaceName" id="id20">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="documentCreationDate" id="id36">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fontEncodingType" id="id321">
+					<xs:annotation>
+						<xs:documentation>
+                       Can be StandardEncoding, MacRomanEncoding, WinAnsiEncoding, and PDF- DocEncoding.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="Helvetica" id="id306">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="CourierOblique" id="id314">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="CourierBold" id="id313">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="CourierBoldOblique" id="id312">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="Symbol" id="id310">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="ZapfDingbats" id="id315">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="HelveticaOblique" id="id307">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="HelveticaBold" id="id309">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="HelveticaBoldOblique" id="id308">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="TimesRoman" id="id302">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="TimesItalic" id="id304">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="TimesBold" id="id303">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="TimesBoldItalic" id="id305">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="Courier" id="id311">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="filter" id="id39">
+					<xs:annotation>
+						<xs:documentation>
+                       Algorithm applied to data.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="deflate_Zlib" id="id124">
+					<xs:annotation>
+						<xs:documentation>
+                       Compression algorithm for textfiles.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fontName" id="id159">
+					<xs:annotation>
+						<xs:documentation>
+                       Name of  font
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fontSize" id="id158">
+					<xs:annotation>
+						<xs:documentation>
+                       Size - normally measured in points - which is applied to a font (rendering information).
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="gammaValueGray" id="id44">
+					<xs:annotation>
+						<xs:documentation>
+                       Level of brightness for pixels ranging from black (0) to white (1). These pixel values serve as the input for the computer monitor. 
+This property is specified for GRAY pictures (no RGB-value array)
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="gammaValueRGB" id="id41">
+					<xs:annotation>
+						<xs:documentation>
+                       Level of brightness for pixels ranging from black (0) to white (1). These pixel values serve as the input for the computer monitor. 
+The sRGB and Adobe RGB colour spaces are also based on a gamma of 2.2.
+Gamma-encoding is supported by certain imagefile formats.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="gray" id="id233">
+					<xs:annotation>
+						<xs:documentation>
+                       8 Bit ColourInformation (1 Channel) for the whole image
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="imageHeight" id="id2">
+					<xs:annotation>
+						<xs:documentation>
+                       Height of an image in pixel
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="colourPalette" id="id25">
+					<xs:annotation>
+						<xs:documentation>
+                       A colour map for palette colour images. 
+Usually for RGB coloured pictures. Should be an array of hex-colour-values... depending on bitdepth
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="Interpolate" id="id371">
+					<xs:annotation>
+						<xs:documentation>
+                       Boolean Value, if an image is interpolated
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="italic" id="id162">
+					<xs:annotation>
+						<xs:documentation>
+                       text-property italic
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="ICCProfileName" id="id43">
+					<xs:annotation>
+						<xs:documentation>
+                       Name of the description of the colour space (in the form of an International Colour Consortium (ICC) profile) to which the samples in the image conform, should be something like: sRGB IEC1966-2.1, Adobe RGB ´98, for cmyk: ISO Coated V2 (ECI) and ISO Uncoated.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="lab-colourspace" id="id55">
+					<xs:annotation>
+						<xs:documentation>
+                       typical LAB colourspace
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="documentLanguage" id="id190">
+					<xs:annotation>
+						<xs:documentation>
+                       Language of the document.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="LineButtCap" id="id340">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="LineRoundCap" id="id341">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="LineSquareCap" id="id342">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="strokeDashArray" id="id343">
+					<xs:annotation>
+						<xs:documentation>
+                       Length of strokes and gaps in a vector-Dash-Line.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="lineJoinMiter" id="id318">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="lineJoinRound" id="id251">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="lineJoinBevel" id="id319">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="documentModificationDate" id="id82">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="numberOfInks" id="id197">
+					<xs:annotation>
+						<xs:documentation>
+                       numberOfInks (=number of Channels). Should be interesting only if bitDepth/ColourSpace is different than the usual ones...
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="pageLayoutDisplay" id="id77">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="panoseNumber" id="id369">
+					<xs:annotation>
+						<xs:documentation>
+                       A PANOSE classification number consists of 10 concatenated values. Each value from a given category was computed from a specific visual metric, such as the weight of the font and the presence or absence of serifs. [cit. Wikipedia]
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="renderingIntent" id="id141">
+					<xs:annotation>
+						<xs:documentation>
+                       The way colour-information is displayed:
+AbsoluteColourmetric.
+RelativeColourmetric.
+Saturation.
+Perception.
+Mapped from PNG (where it is an integer) via "same_as" but should be mapped via "int_to_string".
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="rotationPrint" id="id348">
+					<xs:annotation>
+						<xs:documentation>
+                       The number of degrees by which the page should be rotated clockwise when printed
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="RLE" id="id317">
+					<xs:annotation>
+						<xs:documentation>
+                       CompressionAlgorithm
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="script" id="id360">
+					<xs:annotation>
+						<xs:documentation>
+                       Contains a script. The script-language shall be preserved in the scriptLanguage Property.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="smallCaps" id="id167">
+					<xs:annotation>
+						<xs:documentation>
+                       text-property smallCaps
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="trueType3" id="id220">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="imageWidth" id="id30">
+					<xs:annotation>
+						<xs:documentation>
+                       Width of an image. Corresponds to the x-axis.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="imageData" id="id19">
+					<xs:annotation>
+						<xs:documentation>
+                       Reference to embedded imageData.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="characterSpacing" id="id346">
+					<xs:annotation>
+						<xs:documentation>
+                       Distance between characters if different than default values.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="textualAnnotation" id="id58">
+					<xs:annotation>
+						<xs:documentation>
+                       General textual annotation - not formatted in any kind of metadata-standards like METS.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="artist" id="id31">
+					<xs:annotation>
+						<xs:documentation>
+                       Person who created the digital object.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fontChange" id="id381">
+					<xs:annotation>
+						<xs:documentation>
+                       Entry to mark up a change in font-use within an XCDLl-description-file.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="imageTextRelation" id="id380">
+					<xs:annotation>
+						<xs:documentation>
+                       Refers to a property-set for an embedded image (id-number).
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="lineWidth" id="id253">
+					<xs:annotation>
+						<xs:documentation>
+                       Length of a line/path in a vector-object
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="documentTitle" id="id78">
+					<xs:annotation>
+						<xs:documentation>
+                       Title of the document, if different of fileName (possibly only occuring in pdf-files).
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="normDataText" id="id383">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="wordSpacing" id="id349">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="normData" id="id7">
+                    <xs:annotation>
+				        <xs:documentation>
+				                      Normdata of any kind of type: pixelvalues, utf8-textdata and so on...
+				        </xs:documentation>
+                    </xs:annotation>
+				</xs:enumeration>
+
+			</xs:restriction>
+		</xs:simpleType>
+							
+</xs:schema>

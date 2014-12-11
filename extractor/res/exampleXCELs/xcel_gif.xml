@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XCELDocument xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl
+	schemas/XCELImageExtension.xsd">
+	
+	<!-- XCEL document for Graphics Interchange File Format (GIF, version 89a), incomplete;  draft version according to XCEL version 1.0--> 
+	
+	<preProcessing>
+		
+	</preProcessing>
+	<formatDescription>
+<!-- ***************  Header:   *********************** -->
+		<item xsi:type="structuringItem" identifier="rootItem">
+		<item xsi:type="structuringItem" identifier="IDI01" order="sequence" originalName="Header">
+			<property  identifier="IDI01_S01" interpretation="ASCII">
+				<range>
+					<startposition xsi:type="fixed">0</startposition>
+					<length xsi:type="fixed">3</length>
+				</range>
+				<value>GIF</value>
+				<name>signature</name>
+			</property>
+			<!--<processing type="pushXCEL" xcelRef="IDI_S02">
+				<processingMethod name="setByteOrder">
+					<param valueRef="IDI01_S01"/>
+				</processingMethod>
+			</processing> -->
+			<symbol  identifier="IDI01_S02" interpretation="ASCII">
+				<range>
+					<startposition xsi:type="fixed">3</startposition>
+					<length xsi:type="fixed">3</length>
+				</range>
+				<validValues>    
+					<value>87a</value>
+					<value>89a</value>
+				</validValues>
+				<name>version</name>
+			</symbol>
+			<!--
+			<processing type="pushXCEL" xcelRef="IDI03">  
+				<processingMethod name="setStartPosition">  
+					<param valueRef="IDI01_S03"/>
+				</processingMethod>
+			</processing>	-->
+		</item>	   <!-- End: Header -->
+		
+<!--        ******************      Logical Screen Descriptor :    **********************  -->		
+		<item xsi:type="structuringItem" identifier="IDI02" order="sequence" originalName="logicalScreenDescriptor"> 
+			<symbol  identifier="IDI02_S01" interpretation="uint16" originalName="logicalScreenWidth">
+				<range>
+					<startposition xsi:type="fixed">6</startposition>
+					<length xsi:type="fixed">2</length>
+				</range>
+				<name>logicalScreenWidth</name>
+			</symbol>
+			<symbol  identifier="IDI02_S02" interpretation="uint16" originalName="logicalScreenHeight">
+				<range>
+					<startposition xsi:type="fixed">8</startposition>
+					<length xsi:type="fixed">2</length>
+				</range>
+				<name>logicalScreenHeight</name>
+			</symbol>
+			<item xsi:type="structuringItem" identifier="IDI02_I01" originalName="packedFields">
+				<range>
+					<startposition xsi:type="fixed">10</startposition>
+					<length xsi:type="fixed">1</length>
+				</range>
+				
+				<!-- Global Color Table Flag - Flag indicating the presence of a
+				Global Color Table; if the flag is set, the Global Color Table will
+				immediately follow the Logical Screen Descriptor. This flag also
+				selects the interpretation of the Background Color Index; if the
+				flag is set, the value of the Background Color Index field should
+				be used as the table index of the background color. (This field is
+				the most significant bit of the byte.)				
+				Values :  
+				0 -   No Global Color Table follows, the Background
+				Color Index field is meaningless.
+				1 -   A Global Color Table will immediately follow, the
+				Background Color Index field is meaningful. -->
+				<symbol  identifier="IDI02_I01_S01" interpretation="bit" originalName="globalColorTableFlag">
+					<range>
+						<startposition xsi:type="fixed">10</startposition>
+						<length xsi:type="fixed">1</length>
+					</range>
+					<validValues>    
+						<value>0</value>   
+						<value>1</value>    <!-- 1= global color table to follow after the LSD -->
+					</validValues>
+					<name>globalColorTableFlag</name>
+				</symbol>
+				<symbol  identifier="IDI02_I01_S02" interpretation="bit" originalName="colorResolution">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">3</length>
+					</range>
+					<name>colorResolution</name>
+				</symbol>
+				
+				<!-- Sort Flag - Indicates whether the Global Color Table is sorted.
+						If the flag is set (=1), the Global Color Table is sorted, in order of
+						decreasing importance. Typically, the order would be decreasing
+						frequency, with most frequent color first. -->
+				<symbol  identifier="IDI02_I01_S03" interpretation="bit" originalName="sortFlag">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">1</length>
+					</range>
+					<validValues>    
+						<value>0</value>   
+						<value>1</value>
+					</validValues>
+					<name>sortFlag</name>
+				</symbol>
+				<symbol  identifier="IDI02_I01_S04" interpretation="bit" originalName="sizeOfGlobalColorTable">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">3</length>
+					</range>
+					<name>sizeGlobalColorTable</name>
+				</symbol>
+			</item>  <!-- end packed fields -->			
+			
+			<symbol  identifier="IDI02_S04" interpretation="uint8" originalName="backgroundColorIndex">
+				<range>
+					<startposition xsi:type="fixed">11</startposition>
+					<length xsi:type="fixed">1</length>
+				</range>
+				<name>backgroundColorIndex</name>
+			</symbol>
+			<symbol  identifier="IDI02_S05" interpretation="uint8" originalName="pixelAspectRatio">
+				<range>
+					<startposition xsi:type="fixed">12</startposition>
+					<length xsi:type="fixed">1</length>
+				</range>
+				<name>pixelAspectRatio</name>
+			</symbol>
+		</item>	  <!-- End of Logical Screen Descriptor -->
+		
+<!-- *******************     Global Color Table (optional)     *********************** -->
+		<item xsi:type="structuringItem" multiple="false" order="sequence" identifier="IDI03" originalName="globalColorTable">
+			<processing type="pullXCEL" xcelRef="TEMPL01">
+				<processingMethod name="setName">
+					<param value="aProperty"/>
+				</processingMethod>
+				
+			</processing> 
+			<processing type="pushXCEL" xcelRef="IDI03_I01">
+				<processingMethod name="setStartPosition">  
+					<param value="13"/>
+				</processingMethod> 
+				<!-- size of the global color table:  raise 2 to [the value of the field 'global color size'+ 1] (=2 to the power of (size of field+1)-->
+				<!--<processingMethod name="mathOperationAdd" id="PM01"> 
+					<param valueRef="IDI02_I01_S04"/>
+					<param value="1"/>
+				</processingMethod>
+				<processingMethod name="mathOperationPower" id="PM02"> 
+					<param value="2"/>
+					<param valueRef="PM01"/>
+				</processingMethod>
+				<processingMethod name="mathOperationMulti" id="PM03"> 
+					<param value="3"/>
+					<param valueRef="PM02"/>
+				</processingMethod>-->
+				<processingMethod name="setLength">  
+					<param value="((#IDI02_I01_S04+1)^2)*3"/>
+					<param value="uint8"/>
+				</processingMethod>	
+			</processing>
+			<item xsi:type="definitionItem" identifier="IDI03_I01" originalName="globalColorTable">
+				<symbol  	identifier="IDI03_I01_S01" multiple="true">
+					<range>
+						<startposition xsi:type="sequential"></startposition>
+						<length xsi:type="fixed">3</length>
+					</range>
+					<name>rgb</name>
+				</symbol>
+				<name>rgbPalette</name>
+			</item>
+		</item>	
+<!--        ******************      Image Section :    **********************  -->		
+		<item xsi:type="structuringItem" multiple="true" order="sequence" identifier="IDI04"> <!-- GIF allows to describe an unlimited number of images, each through an 
+		Image descriptor (required), local color table (optional) and image data block(s) (required)    -->
+<!--        ******************      Image Descriptor (required) :    **********************  -->
+			<item xsi:type="structuringItem" identifier="IDI04_I01" originalName="imageDescriptor">
+				<property  identifier="IDI04_I01_S01" interpretation="uint8" originalName="imageSeparator">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">1</length>
+					</range>
+					<value>44</value>
+					<name>imageSeparator</name>    
+				</property>						
+				<symbol  identifier="IDI04_I01_S02" interpretation="uint16" originalName="imageLeftPosition">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">2</length>
+					</range>
+					<name>imageLeftPosition</name>  
+				</symbol>
+				<symbol  identifier="IDI04_I01_S03" interpretation="uint16" originalName="imageTopPosition">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">2</length>
+					</range>
+					<name>imageTopPosition</name>  
+				</symbol>
+				<symbol  identifier="IDI04_I01_S04" interpretation="uint16" originalName="imageWidth">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">2</length>
+					</range>
+					<name>width</name>  
+				</symbol>
+
+				<symbol  identifier="IDI04_I01_S05" interpretation="uint16" originalName="imageHeight">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">2</length>
+					</range>
+					<name>height</name>  
+				</symbol>
+				<item xsi:type="structuringItem" identifier="IDI04_I01_I01" originalName="packedFields">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">1</length>
+					</range>
+					<symbol  identifier="IDI04_I01_I01_S01" interpretation="bit" originalName="localColorTableFlag">
+						<range>
+							<startposition xsi:type="sequential"/>
+							<length xsi:type="fixed">1</length>
+						</range>
+						<validValues>    
+							<value>0</value>   
+							<value>1</value>    <!-- 1= local color table to follow after the Image descriptor -->
+						</validValues>
+						<name>localColorTableFlag</name>
+						
+					</symbol>
+					<symbol  identifier="IDI04_I01_I01_S02" interpretation="bit" originalName="interlaceFlag">
+						<range>
+							<startposition xsi:type="sequential"/>
+							<length xsi:type="fixed">1</length>
+						</range>
+						<valueInterpretation>    
+							<valueLabel>noInterlace</valueLabel>
+							<value>0</value>
+							<valueLabel>interlaceMethod</valueLabel><!--please specifie the sort of interlace Method that is used by gif-->
+							<value>1</value>    <!-- 1= lmage is interlaced -->
+						</valueInterpretation>
+						<name>interlace</name>
+					</symbol>
+					<symbol  identifier="IDI04_I01_I01_S03" interpretation="bit" originalName="sortFlag">
+						<range>
+							<startposition xsi:type="sequential"/>
+							<length xsi:type="fixed">1</length>
+						</range>
+						<validValues>    
+							<value>0</value>   
+							<value>1</value>    <!-- 1= Ordered by decreasing importance, most important color first -->
+						</validValues>
+						<name>sortFlag</name>
+					</symbol>
+					<symbol  identifier="IDI04_I01_I01_S04" interpretation="bit" originalName="reservedBits">
+						<range>
+							<startposition xsi:type="sequential"/>
+							<length xsi:type="fixed">2</length>
+						</range>
+						<name>unspecified</name>
+					</symbol>
+					<symbol  identifier="IDI04_I01_I01_S05" interpretation="bit" originalName="sizeOfLocalColorTable">
+						<range>
+							<startposition xsi:type="sequential"/>
+							<length xsi:type="fixed">3</length>
+						</range>
+						<name>sizeLocalColorTable</name>
+					</symbol>
+						
+				</item>	
+			</item>  <!-- End of Image descriptor -->
+		</item> <!-- end of image section -->
+		</item>
+	</formatDescription>
+<!-- ++++++++++++++++++++++     Template section   +++++++++++++++++++++++++++++   -->
+	<templates>
+		<item xsi:type="structuringItem" identifier="templateRoot">
+		<property  identifier="TEMPL01" interpretation="bit" originalName="globalColorTableFlag">
+			<range>
+				<startposition xsi:type="fixed">10</startposition>
+				<length xsi:type="fixed">1</length>
+			</range>
+			<value>1</value>
+			<name>unspecified</name>
+		</property>
+		</item>
+	</templates>
+	<postProcessing></postProcessing>
+</XCELDocument>

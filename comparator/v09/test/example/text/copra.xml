@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<copra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://www.planets-project.eu/xcl/schemas/xcl" 
+xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl  copra.xsd">
+<set source="testXCDLText1.xcdl" target="testXCDLText2.xcdl">
+<property id="158" name="font" state="partial">
+<metrics>
+<metric id="1" name="equal">
+<result state="failed">code_B_28: Metric is not applicable on properties with more than one value set (node: valueSet) or different numbers of value sets.</result>
+</metric>
+<metric id="101" name="valueSetStat_1">
+<result state="ok">5</result>
+</metric>
+<metric id="102" name="valueSetStat_2">
+<result state="ok">5</result>
+</metric>
+<metric id="121" name="valueSetMatch_1">
+<result state="ok">true</result>
+</metric>
+<metric id="122" name="valueSetMatch_2">
+<result state="ok">false</result>
+</metric>
+<metric id="123" name="valueSetMatch_3">
+<result state="ok">4</result>
+</metric>
+<metric id="124" name="valueSetMatch_4">
+<result state="ok">4</result>
+</metric>
+<metric id="125" name="valueSetMatch_5">
+<result state="ok">0.800000</result>
+</metric>
+<metric id="126" name="valueSetMatch_6">
+<result state="ok">0.800000</result>
+</metric>
+<metric id="251" name="dataRefMatch_1">
+<result state="ok">false</result>
+</metric>
+<metric id="252" name="dataRefMatch_2">
+<result state="ok">22</result>
+</metric>
+<metric id="253" name="dataRefMatch_3">
+<result state="ok">true</result>
+</metric>
+<metric id="254" name="dataRefMatch_4">
+<result state="ok">false</result>
+</metric>
+</metrics>
+</property>
+<property id="106" name="fontSize" state="complete">
+<metrics>
+<metric id="101" name="valueSetStat_1">
+<result state="ok">1</result>
+</metric>
+<metric id="102" name="valueSetStat_2">
+<result state="ok">1</result>
+</metric>
+<metric id="121" name="valueSetMatch_1 ">
+<result state="ok">true</result>
+</metric>
+<metric id="122" name="valueSetMatch_2">
+<result state="ok">true</result>
+</metric>
+<metric id="123" name="valueSetMatch_3">
+<result state="ok">1</result>
+</metric>
+<metric id="124" name="valueSetMatch_4">
+<result state="ok">1</result>
+</metric>
+<metric id="125" name="valueSetMatch_5">
+<result state="ok">1.000000</result>
+</metric>
+<metric id="126" name="valueSetMatch_6">
+<result state="ok">1.000000</result>
+</metric>
+<metric id="251" name="dataRefMatch_1">
+<result state="ok">false</result>
+</metric>
+<metric id="252" name="dataRefMatch_2">
+<result state="ok">22</result>
+</metric>
+<metric id="253" name="dataRefMatch_3">
+<result state="ok">true</result>
+</metric>
+<metric id="254" name="dataRefMatch_4">
+<result state="ok">true</result>
+</metric>
+</metrics>
+</property>
+<property id="300" name="normData" state="partial">
+<metrics>
+<metric id="1" name="equal">
+<result state="failed">code_B_37: Metric is not allowed for normalised data with information type 'text'.</result>
+</metric>
+<metric id="11" name="hammingDistance">
+<result state="ok">0</result>
+</metric>
+<metric id="13" name="simpleMatchCoefficient">
+<result state="ok">1.000000</result>
+</metric>
+<metric id="30" name="hammingDistanceString">
+<result state="ok">0</result>
+</metric>
+</metrics>
+</property>
+<property id="84" name="numberOfPages" state="partial">
+<metrics>
+<metric id="1" name="equal">
+<result state="ok">true</result>
+</metric>
+<metric id="101" name="valueSetStat_1">
+<result state="ok">1</result>
+</metric>
+<metric id="251" name="dataRefMatch_1">
+<result state="failed">code_S_21: Lack of data references (node: ref of node:propertySet) in both src and tar.</result>
+</metric>
+</metrics>
+</property>
+</set>
+</copra>

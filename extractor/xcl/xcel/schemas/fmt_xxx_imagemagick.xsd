@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	* fmt_xxx_imagemagick.xsd
+       * This module is part of the XCL software system
+       *
+       * Written by Sebastian Beyl, Volker Heydegger, Johanna Puhl, Jan Schnasse, Manfred Thaller, Elona Weiper 2006 - 2009
+       * Nameslib-Webservice by Stefan T. Oertel
+       *
+       * Copyright (C) 2006 - 2009 Sebastian Beyl, Volker Heydegger, Johanna Puhl, Jan Schnasse, Manfred Thaller, Elona Weiper
+       *
+       * This program is free software; you can redistribute it and/or modify
+       * it under the terms of the GNU General Public License as published by
+       * the Free Software Foundation; either version 2 of the License, or
+       * (at your option) any later version.
+       *
+       * This program is distributed in the hope that it will be useful,
+       * but WITHOUT ANY WARRANTY; without even the implied warranty of
+       * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+       * GNU General Public License for more details.
+   	*
+-->
+
+
+<!-- extensible characterisation language: properties' name definitions library for XCDL and XCEL documents -->
+<!-- created by PLANETS, PC2, University of Cologne (HKI ) -->
+<!-- Generation info:
+   Date:                    2009-05-26
+   Time:                    20:38:33
+   Host:                    planetarium.hki.uni-koeln.de
+   Ontology Base URI:       http://planetarium.hki.uni-koeln.de/public/XCL/ontology/XCLOntology.owl#
+   RDF used for extraction: xcl.rdf
+-->
+
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+    xmlns:tns="http://www.planets-project.eu/xcl/schemas/xcl"
+    targetNamespace="http://www.planets-project.eu/xcl/schemas/xcl"
+    elementFormDefault="qualified">
+
+		<xs:simpleType name="fmt_xxx_imagemagick" id="properties">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="bitsPerSampleBlue" id="id15">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="bitsPerSampleGreen" id="id14">
+					<xs:annotation>
+						<xs:documentation>
+                       Number of bits per green colour channel
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="bitsPerSampleRed" id="id12">
+					<xs:annotation>
+						<xs:documentation>
+                       Number of bits per red colour channel
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="bitsPerSample" id="id151">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="compressionAlgorithm" id="id18">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="byteOrder" id="id6">
+					<xs:annotation>
+						<xs:documentation>
+                       Ordering of bytes for multi-byte data values within a file (intel or motorola)
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="imageHeight" id="id2">
+					<xs:annotation>
+						<xs:documentation>
+                       Height of an image in pixel
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="imageWidth" id="id30">
+					<xs:annotation>
+						<xs:documentation>
+                       Width of an image. Corresponds to the x-axis.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="1931CIE_ChromaticityBlueX" id="id130">
+					<xs:annotation>
+						<xs:documentation>
+                       Value x of pair xy specifying blue colour according to 1931 CIE colour-space.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="1931CIE_ChromaticityBlueY" id="id131">
+					<xs:annotation>
+						<xs:documentation>
+                       Value y of pair xy specifying green colour according to 1931 CIE colour space.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="1931CIE_ChromaticityGreenX" id="id128">
+					<xs:annotation>
+						<xs:documentation>
+                       Value x of pair xy specifying green colour according to 1931 CIE colour space.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="1931CIE_ChromaticityGreenY" id="id129">
+					<xs:annotation>
+						<xs:documentation>
+                       Value y of pair xy specifying green colour according to 1931 CIE colour space.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="1931CIE_ChromaticityRedX" id="id126">
+					<xs:annotation>
+						<xs:documentation>
+                       Value x of pair xy specifying red colour according to 1931 CIE colour space.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="1931CIE_ChromaticityRedY" id="id127">
+					<xs:annotation>
+						<xs:documentation>
+                       Value y of pair xy specifying red colour according to 1931 CIE colour space.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="whitePointX" id="id28">
+					<xs:annotation>
+						<xs:documentation>
+                       Chromaticity of a computer display's nominal white.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="whitePointY" id="id29">
+					<xs:annotation>
+						<xs:documentation>
+                       Chromaticity of a computer display's nominal white.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="colourPalette" id="id25">
+					<xs:annotation>
+						<xs:documentation>
+                       A colour map for palette colour images. 
+Usually for RGB coloured pictures. Should be an array of hex-colour-values... depending on bitdepth
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="colourSpaceName" id="id20">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fontColour" id="id160">
+					<xs:annotation>
+						<xs:documentation>
+                       Font color in text formats.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="textualAnnotation" id="id58">
+					<xs:annotation>
+						<xs:documentation>
+                       General textual annotation - not formatted in any kind of metadata-standards like METS.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="resolutionX" id="id23">
+					<xs:annotation>
+						<xs:documentation>
+                       The number of pixels per ResolutionUnit in the ImageWidth direction.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="BitDepth" id="id11">
+					<xs:annotation>
+						<xs:documentation>
+                       Number of bits per sample component
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fileName" id="id205">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fileSize" id="id120">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fillColour" id="id241">
+					<xs:annotation>
+						<xs:documentation>
+                       Fill-colour for vector-object.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="filter" id="id39">
+					<xs:annotation>
+						<xs:documentation>
+                       Algorithm applied to data.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fontSize" id="id158">
+					<xs:annotation>
+						<xs:documentation>
+                       Size - normally measured in points - which is applied to a font (rendering information).
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fontName" id="id159">
+					<xs:annotation>
+						<xs:documentation>
+                       Name of  font
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="gammaValueRGB" id="id41">
+					<xs:annotation>
+						<xs:documentation>
+                       Level of brightness for pixels ranging from black (0) to white (1). These pixel values serve as the input for the computer monitor. 
+The sRGB and Adobe RGB colour spaces are also based on a gamma of 2.2.
+Gamma-encoding is supported by certain imagefile formats.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="ICCProfileName" id="id43">
+					<xs:annotation>
+						<xs:documentation>
+                       Name of the description of the colour space (in the form of an International Colour Consortium (ICC) profile) to which the samples in the image conform, should be something like: sRGB IEC1966-2.1, Adobe RGB ´98, for cmyk: ISO Coated V2 (ECI) and ISO Uncoated.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="imageData" id="id19">
+					<xs:annotation>
+						<xs:documentation>
+                       Reference to embedded imageData.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="interlace" id="id45">
+					<xs:annotation>
+						<xs:documentation>
+                       Algorithm for encoding raster image data in multiple layers with the purpose of improved transmission and image build-up.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="IPTC_Metadata" id="id65">
+					<xs:annotation>
+						<xs:documentation>
+                       Standards of the International Press Telecommunications Council (IPTC) and Newspaper Association of America (NAA) for annotating content of any medial kind.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="imageOrientation" id="id48">
+					<xs:annotation>
+						<xs:documentation>
+                       Orientation of the image, e.g., landscape or portrait.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="RLE_Packets" id="id384">
+					<xs:annotation>
+						<xs:documentation>
+                       Number of RLE-Packets (compression property)
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="customPageSize" id="id264">
+					<xs:annotation>
+						<xs:documentation>
+                       Size of a Text-Page in unit W x H
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="compressionQuality" id="id382">
+					<xs:annotation>
+						<xs:documentation>
+                       Quality of compression - depending on the used compressionAlgorithm
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="renderingIntent" id="id141">
+					<xs:annotation>
+						<xs:documentation>
+                       The way colour-information is displayed:
+AbsoluteColourmetric.
+RelativeColourmetric.
+Saturation.
+Perception.
+Mapped from PNG (where it is an integer) via "same_as" but should be mapped via "int_to_string".
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="resolutionUnit" id="id22">
+					<xs:annotation>
+						<xs:documentation>
+                       Name of the Unit  that measures the resolution of theiImage.
+If it is none: default is generally inch.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="signature" id="id4">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="lineColour" id="id244">
+					<xs:annotation>
+						<xs:documentation>
+                       Colour of a line-/path-object
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="strokeDashArray" id="id343">
+					<xs:annotation>
+						<xs:documentation>
+                       Length of strokes and gaps in a vector-Dash-Line.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="lineWidth" id="id253">
+					<xs:annotation>
+						<xs:documentation>
+                       Length of a line/path in a vector-object
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="rowsPerStrip" id="id116">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="numberOfInks" id="id197">
+					<xs:annotation>
+						<xs:documentation>
+                       numberOfInks (=number of Channels). Should be interesting only if bitDepth/ColourSpace is different than the usual ones...
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="resolutionY" id="id24">
+					<xs:annotation>
+						<xs:documentation>
+                       The number of pixels per ResolutionUnit in the ImageHeigth direction.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="normData" id="id7">
+                    <xs:annotation>
+				        <xs:documentation>
+				                      Normdata of any kind of type: pixelvalues, utf8-textdata and so on...
+				        </xs:documentation>
+                    </xs:annotation>
+				</xs:enumeration>
+
+			</xs:restriction>
+		</xs:simpleType>
+							
+</xs:schema>

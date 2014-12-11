@@ -1,0 +1,50 @@
+<pcRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl ../../../../../comparator/res/schemas/pcr/pcr.xsd"
+ xmlns="http://www.planets-project.eu/xcl/schemas/xcl">
+    <compSet>
+        <source name="mySourceXCDL.xcdl"/>
+        <target name="myTargetXCDL1.xcdl"/>   
+        <property id="45" name="rgbPalette">
+            <metric id="11" name="hammingDistance"/>                 
+        </property>
+        <property id="300" name="normData">
+            <metric id="11" name="hammingDistance"/>   
+            <metric id="15" name="levenstheinDistance"/>
+        </property>
+        <property id="39" name="filter">
+            <metric id="1" name="equal"/>
+        </property>       
+        <property id="45" name="interlace">
+            <metric id="1" name="equal"/>
+        </property>
+        <property id="2" name="imageHeight" unit="pixel">
+            <metric id="1" name="equal"/>                
+        </property>
+        <property id="30" name="imageWidth" unit="pixel">
+            <metric id="1" name="equal"/>  
+        </property>    
+    </compSet>
+    <compSet>
+        <source name="mySourceXCDL.xcdl"/>
+        <target name="myTargetXCDL2.xcdl"/>   
+        <property id="45" name="rgbPalette">
+            <metric id="11" name="hammingDistance"/>                 
+        </property>
+        <property id="300" name="normData">
+            <metric id="11" name="hammingDistance"/>   
+            <metric id="15" name="levenstheinDistance"/>
+        </property>
+        <property id="39" name="filter">
+            <metric id="1" name="equal"/>
+        </property>       
+        <property id="45" name="interlace">
+            <metric id="1" name="equal"/>
+        </property>
+        <property id="2" name="imageHeight" unit="pixel">
+            <metric id="1" name="equal"/>                
+        </property>
+        <property id="30" name="imageWidth" unit="pixel">
+            <metric id="1" name="equal"/> 
+        </property>    
+    </compSet>
+</pcRequest>

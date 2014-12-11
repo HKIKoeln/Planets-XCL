@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	
+	* This module is part of the XCL software system
+	*
+	* Written by  Volker Heydegger, Elona Chudobkaite, Johanna Neumann,  Sebastian Beyl, Jan Schnasse, Manfred Thaller 2006 - 2008
+	*
+	* Copyright (C)  2006 - 2008 Volker Heydegger, Elona Chudobkaite, Johanna Neumann,  Sebastian Beyl, Jan Schnasse, Manfred Thaller
+	*
+	* This program is free software; you can redistribute it and/or modify
+	* it under the terms of the GNU General Public License as published by
+	* the Free Software Foundation; either version 2 of the License, or
+	* (at your option) any later version.
+	*
+	* This program is distributed in the hope that it will be useful,
+	* but WITHOUT ANY WARRANTY; without even the implied warranty of
+	* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	* GNU General Public License for more details.
+	*
+-->
+
+
+<!-- extensible characterisation language: properties' name definitions library for XCDL and XCEL documents -->
+<!-- created by PLANETS, PC2, University of Cologne (HKI )-->
+
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+    xmlns:tns="http://www.planets-project.eu/xcl/schemas/xcl"
+    targetNamespace="http://www.planets-project.eu/xcl/schemas/xcl"
+    elementFormDefault="qualified">
+    
+		<xs:simpleType name="XCDLTextProperties" id="properties">
+			<xs:restriction base="xs:string">
+<!--  COMMON PROPERTIES                             ********************************************************** -->				
+				<xs:enumeration value='font' id='id159'>
+					<xs:annotation>
+						<xs:documentation>
+							
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value='fontChange' id='idNULL2'>
+					<xs:annotation>
+						<xs:documentation>
+							
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value='fontSize' id='id158'>
+					<xs:annotation>
+						<xs:documentation>
+							
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value='numberOfPages' id='id84'>
+					<xs:annotation>
+						<xs:documentation>
+							
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				
+<!--     END OF COMMON PROPERTIES    ********************************************************** -->
+			
+			</xs:restriction>
+		</xs:simpleType>							
+</xs:schema>

@@ -1,0 +1,56 @@
+TIFF Directory at offset 0x408 (1032)
+  Subfile Type: (0 = 0x0)
+  Image Width: 32 Image Length: 32
+  Resolution: 72, 72 pixels/inch
+  Bits/Sample: 8
+  Compression Scheme: None
+  Photometric Interpretation: min-is-black
+  Orientation: row 0 top, col 0 lhs
+  Samples/Pixel: 1
+  Rows/Strip: 64
+  Planar Configuration: single image plane
+  DocumentName: /home/Johanna/kdevelop/Extractor/res/tiffsuitneu/basn0g01.tif
+Strip 0:
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff 00 00 00 00 ff ff ff ff 00 00 ff ff ff ff ff ff 00 00 ff ff
+  ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 ff ff ff ff 00 00 ff ff
+  ff ff ff ff 00 00 ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00
+  ff ff ff ff 00 00 ff ff ff ff ff ff 00 00 ff ff ff ff ff ff ff ff ff ff
+  ff 00 00 00 00 00 00 00 ff ff ff ff 00 00 ff ff 00 00 ff ff 00 00 ff ff
+  ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 ff ff ff ff 00 00 ff ff
+  00 00 ff ff 00 00 ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00
+  ff ff ff ff 00 00 ff ff 00 00 ff ff 00 00 ff ff ff ff ff ff ff ff 00 00
+  00 00 00 00 00 00 00 00 ff ff ff ff ff 00 00 00 00 00 00 00 00 ff ff ff
+  ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff ff 00 00 00
+  00 00 00 00 00 ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00
+  ff ff ff ff ff ff 00 00 ff ff 00 00 ff ff ff ff ff ff ff 00 00 00 00 00
+  00 00 00 00 00 00 00 00 ff ff ff ff ff ff 00 00 ff ff 00 00 ff ff ff ff
+  ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 ff ff ff ff
+  ff ff ff 00 00 00 00 00 ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00
+  00 00 00 00 ff ff ff ff ff ff ff 00 00 00 00 00 ff ff ff ff ff ff ff ff
+  ff ff ff 00 00 00 00 00 00 00 00 00 ff ff 00 00 00 00 ff ff 00 00 00 00
+  ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 ff ff 00 00
+  00 00 ff ff 00 00 00 00 ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00
+  00 00 00 00 ff ff ff ff ff ff ff 00 00 00 00 00 ff ff ff ff ff ff ff ff
+  00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff ff ff ff 00 00 00 00 00
+  ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff 00 00
+  00 00 ff ff 00 00 00 00 ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00
+  00 00 00 00 ff ff 00 00 00 00 ff ff 00 00 00 00 ff ff ff ff ff 00 00 00
+  00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff ff ff ff 00 00 00 00 00
+  ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff ff ff
+  ff ff ff 00 00 00 00 00 ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ff ff 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00

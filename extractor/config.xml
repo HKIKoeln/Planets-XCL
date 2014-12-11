@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <library>
+        <!-- The existing xcels-->
+        <namesLib>xcl/xcel/schemas/fmt_10_tiff.xsd</namesLib>
+        <namesLib>xcl/xcel/schemas/fmt_13_png.xsd</namesLib>
+        <namesLib>xcl/xcel/schemas/fmt_17_pdf.xsd</namesLib>
+        <namesLib>xcl/xcel/schemas/fmt_xxx_docx.xsd</namesLib>
+        <namesLib>xcl/xcel/schemas/fmt_xxx_imagemagick.xsd</namesLib>
+        <namesLib>xcl/xcel/schemas/fmt_tiffInfo.xsd</namesLib>
+    </library>
+    <writer>
+        <outputFile>XCDLOutput.xml
+        </outputFile>
+        <ignoredProperties>
+            <ignore>byteOrder</ignore>
+            <ignore>signature</ignore>
+        </ignoredProperties>
+        
+    </writer>
+    <droid>
+        <!-- 	
+                The tag format description: 
+            <format>								//Description of a file format
+                <identifiers>							//List of  pronom identifiers identifying the  file format
+                    <identifier>fmt/41</identifier>		//puid name as  identifier
+                    <identifier>fmt/42</identifier>
+                    <identifier>fmt/43</identifier>	
+                    <identifier>fmt/44</identifier>
+                    <identifier>fmt/149</identifier>
+                    <identifier>fmt/112</identifier>
+                    <identifier>x-fmt/398</identifier>
+                    <identifier>x-fmt/390</identifier>
+                    <identifier>x-fmt/391</identifier>
+                </identifiers>
+                <process>	
+                        // If the xcel is not written for the original file format but 
+                        // for the Image Magick tool output,
+                        //the tag <command> has always a value.
+                        <command>identify -verbose</command>
+                    </process>
+                    <xcel>xcl/xcel/xcel_imageMagick.xml</xcel>		//Path to xcel
+             </format>
+	 -->
+        <format>
+            <identifiers>
+                <!-- png -->
+                <identifier>fmt/11</identifier>
+                <identifier>fmt/12</identifier>
+                <identifier>fmt/13</identifier>
+            </identifiers>
+            <process>
+                <command></command>
+            </process>
+            <xcel>xcl/xcel/xcel_png.xml</xcel>
+        </format>
+        <format>
+            
+            <identifiers>
+                <!-- tiff -->
+                <identifier>image/tiff</identifier>
+                <identifier>fmt/7</identifier>
+                <identifier>fmt/8</identifier>
+                <identifier>fmt/9</identifier>
+                <identifier>fmt/10</identifier>
+                <identifier>fmt/152</identifier>
+                <identifier>fmt/153</identifier>
+                <identifier>fmt/154</identifier>
+                <identifier>fmt/155</identifier>
+                <identifier>fmt/156</identifier>
+                <identifier>x-fmt/399</identifier>
+                <identifier>x-fmt/388</identifier>
+                <identifier>x-fmt/387</identifier>
+            </identifiers>
+            <process>
+                <command></command>
+            </process>
+            <xcel>xcl/xcel/xcel_tiff.xml</xcel>
+        </format>
+        
+        <format>
+            <identifiers>
+                <!-- bmp -->
+                <identifier>fmt/114</identifier>
+                <identifier>fmt/115</identifier>
+                <identifier>fmt/116</identifier>
+                <identifier>fmt/117</identifier>
+                <identifier>fmt/118</identifier>
+                <identifier>fmt/119</identifier>
+                <identifier>x-fmt/25</identifier>
+                <identifier>x-fmt/270</identifier>
+            </identifiers>
+            <process>
+                <command>identify -verbose</command>
+            </process>
+            <xcel>xcl/xcel/xcel_imageMagick.xml</xcel>
+        </format>
+        
+        <format>
+            <identifiers>
+                <!-- gif -->
+                <identifier>fmt/3</identifier>
+                <identifier>fmt/4</identifier>
+            </identifiers>
+            <process>
+                <command>identify -verbose</command>
+            </process>
+            <xcel>xcl/xcel/xcel_imageMagick.xml</xcel>
+        </format>
+        
+        <format>
+            <identifiers>
+                <!-- pdf -->
+                <identifier>fmt/14</identifier>
+                <identifier>fmt/15</identifier>
+                <identifier>fmt/16</identifier>
+                <identifier>fmt/17</identifier>
+                <identifier>fmt/18</identifier>
+                <identifier>fmt/19</identifier>
+                <identifier>fmt/20</identifier>
+                <identifier>fmt/95</identifier>
+                <identifier>fmt/144</identifier>
+                <identifier>fmt/145</identifier>
+                <identifier>fmt/146</identifier>
+               <identifier>fmt/147</identifier>
+               <identifier>fmt/148</identifier>
+               <identifier>fmt/157</identifier>
+               <identifier>fmt/158</identifier>
+            </identifiers>
+            <process>
+                <command></command>
+            </process>
+            <xcel>xcl/xcel/xcel_pdf.xml</xcel>
+        </format>
+        
+        <format>
+            <identifiers>
+                <!-- jpeg -->
+               <identifier>fmt/41</identifier>
+               <identifier>fmt/42</identifier>
+               <identifier>fmt/43</identifier>	
+               <identifier>fmt/44</identifier>
+               <identifier>fmt/149</identifier>
+               <identifier>fmt/112</identifier>
+               <identifier>x-fmt/398</identifier>
+               <identifier>x-fmt/390</identifier>
+               <identifier>x-fmt/391</identifier>
+            </identifiers>
+            <process>
+                <command>identify -verbose</command>
+            </process>
+            <xcel>xcl/xcel/xcel_imageMagick.xml</xcel>
+        </format>
+        
+        
+        <format>
+            <identifiers>
+               
+                <!-- jp2 -->
+                <identifier>x-fmt/392</identifier>
+                
+                <!-- pbm -->
+                <identifier>x-fmt/164</identifier>
+                
+                <!-- pcd -->
+                <identifier>x-fmt/165</identifier>
+                
+                <!-- pcx -->
+                <identifier>fmt/86</identifier>
+                <identifier>fmt/87</identifier>
+                <identifier>fmt/88</identifier>
+                <identifier>fmt/89</identifier>
+                <identifier>fmt/90</identifier>
+                
+                <!-- pict -->
+                <identifier>x-fmt/80</identifier>
+                
+                <!-- ppm-->
+                <identifier>x-fmt/178</identifier>
+                
+                <!-- psd -->
+                <identifier>x-fmt/92</identifier>
+             
+                <!-- svg -->
+                <identifier>fmt/91</identifier>
+                <identifier>fmt/92</identifier>
+                <identifier>x-fmt/109</identifier>
+                
+                <!-- tga -->
+                <identifier>x-fmt/367</identifier>
+               
+                <!-- xbm -->
+                <identifier>x-fmt/299</identifier>
+                <identifier>x-fmt/207</identifier>
+                
+                <!-- xpm-->
+                <identifier>x-fmt/208</identifier>
+                
+                
+                
+                <!-- wpg no testfiles-->
+                <!--<identifier>x-fmt/395</identifier>-->
+                
+                <!-- rla no testfiles-->
+                <!--<identifier>x-fmt/188</identifier>-->
+                
+                <!-- rle no testfiles-->
+                <!--<identifier>x-fmt/189</identifier>-->
+                
+                <!-- dcx no testfiles-->
+                <!--<identifier>x-fmt/348</identifier>
+                <identifier>x-fmt/150</identifier>-->
+                
+                
+                
+                <!-- txt not supported by ImageMagick-->
+                <!--<identifier>x-fmt/110</identifier>
+                <identifier>x-fmt/111</identifier>
+                <identifier>x-fmt/288</identifier>
+                <identifier>x-fmt/289</identifier>
+                <identifier>x-fmt/14</identifier>
+                <identifier>x-fmt/15</identifier>
+                <identifier>x-fmt/130</identifier>
+                <identifier>x-fmt/13</identifier>
+                <identifier>x-fmt/16</identifier>-->
+                
+                <!-- xwd not supported by ImageMagick-->
+                <!--<identifier>x-fmt/209</identifier>-->
+                
+                <!-- mpeg not supported by ImageMagick-->
+                <!--<identifier>x-fmt/385</identifier>
+                <identifier>x-fmt/150</identifier>-->
+                
+                <!-- mpeg-2 not supported by ImageMagick-->
+                <!-- <identifier>x-fmt/386</identifier>-->
+                
+                <!--avi  not supported by ImageMagick-->
+                <!--<identifier>fmt/5</identifier>-->
+            </identifiers>
+            <process>
+                <command>identify -verbose</command>
+            </process>
+            <xcel>xcl/xcel/xcel_imageMagick.xml</xcel>
+        </format>
+        
+
+        
+    </droid>
+</config>
+

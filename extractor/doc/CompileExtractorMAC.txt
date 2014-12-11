@@ -1,0 +1,16 @@
+To build the extractor on Mac OS, perform the following steps:
+
+0. Install Xerces-C, QT4 and ImageMagick (via MacPorts)
+1. make clean
+2. rm -rf rel/extractor.app
+3. qmake -project QT+=xml CONFIG+=debug DESTDIR=rel OBJECTS_DIR=rel LIBS="-lxerces-c -L/opt/local/lib"
+4. Add "-I /opt/local/include/" to the include section in the generated extractor.pro
+5. qmake
+6. make
+7. ln -s ../xcel_v1-0 res/xcl/xcel/xcel_docs/schemas
+
+To support embedded identification of image files (without giving an XCEL):
+8. Make sure the ImageMackick 'identify' executable is available on the PATH 
+   when running Java (testable with output of "System.getenv("PATH")", this 
+   should include /opt/local/bin, for that to work PATH should be defined in 
+   ./.MacOSX/environment.profile as the output of 'echo $PATH' in a Bash)

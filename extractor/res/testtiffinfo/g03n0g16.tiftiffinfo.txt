@@ -1,0 +1,99 @@
+TIFF Directory at offset 0x8 (8)
+  Subfile Type: (0 = 0x0)
+  Image Width: 32 Image Length: 32
+  Resolution: 72, 72 pixels/inch
+  Bits/Sample: 16
+  Compression Scheme: None
+  Photometric Interpretation: min-is-black
+  Samples/Pixel: 1
+  Rows/Strip: 32
+  Planar Configuration: single image plane
+  Photoshop Data: <present>, 1688 bytes
+  Tag 37724: 0x41,0x64,0x6f,0x62,0x65,0x20,0x50,0x68,0x6f,0x74,0x6f,0x73,0x68,0x6f,0x70,0x20,0x44,0x6f,0x63,0x75,0x6d,0x65,0x6e,0x74,0x20,0x44,0x61,0x74,0x61,0x20,0x42,0x6c,0x6f,0x63,0x6b,0x0
+Strip 0:
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff fb fc fb fc fb fc fb fc
+  fb fc fb fc fb fc fb fc 4e 4d 4e 4d 4e 4d 4e 4d 4e 4d 4e 4d 4e 4d 4e 4d
+  c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9
+  62 62 62 62 62 62 62 62 62 62 62 62 62 62 62 62 c7 c8 c7 c8 c7 c8 c7 c8
+  c7 c8 c7 c8 c7 c8 c7 c8 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  f5 f6 f5 f6 f5 f6 f5 f6 f5 f6 f5 f6 f5 f6 f5 f6 72 71 72 71 72 71 72 71
+  72 71 72 71 72 71 72 71 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 f3 f3 f3 f3 f3 f3 f3 f3
+  f3 f3 f3 f3 f3 f3 f3 f3 7e 7d 7e 7d 7e 7d 7e 7d 7e 7d 7e 7d 7e 7d 7e 7d
+  c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ef f0 ef f0 ef f0 ef f0 ef f0 ef f0 ef f0 ef f0
+  87 87 87 87 87 87 87 87 87 87 87 87 87 87 87 87 c7 c8 c7 c8 c7 c8 c7 c8
+  c7 c8 c7 c8 c7 c8 c7 c8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed ed 8f 90 8f 90 8f 90 8f 90
+  8f 90 8f 90 8f 90 8f 90 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff e9 e9 e9 e9 e9 e9 e9 e9
+  e9 e9 e9 e9 e9 e9 e9 e9 97 97 97 97 97 97 97 97 97 97 97 97 97 97 97 97
+  c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 e5 e6 e5 e6 e5 e6 e5 e6 e5 e6 e5 e6 e5 e6 e5 e6
+  9f 9f 9f 9f 9f 9f 9f 9f 9f 9f 9f 9f 9f 9f 9f 9f c7 c8 c7 c8 c7 c8 c7 c8
+  c7 c8 c7 c8 c7 c8 c7 c8 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  e1 e2 e1 e2 e1 e2 e1 e2 e1 e2 e1 e2 e1 e2 e1 e2 a5 a5 a5 a5 a5 a5 a5 a5
+  a5 a5 a5 a5 a5 a5 a5 a5 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 df df df df df df df df
+  df df df df df df df df ab ac ab ac ab ac ab ac ab ac ab ac ab ac ab ac
+  c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff db db db db db db db db db db db db db db db db
+  b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 c7 c8 c7 c8 c7 c8 c7 c8
+  c7 c8 c7 c8 c7 c8 c7 c8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  d7 d7 d7 d7 d7 d7 d7 d7 d7 d7 d7 d7 d7 d7 d7 d7 b7 b7 b7 b7 b7 b7 b7 b7
+  b7 b7 b7 b7 b7 b7 b7 b7 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff d3 d3 d3 d3 d3 d3 d3 d3
+  d3 d3 d3 d3 d3 d3 d3 d3 bb bc bb bc bb bc bb bc bb bc bb bc bb bc bb bc
+  c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 cf cf cf cf cf cf cf cf cf cf cf cf cf cf cf cf
+  c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c7 c8 c7 c8 c7 c8 c7 c8
+  c7 c8 c7 c8 c7 c8 c7 c8 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  c9 ca c9 ca c9 ca c9 ca c9 ca c9 ca c9 ca c9 ca c5 c6 c5 c6 c5 c6 c5 c6
+  c5 c6 c5 c6 c5 c6 c5 c6 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 c5 c6 c5 c6 c5 c6 c5 c6
+  c5 c6 c5 c6 c5 c6 c5 c6 c9 ca c9 ca c9 ca c9 ca c9 ca c9 ca c9 ca c9 ca
+  c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1
+  cf cf cf cf cf cf cf cf cf cf cf cf cf cf cf cf c7 c8 c7 c8 c7 c8 c7 c8
+  c7 c8 c7 c8 c7 c8 c7 c8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  bb bc bb bc bb bc bb bc bb bc bb bc bb bc bb bc d3 d3 d3 d3 d3 d3 d3 d3
+  d3 d3 d3 d3 d3 d3 d3 d3 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff b7 b7 b7 b7 b7 b7 b7 b7
+  b7 b7 b7 b7 b7 b7 b7 b7 d7 d7 d7 d7 d7 d7 d7 d7 d7 d7 d7 d7 d7 d7 d7 d7
+  c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1
+  db db db db db db db db db db db db db db db db c7 c8 c7 c8 c7 c8 c7 c8
+  c7 c8 c7 c8 c7 c8 c7 c8 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ab ac ab ac ab ac ab ac ab ac ab ac ab ac ab ac df df df df df df df df
+  00 00 00 00 df df df df c7 c8 c7 c8 c7 c8 00 00 00 00 c7 c8 c7 c8 c7 c8
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 a5 a5 a5 a5 a5 a5 a5 a5
+  a5 a5 a5 a5 a5 a5 a5 a5 e1 e2 e1 e2 e1 e2 00 00 e1 e2 e1 e2 00 00 e1 e2
+  c7 c8 c7 c8 00 00 c7 c8 c7 c8 00 00 c7 c8 c7 c8 ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff 9f 9f 9f 9f 9f 9f 9f 9f 9f 9f 9f 9f 9f 9f 9f 9f
+  e5 e6 e5 e6 e5 e6 e5 e6 e5 e6 e5 e6 00 00 e5 e6 c7 c8 c7 c8 c7 c8 00 00
+  00 00 c7 c8 c7 c8 c7 c8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  97 97 97 97 97 97 97 97 97 97 97 97 97 97 97 97 e9 e9 e9 e9 e9 e9 e9 e9
+  e9 e9 00 00 e9 e9 e9 e9 c7 c8 c7 c8 00 00 c7 c8 c7 c8 00 00 c7 c8 c7 c8
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 8f 90 8f 90 8f 90 8f 90
+  8f 90 8f 90 8f 90 8f 90 ed ed ed ed ed ed ed ed 00 00 ed ed ed ed ed ed
+  c7 c8 c7 c8 00 00 c7 c8 c7 c8 00 00 c7 c8 c7 c8 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 87 87 87 87 87 87 87 87 87 87 87 87 87 87 87 87
+  ef f0 ef f0 ef f0 00 00 00 00 00 00 00 00 ef f0 00 00 c7 c8 c7 c8 00 00
+  00 00 c7 c8 c7 c8 c7 c8 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  7e 7d 7e 7d 7e 7d 7e 7d 7e 7d 7e 7d 7e 7d 7e 7d f3 f3 f3 f3 f3 f3 f3 f3
+  f3 f3 f3 f3 f3 f3 f3 f3 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 72 71 72 71 72 71 72 71
+  72 71 72 71 72 71 72 71 f5 f6 f5 f6 f5 f6 f5 f6 f5 f6 f5 f6 f5 f6 f5 f6
+  c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff 62 62 62 62 62 62 62 62 62 62 62 62 62 62 62 62
+  f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 c7 c8 c7 c8 c7 c8 c7 c8
+  c7 c8 c7 c8 c7 c8 c7 c8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  4e 4d 4e 4d 4e 4d 4e 4d 4e 4d 4e 4d 4e 4d 4e 4d fb fc fb fc fb fc fb fc
+  fb fc fb fc fb fc fb fc c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 c7 c8 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00

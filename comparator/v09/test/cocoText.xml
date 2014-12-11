@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<coco xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl  /res/schemas/coco/coco.xsd"
+ xmlns="http://www.planets-project.eu/xcl/schemas/xcl">
+    <compSet>   
+        <property id="300" name="normData">   
+            <metric id="1" name="equal"/>       
+            <metric id="11" name="hammingDistance"/>
+            <metric id="13" name="simpleMatchCoefficient"/>            
+            <metric id="30" name="hammingDistanceString"/>           
+        </property>
+        <property id="84" name="numberOfPages">
+            <metric id="1" name="equal"/>      
+            <metric id="101" name="valueSetStat_1"/>
+            <metric id="251" name="dataRefMatch_1"/>
+       </property>  
+        <property id="158" name="font">   
+            <metric id="1" name="equal"/>
+            <metric id="101" name="valueSetStat_1"/>
+            <metric id="102" name="valueSetStat_2"/>
+            <metric id="121" name="valueSetMatch_1"/>
+            <metric id="122" name="valueSetMatch_2"/>
+            <metric id="123" name="valueSetMatch_3"/>
+            <metric id="124" name="valueSetMatch_4"/> 
+            <metric id="125" name="valueSetMatch_5"/>
+            <metric id="126" name="valueSetMatch_6"/>   
+            <metric id="251" name="dataRefMatch_1"/>
+            <metric id="252" name="dataRefMatch_2"/>
+            <metric id="253" name="dataRefMatch_3"/>
+            <metric id="254" name="dataRefMatch_4"/>
+        </property>        
+        <property id="106" name="fontSize">         
+            <metric id="101" name="valueSetStat_1"/>
+            <metric id="102" name="valueSetStat_2"/>
+            <metric id="121" name="valueSetMatch_1 "/>
+            <metric id="122" name="valueSetMatch_2"/>
+            <metric id="123" name="valueSetMatch_3"/>
+            <metric id="124" name="valueSetMatch_4"/> 
+            <metric id="125" name="valueSetMatch_5"/>
+            <metric id="126" name="valueSetMatch_6"/>   
+            <metric id="251" name="dataRefMatch_1"/>
+            <metric id="252" name="dataRefMatch_2"/>
+            <metric id="253" name="dataRefMatch_3"/>
+            <metric id="254" name="dataRefMatch_4"/>
+        </property>         
+    </compSet>   
+</coco>

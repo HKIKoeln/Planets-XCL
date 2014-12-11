@@ -1,0 +1,99 @@
+TIFF Directory at offset 0x8 (8)
+  Subfile Type: (0 = 0x0)
+  Image Width: 32 Image Length: 32
+  Resolution: 72, 72 pixels/inch
+  Bits/Sample: 16
+  Compression Scheme: None
+  Photometric Interpretation: min-is-black
+  Samples/Pixel: 1
+  Rows/Strip: 32
+  Planar Configuration: single image plane
+  Photoshop Data: <present>, 1610 bytes
+  Tag 37724: 0x41,0x64,0x6f,0x62,0x65,0x20,0x50,0x68,0x6f,0x74,0x6f,0x73,0x68,0x6f,0x70,0x20,0x44,0x6f,0x63,0x75,0x6d,0x65,0x6e,0x74,0x20,0x44,0x61,0x74,0x61,0x20,0x42,0x6c,0x6f,0x63,0x6b,0x0
+Strip 0:
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff eb eb eb eb eb eb eb eb
+  eb eb eb eb eb eb eb eb 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 d7 d8 d7 d8 d7 d8 d7 d8 d7 d8 d7 d8 d7 d8 d7 d8
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2e 2d 2e 2d 2e 2d 2e 2d
+  2e 2d 2e 2d 2e 2d 2e 2d ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  c5 c6 c5 c6 c5 c6 c5 c6 c5 c6 c5 c6 c5 c6 c5 c6 02 01 02 01 02 01 02 01
+  02 01 02 01 02 01 02 01 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b5 b5 b5 b5 b5 b5 b5 b5
+  b5 b5 b5 b5 b5 b5 b5 b5 02 02 02 02 02 02 02 02 02 02 02 02 02 02 02 02
+  2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff a3 a4 a3 a4 a3 a4 a3 a4 a3 a4 a3 a4 a3 a4 a3 a4
+  04 03 04 03 04 03 04 03 04 03 04 03 04 03 04 03 2e 2d 2e 2d 2e 2d 2e 2d
+  2e 2d 2e 2d 2e 2d 2e 2d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  95 95 95 95 95 95 95 95 95 95 95 95 95 95 95 95 04 04 04 04 04 04 04 04
+  04 04 04 04 04 04 04 04 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 85 86 85 86 85 86 85 86
+  85 86 85 86 85 86 85 86 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06
+  2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 7a 79 7a 79 7a 79 7a 79 7a 79 7a 79 7a 79 7a 79
+  0a 09 0a 09 0a 09 0a 09 0a 09 0a 09 0a 09 0a 09 2e 2d 2e 2d 2e 2d 2e 2d
+  2e 2d 2e 2d 2e 2d 2e 2d ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 6c 0c 0c 0c 0c 0c 0c 0c 0c
+  0c 0c 0c 0c 0c 0c 0c 0c 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 60 60 60 60 60 60 60 60
+  60 60 60 60 60 60 60 60 10 0f 10 0f 10 0f 10 0f 10 0f 10 0f 10 0f 10 0f
+  2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff 56 55 56 55 56 55 56 55 56 55 56 55 56 55 56 55
+  14 13 14 13 14 13 14 13 14 13 14 13 14 13 14 13 2e 2d 2e 2d 2e 2d 2e 2d
+  2e 2d 2e 2d 2e 2d 2e 2d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  4c 4b 4c 4b 4c 4b 4c 4b 4c 4b 4c 4b 4c 4b 4c 4b 18 18 18 18 18 18 18 18
+  18 18 18 18 18 18 18 18 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 42 42 42 42 42 42 42 42
+  42 42 42 42 42 42 42 42 1e 1d 1e 1d 1e 1d 1e 1d 1e 1d 1e 1d 1e 1d 1e 1d
+  2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 3a 39 3a 39 3a 39 3a 39 3a 39 3a 39 3a 39 3a 39
+  24 23 24 23 24 23 24 23 24 23 24 23 24 23 24 23 2e 2d 2e 2d 2e 2d 2e 2d
+  2e 2d 2e 2d 2e 2d 2e 2d ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  32 31 32 31 32 31 32 31 32 31 32 31 32 31 32 31 2a 2a 2a 2a 2a 2a 2a 2a
+  2a 2a 2a 2a 2a 2a 2a 2a 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 2a 2a 2a 2a 2a 2a 2a 2a
+  2a 2a 2a 2a 2a 2a 2a 2a 32 31 32 31 32 31 32 31 32 31 32 31 32 31 32 31
+  2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff 24 23 24 23 24 23 24 23 24 23 24 23 24 23 24 23
+  3a 39 3a 39 3a 39 3a 39 3a 39 3a 39 3a 39 3a 39 2e 2d 2e 2d 2e 2d 2e 2d
+  2e 2d 2e 2d 2e 2d 2e 2d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  1e 1d 1e 1d 1e 1d 1e 1d 1e 1d 1e 1d 1e 1d 1e 1d 42 42 42 42 42 42 42 42
+  42 42 42 42 42 42 42 42 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 18 18 18 18 18 18 18 18
+  18 18 18 18 18 18 18 18 4c 4b 4c 4b 4c 4b 4c 4b 4c 4b 4c 4b 4c 4b 4c 4b
+  2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 14 13 14 13 14 13 14 13 14 13 14 13 14 13 14 13
+  56 55 56 55 56 55 56 55 56 55 56 55 56 55 56 55 2e 2d 2e 2d 2e 2d 2e 2d
+  2e 2d 2e 2d 2e 2d 2e 2d ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  10 0f 10 0f 10 0f 10 0f 10 0f 10 0f 10 0f 10 0f 60 60 60 60 60 60 60 60
+  00 00 00 00 60 60 60 60 2e 2d 2e 2d 00 00 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0c 0c 0c 0c 0c 0c 0c 0c
+  0c 0c 0c 0c 0c 0c 0c 0c 6c 6c 6c 6c 6c 6c 00 00 6c 6c 6c 6c 00 00 6c 6c
+  2e 2d 2e 2d 00 00 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff 0a 09 0a 09 0a 09 0a 09 0a 09 0a 09 0a 09 0a 09
+  7a 79 7a 79 7a 79 00 00 7a 79 00 00 00 00 7a 79 2e 2d 2e 2d 00 00 2e 2d
+  2e 2d 2e 2d 2e 2d 2e 2d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 06 85 86 85 86 85 86 00 00
+  00 00 85 86 00 00 85 86 2e 2d 2e 2d 00 00 2e 2d 00 00 2e 2d 2e 2d 2e 2d
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 04 04 04 04 04 04 04 04
+  04 04 04 04 04 04 04 04 95 95 95 95 95 95 00 00 95 95 95 95 00 00 95 95
+  2e 2d 2e 2d 00 00 00 00 00 00 00 00 2e 2d 2e 2d 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 04 03 04 03 04 03 04 03 04 03 04 03 04 03 04 03
+  a3 a4 a3 a4 a3 a4 a3 a4 00 00 00 00 a3 a4 a3 a4 00 00 2e 2d 2e 2d 2e 2d
+  00 00 2e 2d 2e 2d 2e 2d ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  02 02 02 02 02 02 02 02 02 02 02 02 02 02 02 02 b5 b5 b5 b5 b5 b5 b5 b5
+  b5 b5 b5 b5 b5 b5 b5 b5 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 01 02 01 02 01 02 01
+  02 01 02 01 02 01 02 01 c5 c6 c5 c6 c5 c6 c5 c6 c5 c6 c5 c6 c5 c6 c5 c6
+  2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  d7 d8 d7 d8 d7 d8 d7 d8 d7 d8 d7 d8 d7 d8 d7 d8 2e 2d 2e 2d 2e 2d 2e 2d
+  2e 2d 2e 2d 2e 2d 2e 2d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 eb eb eb eb eb eb eb eb
+  eb eb eb eb eb eb eb eb 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 2e 2d 00 00 00 00 00 00 00 00
+  00 00 00 00 00 00 00 00

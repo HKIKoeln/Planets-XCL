@@ -1,0 +1,48 @@
+Image: basi0g01.tif
+  Format: TIFF (Tagged Image File Format)
+  Class: DirectClass
+  Geometry: 32x32+0+0
+  Resolution: 72x72
+  Print size: 0.444444x0.444444
+  Units: PixelsPerInch
+  Type: Bilevel
+  Base type: Bilevel
+  Endianess: MSB
+  Colorspace: RGB
+  Depth: 1-bit
+  Channel depth:
+    gray: 1-bit
+  Channel statistics:
+    gray:
+      min: 0 (0)
+      max: 1 (1)
+      mean: 0.511719 (0.511719)
+      standard deviation: 0.499863 (0.499863)
+  Histogram:
+       524: (255,255,255) #FFFFFF white
+       500: (  0,  0,  0) #000000 black
+  Rendering intent: Undefined
+  Interlace: None
+  Background color: white
+  Border color: rgb(223,223,223)
+  Matte color: grey74
+  Transparent color: black
+  Page geometry: 32x32+0+0
+  Dispose: Undefined
+  Iterations: 0
+  Compression: None
+  Orientation: TopLeft
+  Properties:
+    create-date: 2009-05-06T11:30:19+02:00
+    modify-date: 2009-05-06T11:30:16+02:00
+    signature: 8081add6f0a92cbe119b66623a24682579c3ebd42a6bcb1aa6af7500f9d9ec51
+    tiff:rows-per-strip: 32
+  Profiles:
+    Profile-8bim: 1562 bytes
+    Profile-tiff:37724: 36 bytes
+  Artifacts:
+    verbose: true
+  Tainted: False
+  Filesize: 1.89kb
+  Number pixels: 1kb
+  Version: ImageMagick 6.4.5 2008-12-02 Q16 OpenMP http://www.imagemagick.org

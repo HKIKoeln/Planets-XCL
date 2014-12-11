@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XCELDocument xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl
+    schemas/XCELImageExtension.xsd">
+    
+    <preProcessing> 
+        <item xsi:type="structuringItem" identifier="preproc1">
+            <processing type="configureParser" >
+                <processingMethod name="setSymbolDoesNotMatchHandle">
+                    <param value="skipWhiteSpace"/>
+                </processingMethod>
+            </processing>
+        </item>
+    </preProcessing>
+    
+    <formatDescription>
+      
+        <item xsi:type="structuringItem" identifier="rootNode" >
+
+            <item xsi:type="structuringItem"  identifier="aRecord" multiple="true" order="choice">
+                
+                
+                
+                <!-- imageWidth/imageHeight-->
+                <!-- 
+                    Geometry: 32x32+0+0
+                    -geometry widthxheight{+-}x{+-}y     // preferred size and location of the image.
+                    http://www.imagemagick.org/script/command-line-options.php#geometry
+                -->
+                <item identifier="imageWidth" xsi:type="structuringItem" multiple="false" order="sequence" >
+                    
+                    <symbol 
+                        identifier="imageWidth_Symbol" length="9"   interpretation="ASCII" value="Geometry:"
+                    />
+                    
+                    <!-- imageWidth -->
+                    <item identifier="imageWidthNumber" xsi:type="definitionItem">
+                        
+                        <symbol identifier="imageWidthNumber_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                            <validValues>
+                                <startRange>0</startRange>
+                                <endRange>9</endRange>
+                            </validValues>
+                        </symbol>
+                        <name>imageWidth</name>
+                    </item>
+                   
+                    <symbol identifier="item_x" length="1"   interpretation="ASCII" value="x"/>
+                    
+                    <!-- imageHeight -->              
+                    <item identifier="imageHeight" xsi:type="definitionItem">
+                        
+                        <symbol identifier="imageHeight_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                            <validValues>
+                                <startRange>0</startRange>
+                                <endRange>9</endRange>
+                            </validValues>
+                        </symbol>
+                        <name>imageHeight</name>
+                    </item>
+                    
+                    
+                    
+                    <symbol identifier="rest" length="1" multiple="true" interpretation="ASCII"  >
+                        <nonValidValues>
+                            <value>CR</value>
+                            <value>LF</value>
+                        </nonValidValues>
+                       
+                    </symbol>
+                    
+                </item>
+                
+                <!--  imageType -->
+                <item identifier="imageType" xsi:type="structuringItem" >
+                    
+                    <symbol 
+                        identifier="imageType_Symbol"  length="5"   interpretation="ASCII" value="Type:"
+                    />
+                    
+                    <item identifier="imageType_value" xsi:type="definitionItem" order="choice">
+                        <symbol identifier="imageType_value1" interpretation="ASCII" >
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">9</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>greyscale</valueLabel>
+                                <value>Grayscale</value>
+                            </valueInterpretation>
+                        </symbol>
+                        
+                        <symbol identifier="imageType_value2" interpretation="ASCII" >
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">9</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>truecolour</valueLabel>
+                                <value>TrueColor</value>
+                            </valueInterpretation>
+                        </symbol>
+                        
+                        <symbol identifier="imageType_value3" interpretation="ASCII" >
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">7</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>palette</valueLabel>
+                                <value>Palette</value>
+                            </valueInterpretation>
+                        </symbol>
+                        
+                        <symbol identifier="imageType_value4" interpretation="ASCII" >
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">7</length>
+                        </range>
+                        <valueInterpretation>
+                            <valueLabel>bilevel</valueLabel>
+                            <value>Bilevel</value>
+                        </valueInterpretation>
+                        </symbol>
+                        
+                        <!-- 
+                        Ohne:
+                            Grayscale
+                            Palette
+                            TrueColor
+                            Bilevel
+                         kann imageMagick auch weitere Werte setzen:
+                            
+                            ColorSeparation
+                            ColorSeparationMatte
+                            GrayscaleMatte =? greyscaleAlpha
+                            Optimize
+                            PaletteBilevelMatte
+                            PaletteMatte
+                            TrueColorMatte
+                            
+                            Befehl: identify -list type
+                        -->
+                        
+                        <name>imageType</name>
+                    </item>
+                    
+                </item>
+                
+                
+                <!--  Endianess -->
+                <item identifier="endianess" xsi:type="structuringItem" >
+                    
+                    <symbol 
+                        identifier="Endianess_Symbol"  length="10"   interpretation="ASCII" value="Endianess:"
+                    />
+                    
+                    <item identifier="imageType_value_item" xsi:type="definitionItem" order="choice">
+                        
+                        <symbol identifier="endianess_value1" interpretation="ASCII" >
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">3</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>bigEndian</valueLabel>
+                                <value>MSB</value>
+                            </valueInterpretation>
+                        </symbol>
+                        
+                        <symbol identifier="endianess_value2" interpretation="ASCII" >
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">3</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>littleEndian</valueLabel>
+                                <value>LSB</value>
+                            </valueInterpretation>
+                        </symbol>
+                        
+                        <symbol identifier="endianess_value3" interpretation="ASCII" >
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">9</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>undefined</valueLabel>
+                                <value>Undefined</value>
+                            </valueInterpretation>
+                        </symbol>
+                
+                        <name>byteOrder</name>
+                    </item>
+                    
+                </item>
+                
+                
+                
+                
+                
+                
+                <item identifier="bitsPerSample" xsi:type="structuringItem" >
+                    
+                    <symbol 
+                        identifier="bitsPerSample_Symbol"  length="6"   interpretation="ASCII" value="Depth:"
+                    />
+                    
+                    <item identifier="bitsPerSample_value" xsi:type="definitionItem">
+                        <symbol identifier="bitsPerSample_value_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                            <validValues>
+                                <startRange>0</startRange>
+                                <endRange>9</endRange>
+                            </validValues>
+                        </symbol>
+                        <name>bitsPerSample</name>
+                    </item>
+                    
+                    
+                </item>
+                
+                
+                
+                
+                <!--  Channel depth: bitsPerSampleRed/bitsPerSampleGreen/bitsPerSampleBlue-->
+                <item identifier="channel_depth" xsi:type="structuringItem" >
+                    
+                    <symbol 
+                        identifier="channel_depth_Symbol"  length="14"   interpretation="ASCII" value="Channel depth:"
+                    />
+                    
+                    <!-- bitsPerSampleRed -->
+                    <item identifier="bitsPerSampleRed" xsi:type="structuringItem" optional="true">
+                        
+                        <symbol 
+                            identifier="bitsPerSampleRed_Symbol"  length="4"   interpretation="ASCII" value="Red:" 
+                        />
+                        
+                        <item identifier="bitsPerSampleRed_di" xsi:type="definitionItem" >
+                            <symbol identifier="bitsPerSampleRed_value_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                                <validValues>
+                                    <startRange>0</startRange>
+                                    <endRange>9</endRange>
+                                </validValues>
+                            </symbol>
+                            <name>bitsPerSampleRed</name>
+                        </item>      
+                        
+                        <symbol identifier="default_rest" length="1" multiple="true" interpretation="ASCII"  >
+                            <nonValidValues>
+                                <value>CR</value>
+                                <value>LF</value>
+                            </nonValidValues>
+                         </symbol>
+                        
+                    </item>
+                    
+                    <!-- bitsPerSampleGreen -->
+                    <item identifier="bitsPerSampleGreen" xsi:type="structuringItem"  optional="true">
+                        
+                        <symbol 
+                            identifier="bitsPerSampleGreen_Symbol"  length="6"   interpretation="ASCII" value="Green:" 
+                        />
+                        
+                        <item identifier="bitsPerSampleGreen_di" xsi:type="definitionItem" >
+                            <symbol identifier="bitsPerSampleGreen_value_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                                <validValues>
+                                    <startRange>0</startRange>
+                                    <endRange>9</endRange>
+                                </validValues>
+                            </symbol>
+                            <name>bitsPerSampleGreen</name>
+                        </item>  
+                        
+                        <symbol identifier="default_rest2" length="1" multiple="true" interpretation="ASCII" >
+                            <nonValidValues>
+                                <value>CR</value>
+                                <value>LF</value>
+                            </nonValidValues>
+                        </symbol>
+                        
+                    </item>
+                    
+                    <!-- bitsPerSampleBlue -->
+                    <item identifier="bitsPerSampleBlue" xsi:type="structuringItem"  optional="true">
+                        
+                        <symbol 
+                            identifier="bitsPerSampleBlue_Symbol"  length="5"   interpretation="ASCII" value="Blue:" 
+                        />
+                        
+                        <item identifier="bitsPerSampleBlue_di" xsi:type="definitionItem" >
+                            <symbol identifier="bitsPerSampleBlue_value_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                                <validValues>
+                                    <startRange>0</startRange>
+                                    <endRange>9</endRange>
+                                </validValues>
+                            </symbol>
+                            <name>bitsPerSampleBlue</name>
+                        </item>  
+                        
+                        <symbol identifier="default_rest3" length="1" multiple="true" interpretation="ASCII"  >
+                            <nonValidValues>
+                                <value>CR</value>
+                                <value>LF</value>
+                            </nonValidValues>
+                        </symbol>
+                        
+                    </item>
+                                        
+                </item>
+                
+             
+                
+                <!--Chromaticity  -->
+                <item identifier="chromaticity_sItem" xsi:type="structuringItem" >
+                    
+                    <symbol 
+                        identifier="chromaticity_Symbol"  length="13"   interpretation="ASCII" value="Chromaticity:"
+                    />
+                    
+                    <!--Chromaticity: red primary -->
+                    <item identifier="chromaticity_sItem2" xsi:type="structuringItem" optional="true" >
+                        
+                        <symbol 
+                            identifier="red_primary_Symbol"  length="14"   interpretation="ASCII" value="red primary: (" 
+                        />
+                        
+                        <item identifier="redprimaryX" xsi:type="definitionItem">
+                            <symbol identifier="redprimaryX_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                                <nonValidValues>
+                                    <value>,</value>
+                                </nonValidValues>
+                            </symbol>
+                            <name>1931CIE_ChromaticityRedX</name>
+                        </item>
+                        
+                        <symbol identifier="komma" value="44" />
+                        
+                        <item identifier="redprimaryY" xsi:type="definitionItem">
+                            <symbol identifier="redprimaryY_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                                <nonValidValues>
+                                    <value>)</value>
+                                </nonValidValues>
+                            </symbol>
+                            <name>1931CIE_ChromaticityRedX</name>
+                        </item>
+                        
+                        <symbol identifier="abschließendeKlammer"  value="41"  />
+                        
+                        <symbol 
+                            identifier="green_primary_Symbol"  length="16"   interpretation="ASCII" value="green primary: (" 
+                        />
+                        
+                        <item identifier="greenprimaryX" xsi:type="definitionItem">
+                            <symbol identifier="greenprimaryX_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                                <nonValidValues>
+                                    <value>,</value>
+                                </nonValidValues>
+                            </symbol>
+                            <name>1931CIE_ChromaticityGreenX</name>
+                        </item>
+                        
+                        <symbol identifier="komma2" value="44" />
+                        
+                        <item identifier="greenprimaryY" xsi:type="definitionItem">
+                            <symbol identifier="greenprimaryY_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                                <nonValidValues>
+                                    <value>)</value>
+                                </nonValidValues>
+                            </symbol>
+                            <name>1931CIE_ChromaticityGreenY</name>
+                        </item>
+                        
+                        <symbol identifier="abschließendeKlammer2"  value="41"  />
+                        
+                        <symbol 
+                            identifier="blue_primary_Symbol"  length="15"   interpretation="ASCII" value="blue primary: (" 
+                        />
+                        
+                       <item identifier="blueprimaryX" xsi:type="definitionItem">
+                        <symbol identifier="blueprimaryX_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                            <nonValidValues>
+                                <value>,</value>
+                            </nonValidValues>
+                        </symbol>
+                        <name>1931CIE_ChromaticityBlueX</name>
+                    </item>
+                    
+                    <symbol identifier="komma3" value="44" />
+                    
+                    <item identifier="blueprimaryY" xsi:type="definitionItem">
+                        <symbol identifier="blueprimaryY_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                            <nonValidValues>
+                                <value>)</value>
+                            </nonValidValues>
+                        </symbol>
+                        <name>1931CIE_ChromaticityBlueY</name>
+                    </item>
+                    
+                        <symbol identifier="abschließendeKlammer3"  value="41"  />
+                        
+                        <symbol 
+                            identifier="whitepoint_Symbol"  length="14"   interpretation="ASCII" value="white point: (" 
+                        />
+                        
+                        <item identifier="whitePointX" xsi:type="definitionItem">
+                            <symbol identifier="whitePointX_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                                <nonValidValues>
+                                    <value>,</value>
+                                </nonValidValues>
+                            </symbol>
+                            <name>whitePointX</name>
+                        </item>
+                        
+                        <symbol identifier="komma4" value="44" />
+                        
+                        <item identifier="whitePointY" xsi:type="definitionItem">
+                            <symbol identifier="whitePointY_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                                <nonValidValues>
+                                    <value>)</value>
+                                </nonValidValues>
+                            </symbol>
+                            <name>whitePointY</name>
+                        </item>
+                        
+                        <symbol identifier="abschließendeKlammer4"  value="41"  />
+                        
+                    </item>
+                    
+                </item>
+                
+                <!--  Gamma png -->
+                <!-- Fehler? leerzeichen vor dem Wert: in xcdl: <val> 0.45455</val> -->
+                <item identifier="gamma" xsi:type="structuringItem">
+                    
+                    <symbol 
+                        identifier="gamma_Symbol"  length="7"   interpretation="ASCII" value="Gamma: "
+                    />
+                    
+                    <item identifier="gamma_value" xsi:type="definitionItem">
+                        <symbol identifier="gammaValue_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                            <nonValidValues>
+                                <value>LF</value>
+                                <value>CR</value>  
+                                <value>SP</value>
+                            </nonValidValues>
+                        </symbol>
+                        <name>gamma</name>
+                    </item>
+                    
+                </item>
+                
+                <!-- rgbPalette -->
+                <item identifier="rgbPaletteComplete" xsi:type="structuringItem">
+                    
+                    <!-- liest die Zeile, z.B.: Colormap: 253 -->
+                    <symbol identifier="rgbPalette_Symbol"  length="9"   interpretation="ASCII" value="Colormap:" />
+                    <symbol identifier="rest4" length="1" multiple="true" interpretation="ASCII"  >
+                        <nonValidValues>
+                            <value>CR</value>
+                            <value>LF</value>
+                        </nonValidValues>
+                    </symbol>                    
+                    
+                    
+                    <!-- ITERATIVES Einlesen der Zeilen folgender Art:
+                        0: (  0,  0,  0) #000000 black
+                        1: ( 56,120, 28) #38781C rgb(56,120,28)
+                        2: (140,156,124) #8C9C7C rgb(140,156,124)
+                        3: (216,248,152) #D8F898 rgb(216,248,152)
+                        4: (204,248,160) #CCF8A0 rgb(204,248,160)
+                        5: ( 40,120, 12) #28780C rgb(40,120,12)
+                        
+                        Die Werte aus der ersten Klammer stellen rgbPalette dar.-->
+                    <item identifier="rgbPalette2" xsi:type="structuringItem" multiple="true">
+                        
+                        <!-- Das einlesen von:
+                            0: (
+                            1: ( 
+                            2: (
+                            3: ( -->
+                        <symbol identifier="rgbNum" length="1" multiple="true" interpretation="ASCII" >
+                            <validValues>
+                                <startRange>0</startRange>
+                                <endRange>9</endRange>
+                            </validValues>
+                        </symbol>
+                        
+                        <symbol   identifier="rgbPNum"  length="3"   interpretation="ASCII" value=": (" />
+                        
+                        
+                        <!--Das Einlesen von Werten aus der ersten Klammer:
+                            0: (  0,  0,  0) #000000 black
+                            1: ( 56,120, 28) #38781C rgb(56,120,28)
+                            2: (140,156,124) #8C9C7C rgb(140,156,124)
+                            3: (216,248,152) #D8F898 rgb(216,248,152) -->
+                        <item identifier="rgbPalette_value" xsi:type="structuringItem" multiple="true">
+                            
+                            <item identifier="rgbPalette_value_n" xsi:type="definitionItem" multiple="true" >
+                            
+                                 <symbol identifier="rgbPalette_value_Symbol" length="1" multiple="true" interpretation="ASCII"  >
+                                      <validValues>
+                                    <startRange>0</startRange>
+                                    <endRange>9</endRange>
+                                  </validValues>
+                              </symbol>
+                                
+                             <name>rgbPaletteEntry</name>
+                            </item>
+                            
+                                                 
+                            
+                            <symbol  identifier="rgbPalette_komma"  length="1"   interpretation="ASCII" value=","   optional="true" />
+                           
+                        </item>
+                        
+                        
+                        <!-- Das Einlesen der Restdaten in der Zeile, die der ersten Klammer folgen  -->
+                        <symbol identifier="rest5" length="1" multiple="true" interpretation="ASCII"  >
+                            <nonValidValues>
+                                <value>CR</value>
+                                <value>LF</value>
+                            </nonValidValues>
+                        </symbol>
+                        
+                    </item>
+                    
+                    
+                    <symbol identifier="rgbPalette" name="rgbPalette" length="0" interpretation="uint8"/>    <!-- Element Namens 'rgbPalette' wird erstellt-->
+                    <processing type="pushXCEL" xcelRef="rgbPalette">    <!-- auf Element 'rgbPalette' soll  pushXCEL-Processing angewendet werden, d.h. ???
+                                                                                                              -->
+                        <processingMethod name="setValue">                    <!-- pushXCEL-Processing heist hier setValue. d.h. Wertzuweisung-->
+                            <param valueRef="rgbPalette_value_n"/>            <!-- der Wert DES ELEMENTS  'rgbPalette_value_n'  wird dem Element 'rgbPalette' zugewiwesen. -->
+                            <param value=" "/>                                            <!-- der Wert '' wird dem Element 'rgbPalette' zugewiwesen.-->
+                        </processingMethod>
+                    </processing>
+                    
+                </item>
+                
+                
+                
+                <!-- Resolution -->
+                <item identifier="Resolution" xsi:type="structuringItem" >
+                    
+                    <symbol 
+                        identifier="Resolution_Symbol"  length="11"   interpretation="ASCII" value="Resolution:"
+                    />
+                    
+                    <item identifier="ResolutionX" xsi:type="definitionItem">
+                        <symbol identifier="ResolutionX_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                            <!-- 
+                                Sie kann auch fehlen, z.B in bmp
+                                Resolution: 42.51x42.51 in LAND.bmp.img
+                                Resolution: 180x180 in  .jpg.img
+                                ??!! Korrektur
+                            -->
+                            <validValues>
+                                <startRange>0</startRange>
+                                <endRange>9</endRange>
+                            </validValues>
+                        </symbol>
+                        <name>resolutionX</name>
+                    </item>
+                    
+                                        
+                     <symbol identifier="item_x2" length="1" value="120"  />
+                        
+                     <item identifier="ResolutionY" xsi:type="definitionItem">
+                        <symbol identifier="ResolutionY_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                            <validValues>
+                                <startRange>0</startRange>
+                                <endRange>9</endRange>
+                            </validValues>
+                        </symbol>
+                        <name>resolutionY</name>
+                     </item>
+                                      
+                </item>
+                
+                <!-- resolutionUnit -->
+                <item identifier="Units" xsi:type="structuringItem">
+                    
+                    <symbol 
+                        identifier="Units_Symbol"  length="7"   interpretation="ASCII" value="Units: "
+                    />
+                    
+                    <item identifier="resolutionUnit_item" xsi:type="definitionItem"  multiple="false" order="choice">
+                        
+                        <symbol identifier="resolutionUnit_value" interpretation="ASCII"
+                            originalName="resolutionUnit">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">13</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>inch</valueLabel>
+                                <value>PixelsPerInch</value>
+                            </valueInterpretation>
+                        </symbol>
+                        
+                        <symbol identifier="resolutionUnit_value2" interpretation="ASCII" 
+                            originalName="resolutionUnit">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">19</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>centimeter</valueLabel>
+                                <value>PixelsPerCentimeter</value>
+                            </valueInterpretation>
+                        </symbol>
+                        
+                        <symbol identifier="resolutionUnit_value3" interpretation="ASCII"
+                            originalName="resolutionUnit">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">9</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>undefined</valueLabel>
+                                <value>Undefined</value>
+                            </valueInterpretation>
+                        </symbol>
+                        
+                        <name>resolutionUnit</name>
+                     </item>
+                    
+                </item>
+                
+               
+                <!-- fileSize -->
+                <!-- bmp 
+                    Beispiele:     97.4707kb
+                                       232b
+                -->
+                <item identifier="Filesize" xsi:type="structuringItem">
+                    
+                    <symbol 
+                        identifier="Filesize_Symbol"  length="9"   interpretation="ASCII" value="Filesize:"
+                    />
+                    
+                    <item identifier="Filesize_value" xsi:type="definitionItem">
+                        <symbol identifier="FilesizeValue_Symbol" length="1" multiple="true" interpretation="ASCII"  >
+                            <nonValidValues>
+                                <value>CR</value>
+                                <value>LF</value>                            
+                            </nonValidValues>
+                        </symbol>
+                        <name>fileSize</name>
+                    </item>
+                    
+                </item>
+                
+                
+                <!-- interlace-->
+                <!-- png -->
+                <item identifier="interlace" xsi:type="structuringItem">
+                    
+                    <symbol 
+                        identifier="interlace_Symbol"  length="10"   interpretation="ASCII" value="Interlace:"
+                    />
+                    
+         
+                   <item identifier="interlace_value" xsi:type="definitionItem"  multiple="false" order="choice">
+                       
+                       <symbol identifier="interlaceValue1_Symbol" interpretation="ASCII" >
+                           <range>
+                               <startposition xsi:type="sequential"/>
+                               <length xsi:type="fixed">4</length>
+                           </range>
+                           <valueInterpretation>
+                               <valueLabel>noInterlace</valueLabel>
+                               <value>None</value>
+                           </valueInterpretation>
+                       </symbol>
+                       
+                       <symbol identifier="interlaceValue2_Symbol" interpretation="ASCII">
+                           <range>
+                               <startposition xsi:type="sequential"/>
+                               <length xsi:type="fixed">4</length>
+                           </range>
+                           <valueInterpretation>
+                               <valueLabel>PNG</valueLabel><!-- richtige Interpretation? png ->adam7  ? -->
+                               <value>PNG</value>
+                           </valueInterpretation>
+                       </symbol>
+                       
+                        <name>interlace</name>
+                        <!-- in XCDL wird nicht angezeigt, da diese property nicht zu wichtigen properties zählt-->
+                    </item>
+                    
+                </item>
+                
+                
+                <!-- backgroundColour brauchen wir nicht!?-->
+                
+                
+                <!-- compression-->
+                <!-- Choices are: None, BZip, Fax, Group4, JPEG, JPEG2000, Lossless, LZW, RLE or Zip.
+                
+                -->
+                <item identifier="compression" xsi:type="structuringItem">
+                    
+                    <symbol 
+                        identifier="compression_Symbol"  length="12"   interpretation="ASCII" value="Compression:"
+                    />
+                    
+                    <item identifier="compression_item" xsi:type="structuringItem"  multiple="false" order="choice">
+                         
+                         
+                        <symbol identifier="compression_None" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>uncompressed</valueLabel>
+                                <value>None</value>
+                            </valueInterpretation>
+                            <name>compression</name>
+                        </symbol>
+                         
+                        <symbol identifier="compression_Undefined" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">9</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>undefined</valueLabel>
+                                <value>Undefined</value>
+                            </valueInterpretation>
+                            <name>compression</name>
+                        </symbol>
+                        
+                        <symbol identifier="compression_BZip" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">7</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>BZip</valueLabel>
+                                <value>BZip</value>
+                            </valueInterpretation>
+                            <name>compression</name>
+                        </symbol>
+                        
+                        <symbol identifier="compression_Zip" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">3</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>zlibDeflateInflate</valueLabel>
+                                <value>Zip</value>
+                            </valueInterpretation>
+                            <name>compression</name>
+                        </symbol>
+                       
+                        <symbol identifier="compression_Fax" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">9</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>Fax</valueLabel>
+                                <value>Fax</value>
+                            </valueInterpretation>
+                            <name>compression</name>
+                        </symbol>
+                        
+                        <symbol identifier="compression_Group4" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">10</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>Group4</valueLabel>
+                                <value>Group4</value>
+                            </valueInterpretation>
+                            <name>compression</name>
+                        </symbol>
+                        
+                        <symbol identifier="compression_JPEG" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">10</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>JPEG</valueLabel>
+                                <value>JPEG</value>
+                            </valueInterpretation>
+                            <name>compression</name>
+                        </symbol>
+                        
+                        <symbol identifier="JPEG2000" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">10</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>JPEG2000</valueLabel>
+                                <value>JPEG2000</value>
+                            </valueInterpretation>
+                            <name>compression</name>
+                        </symbol>
+                        
+                        <symbol identifier="Lossless" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">10</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>Lossless</valueLabel>
+                                <value>Lossless</value>
+                            </valueInterpretation>
+                            <name>compression</name>
+                        </symbol>
+                        
+                        <symbol identifier="LZW" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">10</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>LZW</valueLabel>
+                                <value>LZW</value>
+                            </valueInterpretation>
+                            <name>compression</name>
+                        </symbol>
+                        
+                        <symbol identifier="RLE" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">10</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>RLE</valueLabel>
+                                <value>RLE</value>
+                            </valueInterpretation>
+                            <name>compression</name>
+                        </symbol>
+                        
+                    </item>
+                    
+                </item>
+              
+                
+                <!-- orientation -->
+                <!--  Beispiele:
+                    Diese Werte können vom ImageMagick gesetzt werden.
+                    TopLeft
+                    TopRight
+                    BottomRight
+                    BottomLeft
+                    LeftTop
+                    RightTop
+                    RightBottom                  
+                    leftBottom
+                    LeftBottom
+                 -->
+                <item identifier="orientation" xsi:type="structuringItem">
+                    
+                    <symbol 
+                        identifier="orientation_Symbol"  length="12"   interpretation="ASCII" value="Orientation:"
+                    />
+                    
+                    <item identifier="orientation_item" xsi:type="definitionItem"  multiple="false" order="choice">
+                                          
+                        <symbol identifier="orientation_value10" interpretation="ASCII" >
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">7</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>topLeft</valueLabel>
+                                <value>TopLeft</value>
+                            </valueInterpretation>
+                        </symbol>
+                        
+                        <symbol identifier="orientation_value20" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">8</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>topRight</valueLabel>
+                                <value>TopRight</value>
+                            </valueInterpretation>
+                        </symbol>
+                        
+                        <symbol identifier="orientation_value30" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">11</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>bottomRight</valueLabel>
+                                <value>BottomRight</value>
+                            </valueInterpretation>
+                        </symbol>
+                        
+                        <symbol identifier="orientation_value40" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">10</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>bottomLeft</valueLabel>
+                                <value>BottomLeft</value>
+                            </valueInterpretation>
+                        </symbol>
+                        
+                        <symbol identifier="orientation_value50" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">7</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>leftTop</valueLabel>
+                                <value>LeftTop</value>
+                            </valueInterpretation>
+                        </symbol>
+                        
+                        <symbol identifier="orientation_value60" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">8</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>rightTop</valueLabel>
+                                <value>RightTop</value>
+                            </valueInterpretation>
+                        </symbol>
+                        
+                        <symbol identifier="orientation_value70" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">11</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>rightBottom</valueLabel>
+                                <value>RightBottom</value>
+                            </valueInterpretation>
+                        </symbol>
+                        
+                        <symbol identifier="orientation_value80" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">10</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>leftBottom</valueLabel>
+                                <value>LeftBottom</value>
+                            </valueInterpretation>
+                        </symbol>
+                                                
+                        <symbol identifier="orientation_value2" interpretation="ASCII">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">9</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>undefined</valueLabel>
+                                <value>Undefined</value>
+                            </valueInterpretation>
+                        </symbol>
+                        
+                        <name>orientation</name>
+                    </item>
+                    
+                </item>
+                
+                
+                <!-- signature -->
+                <!--in XCDL  nicht angezeigt.-->
+                <item identifier="signature" xsi:type="structuringItem">
+                    
+                    <symbol 
+                        identifier="signature_Symbol"  length="10"   interpretation="ASCII" value="Signature:"
+                    />
+                    
+                    <item identifier="signature_value" xsi:type="definitionItem">
+                        <symbol identifier="signatureValue_Symbol" length="1" multiple="true" interpretation="ASCII"  >
+                            <nonValidValues>
+                                <value>CR</value>
+                                <value>LF</value>                            
+                            </nonValidValues>
+                        </symbol>
+                        <name>signature</name>
+                    </item>
+                    
+                </item>
+                
+                
+                <!--  Rows/Strip-->
+                <!--tiff, in XCDL  nicht angezeigt.-->
+                <item identifier="RowsStrip" xsi:type="structuringItem" >
+                    
+                    <symbol 
+                        identifier="RowsStrip_Symbol" multiple="true" value="Tiff:rows-per-strip:" length="20" interpretation="ASCII"
+                    />
+                    
+                    <item identifier="RowsStripValue" xsi:type="definitionItem">
+                        <symbol identifier="RowsStripValue_Symbol" length="1" multiple="true" interpretation="ASCII" >
+                            <validValues>
+                                <startRange>0</startRange>
+                                <endRange>9</endRange>
+                            </validValues>
+                        </symbol>
+                        <name>rowsPerStrip</name>
+                    </item>   
+                    
+                </item>
+                
+                
+                <!-- default -->
+                <item identifier="default" xsi:type="structuringItem">                   
+                                    
+                    <symbol identifier="default_Symbol" length="1" multiple="true" interpretation="ASCII"  >
+                        <nonValidValues>
+                            <value>CR</value>
+                            <value>LF</value>
+                        </nonValidValues>
+                        <name>undefinedData</name>
+                    </symbol>
+                    
+                </item>
+                        
+            </item>
+
+
+        </item>
+        
+    </formatDescription>
+    <postProcessing></postProcessing>
+</XCELDocument>
+

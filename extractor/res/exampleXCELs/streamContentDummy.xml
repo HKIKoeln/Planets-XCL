@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<item identifier="i0" xsi:type="structuringItem" order="sequence">
+    <symbol identifier="any_symbol_except_e" interpretation="ASCII" multiple="true">
+        <range>
+            <startposition xsi:type="sequential"/>
+            <length xsi:type="fixed">1</length>
+        </range>
+        <nonValidValues> 
+            <value>e</value> 
+        </nonValidValues>          
+    </symbol>
+    <item identifier="i1" xsi:type="structuringItem" order="sequence">
+        <item identifier="i2" xsi:type="structuringItem" order="choice">
+            <property identifier="choice_endstream"  interpretation="ASCII">
+                <range>
+                <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">9</length>
+                </range>
+                <value>endstream</value>
+            </property>   
+            <item identifier="i3" xsi:type="structuringItem" order="sequence">
+                <symbol identifier="!en_!.e" matchingBehaviour="regexp" interpretation="ASCII" multiple="true">
+                    <range>
+                        <startposition xsi:type="sequential"/>
+                        <length xsi:type="fixed">2</length>
+                    </range>
+                    <nonValidValues> 
+                        <value>en</value>
+                        <value>.e</value> 
+                    </nonValidValues>          
+                </symbol>
+                <item identifier="choice_next1" xsi:type="structuringItem" order="choice">
+                    <item identifier="choice_endstream_OR_.enstream" xsi:type="structuringItem" order="choice">
+                        <symbol identifier="choice_.endstream"  interpretation="ASCII" matchingBehaviour="regexp">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">10</length>
+                            </range>
+                            <value>.endstream</value>
+                        </symbol> 
+                        <symbol identifier="choice_endstream"  interpretation="ASCII" matchingBehaviour="regexp">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">9</length>
+                            </range>
+                            <value>endstream</value>
+                        </symbol>   
+                    </item>
+                    <item identifier="choice_nextItem" xsi:type="structuringItem" order="sequence">
+                        <symbol identifier="!end_!.en_!..e" matchingBehaviour="regexp" interpretation="ASCII" multiple="true">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">3</length>
+                        </range>
+                        <nonValidValues> 
+                            <value>..e</value>
+                            <value>.en</value> 
+                            <value>end</value>
+                        </nonValidValues>          
+                        </symbol>
+                        <item identifier="choice_next2" xsi:type="structuringItem" order="choice">
+                            <item identifier="choice_endstream_OR_.endstream_OR_..endstream" xsi:type="structuringItem" order="choice">
+                                <symbol identifier="choice_..endstream"  interpretation="ASCII" matchingBehaviour="regexp">
+                                    <range>
+                                        <startposition xsi:type="sequential"/>
+                                        <length xsi:type="fixed">11</length>
+                                    </range>
+                                    <value>..endstream</value>
+                                </symbol> 
+                                <symbol identifier="choice_.endstream"  interpretation="ASCII" matchingBehaviour="regexp">
+                                    <range>
+                                        <startposition xsi:type="sequential"/>
+                                        <length xsi:type="fixed">10</length>
+                                    </range>
+                                    <value>.endstream</value>
+                                </symbol>
+                                <symbol identifier="choice_endstream"  interpretation="ASCII" matchingBehaviour="regexp">
+                                    <range>
+                                        <startposition xsi:type="sequential"/>
+                                        <length xsi:type="fixed">9</length>
+                                    </range>
+                                    <value>endstream</value>
+                                </symbol>
+                           </item>      
+                            <item identifier="choice_next3" xsi:type="structuringItem" order="sequence">
+                                <symbol identifier="!ends_!.end_!..en_!...e" matchingBehaviour="regexp" interpretation="ASCII" multiple="true">
+                                    <range>
+                                        <startposition xsi:type="sequential"/>
+                                        <length xsi:type="fixed">4</length>
+                                    </range>
+                                    <nonValidValues> 
+                                        <value>...e</value>
+                                        <value>..en</value> 
+                                        <value>.end</value>
+                                        <value>ends</value>
+                                    </nonValidValues>          
+                                </symbol>
+                                <item identifier="endOfStream" xsi:type="structuringItem" order="choice">
+                                    <symbol identifier="alt1" matchingBehaviour="regexp" interpretation="ASCII">
+                                        <range>
+                                            <startposition xsi:type="sequential"/>
+                                            <length xsi:type="fixed">8</length>
+                                        </range>                                    
+                                        <value>...endst</value>
+                                    </symbol>
+                                    <symbol identifier="alt2" matchingBehaviour="regexp"  interpretation="ASCII">
+                                        <range>
+                                            <startposition xsi:type="sequential"/>
+                                            <length xsi:type="fixed">7</length>
+                                        </range>                                    
+                                        <value>..endst</value>
+                                    </symbol>
+                                    <symbol identifier="alt3" matchingBehaviour="regexp"  interpretation="ASCII">
+                                        <range>
+                                            <startposition xsi:type="sequential"/>
+                                            <length xsi:type="fixed">6</length>
+                                        </range>                                    
+                                        <value>.endst</value>
+                                    </symbol> 
+                                    <symbol identifier="alt4"  matchingBehaviour="regexp" interpretation="ASCII">
+                                        <range>
+                                            <startposition xsi:type="sequential"/>
+                                            <length xsi:type="fixed">5</length>
+                                        </range>                                    
+                                        <value>endst</value>
+                                    </symbol>
+                                </item>                         
+                            </item>    
+                        </item>                            
+                    </item>
+                 </item>   
+             </item>   
+        </item>  
+    </item>    
+</item>

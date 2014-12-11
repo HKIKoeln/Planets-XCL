@@ -1,0 +1,2162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XCELDocument xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl
+                                schemas/XCELImageExtension.xsd">
+
+
+
+
+    <preProcessing>
+        
+        <item xsi:type="structuringItem" identifier="pre1" order="sequence">
+         
+            <!--setByteOrder/bigEndian: All integers that require more than one byte shall be in network byte order (as illustrated in figure 7.1): 
+                the most significant byte comes first, then the less significant bytes in descending order of significance 
+                (MSB LSB for two-byte integers, MSB B2 B1 LSB for four-byte integers). The highest bit (value 128) of a byte is 
+                numbered bit 7; the lowest bit (value 1) is numbered bit 0. Values are unsigned unless otherwise noted. 
+                Values explicitly noted as signed are represented in two's complement notation.
+                
+                PNG four-byte unsigned integers are limited to the range 0 to (2^31)-1 to accommodate languages that have 
+                difficulty with unsigned four-byte values. Similarly PNG four-byte signed integers are limited to the range
+                -(2^31-1) to (2^31)-1 to accommodate languages that have difficulty with the value -2^31.  
+                For further information see: http://www.w3.org/TR/PNG/#7Integers-and-byte-order-->
+            
+        <processing type="pushXCEL" xcelRef="pngRootItem">
+            <processingMethod name="setByteOrder">
+                <param value="bigEndian"/>
+            </processingMethod>
+        </processing>
+            
+        </item>
+        
+    </preProcessing>
+
+
+    <formatDescription>
+
+        <item identifier="pngRootItem" originalName="pngFile" xsi:type="structuringItem"
+            order="sequence">
+
+
+            <processing type="pushXCEL" xcelRef="pngRootItem">
+                <processingMethod name="setByteOrder">
+                    <param value="bigEndian"/>
+                </processingMethod>
+            </processing>
+          
+            <!-- signature: The first eight bytes of a PNG datastream always contain the following (decimal) values:
+                
+                137 80 78 71 13 10 26 10
+                
+                This signature indicates that the remainder of the datastream contains a single PNG image, 
+                consisting of a series of chunks beginning with an IHDR chunk and ending with an IEND chunk. -->
+            <property identifier="signatureProperty" originalName="signature" interpretation="uint8">
+                <range>
+                    <startposition xsi:type="fixed">0</startposition>
+                    <length xsi:type="fixed">8</length>
+                </range>
+                <value>137 80 78 71 13 10 26 10</value>
+                <name>signature</name>
+            </property>
+            
+            <!-- ***************************IHDR-Chunk (Image Header)************************************** -->
+            
+            <!-- Beginning of IHDR-Chunk (Image Header) :
+                The four-byte chunk type field contains the decimal values
+                73 72 68 82
+                The IHDR chunk shall be the first chunk in the PNG datastream. It contains:
+                Width 	4 bytes
+                Height 	4 bytes
+                Bit depth 	1 byte
+                Colour type 	1 byte
+                Compression method 	1 byte
+                Filter method 	1 byte
+                Interlace method 	1 byte
+                For further information see: http://www.w3.org/TR/PNG/#11IHDR  -->
+            <item identifier="pngheader" originalName="IHDR" xsi:type="structuringItem">
+                
+                <!--Length: A four-byte unsigned integer giving the number of bytes in the chunk's data field. 
+                    The length counts only the data field, not itself, the chunk type, or the CRC. Zero is a valid length. 
+                    Although encoders and decoders should treat the length as unsigned, its value shall not exceed (2^31)-1 bytes. 
+                    For further information see: http://www.w3.org/TR/PNG/#5Chunk-layout -->
+                <symbol identifier="ID01_I01_S01" originalName="chunkDataLength">
+                    <range>
+                        <startposition xsi:type="fixed">8</startposition>
+                        <length xsi:type="fixed">4</length>
+                    </range>
+                    <name>dataBlockLength</name>
+                </symbol>
+                
+                <!-- Chunk Type: A sequence of four bytes defining the chunk type. Each byte of a chunk type is restricted to the 
+                    decimal values 65 to 90 and 97 to 122. These correspond to the uppercase and lowercase ISO 646 letters 
+                    (A-Z and a-z) respectively for convenience in description and examination of PNG datastreams. Encoders and 
+                    decoders shall treat the chunk types as fixed binary values, not character strings. For example, it would not be 
+                    correct to represent the chunk type IDAT by the equivalents of those letters in the UCS 2 character set. 
+                    For further information see: http://www.w3.org/TR/PNG/#5Chunk-layout -->
+                <property identifier="ID01_I01_S02" originalName="chunkType">
+                    <range>
+                        <startposition xsi:type="fixed">12</startposition>
+                        <length xsi:type="fixed">4</length>
+                    </range>
+                    <value>73 72 68 82</value>
+                    <name>dataBlockType</name>
+                </property>
+                
+                <!-- Chunk Data: The data bytes appropriate to the chunk type, if any. This field can be of zero length. 
+                    For further information see: http://www.w3.org/TR/PNG/#5Chunk-layout  -->
+                <item xsi:type="structuringItem" identifier="ID01_I01_I01" originalName="chunkData" >
+                    
+                    <!-- Width and height give the image dimensions in pixels. They are PNG four-byte unsigned integers. 
+                    Zero is an invalid value. -->
+                    <symbol identifier="ID01_I01_I01_S01" originalName="width"
+                        interpretation="uint32">
+                        <range>
+                            <startposition xsi:type="fixed">16</startposition>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>width</name>
+                    </symbol>
+                    
+                    <symbol identifier="ID01_I01_I01_S02" originalName="height"
+                        interpretation="uint32">
+                        <range>
+                            <startposition xsi:type="fixed">20</startposition>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>height</name>
+                    </symbol>
+                    
+                    <!-- Bit depth is a single-byte integer giving the number of bits per sample or per palette index (not per pixel). 
+                        Valid values are 1, 2, 4, 8, and 16, although not all values are allowed for all colour types. -->
+                    <symbol identifier="ID01_I01_I01_S03" originalName="bitDepth">
+                        <range>
+                            <startposition xsi:type="fixed">24</startposition>
+                            <length xsi:type="fixed">1</length>
+                        </range>
+                        <validValues>
+                            <value>1</value>
+                            <value>2</value>
+                            <value>4</value>
+                            <value>6</value>
+                            <value>8</value>
+                            <value>16</value>
+                        </validValues>
+                        <name>bitsPerSample</name>
+                    </symbol>
+                    <!-- Colour type is a single-byte integer that defines the PNG image type. Valid values are 0, 2, 3, 4, and 6.
+                        Bit depth restrictions for each colour type are imposed to simplify implementations and to prohibit combinations 
+                        that do not compress well. The allowed combinations are defined in Table 11.1 (http://www.w3.org/TR/PNG/#table111)
+                        
+                        The sample depth is the same as the bit depth except in the case of indexed-colour PNG images (colour type 3), 
+                        in which the sample depth is always 8 bits-->
+                    <symbol identifier="ID01_I01_I01_S04" originalName="colourType">
+                        <range>
+                            <startposition xsi:type="fixed">25</startposition>
+                            <length xsi:type="fixed">1</length>
+                        </range>
+                        <valueInterpretation>
+                            <valueLabel>greyscale</valueLabel>
+                            <value>0</value>
+                            <valueLabel>truecolour</valueLabel>
+                            <value>2</value>
+                            <valueLabel>palette</valueLabel>
+                            <value>3</value>
+                            <valueLabel>greyscaleAlpha</valueLabel>
+                            <value>4</value>
+                            <valueLabel>truecolourAlpha</valueLabel>
+                            <value>6</value>
+                        </valueInterpretation>
+                        <name>imageType</name>
+                    </symbol>
+                    
+                    <!-- Compression method is a single-byte integer that indicates the method used to compress the image data. 
+                        Only compression method 0 (deflate/inflate compression with a sliding window of at most 32768 bytes) is defined 
+                        in this International Standard. All conforming PNG images shall be compressed with this scheme. 
+                        For further information see: http://www.w3.org/TR/PNG/#10Compression -->
+                    <symbol identifier="ID01_I01_I01_S05" originalName="compressionMethod">
+                        <range>
+                            <startposition xsi:type="fixed">26</startposition>
+                            <length xsi:type="fixed">1</length>
+                        </range>
+                        <valueInterpretation>
+                            <valueLabel>zlibDeflateInflate</valueLabel>
+                            <value>0</value>
+                        </valueInterpretation>
+                        <name>compression</name>
+                    </symbol>
+                    
+                    <!-- Filter method is a single-byte integer that indicates the preprocessing method applied to the image data before compression. 
+                        Only filter method 0 (adaptive filtering with five basic filter types) is defined in this International Standard. 
+                        For further information see: http://www.w3.org/TR/PNG/#9Filters-->
+                    <symbol identifier="ID01_I01_I01_S06" originalName="filterMethod">
+                        <range>
+                            <startposition xsi:type="fixed">27</startposition>
+                            <length xsi:type="fixed">1</length>
+                        </range>
+                        <valueInterpretation>
+                            <valueLabel>adaptive</valueLabel>
+                            <value>0</value>
+                        </valueInterpretation>
+                        <name>filter</name>
+                    </symbol>
+                    
+                    <!-- Interlace method is a single-byte integer that indicates the transmission order of the image data. 
+                        Two values are defined in this International Standard: 0 (no interlace) or 1 (Adam7 interlace).
+                        For further information see: http://www.w3.org/TR/PNG/#8Interlace-->
+                    <symbol identifier="ID01_I01_I01_S07" originalName="interlaceMethod">
+                        <range>
+                            <startposition xsi:type="fixed">28</startposition>
+                            <length xsi:type="fixed">1</length>
+                        </range>
+                        <valueInterpretation>
+                            <valueLabel>adam7</valueLabel>
+                            <value>1</value>
+                            <valueLabel>noInterlace</valueLabel>
+                            <value>0</value>
+                        </valueInterpretation>
+                        <name>interlace</name>
+                    </symbol>
+                </item>
+                <!-- end of ChunkData -->
+                
+                <!-- Cyclic Redundancy Code. A four-byte CRC (Cyclic Redundancy Code) calculated on the preceding bytes in the chunk, 
+                    including the chunk type field and chunk data fields, but not including the length field. The CRC can be used to check 
+                    for corruption of the data. The CRC is always present, even for chunks containing no data. 
+                    For further information see: http://www.w3.org/TR/PNG/#5CRC-algorithm-->
+                <symbol identifier="ID01_I01_S03" originalName="crc">
+                    <range>
+                        <startposition xsi:type="fixed">29</startposition>
+                        <length xsi:type="fixed">4</length>
+                    </range>
+                    <name>checksum</name>
+                </symbol>
+            </item>
+
+
+            <item xsi:type="structuringItem" identifier="IDC02" order="all" optional="true">
+                <!-- end of IHDR-Chunk -->
+
+                <!--***************************IDAT-Chunk (Image Data)**************************************-->
+               <!-- The four-byte chunk type field contains the decimal values
+
+					73 68 65 84
+
+					The IDAT chunk contains the actual image data which is the output stream of the 
+					compression algorithm. See clause 9: Filtering and clause 10: Compression for 
+					details.
+
+					There may be multiple IDAT chunks; 
+					if so, they shall appear consecutively with no other intervening chunks. 
+					The compressed datastream is then the concatenation of the contents of the data 
+					fields of all the IDAT chunks.--> 
+
+		    <item xsi:type="structuringItem" identifier="IDI02" originalName="IDAT"
+			  multiple="true">
+			    <symbol identifier="IDI02_S01" originalName="chunkDataLength"
+				    interpretation="uint32">
+				    <range>
+				        <startposition xsi:type="sequential"/>
+					    <length xsi:type="fixed">4</length>
+				    </range>
+				    <name>dataBlockLength</name>
+			    </symbol>
+			    
+			    <property identifier="IDI02_S02" originalName="ChunkType" interpretation="ASCII" optional="false">
+				    <range>
+					    <startposition xsi:type="sequential"/>
+					    <length xsi:type="fixed">4</length>
+				    </range>
+				    <value>IDAT</value>
+				    <name>dataBlockType</name>
+			    </property>
+			    
+			    <processing type="pushXCEL" xcelRef="normDataSymbol">
+				    <processingMethod name="setLength">
+					    <param valueRef="IDI02_S01"/>
+				    </processingMethod>
+			    </processing>
+			    
+			    <symbol identifier="normDataSymbol" interpretation="uint8">
+				    <range>
+					    <startposition xsi:type="sequential"/>
+					    <length xsi:type="processed"/>
+				    </range>
+				    <name>normData</name>
+			    </symbol>
+			    
+			    <!-- end of Chunk Data -->
+			    <symbol identifier="IDI02_S04" originalName="crc">
+				    <range>
+					    <startposition xsi:type="sequential"/>
+					    <length xsi:type="fixed">4</length>
+				    </range>
+				    <name>checksum</name>
+			    </symbol>
+			    
+		    </item>
+                <!-- end of IDAT-Chunk -->
+
+                <!--***************************gAMA-Chunk (Image Gama)**************************************-->
+
+				<!-- The four-byte chunk type field contains the decimal values
+
+					103 65 77 65
+
+					The gAMA chunk specifies the relationship between the image samples and the 
+					desired display output intensity. Gamma is defined in 3.1.20: gamma.
+					In fact specifying the desired display output intensity is insufficient. 
+					It is also necessary to specify the viewing conditions under which the output 
+					is desired. For gAMA these are the reference viewing conditions of the sRGB 
+					specification [IEC 61966-2-1], which are based on ISO 3664 [ISO-3664]. 
+					Adjustment for different viewing conditions is normally handled by a Colour 
+					Management System. If the adjustment is not performed, the error is usually small. 
+					Applications desiring high colour fidelity may wish to use an sRGB chunk or iCCP chunk.
+					The gAMA chunk contains:
+					Image gamma 	4 bytes
+					The value is encoded as a four-byte PNG unsigned integer, representing gamma times 100000.
+					EXAMPLE A gamma of 1/2.2 would be stored as the integer 45455.
+					See 12.2 (in PNG-Specification): Encoder gamma handling and 13.13: Decoder gamma 
+					handling for more information.
+					An sRGB chunk or iCCP chunk, when present and recognized, overrides the gAMA chunk.-->
+
+                <item xsi:type="structuringItem" optional="true" identifier="IDI03" originalName="gAMA">
+                    <property identifier="IDI03_S01" originalName="chunkDataLength"
+                        interpretation="uint32">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <value>4</value>
+                        <name>dataBlockLength</name>
+                    </property>
+                    <property identifier="IDI03_S02" originalName="ChunkType" interpretation="ASCII" optional="false">
+                        <range>
+                            <startposition xsi:type="sequential"> </startposition>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <value>gAMA</value>
+                        <name>dataBlockType</name>
+                    </property>
+                    <item xsi:type="structuringItem" identifier="IDI03_I01" originalName="chunkData">
+                        <symbol identifier="IDI03_I01_S01" originalName="imageGamma"
+                            interpretation="uint32">
+                            <range>
+                                <startposition xsi:type="sequential"> </startposition>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <name>gamma</name>
+                        </symbol>
+                    </item>
+                    <!-- end of Chunk Data -->
+                    <symbol identifier="IDI03_S03" originalName="crc">
+                        <range>
+                            <startposition xsi:type="sequential"> </startposition>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>checksum</name>
+                    </symbol>
+                </item>
+                <!-- end of gAMA-Chunk -->
+		
+	
+                <!--***************************PLTE-Chunk (Palette)**************************************-->
+
+				<!-- The four-byte chunk type field contains the decimal values
+
+						80 76 84 69
+
+						The PLTE chunk contains from 1 to 256 palette entries, each a three-byte series of the form:
+						Red 	1 byte
+						Green 	1 byte
+						Blue 	1 byte
+						For more information see: http://www.w3.org/TR/PNG/#11PLTE-->
+
+                <item xsi:type="structuringItem" identifier="IDI04" optional="true"
+                    originalName="PLTE">
+
+                    <symbol identifier="IDI04_S01" originalName="chunkDataLength"
+                        interpretation="uint32">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>dataBlockLength</name>
+                    </symbol>
+
+                    <property identifier="IDI04_S02" originalName="ChunkType" interpretation="ASCII" optional="false">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+			<value>PLTE</value>
+                        <name>dataBlockType</name>
+                    </property>
+
+
+                    <processing type="pushXCEL" xcelRef="IDI04_I01_S01">
+                        <processingMethod name="setLength">
+                            <param valueRef="IDI04_S01"/>
+                        </processingMethod>
+                    </processing>
+
+                    <symbol identifier="IDI04_I01_S01" originalName="rgb">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="processed"/>
+                        </range>
+                        <name>rgbPalette</name>
+                    </symbol>
+
+                    <symbol identifier="IDI04_S03" originalName="crc">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>checksum</name>
+                    </symbol>
+                </item>
+                <!-- end of PLTE-Chunk -->
+
+
+                <!--***************************sBIT-Chunk (Significant bits)**************************************-->
+
+				<!-- The four-byte chunk type field contains the decimal values
+
+					115 66 73 84
+
+					To simplify decoders, PNG specifies that only certain sample depths may be used, 
+					and further specifies that sample values should be scaled to the full range of 
+					possible values at the sample depth. The sBIT chunk defines the original number of 
+					significant bits (which can be less than or equal to the sample depth). This allows 
+					PNG decoders to recover the original data losslessly even if the data had a sample 
+					depth not directly supported by PNG.
+					For more information see: http://www.w3.org/TR/PNG/#11sBIT -->
+
+                <item xsi:type="structuringItem" optional="true" identifier="IDI05"
+                    originalName="sBIT">
+
+                    <symbol identifier="IDI05_S01" originalName="chunkDataLength"
+                        interpretation="uint32">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>dataBlockLength</name>
+                    </symbol>
+
+                    <property identifier="IDI05_S02" originalName="ChunkType" interpretation="ASCII">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+			<value>sBIT</value>
+                        <name>dataBlockType</name>
+                    </property>
+
+                    <processing type="pushXCEL" xcelRef="sBitSymbol">
+                        <processingMethod name="setLength">
+                            <param valueRef="IDI05_S01"/>
+                        </processingMethod>
+                    </processing>
+
+                    <symbol identifier="sBitSymbol">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="processed"/>
+                        </range>
+                        <name>significantBits</name>
+                    </symbol>
+
+                    <symbol identifier="IDI05_S03" originalName="crc">
+                        <range>
+                            <startposition xsi:type="sequential"> </startposition>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>checksum</name>
+                    </symbol>
+
+                </item>
+                <!-- end of sBIT-Chunk -->
+
+
+                <!--******************tIME-Chunk (Image last modification time)********************************-->
+
+				<!-- The four-byte chunk type field contains the decimal values
+
+				116 73 77 69
+
+				The tIME chunk gives the time of the last image modification (not the time of initial image creation). It contains:
+				Year 	2 bytes (complete; for example, 1995, not 95)
+				Month 	1 byte (1-12)
+				Day 	1 byte (1-31)
+				Hour 	1 byte (0-23)
+				Minute 	1 byte (0-59)
+				Second 	1 byte (0-60) (to allow for leap seconds)
+
+				Universal Time (UTC) should be specified rather than local time.
+				The tIME chunk is intended for use as an automatically-applied time stamp 
+				that is updated whenever the image data are changed. -->
+
+                <item xsi:type="structuringItem" identifier="IDI06" optional="true"
+                    originalName="tIME">
+
+                    <property identifier="IDI06_S01" originalName="chunkDataLength"
+                        interpretation="uint32">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <value>7</value>
+                        <name>dataBlockLength</name>
+                    </property>
+
+                    <property identifier="IDI06_S02" originalName="ChunkType">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <value>116 73 77 69</value>
+                        <name>dataBlockType</name>
+                    </property>
+
+                    <item xsi:type="definitionItem" identifier="IDI06_I01_I01">
+                        <symbol identifier="IDI06_I01_I01_S01" originalName="year"
+                            interpretation="uint16">
+                            <range>
+                                <startposition xsi:type="sequential"> </startposition>
+                                <length xsi:type="fixed">2</length>
+                            </range>
+                            <name>yyear</name>
+                        </symbol>
+                        <symbol identifier="IDI06_I01_I01_S02" originalName="month">
+                            <range>
+                                <startposition xsi:type="sequential"> </startposition>
+                                <length xsi:type="fixed">1</length>
+                            </range>
+                            <name>month</name>
+                        </symbol>
+                        <symbol identifier="IDI06_I01_I01_S03" originalName="day">
+                            <range>
+                                <startposition xsi:type="sequential"> </startposition>
+                                <length xsi:type="fixed">1</length>
+                            </range>
+                            <name>day</name>
+                        </symbol>
+                        <symbol identifier="IDI06_I01_I01_S04" originalName="hour">
+                            <range>
+                                <startposition xsi:type="sequential"> </startposition>
+                                <length xsi:type="fixed">1</length>
+                            </range>
+                            <name>hour</name>
+                        </symbol>
+                        <symbol identifier="IDI06_I01_I01_S05" originalName="minute">
+                            <range>
+                                <startposition xsi:type="sequential"> </startposition>
+                                <length xsi:type="fixed">1</length>
+                            </range>
+                            <name>minute</name>
+                        </symbol>
+                        <symbol identifier="IDI06_I01_I01_S06" originalName="second">
+                            <range>
+                                <startposition xsi:type="sequential"> </startposition>
+                                <length xsi:type="fixed">1</length>
+                            </range>
+                            <name>second</name>
+                        </symbol>
+                        <name>timeLastMod</name>
+                    </item>
+                    <!--end of imageItem timeLastMod -->
+
+                    <symbol identifier="IDI06_S03" originalName="crc">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>checksum</name>
+                    </symbol>
+                </item>
+                <!-- end of tIME-Chunk -->
+                 
+                <!--***************************bKGD-Chunk (Background colour)**************************************-->
+
+				<!--The four-byte chunk type field contains the decimal values
+
+					98 75 71 68
+
+					The bKGD chunk specifies a default background colour to present 
+					the image against. If there is any other preferred background, 
+					either user-specified or part of a larger page (as in a browser),
+					 the bKGD chunk should be ignored. The bKGD chunk contains:
+					Colour types 0 and 4
+					Greyscale 	2 bytes
+					Colour types 2 and 6
+					Red 	2 bytes
+					Green 	2 bytes
+					Blue 	2 bytes
+					Colour type 3
+					Palette index 	1 byte
+
+					For colour type 3 (indexed-colour), the value is the palette 
+					index of the colour to be used as background.
+
+					For colour types 0 and 4 (greyscale, greyscale with alpha), 
+					the value is the grey level to be used as background in the 
+					range 0 to (2bitdepth)-1. For colour types 2 and 6 (truecolour, 
+					truecolour with alpha), the values are the colour to be used as 
+					background, given as RGB samples in the range 0 to (2bitdepth)-1. 
+					In each case, for consistency, two bytes per sample are used 
+					regardless of the image bit depth. If the image bit depth is less 
+					than 16, the least significant bits are used and the others are 0.-->
+
+                <item xsi:type="structuringItem" identifier="IDI07" optional="true"
+                    originalName="bKGD" order="choice">
+                    
+                    <!-- choice 1 : greyscale--> 
+                    <item xsi:type="structuringItem" identifier="IDI07_C01">
+                        
+                        <property identifier="IDI07_C01_S01" originalName="chunkDataLength"
+                            interpretation="uint32">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <value>2</value>
+                            <name>dataBlockLength</name>
+                        </property>
+                        
+                        <property identifier="IDI07_C01_S02" originalName="ChunkType">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <value>98 75 71 68</value>
+                            <name>dataBlockType</name>
+                        </property>
+                        
+                        <symbol identifier="IDI07_C01_S03" interpretation="uint16">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">2</length>
+                            </range>
+                            <name>backgroundColour</name>
+                        </symbol>
+                        <symbol identifier="IDI07_C01_S04" originalName="crc">
+                            <range>
+                                <startposition xsi:type="sequential"> </startposition>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <name>checksum</name>
+                        </symbol>
+                    
+                    </item> <!-- choice 1 end -->
+                    <!-- end of backgroundcolor - greyscale definition-->
+                    
+                    <!-- choice 2 -->
+                    <item xsi:type="structuringItem" identifier="IDI07_C02" optional="true">
+                        
+                        <property identifier="IDI07_C02_S01" originalName="chunkDataLength"
+                            interpretation="uint32">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <value>6</value>
+                            <name>dataBlockLength</name>
+                        </property>
+                        
+                        <property identifier="IDI07_C02_S02" originalName="ChunkType">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <value>98 75 71 68</value>
+                            <name>dataBlockType</name>
+                        </property>
+                        
+                        <item xsi:type="definitionItem" identifier="IDI07_C02_I01">
+                            
+                            <symbol identifier="IDI07_C01_I01_S01"  interpretation="uint16">
+                                <range>
+                                    <startposition xsi:type="sequential"/>
+                                    <length xsi:type="fixed">2</length>
+                                </range>
+                                <name>truecolourRed</name>
+                            </symbol>
+                            
+                            <symbol identifier="IDI07_C01_I01_S02"  interpretation="uint16">
+                                <range>
+                                    <startposition xsi:type="sequential"/>
+                                    <length xsi:type="fixed">2</length>
+                                </range>
+                                <name>truecolourGreen</name>
+                            </symbol>
+                            
+                            <symbol identifier="IDI07_C01_I01_S03"  interpretation="uint16">
+                                <range>
+                                    <startposition xsi:type="sequential"/>
+                                    <length xsi:type="fixed">2</length>
+                                </range>
+                                <name>truecolourBlue</name>
+                            </symbol>
+                            <name>backgroundColour</name>
+                        </item>
+                        <!-- end of chunkData -->
+                        <symbol identifier="IDI07_C02_S03" originalName="crc">
+                            <range>
+                                <startposition xsi:type="sequential"> </startposition>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <name>checksum</name>
+                        </symbol>
+                    
+                    </item> <!-- choice 2 end --> 
+                    <!-- end of background Colour truecolor definition -->
+                    
+                    <!--  choice 3 -->
+                    <item xsi:type="structuringItem" identifier="IDI07_C03" optional="true">
+                        
+                        <property identifier="IDI07_C03_S01" originalName="chunkDataLength"
+                            interpretation="uint32">
+                            <range>
+                                <startposition xsi:type="sequential"> </startposition>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <value>1</value>
+                            <name>dataBlockLength</name>
+                        </property>
+                        
+                        <property identifier="IDI07_C03_S02" originalName="ChunkType">
+                            <range>
+                                <startposition xsi:type="sequential"> </startposition>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <value>98 75 71 68</value>
+                            <name>dataBlockType</name>
+                        </property>
+                        
+                        <symbol identifier="IDI07_C03_S03">
+                            <range>
+                                <startposition xsi:type="sequential"> </startposition>
+                                <length xsi:type="fixed">1</length>
+                            </range>
+                            <name>backgroundColour</name>
+                        </symbol>
+                        
+                        <symbol identifier="IDI07_C03_S04" originalName="crc">
+                            <range>
+                                <startposition xsi:type="sequential"> </startposition>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <name>checksum</name>
+                        </symbol>
+                                   
+                    </item>  <!-- choice 3 end -->
+                    <!-- end of background color index color definition -->
+                    
+                </item>
+                <!-- end of bKGD-Chunk -->
+                
+                <!--***************************hIST-Chunk (Image histogram)**************************************-->
+
+				<!-- The four-byte chunk type field contains the decimal values
+
+					104 73 83 84
+
+					The hIST chunk contains a series of two-byte (16-bit) unsigned integers:
+					Frequency 	2 bytes (unsigned integer)
+					...etc... 	 
+
+					The hIST chunk gives the approximate usage frequency of each 
+					colour in the palette. A histogram chunk can appear only when a 
+					PLTE chunk appears. If a viewer is unable to provide all the 
+					colours listed in the palette, the histogram may help it decide 
+					how to choose a subset of the colours for display.
+
+					There shall be exactly one entry for each entry in the PLTE chunk. 
+					Each entry is proportional to the fraction of pixels in the image 
+					that have that palette index; the exact scale factor is chosen by 
+					the encoder.
+
+					Histogram entries are approximate, with the exception that a 
+					zero entry specifies that the corresponding palette entry is not 
+					used at all in the image. A histogram entry shall be nonzero if 
+					there are any pixels of that colour.-->
+
+                <item xsi:type="structuringItem" identifier="IDI08" optional="true"
+                    originalName="hIST">
+
+                    <symbol identifier="IDI08_S01" originalName="chunkDataLength"
+                        interpretation="uint32">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>dataBlockLength</name>
+                    </symbol>
+
+                    <property identifier="IDI08_S02" originalName="ChunkType">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <value>104 73 83 84</value>
+                        <name>dataBlockType</name>
+                    </property>
+
+                    <processing type="pushXCEL" xcelRef="histogramSymbol">
+                        <processingMethod name="setLength">
+                            <param valueRef="IDI08_S01"/>
+                        </processingMethod>
+                    </processing>
+
+                    <symbol identifier="histogramSymbol">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">1</length>
+                        </range>
+                        <name>histogram</name>
+                    </symbol>
+
+                    <symbol identifier="IDI08_S03" originalName="crc">
+                        <range>
+                            <startposition xsi:type="sequential"> </startposition>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>checksum</name>
+                    </symbol>
+                </item>
+                <!-- end of hIST-Chunk -->
+                
+                <!--***************************tEXt-Chunk (Textual Data)**************************************-->
+
+				<!--The four-byte chunk type field contains the decimal values
+
+					116 69 88 116
+
+					Each tEXt chunk contains a keyword and a text string, in the format:
+					Keyword 	1-79 bytes (character string)
+					Null separator 	1 byte (null character)
+					Text string 	0 or more bytes (character string)
+
+					The keyword and text string are separated by a zero byte (null 
+					character). Neither the keyword nor the text string may contain 
+					a null character. The text string is not null-terminated (the 
+					length of the chunk defines the ending). The text string may be 
+					of any length from zero bytes up to the maximum permissible 
+					chunk size less the length of the keyword and null character 
+					separator.
+
+					The keyword indicates the type of information represented by 
+					the text string as described in 11.3.4.2: Keywords and text strings.
+
+					Text is interpreted according to the Latin-1 character set 
+					[ISO-8859-1]. The text string may contain any Latin-1 character. 
+					Newlines in the text string should be represented by a single 
+					linefeed character (decimal 10). Characters other than those 
+					defined in Latin-1 plus the linefeed character have no defined 
+					meaning in tEXt chunks. Text containing characters outside the 
+					repertoire of ISO/IEC 8859-1 should be encoded using the iTXt 
+					chunk.-->
+
+                <item xsi:type="structuringItem" identifier="IDI09" originalName="tEXt"
+                    optional="true" multiple="true">
+                    <symbol identifier="IDI09_S01" originalName="chunkDataLength" interpretation="uint32">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>dataBlockLength</name>
+                    </symbol>
+                    <property identifier="IDI09_S02" originalName="ChunkType">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <value>116 69 88 116</value>
+                        <name>dataBlockType</name>
+                    </property>
+
+                    <processing type="pullXCEL" xcelRef="textItem">
+                        <processingMethod name="setLength">
+                            <param valueRef="IDI09_S01"/>
+                        </processingMethod>
+                    </processing>
+
+                    <!-- end of Chunk Data -->
+                    <symbol identifier="IDI09_S03" originalName="crc">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>checksum</name>
+                    </symbol>
+                </item>
+                <!-- end of tEXt-Chunk -->
+                
+                <!-- ***************************tRNS-Chunk (Transparency)************************************** -->
+
+				<!--The four-byte chunk type field contains the decimal values
+
+					116 82 78 83
+
+					The tRNS chunk specifies either alpha values that are associated with palette entries (for indexed-colour images) or a single transparent colour (for greyscale and truecolour images). The tRNS chunk contains:
+					Colour type 0
+					Grey sample value 	2 bytes
+					Colour type 2
+					Red sample value 	2 bytes
+					Blue sample value 	2 bytes
+					Green sample value 	2 bytes
+					Colour type 3
+					Alpha for palette index 0 	1 byte
+					Alpha for palette index 1 	1 byte
+					...etc... 	1 byte
+					For more information see: http://www.w3.org/TR/PNG/#11tRNS -->
+
+                <item xsi:type="structuringItem" identifier="IDI12" optional="true"
+                    originalName="tRNS" order="sequence">
+
+                    <item xsi:type="structuringItem" identifier="IDI12_C01" order="choice">
+
+                        <item xsi:type="structuringItem" identifier="IDI12_C01_I01" optional="true">
+
+                            <property identifier="IDI12_C01_I01_S01" originalName="chunkDataLength" interpretation="uint32">
+                                <range>
+                                    <startposition xsi:type="sequential"/>
+                                    <length xsi:type="fixed">4</length>
+                                </range>
+                                <value>2</value>
+                                <name>dataBlockLength</name>
+                            </property>
+
+                            <property identifier="IDI12_C01_I01_S02" originalName="ChunkType">
+                                <range>
+                                    <startposition xsi:type="sequential"/>
+                                    <length xsi:type="fixed">4</length>
+                                </range>
+                                <value>116 82 78 83</value>
+                                <name>dataBlockType</name>
+                            </property>
+
+                            <item xsi:type="definitionItem" identifier="IDI12_C01_I01_I01">
+                                <symbol identifier="IDI12_C01_I01_S03">
+                                    <range>
+                                        <startposition xsi:type="sequential"/>
+                                        <length xsi:type="fixed">2</length>
+                                    </range>
+                                    <name>greyscale</name>
+                                </symbol>
+                                <name>transparency</name>
+                            </item>
+
+                        </item>
+                        <!-- end of transparency - greyscale definition-->
+
+                        <item xsi:type="structuringItem" identifier="IDI12_C01_I02" optional="true">
+
+                            <property identifier="IDI12_C01_I02_S01" originalName="chunkDataLength" interpretation="uint32">
+                                <range>
+                                    <startposition xsi:type="sequential"> </startposition>
+                                    <length xsi:type="fixed">4</length>
+                                </range>
+                                <value>6</value>
+                                <name>dataBlockLength</name>
+                            </property>
+
+                            <property identifier="IDI12_C01_I02_S02" originalName="ChunkType">
+                                <range>
+                                    <startposition xsi:type="sequential"> </startposition>
+                                    <length xsi:type="fixed">4</length>
+                                </range>
+                                <value>116 82 78 83</value>
+                                <name>dataBlockType</name>
+                            </property>
+
+                            <item xsi:type="structuringItem" identifier="IDI12_C01_I02_I01">
+                                <range>
+                                    <startposition xsi:type="sequential"/>
+                                    <length xsi:type="fixed">6</length>
+                                </range>
+
+                                <item xsi:type="definitionItem" identifier="IDI12_C01_I02_I01_I01">
+                                    <symbol identifier="IDI12_C01_I02_I01_S01">
+                                        <range>
+                                            <startposition xsi:type="sequential"> </startposition>
+                                            <length xsi:type="fixed">2</length>
+                                        </range>
+                                        <name>truecolourRed</name>
+                                    </symbol>
+                                    <symbol identifier="IDI12_C01_I02_I01_S02">
+                                        <range>
+                                            <startposition xsi:type="sequential"> </startposition>
+                                            <length xsi:type="fixed">2</length>
+                                        </range>
+                                        <name>truecolourGreen</name>
+                                    </symbol>
+                                    <symbol identifier="IDI12_C01_I02_I01_S03">
+                                        <range>
+                                            <startposition xsi:type="sequential"> </startposition>
+                                            <length xsi:type="fixed">2</length>
+                                        </range>
+                                        <name>truecolourBlue</name>
+                                    </symbol>
+                                    <name>transparency</name>
+                                </item>
+                            </item>
+                            <!-- end of chunkData -->
+                        </item>
+
+                        <!-- end of background Colour truecolor definition -->
+
+                        <item xsi:type="structuringItem" identifier="IDI12_C01_I03" optional="true">
+
+                            <symbol identifier="IDI12_C01_I03_S01" originalName="chunkDataLength" interpretation="uint32">
+                                <range>
+                                    <startposition xsi:type="sequential"> </startposition>
+                                    <length xsi:type="fixed">4</length>
+                                </range>
+                                <name>dataBlockLength</name>
+                            </symbol>
+
+                            <property identifier="IDI12_C01_I03_S02" originalName="ChunkType">
+                                <range>
+                                    <startposition xsi:type="sequential"> </startposition>
+                                    <length xsi:type="fixed">4</length>
+                                </range>
+                                <value>116 82 78 83</value>
+                                <name>dataBlockType</name>
+                            </property>
+
+                            <processing type="pushXCEL" xcelRef="transparencyItem">
+                                <processingMethod name="setLength">
+                                    <param valueRef="IDI12_C01_I03_S01"/>
+                                </processingMethod>
+                            </processing>
+
+                            <item xsi:type="structuringItem" identifier="transparencyItem"
+                                optional="true">
+                                <item xsi:type="definitionItem" identifier="IDI12_C01_I03_I01_I01">
+                                    <symbol identifier="IDI12_C01_I03_I01_S0" multiple="true">
+                                        <range>
+                                            <startposition xsi:type="sequential"/>
+                                            <length xsi:type="fixed">1</length>
+                                        </range>
+                                        <validValues>
+                                            <startRange>0</startRange>
+                                            <endRange>255</endRange>
+                                        </validValues>
+                                        <name>palette</name>
+                                    </symbol>
+                                    <name>transparency</name>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                    <!--end of unordered Item-->
+
+                    <symbol identifier="IDI12_S01" originalName="crc">
+                        <range>
+                            <startposition xsi:type="sequential"> </startposition>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>checksum</name>
+                    </symbol>
+                </item>
+                <!-- end of tRNS-Chunk -->
+
+                <!--*************cHRM-Chunk (Primary chromaticities and white point)**************************-->
+
+				<!--The four-byte chunk type field contains the decimal values
+
+					99 72 82 77
+
+					The cHRM chunk may be used to specify the 1931 CIE x,y chromaticities of the red, green, and blue display primaries used in the image, and the referenced white point. See Annex C: Gamma and chromaticity for more information. The iCCP and sRGB chunks provide more sophisticated support for colour management and control.
+
+					The cHRM chunk contains:
+					White point x 	4 bytes
+					White point y 	4 bytes
+					Red x 	4 bytes
+					Red y 	4 bytes
+					Green x 	4 bytes
+					Green y 	4 bytes
+					Blue x 	4 bytes
+					Blue y 	4 bytes
+
+					Each value is encoded as a four-byte PNG unsigned integer, 
+					representing the x or y value times 100000.
+					EXAMPLE A value of 0.3127 would be stored as the integer 31270.
+					The cHRM chunk is allowed in all PNG datastreams, although it is 
+					of little value for greyscale images.
+					An sRGB chunk or iCCP chunk, when present and recognized, 
+					overrides the cHRM chunk.-->
+
+                <item xsi:type="structuringItem" identifier="IDI13" originalName="cHRM"
+                    optional="true">
+
+                    <symbol identifier="IDI13_S01" originalName="chunkDataLength"
+                        interpretation="uint32">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>dataBlockLength</name>
+                    </symbol>
+
+                    <property identifier="IDI13_S02" originalName="ChunkType">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <value>99 72 82 77</value>
+                        <name>dataBlockType</name>
+                    </property>
+
+                    <item xsi:type="contextItem" identifier="context02">
+
+                        <symbol identifier="IDI13_I01_I01_S01" interpretation="uint32">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <name>whitePointX</name>
+                        </symbol>
+
+                        <symbol identifier="IDI13_I01_I01_S02" interpretation="uint32">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <name>whitePointY</name>
+                        </symbol>
+
+                        <symbol identifier="IDI13_I01_I02_S01" interpretation="uint32">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <name>1931IEC_ChromaticityRedX</name>
+                        </symbol>
+
+                        <symbol identifier="IDI13_I01_I02_S02" interpretation="uint32">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <name>1931IEC_ChromaticityRedY</name>
+                        </symbol>
+
+                        <symbol identifier="IDI13_I01_I03_S01" interpretation="uint32">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <name>1931IEC_ChromaticityGreenX</name>
+                        </symbol>
+
+                        <symbol identifier="IDI13_I01_I03_S02" interpretation="uint32">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <name>1931IEC_ChromaticityGreenY</name>
+                        </symbol>
+
+                        <symbol identifier="IDI13_I01_I04_S01" interpretation="uint32">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <name>1931IEC_ChromaticityBlueX</name>
+                        </symbol>
+
+                        <symbol identifier="IDI13_I01_I04_S02" interpretation="uint32">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <name>1931IEC_ChromaticityBlueY</name>
+                        </symbol>
+
+                    </item>
+                    <!-- end of contextItem-->
+
+                    <symbol identifier="IDI13_S03" originalName="crc">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>checksum</name>
+                    </symbol>
+                </item>
+                <!-- end of  cHRM-Chunk -->
+
+
+                <!--*********************iCCP-Chunk (Embedded ICC profile)*********************************-->
+
+				<!-- The four-byte chunk type field contains the decimal values
+
+					105 67 67 80
+
+					The iCCP chunk contains:
+					Profile name 	1-79 bytes (character string)
+					Null separator 	1 byte (null character)
+					Compression method 	1 byte
+					Compressed profile 	n bytes
+					For more information see: http://www.w3.org/TR/PNG/#11iCCP-->
+
+                <item xsi:type="structuringItem" identifier="IDI14" originalName="iCCP"
+                    optional="true">
+
+                    <symbol identifier="IDI14_S01" originalName="chunkDataLength" interpretation="uint32">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>dataBlockLength</name>
+                    </symbol>
+
+                    <property identifier="IDI14_S02" originalName="ChunkType">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <value>105 67 67 80</value>
+                        <name>dataBlockType</name>
+                    </property>
+
+                    <processing type="pushXCEL" xcelRef="iccpItem">
+                        <processingMethod name="setLength">
+                            <param valueRef="IDI14_S01"/>
+                        </processingMethod>
+                    </processing>
+
+                    <item xsi:type="structuringItem" identifier="iccpItem">
+
+                        <symbol multiple="true" identifier="IDI14_I01_S01" interpretation="Latin1">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">1</length>
+                            </range>
+                            <validValues>
+                                <startRange>1</startRange>
+                                <endRange>255</endRange>
+                            </validValues>
+                            <name>textualDataKeyword</name>
+                        </symbol>
+
+                        <property identifier="IDI14_I01_S02">
+                            <range>
+                                <startposition xsi:type="sequential"> 33</startposition>
+                                <length xsi:type="fixed">1</length>
+                            </range>
+                            <value>0</value>
+                            <name>delimiter</name>
+                        </property>
+
+                        <symbol identifier="IDI14_I01_S03" originalName="compressionMethod">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">1</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>zlibDeflateInflate</valueLabel>
+                                <value>0</value>
+                            </valueInterpretation>
+                            <name>compression</name>
+                        </symbol>
+
+                        <symbol multiple="true" interpretation="utf-8" identifier="IDI14_I01_S04">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="processed"/>
+                            </range>
+                            <name>compressedText</name>
+                        </symbol>
+                    </item>
+                    <symbol identifier="IDI14_S03" originalName="crc">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>checksum</name>
+                    </symbol>
+                </item>
+                <!-- end of  iCCP-Chunk -->
+
+
+                <!--**************sRGB-Chunk (Standard RGB colour space)*****************************-->
+
+				<!-- The four-byte chunk type field contains the decimal values
+
+					115 82 71 66
+
+					If the sRGB chunk is present, the image samples conform to the 
+					sRGB colour space [IEC 61966-2-1] and should be displayed using 
+					the specified rendering intent defined by the International 
+					Color Consortium [ICC-1] and [ICC-1A].
+
+					The sRGB chunk contains:
+					Rendering intent 	1 byte
+					For more information see: http://www.w3.org/TR/PNG/#11sRGB -->
+
+                <item xsi:type="structuringItem" identifier="IDI15" originalName="sRGB"
+                    optional="true">
+
+                    <symbol identifier="IDI15_S01" originalName="chunkDataLength" interpretation="uint32">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>dataBlockLength</name>
+                    </symbol>
+
+                    <property identifier="IDI15_S02" originalName="ChunkType">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <value>115 82 71 66</value>
+                        <name>dataBlockType</name>
+                    </property>
+
+                    <item xsi:type="structuringItem" identifier="IDI15_I01">
+
+                        <symbol identifier="IDI15_I01_S01">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">1</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>perceptual</valueLabel>
+                                <value>0</value>
+                                <valueLabel>relativeColorimetric</valueLabel>
+                                <value>1</value>
+                                <valueLabel>saturation</valueLabel>
+                                <value>2</value>
+                                <valueLabel>absoluteColorimetric</valueLabel>
+                                <value>3</value>
+                            </valueInterpretation>
+                            <name>ICC-1/ICC-1A_RenderingIntent</name>
+                        </symbol>
+
+                    </item>
+                    <!-- end of Chunk Data -->
+                    <symbol identifier="IDI15_S03" originalName="crc">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>checksum</name>
+                    </symbol>
+                </item>
+                <!-- end of  sRGB-Chunk -->
+
+                <!--**************pHYS-Chunk (Physical pixel dimensions)***************************-->
+
+				<!-- The four-byte chunk type field contains the decimal values
+
+					112 72 89 115
+
+					The pHYs chunk specifies the intended pixel size or aspect ratio 
+					for display of the image. It contains:
+					Pixels per unit, X axis 	4 bytes (PNG unsigned integer)
+					Pixels per unit, Y axis 	4 bytes (PNG unsigned integer)
+					Unit specifier 	1 byte
+
+					The following values are defined for the unit specifier:
+					0 	unit is unknown
+					1 	unit is the metre
+
+					When the unit specifier is 0, the pHYs chunk defines pixel aspect 
+					ratio only; the actual size of the pixels remains unspecified.
+
+					If the pHYs chunk is not present, pixels are assumed to be square, 
+					and the physical size of each pixel is unspecified.-->
+
+                <item xsi:type="structuringItem" identifier="IDI16" originalName="pHYS"
+                    optional="true">
+
+                    <symbol identifier="IDI16_S01" originalName="chunkDataLength" interpretation="uint32">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>dataBlockLength</name>
+                    </symbol>
+
+                    <property identifier="IDI16_S02" originalName="ChunkType">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <value>112 72 89 115</value>
+                        <name>dataBlockType</name>
+                    </property>
+
+                    <item xsi:type="contextItem" identifier="IDI16_I01">
+
+                        <symbol identifier="IDI16_I01_S01">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <name>resolutionX</name>
+                        </symbol>
+
+                        <symbol identifier="IDI16_I01_S02">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">4</length>
+                            </range>
+                            <name>resolutionY</name>
+                        </symbol>
+
+                        <symbol identifier="IDI16_I01_S03">
+                            <range>
+                                <startposition xsi:type="sequential"/>
+                                <length xsi:type="fixed">1</length>
+                            </range>
+                            <valueInterpretation>
+                                <valueLabel>unspecified</valueLabel>
+                                <value>0</value>
+                                <valueLabel>metre</valueLabel>
+                                <value>1</value>
+                            </valueInterpretation>
+                            <name>resolutionUnit</name>
+                        </symbol>
+
+                    </item>
+                    <!-- end of Chunk Data -->
+                    <symbol identifier="IDI16_S03" originalName="crc">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>checksum</name>
+                    </symbol>
+                </item>
+                <!-- end of  pHYS-Chunk -->
+
+
+                <!--***************************spAL-Chunk**************************************-->
+                <!-- the suggested Palette Chunk that is used by the png test images from the libpng webpage. 
+                    The original SPLT chunk is described above -->
+
+                <item xsi:type="structuringItem" identifier="IDI17" originalName="spAL"
+                    optional="true" multiple="false">
+                    <symbol identifier="IDI17_S01" originalName="chunkDataLength"
+                        interpretation="uint32">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>dataBlockLength</name>
+                    </symbol>
+
+                    <property identifier="IDI17_S02" originalName="ChunkType">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <value>115 112 65 76</value>
+                        <!--115 80 76 84 -->
+                        <name>dataBlockType</name>
+                    </property>
+
+                    <processing type="pushXCEL" xcelRef="spalItem">
+                        <processingMethod name="setLength">
+                            <param valueRef="IDI17_S01"/>
+                        </processingMethod>
+                    </processing>
+                    
+                    <item xsi:type="structuringItem" identifier="spalItem">
+                        
+                        <item xsi:type="definitionItem" identifier="IDI17_I02_I01_I01">
+
+                            <symbol identifier="IDI17_I02_I01_I01_S01" interpretation="ASCII"
+                                multiple="true">
+                                <range>
+                                    <startposition xsi:type="sequential"/>
+                                    <length xsi:type="fixed">1</length>
+                                </range>
+                                <nonValidValues>
+                                    <value>NULL</value>
+                                </nonValidValues>
+                            </symbol>
+
+                            <property identifier="IDI17_I02_I01_I01_S02">
+                                <range>
+                                    <startposition xsi:type="sequential"/>
+                                    <length xsi:type="fixed">1</length>
+                                </range>
+                                <value>0</value>
+                                <name>delimiter</name>
+                            </property>
+
+                            <symbol identifier="IDI17_I02_I01_I01_S03" interpretation="ASCII"
+                                multiple="true">
+                                <range>
+                                    <startposition xsi:type="sequential"/>
+                                    <length xsi:type="fixed">1</length>
+                                </range>
+                                <nonValidValues>
+                                    <value>NULL</value>
+                                </nonValidValues>
+                            </symbol>
+
+                            <property identifier="IDI17_I02_I01_I01_S04">
+                                <range>
+                                    <startposition xsi:type="sequential"/>
+                                    <length xsi:type="fixed">1</length>
+                                </range>
+                                <value>0</value>
+                                <name>delimiter</name>
+                            </property>
+                            
+                            <name>suggestedPaletteName</name>
+                        </item>
+                        <!--end of definition Item suggested Palette Name-->
+
+                        <item xsi:type="structuringItem" order="choice" identifier="IDI17_I02_I01_I02"><!-- either 8 bit or 16 bit --> 
+
+                            <item xsi:type="structuringItem" identifier="IDI17_I02_I01_I02_I01"><!-- choice 1: 8 bit -->
+                                
+                                <property identifier="IDI17_I02_I01_I02_I01_S01">
+                                    <range>
+                                        <startposition xsi:type="sequential"/>
+                                        <length xsi:type="fixed">1</length>
+                                    </range>
+                                    <value>8</value>
+                                    <name>suggestedPaletteSampleDepth</name>
+                                </property>
+
+                                <item xsi:type="contextItem" identifier="sPalEntry8" multiple="true">
+                                        
+                                    <symbol identifier="spalEntryTrueColorRed">
+                                         <range>
+                                             <startposition xsi:type="sequential"/>
+                                             <length xsi:type="fixed">1</length>
+                                         </range>
+                                         <name>truecolourRed</name>
+                                    </symbol>
+                                    <symbol identifier="spalEntryTrueColorGreen">
+                                        <range>
+                                            <startposition xsi:type="sequential"/>
+                                            <length xsi:type="fixed">1</length>
+                                        </range>
+                                        <name>truecolourGreen</name>
+                                    </symbol>
+                                    <symbol identifier="spalEntryTrueColorBlue">
+                                         <range>
+                                             <startposition xsi:type="sequential"/>
+                                             <length xsi:type="fixed">1</length>
+                                         </range>
+                                         <name>truecolourBlue</name>
+                                     </symbol>
+                                     <symbol identifier="spalEntryAlpha">
+                                         <range>
+                                             <startposition xsi:type="sequential"/>
+                                             <length xsi:type="fixed">1</length>
+                                         </range>
+                                         <name>suggestedPaletteAlpha</name>
+                                     </symbol>
+                                     <symbol identifier="spalEntryFrequency" originalName="frequency" interpretation="uint16">
+                                         <range>
+                                             <startposition xsi:type="sequential"/>
+                                             <length xsi:type="fixed">2</length>
+                                         </range>
+                                         <name>suggestedPaletteFrequency</name>
+                                     </symbol>
+
+                                </item>
+                                <!--end of contextItem sPalEntry8-->
+                                
+                            </item>
+                            <!-- end of choice 1: 8 Bit Item-->
+                            
+
+                            <item xsi:type="structuringItem" identifier="IDI17_I02_I01_I03">
+                                
+                                <property identifier="IDI17_I02_I01_I03_S01">
+                                    <range>
+                                        <startposition xsi:type="sequential"/>
+                                        <length xsi:type="fixed">1</length>
+                                    </range>
+                                    <value>16</value>
+                                    <name>suggestedPaletteSampleDepth</name>
+                                </property>
+                                        
+                                        <item xsi:type="contextItem"   identifier="sPalEntry16" multiple="true">
+                                            
+                                            <symbol identifier="spalEntryTrueColorRed2"
+                                                interpretation="uint16">
+                                                <range>
+                                                  <startposition xsi:type="sequential"/>
+                                                  <length xsi:type="fixed">2</length>
+                                                </range>
+                                                <name>truecolourRed</name>
+                                            </symbol>
+                                            <symbol identifier="spalEntryTrueColorGreen2"
+                                                interpretation="uint16">
+                                                <range>
+                                                  <startposition xsi:type="sequential"/>
+                                                  <length xsi:type="fixed">2</length>
+                                                </range>
+                                                <name>truecolourGreen</name>
+                                            </symbol>
+                                            <symbol identifier="spalEntryTrueColorBlue2"
+                                                interpretation="uint16">
+                                                <range>
+                                                  <startposition xsi:type="sequential"/>
+                                                  <length xsi:type="fixed">2</length>
+                                                </range>
+                                                <name>truecolourBlue</name>
+                                            </symbol>
+                                            <symbol identifier="spalEntryAlpha2"
+                                                interpretation="uint16">
+                                                <range>
+                                                  <startposition xsi:type="sequential"/>
+                                                  <length xsi:type="fixed">2</length>
+                                                </range>
+                                                <name>suggestedPaletteAlpha</name>
+                                            </symbol>
+                                            <symbol identifier="spalEntryFrequency2"
+                                                originalName="frequency" interpretation="uint16">
+                                                <range>
+                                                  <startposition xsi:type="sequential"/>
+                                                  <length xsi:type="fixed">2</length>
+                                                </range>
+                                                <name>suggestedPaletteFrequency</name>
+                                            </symbol>
+                                            
+                                        </item>
+                                <!--end of contextItem sPalEntry16 -->
+
+                            </item>
+                            <!-- end of choice 2: 16Bit Item-->
+                            
+                        </item>
+                        <!--end of 16Bit or 8Bit unordered Item-->
+                        
+                    </item>
+                    <!-- end of structering Item (range) -->
+            
+                    
+                    <!-- end of Chunk Data -->
+                    <symbol identifier="IDI17_S03" originalName="crc">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>checksum</name>
+                    </symbol>
+                
+                </item>
+                <!-- end of  spAL-Chunk -->
+                
+                <!-- ********************original SPLT-Chunk (Suggested palette) as described in PNG spec************************-->
+
+				<!-- The four-byte chunk type field contains the decimal values
+
+					115 80 76 84
+
+					The sPLT chunk contains:
+					Palette name 	1-79 bytes (character string)
+					Null separator 	1 byte (null character)
+					Sample depth 	1 byte
+					Red 	1 or 2 bytes
+					Green 	1 or 2 bytes
+					Blue 	1 or 2 bytes
+					Alpha 	1 or 2 bytes
+					Frequency 	2 bytes
+					...etc... 	 
+
+					Each palette entry is six bytes or ten bytes containing five 
+					unsigned integers (red, blue, green, alpha, and frequency).
+					For more information see: http://www.w3.org/TR/PNG/#11sPLT -->
+
+                <item xsi:type="structuringItem" identifier="SPAL" originalName="spAL"
+                    optional="true" multiple="false">
+                    <symbol identifier="SPAL_S01" originalName="chunkDataLength"
+                        interpretation="uint32">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>dataBlockLength</name>
+                    </symbol>
+                    
+                    <property identifier="SPAL_S02" originalName="ChunkType" interpretation="ASCII">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <value>SPAL</value>
+                        <!--115 80 76 84 -->
+                        <name>dataBlockType</name>
+                    </property>
+                    
+                    <processing type="pushXCEL" xcelRef="SPLTItem">
+                        <processingMethod name="setLength">
+                            <param valueRef="SPAL_S01"/>
+                        </processingMethod>
+                    </processing>
+                    
+                    <item xsi:type="structuringItem" identifier="SPLTItem">
+                        
+                        <item xsi:type="definitionItem" identifier="SPAL_I02_I01_I01">
+                                                   
+                            <symbol identifier="SPAL_I02_I01_I01_S01" interpretation="ASCII"
+                                multiple="true">
+                                <range>
+                                    <startposition xsi:type="sequential"/>
+                                    <length xsi:type="fixed">1</length>
+                                </range>
+                                <nonValidValues>
+                                    <value>NULL</value>
+                                </nonValidValues>
+                            </symbol>
+                             
+                            <property identifier="SPAL_I02_I01_I01_S02">
+                                <range>
+                                    <startposition xsi:type="sequential"> </startposition>
+                                    <length xsi:type="fixed">1</length>
+                                </range>
+                                <value>0</value>
+                                <name>delimiter</name>
+                            </property>
+                            
+                            <name>suggestedPaletteName</name>
+                        </item>
+                        <!--end of definition Item suggested Palette Name-->
+                        
+                        <item xsi:type="structuringItem" order="all" identifier="SPAL_I02_I01_I02">
+                            
+                            <item xsi:type="structuringItem" identifier="SPAL_I02_I01_I02_I01">
+                                <property identifier="SPAL_I02_I01_I02_I01_S01">
+                                    <range>
+                                        <startposition xsi:type="sequential"/>
+                                        <length xsi:type="fixed">1</length>
+                                    </range>
+                                    <value>8</value>
+                                    <name>suggestedPaletteSampleDepth</name>
+                                </property>
+                                <!--         <item xsi:type="structuringItem" ordered="false" identifier="spalMultipleWorkAround">-->
+                                
+                                <item xsi:type="structuringItem" identifier="SPALEntry"
+                                    multiple="true">
+                                    <item xsi:type="contextItem" identifier="SPALEntryContextItem">
+                                        <symbol identifier="SPALEntryTrueColorRed">
+                                            <range>
+                                                <startposition xsi:type="sequential"/>
+                                                <length xsi:type="fixed"> 1</length>
+                                            </range>
+                                            <name>truecolourRed</name>
+                                        </symbol>
+                                        <symbol identifier="SPALEntryTrueColorGreen">
+                                            <range>
+                                                <startposition xsi:type="sequential"/>
+                                                <length xsi:type="fixed"> 1</length>
+                                            </range>
+                                            <name>truecolourGreen</name>
+                                        </symbol>
+                                        <symbol identifier="SPALEntryTrueColorBlue">
+                                            <range>
+                                                <startposition xsi:type="sequential"/>
+                                                <length xsi:type="fixed"> 1</length>
+                                            </range>
+                                            <name>truecolourBlue</name>
+                                        </symbol>
+                                        <symbol identifier="SPALEntryAlpha">
+                                            <range>
+                                                <startposition xsi:type="sequential"/>
+                                                <length xsi:type="fixed"> 1</length>
+                                            </range>
+                                            <name>suggestedPaletteAlpha</name>
+                                        </symbol>
+                                        <symbol identifier="SPALEntryFrequency"
+                                            originalName="frequency" interpretation="uint16">
+                                            <range>
+                                                <startposition xsi:type="sequential"/>
+                                                <length xsi:type="fixed"> 2</length>
+                                            </range>
+                                            <name>suggestedPaletteFrequency</name>
+                                        </symbol>
+                                        
+                                    </item>
+                                    <!--end of contextItem-->
+                                </item>
+                                <!-- end of Palette Entry-->
+                                <!-- </item>-->
+                                <!-- end of multiple Item -->
+                            </item>
+                            <!-- end of 8Bit Item-->
+                            
+                            <item xsi:type="structuringItem" identifier="SPAL_I02_I01_I03">
+                                <property identifier="SPAL_I02_I01_I03_S01">
+                                    <range>
+                                        <startposition xsi:type="sequential"/>
+                                        <length xsi:type="fixed">1</length>
+                                    </range>
+                                    <value>16</value>
+                                    <name>suggestedPaletteSampleDepth</name>
+                                </property>
+                                <item xsi:type="structuringItem" order="all"
+                                    identifier="SPALMultipleWorkAround2">
+                                    
+                                    <item xsi:type="structuringItem" identifier="SPALEntry2">
+                                        <item xsi:type="contextItem"
+                                            identifier="SPALEntryContextItem2">
+                                            <symbol identifier="SPALEntryTrueColorRed2"
+                                                interpretation="uint16">
+                                                <range>
+                                                    <startposition xsi:type="sequential"/>
+                                                    <length xsi:type="fixed"> 2</length>
+                                                </range>
+                                                <name>truecolourRed</name>
+                                            </symbol>
+                                            <symbol identifier="SPALEntryTrueColorGreen2"
+                                                interpretation="uint16">
+                                                <range>
+                                                    <startposition xsi:type="sequential"/>
+                                                    <length xsi:type="fixed"> 2</length>
+                                                </range>
+                                                <name>truecolourGreen</name>
+                                            </symbol>
+                                            <symbol identifier="SPALEntryTrueColorBlue2"
+                                                interpretation="uint16">
+                                                <range>
+                                                    <startposition xsi:type="sequential"/>
+                                                    <length xsi:type="fixed"> 2</length>
+                                                </range>
+                                                <name>truecolourBlue</name>
+                                            </symbol>
+                                            <symbol identifier="SPALEntryAlpha2"
+                                                interpretation="uint16">
+                                                <range>
+                                                    <startposition xsi:type="sequential"/>
+                                                    <length xsi:type="fixed"> 2</length>
+                                                </range>
+                                                <name>suggestedPaletteAlpha</name>
+                                            </symbol>
+                                            <symbol identifier="SPALEntryFrequency2"
+                                                originalName="frequency" interpretation="uint16">
+                                                <range>
+                                                    <startposition xsi:type="sequential"/>
+                                                    <length xsi:type="fixed"> 2</length>
+                                                </range>
+                                                <name>suggestedPaletteFrequency</name>
+                                            </symbol>
+                                        </item>
+                                        <!--end of contextItem-->
+                                    </item>
+                                    <!-- end of Palette Entry-->
+                                </item>
+                                <!-- end of multiple Item -->
+                            </item>
+                            <!-- end of 16Bit Item-->
+                        </item>
+                        <!--end of 16Bit or 8Bit unordered Item-->
+                    </item>
+                    <!-- end of structering Item (range) -->
+                    <!-- end of Chunk Data -->
+                    <symbol identifier="SPAL_S03" originalName="crc">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>checksum</name>
+                    </symbol>
+                </item>
+                <!-- end of  SPLT-Chunk -->
+                
+                <!-- ******************zTXt-Chunk (Compressed textual data)******************************-->
+
+				<!-- The four-byte chunk type field contains the decimal values
+
+					122 84 88 116
+
+					The zTXt and tEXt chunks are semantically equivalent, but the zTXt chunk is recommended for storing large blocks of text.
+
+					A zTXt chunk contains:
+					Keyword 	1-79 bytes (character string)
+					Null separator 	1 byte (null character)
+					Compression method 	1 byte
+					Compressed text datastream 	n bytes
+
+					The keyword and null character are the same as in the tEXt chunk 
+					(see 11.3.4.3: tEXt Textual data). The keyword is not compressed. 
+					The compression method entry defines the compression method used. 
+					The only value defined in this International Standard is 0 
+					(deflate/inflate compression). Other values are reserved for 
+					future standardization (see 4.9 Extension and registration). 
+					The compression method entry is followed by the compressed text 
+					datastream that makes up the remainder of the chunk. For compression 
+					method 0, this datastream is a zlib datastream with deflate 
+					compression (see 10.3: Other uses of compression). Decompression 
+					of this datastream yields Latin-1 text that is identical to the 
+					text that would be stored in an equivalent tEXt chunk.-->
+
+                <item xsi:type="structuringItem" optional="true" identifier="ztxt1"
+		      originalName="undefined" multiple="true">
+			
+			<symbol identifier="ztxt2" originalName="chunkDataLength"
+				interpretation="uint32">
+				<range>
+					<startposition xsi:type="sequential"/>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<name>dataBlockLength</name>
+			</symbol>
+			
+			<property identifier="ztxt3" originalName="ChunkType" interpretation="ASCII">
+				<range>
+					<startposition xsi:type="sequential"/>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<value>zTXt</value>
+				<name>dataBlockType</name>
+			</property>
+			
+		    <processing type="pushXCEL" xcelRef="ztextItem">
+				<processingMethod name="setLength">
+					<param valueRef="ztxt2"/>
+				</processingMethod>
+			</processing>
+
+		<item identifier="ztextItem" xsi:type="contextItem">
+
+
+		    <item xsi:type="definitionItem" identifier="ztextualDataKeyword">
+		        <symbol multiple="true" identifier="zkeyChar" interpretation="ASCII">
+		            <range>
+		                <startposition xsi:type="sequential"/>
+		                <length xsi:type="fixed">1</length>
+		            </range>
+		            <nonValidValues>
+		                <value>NULL</value>
+		            </nonValidValues>
+		        </symbol>
+		        <name>textualDataKeyword</name>
+		    </item>
+
+		    <property identifier="zdelimiter">
+		        <range>
+		            <startposition xsi:type="sequential"/>
+		            <length xsi:type="fixed">1</length>
+		        </range>
+		        <value>0</value>
+		        <name>delimiter</name>
+		    </property>
+
+		    <symbol multiple="false" identifier="zTXtCompressionMethod" interpretation="uint8">
+		        <range>
+		            <startposition xsi:type="sequential"/>
+		            <length xsi:type="fixed">1</length>
+		        </range>
+		        <valueInterpretation>
+		            <valueLabel>zlibDeflateInflate</valueLabel>
+		            <value>0</value>
+		        </valueInterpretation>
+		        <name>zTXtCompressionMethod</name>
+		    </symbol>
+
+		     <processing type="pushXCEL" xcelRef="zTextualDataString">
+		         <processingMethod name="addFilter">
+                             <param value="compression"/>
+                             <param valueRef="zTXtCompressionMethod"/>
+                         </processingMethod>
+                     </processing>
+		  
+		    <item xsi:type="definitionItem" identifier="zTextualDataString">
+		        <symbol interpretation="Latin1" identifier="zdatacharr" multiple="true">
+		            <range>
+		                <startposition xsi:type="sequential"/>
+		                <length xsi:type="fixed">1</length>
+		            </range>
+		        </symbol>
+		        <name>textualDataString</name>
+		    </item>
+
+			
+		</item>	
+			<symbol identifier="ztxt4" originalName="crc">
+				<range>
+					<startposition xsi:type="sequential"> </startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<name>checksum</name>
+			</symbol>
+			
+		</item>
+                 <!-- end of zTXt -->
+                
+                <!--***************************IEND-Chunk (Image trailer)**************************************-->
+
+				<!-- The four-byte chunk type field contains the decimal values
+
+				73 69 78 68
+
+				The IEND chunk marks the end of the PNG datastream. The chunk's data 
+				field is empty.-->
+			
+                <item xsi:type="structuringItem" identifier="ID01_I18" originalName="IEND"
+                    multiple="false">
+                    <property identifier="ID01_I18_S01" originalName="chunkDataLength" interpretation="uint32">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <value>0</value>
+                        <name>dataBlockLength</name>
+                    </property>
+                    <property identifier="ID01_I18_S02" originalName="ChunkType" interpretation="ASCII">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <value>IEND</value>
+                        <name>dataBlockType</name>
+                    </property>
+                    <symbol identifier="ID01_I18_S04" originalName="crc">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>checksum</name>
+                    </symbol>
+                </item>
+                <!-- end of IEND-Chunk -->
+
+                <!--***************************Dummy**************************************-->
+               <item xsi:type="structuringItem" optional="true" identifier="dummy1"
+                    originalName="undefined" multiple="true">
+
+                    <symbol identifier="dummy2" originalName="chunkDataLength"
+                        interpretation="uint32">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>dataBlockLength</name>
+                    </symbol>
+
+                    <symbol identifier="dummy3" originalName="ChunkType">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>dataBlockType</name>
+                    </symbol>
+
+                    <processing type="pushXCEL" xcelRef="undefinedSymbol">
+                        <processingMethod name="setLength">
+                            <param valueRef="dummy2"/>
+                        </processingMethod>
+                    </processing>
+
+                    <symbol identifier="undefinedSymbol" interpretation="uint8">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="processed"/>
+                        </range>
+                        <name>unspecified</name>
+                    </symbol>
+
+
+                    <symbol identifier="dummy4" originalName="crc">
+                        <range>
+                            <startposition xsi:type="sequential"> </startposition>
+                            <length xsi:type="fixed">4</length>
+                        </range>
+                        <name>checksum</name>
+                    </symbol>
+
+                </item>
+                <!-- end of Dummy-Chunk -->
+            </item>
+            <!-- end of all Item-->
+
+
+        </item>
+    </formatDescription>
+
+
+    <templates>
+        <item xsi:type="structuringItem" identifier="textItem">
+            <item xsi:type="definitionItem" identifier="textualDataKeyword">
+                <symbol multiple="true" identifier="IDI09_I01_S01" interpretation="ASCII">
+                    <range>
+                        <startposition xsi:type="sequential"/>
+                        <length xsi:type="fixed">1</length>
+                    </range>
+                    <nonValidValues>
+                        <value>NULL</value>
+		    </nonValidValues>
+                </symbol>
+                <name>textualDataKeyword</name>
+            </item>
+            <property identifier="IDI09_I01_S02">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <value>0</value>
+                <name>delimiter</name>
+            </property>
+            <item xsi:type="definitionItem" identifier="textualDataString">
+                <symbol interpretation="Latin1" identifier="IDI09_I01_S03" multiple="true">
+                    <range>
+                        <startposition xsi:type="sequential"/>
+                        <length xsi:type="fixed">1</length>
+                    </range>
+		  
+                </symbol>
+                <name>textualDataString</name>
+            </item>
+	
+        </item>
+    </templates>
+
+
+    <postProcessing>
+         <item xsi:type="structuringItem" order="sequence" identifier="pp01">
+        	<item xsi:type="structuringItem" order="sequence" identifier="pp03">     
+        		<processing type="pushBinary" xcelNameRef="normData">
+        		<processingMethod name="addFilter">
+        			<param value="compression"/><!-- Filter Typ-->
+        			<param nameRef="compression"/><!--zlibDeflateInflate-->
+        		</processingMethod>
+        		<processingMethod name="addFilter">
+        			<param value="pngFilterMethod"/>
+        			<!--Filter Typ-->
+        			<param nameRef="filter"/>
+        			<!--Png Filter name "adaptive" oder "nothing"-->
+        			<param nameRef="width"/>
+        			<param nameRef="height"/>
+        			<param nameRef="bitsPerSample"/>
+        			<param nameRef="imageType"/>
+        			<param nameRef="interlace"/>
+        			<!--interlace "adam7" oder "noInterlace"-->
+        		</processingMethod>
+        		</processing>
+        	</item>
+        	<item xsi:type="structuringItem" order="sequence" identifier="pp02">
+        		<processing type="pullXCEL" xcelNameRef="imageType">
+        			<processingMethod name="isEqual">
+        			   <param value="palette"/>	
+        			</processingMethod>
+        		</processing>	
+        		<processing type="pushBinary" xcelNameRef="normData">
+        			<processingMethod name="addFilter">
+        				<param value="palette"/>
+        				<param nameRef="rgbPalette"/>
+        				<param nameRef="width"/>
+        				<param nameRef="height"/>
+        			</processingMethod>
+        		</processing>
+        	</item>
+         </item>
+    </postProcessing>
+
+</XCELDocument>

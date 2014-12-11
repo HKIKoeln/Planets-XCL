@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- WAVE file format specification (subtype: LPCM); using  xcel version 1.0--> 
+	<!-- date of creation: 2007-01-25-->
+	<!-- created by HKI, University at Cologne -->
+	<!-- status: incomplete (only MS LPCM) -->
+	
+	<XCELDocument xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl
+	schemas/XCELAudioExtension.xsd">
+	
+	<!-- 
+		WAVE File Structure 
+		Wave files use the standard RIFF structure which groups the files contents (sample format, digital audio samples, etc.) into separate chunks, 
+		each containing it's own header and data bytes. The chunk header specifies the type and size of the chunk data bytes. This organization method 
+		allows programs that do not use or recognize particular types of chunks to easily skip over them and continue processing following known chunks. 
+		Certain types of chunks may contain sub-chunks. For example, in the diagram to the right, you can see that the "fmt " and "data" chunks are actually 
+		sub-chunks of the "RIFF" chunk.
+		!!!
+		One tricky thing about RIFF file chunks is that they must be word aligned. This means that their total size must be a multiple of 2 bytes
+		(ie. 2, 4, 6, 8, and so on). If a chunk contains an odd number of data bytes, causing it not to be word aligned, an extra padding byte with a value of
+		zero must follow the last data byte. This extra padding byte is not counted in the chunk size, therefor a program must always word align a chunk 
+		headers size value in order to calculate the offset of the following chunk
+		!!!
+		(source: http://www.sonicspot.com/guide/wavefiles.html#overview).
+	-->
+	
+	<!-- ********************* xcel header section:   ********************* -->
+	<preProcessing>
+		<processing type="pushXCEL" xcelRef="IDA02">
+			<processingMethod name="setByteOrder">
+				<param value="littleEndian"/>
+			</processingMethod>
+		</processing>
+	</preProcessing>
+	<formatDescription>
+	
+	<!-- ***************    xcel pre-processing section:  ********************* -->
+	<item xsi:type="structuringItem" identifier="IDA02" >
+		<!-- ***************  Chunk header:   *********************** -->
+		<item xsi:type="structuringItem" identifier="IDA02_I01" order="sequence" originalName="chunkHeader">
+			<property  identifier="IDA02_I01_S01" interpretation="ASCII">
+				<range>
+					<startposition xsi:type="fixed">0</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<value>RIFF</value>
+				<name>waveHeaderChunkId</name>
+			</property>
+			<!-- This is the size of the entire file in bytes minus 8 bytes for the two fields not included in this count: ChunkID and ChunkSize : -->	
+			<symbol  identifier="IDA02_I01_S02" interpretation="uint32" originalName="chunkDataSize">
+				<range>
+					<startposition xsi:type="fixed">4</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<name>waveChunkSize</name>
+			</symbol>
+			<property  identifier="IDA02_I01_S03" interpretation="ASCII" originalName="format">
+				<range>
+					<startposition xsi:type="fixed">8</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<value>WAVE</value>	<!-- Contains the letters "WAVE"	(0x57415645 big-endian form) -->
+				<name>signature</name>    
+			</property>
+		</item>		 <!-- End: Chunk Header -->
+	
+	
+	<!-- ************************ sub-chunks section:   ************************* -->
+		<item xsi:type="structuringItem" identifier="IDA02_I02" order="all">
+	<!-- *************************    format chunk (fmt)   **************************** -->
+			<item xsi:type="structuringItem" identifier="IDA02_I02_I01" originalName="fmtChunk">
+				<property 	identifier="IDA02_I02_I01_S01" interpretation="ASCII" originalName="chunkId">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">4</length>
+					</range>
+					<value>fmt </value><!-- The chunk ID string ends with the space character (0x20). -->	
+					<name>waveFmtChunkId</name>  
+				</property>
+				<symbol  identifier="IDA02_I02_I01_S02" interpretation="uint32" originalName="chunkSize">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">4</length>
+					</range>
+					<name>waveChunkSize</name>
+				</symbol>
+				<property  identifier="IDA02_I02_I01_S03" interpretation="uint16" originalName="wformatTag">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">2</length>
+					</range>
+					<value>1</value>   <!-- 1 =PCM/uncompressed -->
+					<name>waveFormat</name>
+				</property>
+				<symbol  identifier="IDA02_I02_I01_S04" interpretation="uint16" originalName="wChannels">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">2</length>
+					</range>
+					<name>numberOfChannels</name>
+				</symbol>
+				<!-- 
+				Sample Rate:
+				The number of sample slices per second. This value is unaffected by the number of channels.
+				-->
+				<symbol  identifier="IDA02_I02_I01_S05" interpretation="uint32" originalName="dwSamplesPerSec">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">4</length>
+					</range>
+					<name>sampleRate</name>
+				</symbol>
+				<!-- 
+				Average Bytes Per Second:
+				This value indicates how many bytes of wave data must be streamed to a D/A converter per second in order
+				to play the wave file. This information is useful when determining if data can be streamed from the source fast 
+				enough to keep up with playback. This value can be easily calculated with the formula:
+				AvgBytesPerSec = SampleRate * BlockAlign 
+				-->
+				<symbol  identifier="IDA02_I02_I01_S06" interpretation="uint32" originalName="dwAvgBytesPerSec">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">4</length>
+					</range>
+					<name>byteRate</name>
+				</symbol>
+				<!-- 
+				Block Align:
+				The number of bytes per sample slice. This value is not affected by the number of channels and can be calculated with the formula:
+				BlockAlign = SignificantBitsPerSample / 8 * NumChannels 
+				-->
+				<symbol  identifier="IDA02_I02_I01_S07" interpretation="uint16" originalName="wBlockAlign">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">2</length>
+					</range>
+					<name>bytesPerSample</name>
+				</symbol>
+				<!-- 
+				Bits per sample:	
+				This value specifies the number of bits used to define each sample. 
+				This value is usually 8, 16, 24 or 32. If the number of bits is not byte aligned (a multiple of 8) then the 
+				number of bytes used per sample is rounded up to the nearest byte size and the unused bytes are set to 0 and ignored.
+				-->
+				<symbol  identifier="IDA02_I02_I01_S08" interpretation="uint16" originalName="wBitsPerSample">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">2</length>
+					</range>
+					<name>bitsPerSample</name>
+				</symbol>
+			</item>  <!-- end of format chunk -->
+			
+			<!-- ******************  data chunk:  *************************-->
+			<item xsi:type="structuringItem" identifier="IDA02_I02_I02" originalName="dataChunk">
+				<property 	identifier="IDA02_I02_I02_S01" interpretation="ASCII" originalName="chunkId">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">4</length>
+					</range>
+					<value>data</value><!-- Contains the letters "data" (0x64617461 big-endian form).  -->	
+					<name>waveDataChunkId</name>  
+				</property>
+				<!--
+				chunkSize is the number of bytes in the chunk, not counting the 8 bytes used by ID and Size fields
+				!!!nor any possible pad byte needed to make the chunk an even size !!!(ie, chunkSize is the number of remaining 
+				bytes in the chunk after the chunkSize field, !!! not counting any trailing pad byte !!!).
+				-->
+				<symbol  identifier="IDA02_I02_I02_S02" interpretation="uint32" originalName="chunkSize">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">4</length>
+					</range>
+					<name>waveChunkSize</name>
+				</symbol>
+				
+				<!-- because of the required word alignment the size must be checked and in case of odd number of bytes 
+				     " 1" must be added to the size;  this is done by following first processingMetrhod: --> 
+				<processing type="pushXCEL" xcelRef="IDA02_I02_I02_I01">
+					<processingMethod name="setLength">
+						<param valueRef="IDA02_I02_I02_S02"/>
+					</processingMethod> 
+				</processing>
+				<item xsi:type="structuringItem" identifier="IDA02_I02_I02_I01">
+				<item xsi:type="definitionItem" identifier="IDA02_I02_I02_I01_I01">
+					<symbol  identifier="IDA02_I02_I02_I01_S01"  originalName="waveformData">
+						<range>
+							<startposition xsi:type="sequential"/>
+							<length xsi:type="processed"/>
+						</range>
+						<name>dataBlock</name>
+					</symbol>
+					<name>normData</name>
+				</item>
+				</item>
+				<property  identifier="oddToEvenProperty" multiple="true" optional="true">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed"/>
+					</range>
+					<value>0</value>
+					<name>unspecified</name>
+				</property>
+				
+			</item> <!-- end of data chunk -->
+		</item>
+	</item>  </formatDescription>
+	<templates></templates>
+	<postProcessing></postProcessing>
+</XCELDocument>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cpResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://www.planets-project.eu/xcl/schemas/xcl" 
+xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl  cprPP5.xsd">
+<compSet id="1" source="testWien1.xcdl" target="testWien2.xcdl">
+<property id="2" name="imageHeight" unit="pixel" compStatus="complete">
+<values type="int">
+<src>100</src>
+<tar>100</tar>
+</values>
+<metric id="1" name="equal" result="true"/>
+</property>
+<property id="30" name="imageWidth" unit="pixel" compStatus="complete">
+<values type="int">
+<src>150</src>
+<tar>150</tar>
+</values>
+<metric id="1" name="equal" result="true"/>
+</property>
+<property id="300" name="normData" compStatus="partial">
+<values type="hex">
+<src></src>
+<tar></tar>
+</values>
+<metric id="11" name="hammingDistance" error="ERRORCODE_110"/>
+</property>
+<property id="45" name="rgbPalette" compStatus="failed"/>
+<property id="39" name="filter" compStatus="failed"/>
+<property id="45" name="interlace" compStatus="failed"/>
+</compSet>
+<compSet id="2" source="testWien1.xcdl" target="testWien3.xcdl">
+<property id="2" name="imageHeight" unit="pixel" compStatus="complete">
+<values type="int">
+<src>100</src>
+<tar>100</tar>
+</values>
+<metric id="1" name="equal" result="true"/>
+</property>
+<property id="30" name="imageWidth" unit="pixel" compStatus="complete">
+<values type="int">
+<src>150</src>
+<tar>150</tar>
+</values>
+<metric id="1" name="equal" result="true"/>
+</property>
+<property id="300" name="normData" compStatus="partial">
+<values type="hex">
+<src></src>
+<tar></tar>
+</values>
+<metric id="11" name="hammingDistance" error="ERRORCODE_110"/>
+</property>
+<property id="45" name="rgbPalette" compStatus="failed"/>
+<property id="39" name="filter" compStatus="failed"/>
+<property id="45" name="interlace" compStatus="failed"/>
+</compSet>
+</cpResponse>

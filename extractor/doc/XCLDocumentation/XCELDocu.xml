@@ -1,0 +1,1790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<book>
+  <title>XCEL</title>
+
+  <subtitle>Extensible Characterisation Extraction Language
+  Documentation</subtitle>
+
+  <bookinfo>
+    <author>
+      <surname>UzK - University at Cologne - HKI</surname>
+    </author>
+
+    <bibliomisc>Project: IST-2006-033789 PLANETS</bibliomisc>
+
+    <bibliomisc>Deliverable: PC/2 / D3</bibliomisc>
+  </bookinfo>
+
+  <preface>
+    <title>Preface</title>
+
+    <figure>
+      <title>Planets Logo</title>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="resources/planetsLogo.gif" />
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <table>
+      <title>Paper-Description</title>
+
+      <tgroup cols="2">
+        <tbody>
+          <row>
+            <entry>Project Number</entry>
+
+            <entry>IST-2006-033789</entry>
+          </row>
+
+          <row>
+            <entry>Project Title</entry>
+
+            <entry>PLANETS</entry>
+          </row>
+
+          <row>
+            <entry>Title of Deliverable</entry>
+
+            <entry>XCDL description set</entry>
+          </row>
+
+          <row>
+            <entry>Deliverable Number</entry>
+
+            <entry>D3</entry>
+          </row>
+
+          <row>
+            <entry>Contributing Sub-project and Work-package</entry>
+
+            <entry>PC/2</entry>
+          </row>
+
+          <row>
+            <entry>Deliverable</entry>
+
+            <entry>Internal</entry>
+          </row>
+
+          <row>
+            <entry>Dissemination Level</entry>
+
+            <entry>PP = Restricted to other programme participants (including
+            the Commission Services)</entry>
+          </row>
+
+          <row>
+            <entry>Deliverable Nature</entry>
+
+            <entry>Report</entry>
+          </row>
+
+          <row>
+            <entry>Contractual Delivery Date</entry>
+
+            <entry>31th July 2007</entry>
+          </row>
+
+          <row>
+            <entry>Actual Delivery Date</entry>
+
+            <entry>30th November 2007</entry>
+          </row>
+
+          <row>
+            <entry>Author(s)</entry>
+
+            <entry>UzK</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+
+    <abstract>
+      <para>The aim of this document is to describe the actual status of the
+      XCEL design development. In its later stages it should be read as a
+      language documentation and specification. It also should complement the
+      internal documentation of the XML Schemas that defines the formal
+      structure of the XCEL.</para>
+    </abstract>
+
+    <section>
+      <title>Document Control</title>
+
+      <para>ISO9001 Information: This document is not under document
+      control.</para>
+
+      <section>
+        <title>Keyword list:</title>
+
+        <para>XCEL, XCL, XCDL, PC, Extensible Characterisation Extraction
+        Language, Format Definition Language</para>
+      </section>
+
+      <section>
+        <title>Contributors</title>
+
+        <table>
+          <title>Contributors</title>
+
+          <tgroup cols="4">
+            <thead>
+              <row>
+                <entry align="center">Person</entry>
+
+                <entry align="center">Role</entry>
+
+                <entry align="center">Partner</entry>
+
+                <entry align="center">Contribution</entry>
+              </row>
+            </thead>
+
+            <tbody>
+              <row>
+                <entry>Thaller, Manfred</entry>
+
+                <entry>Lead, author</entry>
+
+                <entry>UzK</entry>
+
+                <entry>Common coaction</entry>
+              </row>
+
+              <row>
+                <entry>Schnasse, Jan</entry>
+
+                <entry>Development, author</entry>
+
+                <entry>UzK</entry>
+
+                <entry>Common coaction</entry>
+              </row>
+
+              <row>
+                <entry>Heydegger, Volker</entry>
+
+                <entry>Development, author</entry>
+
+                <entry>UzK</entry>
+
+                <entry>Common coaction</entry>
+              </row>
+
+              <row>
+                <entry>Neumann, Johanna</entry>
+
+                <entry>Development, author</entry>
+
+                <entry>UzK</entry>
+
+                <entry>Common coaction</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </section>
+
+      <section>
+        <title>Document Approval</title>
+
+        <table>
+          <title>Document Approval</title>
+
+          <tgroup cols="3">
+            <thead>
+              <row>
+                <entry align="center">Person</entry>
+
+                <entry align="center">Role</entry>
+
+                <entry align="center">Partner</entry>
+              </row>
+            </thead>
+
+            <tbody>
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </section>
+
+      <section>
+        <title>Distribution</title>
+
+        <table>
+          <title>Distribution</title>
+
+          <tgroup cols="3">
+            <thead>
+              <row>
+                <entry align="center">Person</entry>
+
+                <entry align="center">Role</entry>
+
+                <entry align="center">Partner</entry>
+              </row>
+            </thead>
+
+            <tbody>
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </section>
+
+      <section>
+        <title>Revision History</title>
+
+        <para></para>
+
+        <table>
+          <title>Revision History</title>
+
+          <tgroup cols="4">
+            <thead>
+              <row>
+                <entry align="center">Issue</entry>
+
+                <entry align="center">Author</entry>
+
+                <entry align="center">Date</entry>
+
+                <entry align="center">Discription</entry>
+              </row>
+            </thead>
+
+            <tbody>
+              <row>
+                <entry>0.1</entry>
+
+                <entry>Schnasse, Jan</entry>
+
+                <entry>30/05/2006</entry>
+
+                <entry>Initial draft version for internal review</entry>
+              </row>
+
+              <row>
+                <entry>0.2</entry>
+
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+
+              <row>
+                <entry>0.3</entry>
+
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </section>
+
+      <section>
+        <title>References</title>
+
+        <para></para>
+
+        <table>
+          <title>References</title>
+
+          <tgroup cols="4">
+            <thead>
+              <row>
+                <entry align="center">Ref.</entry>
+
+                <entry align="center">Document</entry>
+
+                <entry align="center">Date</entry>
+
+                <entry align="center">Details and Version</entry>
+              </row>
+            </thead>
+
+            <tbody>
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </section>
+    </section>
+
+    <section>
+      <title>Executive Summary</title>
+
+      <para></para>
+    </section>
+  </preface>
+
+  <toc></toc>
+
+  <preface>
+    <title>Introduction</title>
+
+    <section>
+      <title>Long-time preservation</title>
+
+      <subtitle>A solution by XCL</subtitle>
+
+      <para>by Volker Heydegger, Susanne Kurz, Jan Schnasse, Manfred
+      Thaller</para>
+
+      <para>In the last decades a radical change away from analogue up to
+      digital creation, exchanging and discovering of information-resources at
+      very different fields like science, culture, management, commercial and
+      so on is observable. This movement with upward trend provides many new
+      possibilities but it creates in different ways a lot of new problems.
+      One problem is long-term preservation of digital produced resources as
+      well as retrospectively digitized material because this material is in
+      different ways inherently ephemeral.</para>
+
+      <para>To provide the digital heritage also in the future it is
+      inevitable to consider two very different areas: the physical and the
+      logical sound condition of data. So on one hand the intactness of each
+      data storage medium must be ensured and on the other hand the guarantee
+      of the correct interpretation of data has to be offered. (Digital data
+      at first are not more than sequences of 0 and 1.) At present the
+      hardware problem is solved by regular interchange and complex backup
+      strategies but obsolescence of software systems that solely ensure the
+      original interpretation of data is an unsolved problem yet.</para>
+
+      <para>As a basic principle there are two ways of problem solving:
+      emulation and migration. While people attending the emulation strategy
+      aim at doing a reproduction of obsolete software systems (including
+      operating system, possibly computer architecture and the respective
+      application) inside of actual operating systems, migration means
+      converting at regular intervals and timely (means at a point of time the
+      technological obsolescence is not yet progressed and correct
+      interpretation of data is still possible) obsolete file formats into
+      stable and current formats. One of the following problems by using this
+      strategy is to ensure the all information of the old format is contained
+      in the new one. Automatic detection of loss of information caused by
+      converting file formats isn’t a trivial task especially if a huge number
+      of heterogeneous data is concerned (in such a way at archives and
+      libraries).</para>
+
+      <para>Many different kinds of data can be found within those data
+      collections: text and image files (with the different between raster and
+      vector images), audio and video files, virtual reality and 3d graphic
+      files, presentations, spreadsheets, databases and so on. Inside every
+      category many different file formats exist:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Text formats: pdf, rtf, plain text, MS Word, OpenOffice,
+          WordPerfect, HTML...</para>
+        </listitem>
+
+        <listitem>
+          <para>Raster graphics: tiff, png, gif, jpg, psd, ...</para>
+        </listitem>
+
+        <listitem>
+          <para>Vektor graphics: svg, eps, cdr, dxf, swf, ...</para>
+        </listitem>
+
+        <listitem>
+          <para>Audio formats: aiff, wave, midi, mpeg, wma, ram, snd, ogg, au,
+          ...</para>
+        </listitem>
+
+        <listitem>
+          <para>Video formats: avi, mpeg, Quicktime, mov, ogg, wmv, rv,
+          ...</para>
+        </listitem>
+
+        <listitem>
+          <para>3D- graphics /VR: X3D, VRML, U3D, ...</para>
+        </listitem>
+
+        <listitem>
+          <para>Presentations: MS PowerPoint, OpenOffice, Keynote, ...</para>
+        </listitem>
+
+        <listitem>
+          <para>Spreadsheets: MS Excel, OpenOffice, ...</para>
+        </listitem>
+
+        <listitem>
+          <para>Databases: SQL DDL, MS Access, Filemaker, ...</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>Besides the diversity of formats an additional format intrinsic
+      problem arises. In many cases the file format specification is not a
+      stable and durable one; it underlies development and integration of new
+      functionality so that several versions of a file format specification
+      enhance the diversity in addition. Particularly archives and libraries
+      collecting digital data for a long time are concerned of this.</para>
+
+      <para>Another type of complexity is based on the extents of coverage of
+      text information. On principle every text document can be divided into a
+      layout and a content component. Some experts argue that archiving and
+      preserving only content as the essential part of text documents is
+      effectual enough. Apart from the matter of fact that layout can be the a
+      research topic particularly with regard to historical documents, such an
+      approach is leading to problems. For instance: archiving only the
+      content of a table avoids any capturing of comprehension if the order of
+      columns and rows is not longer present. In many cases text formatting,
+      e.g. alternative, bold or italic fonts or indentations, listings or
+      paragraphs, leads to a correct understanding of content. These examples
+      show that a general decision of preserving content is not equivalent
+      with archiving solely content without layout. Even though layout is not
+      always relevant it must be taken into consideration.<footnote>
+          <para>In the following the term ‚digital object’ is for benefit of
+          the term ‚file’ deliberatly avoided because the expression ‚digital
+          object’ is an excellent choice to describe a unit of organisation
+          inside a complex conception but finally within practical use a
+          digital object is a defined file as the case may be a compositions
+          of multiple files with clear correlations.</para>
+        </footnote></para>
+
+      <para>The migration of obsolete file formats into current ones is a
+      comparative well-supported procedure of software vendors and with the
+      utmost probability it must be rerun by the concerned institutions.
+      Especially migration of a huge number of heterogeneous data needs
+      elaborate care and control of loss of information caused by the act of
+      migration itself. But at this point there is a lack of automated
+      solutions to identify problems and to separate them from unproblematic
+      cases.</para>
+
+      <para>The Cologne method of resolving this set of problems is based on
+      the development of a XML<footnote>
+          <para>Extensible Markup Language
+          (http://www.w3.org/TR/REC-xml/)</para>
+        </footnote>formal language describing structures and content of files.
+      XML is long time field-tested and provides the necessary independence of
+      applications, operating systems and hardware. XML data are human and
+      machine readable, comparatively simple for understanding and presentable
+      without converting through each text editor at arbitrary operation
+      system. Very important is the fact that XML is a general rule type for
+      the development of special languages for special problems. These
+      languages can be processed by every XML compatible application. XML
+      based languages and mark-up schema avail these properties for effective
+      storage, illustration and editing by standard tools. A further benefit
+      of XML is the possibility of document enhancement without encounter the
+      previous content. This is a very important characteristic, specifically
+      in the area of file description, because the number of file formats is
+      more than unclear by now.</para>
+
+      <para>The XML based Extensible Characterisation Language (XCL), composed
+      of XCEL<footnote>
+          <para>Extensible Characterisation Extraction Language</para>
+        </footnote> and XCDL<footnote>
+          <para>Extensible Characterisation Definition Language</para>
+        </footnote>, backs on the idea to capture the data stream of a file
+      and to extract the content as it is constituted by its file format
+      specification, which is therefore transformed into an XCEL document: It
+      is assumed that all data can be consistently described by the abstract
+      language XCEL. On the one hand the XCEL document shapes the structure of
+      a file format and on the other hand it completes the elements of the
+      structure with content. By using a special software (the so-called
+      extractor, see figure below) a file can be transformed into a general
+      descriptive form. The XCDL provides the formal description for this
+      transformation.</para>
+
+      <para>Applying the XCL on digital data originating from different file
+      formats enables to compare content in an automated way, based on a
+      unique representation as XCDL.</para>
+
+      <para>Every XCEL document covers only one file format specification, so
+      for every file format specification an equivalent XCEL document is
+      necessary. Such a transformation of semantic description to a
+      structured, machine-readable XML Code is only feasible if the file
+      format specification is completely documented.</para>
+
+      <para>At the first stage of the Cologne project a concentration on the
+      potential of an automated and high-performance comparison to verify the
+      loss of information by format converting of a great many of data files
+      is made. This is particularly a problem for one major preservation
+      strategies: file conversion.</para>
+
+      <para>The figure below illustrates the basis structure and the involved
+      components of comparison via XCL:</para>
+
+      <figure>
+        <title>migration - extraction - comparsion</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="resources/xtractorApproach.gif" />
+          </imageobject>
+        </mediaobject>
+      </figure>
+
+      <para>At the beginning of the procedure is a migration activity, i.e.
+      the conversion of an arbitrary file format into some other using any
+      migration tool as a result of the preservation planning of an
+      institution. In practice, the exact file format and migration tools will
+      strongly depend on these institutional decisions. The software component
+      ‘extractor’ imports the source as well as the target format. After
+      running automated format identification, the corresponding XCEL file
+      will be used to generate the respective XCDL files. The example below
+      shows an excerpt of a png-XCEL describing the structure and the
+      properties of the png-format. On the right is an excerpt of the
+      generated XCDL file. It is produced by the extractor software processing
+      a concrete png-file and the according standardized format description
+      (png-XCEL):</para>
+
+      <table>
+        <title>Example: excerpt of a png-XCEL describing the structure and the
+        properties of the png-format</title>
+
+        <tgroup cols="2">
+          <tbody>
+            <row>
+              <entry><programlisting>&lt;xcel...&gt;
+&lt;formatDescription&gt;....
+
+&lt;symbol identifier="ID01_I01_I01_S02" interpretation="uint32"&gt;
+                       &lt;range&gt;
+                            &lt;startposition xsi:type="fixed"&gt;20&lt;/startposition&gt;
+                            &lt;length xsi:type="fixed"&gt;4&lt;/length&gt;
+                        &lt;/range&gt;
+                        &lt;name&gt;imageHeight&lt;/name&gt;
+                    &lt;/symbol&gt;
+&lt;symbol identifier="ID01_I01_I01_S03" interpretation="uint8”&gt;
+                        &lt;range&gt;
+                            &lt;startposition xsi:type="fixed"&gt;24&lt;/startposition&gt;
+                            &lt;length xsi:type="fixed"&gt;1&lt;/length&gt;
+                        &lt;/range&gt;
+                        &lt;validValues&gt;
+                            &lt;value&gt;1&lt;/value&gt;
+                            &lt;value&gt;2&lt;/value&gt;
+                            &lt;value&gt;4&lt;/value&gt;
+                            &lt;value&gt;6&lt;/value&gt;
+                            &lt;value&gt;8&lt;/value&gt;
+                            &lt;value&gt;16&lt;/value&gt;
+                        &lt;/validValues&gt;
+                        &lt;name&gt;bitDepth&lt;/name&gt;
+                    &lt;/symbol&gt;
+…
+&lt;symbol identifier="ID01_I01_I01_S05"&gt;
+                        &lt;range&gt;
+                            &lt;startposition xsi:type="fixed"&gt;26&lt;/startposition&gt;
+                            &lt;length xsi:type="fixed"&gt;1&lt;/length&gt;
+                        &lt;/range&gt;
+                        &lt;valueInterpretation&gt;
+                            &lt;valueLabel&gt;zlibDeflateInflate&lt;/valueLabel&gt;
+                            &lt;value&gt;0&lt;/value&gt;
+                        &lt;/valueInterpretation&gt;
+                        &lt;name&gt;compression&lt;/name&gt;
+                    &lt;/symbol&gt;
+&lt;/xcel...&gt;</programlisting></entry>
+
+              <entry><programlisting>&lt;xcdl&gt;
+  &lt;object id="o1" &gt;
+    &lt;normData id="nd1" &gt; ... &lt;/normData&gt;
+     
+&lt;property id="p3" source="raw"&gt;
+            &lt;name&gt;imageHeight&lt;/name&gt;
+            &lt;valueSet id="i_i1_s3"&gt;
+                &lt;labValue&gt;
+                    &lt;val&gt;32&lt;/val&gt;
+                    &lt;type&gt;uint32&lt;/type&gt;
+                &lt;/labValue&gt;                
+            &lt;/valueSet&gt;
+        &lt;/property&gt;
+
+&lt;property id="p1" source="raw"&gt;
+            &lt;name&gt;bitDepth&lt;/name&gt;
+            &lt;valueSet id="i_i1_s4"&gt;
+                &lt;labValue&gt;
+                    &lt;val&gt;2&lt;/val&gt;
+                    &lt;type&gt;uint8&lt;/type&gt;
+                &lt;/labValue&gt;                
+            &lt;/valueSet&gt;
+        &lt;/property&gt;
+
+        &lt;property id="p2" source="raw"&gt;
+            &lt;name&gt;compression&lt;/name&gt;
+            &lt;valueSet id="i_i1_s6"&gt;
+                &lt;labValue&gt;
+                    &lt;val&gt;zlibDeflateInflate&lt;/val&gt;
+                    &lt;type&gt;XCLLabel&lt;/type&gt;
+                &lt;/labValue&gt;                
+            &lt;/valueSet&gt;
+        &lt;/property&gt;
+        
+...
+&lt;/xcdl&gt;</programlisting></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+
+      <para>Now the XCDL files of the source and the target format possess the
+      essential information layers. The following instance shows two into the
+      XCDL transformed files containing properties and values adapted for an
+      automated comparison:</para>
+
+      <table>
+        <title>Example: Two into the XCDL transformed files containing
+        properties and values adapted for an automated comparison:</title>
+
+        <tgroup cols="2">
+          <tbody>
+            <row>
+              <entry><programlisting>png-XCDL
+
+&lt;xcdl&gt;
+....
+   &lt;property id="p1" source="raw"&gt;
+      &lt;name&gt;bitDepth&lt;/name&gt;
+      &lt;valueSet id="i_i1_s4"&gt;
+         &lt;labValue&gt;
+            &lt;val&gt;2&lt;/val&gt;
+            &lt;type&gt;uint8&lt;/type&gt;
+         &lt;/labValue&gt;                
+      &lt;/valueSet&gt;
+   &lt;/property&gt;
+
+   &lt;property id="p2" source="raw"&gt;
+      &lt;name&gt;compression&lt;/name&gt;
+      &lt;valueSet id="i_i1_s6"&gt;
+         &lt;labValue&gt;
+            &lt;val&gt;zlibDeflateInflate&lt;/val&gt;
+            &lt;type&gt;XCLLabel&lt;/type&gt;
+         &lt;/labValue&gt;                   
+      &lt;/valueSet&gt;
+   &lt;/property&gt;
+
+
+   &lt;property id="p3" source="raw"&gt;
+            &lt;name&gt;imageHeight&lt;/name&gt;
+            &lt;valueSet id="i_i1_s3"&gt;
+                &lt;labValue&gt;
+                    &lt;val&gt;32&lt;/val&gt;
+                    &lt;type&gt;uint32&lt;/type&gt;
+                &lt;/labValue&gt;                
+            &lt;/valueSet&gt;
+   &lt;/property&gt;
+...
+&lt;/xcdl&gt;</programlisting></entry>
+
+              <entry><programlisting>tiff-XCDL
+
+&lt;xcdl&gt;
+...
+   &lt;property id="p1" source="raw"&gt;
+      &lt;name&gt;bitDepth&lt;/name&gt;
+      &lt;valueSet id="i_i1_s13"&gt;
+         &lt;labValue&gt;
+            &lt;val&gt;8&lt;/val&gt;
+            &lt;type&gt;uint16&lt;/type&gt;
+         &lt;/labValue&gt;
+      &lt;/valueSet&gt;
+   &lt;/property&gt;
+
+   &lt;property id="p2" source="raw"&gt;
+      &lt;name&gt;compression&lt;/name&gt;
+      &lt;valueSet id="i_i1_s16"&gt;
+         &lt;labValue&gt;
+            &lt;val&gt;uncompressed&lt;/val&gt;
+            &lt;type&gt;XCLLabel&lt;/type&gt;
+         &lt;/labValue&gt;
+      &lt;/valueSet&gt;
+   &lt;/property&gt;
+
+   &lt;property id="p3" source="raw"&gt;
+      &lt;name&gt;imageHeight&lt;/name&gt;
+      &lt;valueSet id="i_i1_s10"&gt;
+         &lt;labValue&gt;
+            &lt;val&gt;32&lt;/val&gt;
+            &lt;type&gt;uint16&lt;/type&gt;
+         &lt;/labValue&gt;
+      &lt;/valueSet&gt;
+   &lt;/property&gt;
+...
+&lt;/xcdl&gt;</programlisting></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+
+      <para>Thus standardised data can be processed by a further software
+      component, the comparator (see figure 1 above). On the one hand this
+      application is able to identify kind and quantity of covered properties
+      and on the other one it is also able to compare values of property-pairs
+      extracted from two XCDL files. An overall output of the comparator can
+      be a measure of identicalness of the content of two XCDLs, i.e. a
+      measure of similarity of migrated files (in the model case
+      97,8%).</para>
+
+      <para>Needless to say, that not each of the numerous properties of a
+      complex file format is similarly important for different institutions.
+      So the comparator also offers the possibility to select and weight only
+      a subset of properties. As a result institutions have the ability to
+      regulate the relevance of property A, B, or C of a file format according
+      to their specific needs. The example below shows the automated request
+      sequence between an enquiring partner and the comparator software
+      component:</para>
+
+      <para><emphasis>Example follows according development plan by end of
+      October 2007.</emphasis></para>
+
+      <para>Besides this the XCL and its components XCEL and XCDL are
+      extensively applicable. An enlarged functionality that builds on the
+      current development is conceivable as well as the extended use of this
+      technology. E.g., the XCDL comparison in pairs can be enlarged to a
+      multi comparison of XCDL files to provide the opportunity to provide a
+      ‘Collection Profiler’ to examine file collections in consideration of
+      their properties. Additional the development of XCL offers a development
+      of applications to reconstruct fragments of files. With XCEL
+      identification and utilisation of available sections of a file is
+      possible if conventional tools fail. Furthermore XCDL is an eligible
+      long-term preservation format for all existing digital files of any
+      format and in future a firsthand design of new formats is very
+      beneficial. For this purpose, only the development of applications like
+      reader, writer and converter are needed.</para>
+    </section>
+  </preface>
+
+  <chapter>
+    <title>Terms, definitions, abbreviated terms</title>
+
+    <section>
+      <title>Terms and Definitions</title>
+
+      <para></para>
+
+      <glossary>
+        <glossdiv>
+          <title>Terms and Definitions: Glossar</title>
+
+          <glossentry>
+            <glossterm>Item</glossterm>
+
+            <glossdef>
+              <para>An Item is an entity that groups other entities in a
+              structural, logical or semantical way. An Item has always
+              children; in this sense it is non-terminal. The starting Item of
+              any XCEL Instance is called Root Item.</para>
+            </glossdef>
+          </glossentry>
+
+          <glossentry>
+            <glossterm>Symbol</glossterm>
+
+            <glossdef>
+              <para>A Symbol is a terminal entity that describes the position,
+              length, encoding and semantics of a byte sequence.</para>
+            </glossdef>
+          </glossentry>
+
+          <glossentry>
+            <glossterm>Property</glossterm>
+
+            <glossdef>
+              <para>A Property is a special form of a Symbol in the way, that
+              its value is determined by the file format specification.</para>
+            </glossdef>
+          </glossentry>
+
+          <glossentry>
+            <glossterm>Processing</glossterm>
+
+            <glossdef>
+              <para>A Processing encapsulates runtime dependencies that affect
+              the XCEL tree structure or the byte stream depending on the
+              occurrence of single values.</para>
+            </glossdef>
+          </glossentry>
+
+          <glossentry>
+            <glossterm>XCEL Tree</glossterm>
+
+            <glossdef>
+              <para>An XCEL Tree is made up of Items, Symbols, Properties and
+              Processings. The root of an XCEL Tree must be an Item. Leaves of
+              an XCEL Tree can either be Symbols, Properties or
+              Processings.</para>
+            </glossdef>
+          </glossentry>
+
+          <glossentry>
+            <glossterm>XCEL Element</glossterm>
+
+            <glossdef>
+              <para>XCEL Element (short: 'Element') is the shared term for
+              Items, Symbols, Properties and Processings.</para>
+            </glossdef>
+          </glossentry>
+
+          <glossentry>
+            <glossterm>XCEL Processor</glossterm>
+
+            <glossdef>
+              <para>A tool that is able to process an XCEL instance and any
+              corresponding binary file. The XCEL Processor developed by
+              Planets is called 'Extractor'.</para>
+            </glossdef>
+          </glossentry>
+
+          <glossentry>
+            <glossterm>XCEL Schemas</glossterm>
+
+            <glossdef>
+              <para>Entirety of the single XML schemas which express parts of
+              the XCEL.</para>
+            </glossdef>
+          </glossentry>
+
+          <glossentry>
+            <glossterm>Digital object</glossterm>
+
+            <glossdef>
+              <para>A digital object is an abstract term for a beast that
+              lives on a computer and you are thinking of as an entity. The
+              way how a digital object is represented on a digital system is
+              not defined by the digital object as a digital object. e.g. a
+              digital object can be represented as a record, a file, two
+              files, three files etc.</para>
+            </glossdef>
+          </glossentry>
+
+          <glossentry>
+            <glossterm>Fileformat</glossterm>
+
+            <glossdef>
+              <para>A Fileformat is a set of rules which formalize all
+              knowledge needed to process the binary information contained
+              within a distinct and complete block of binary information,
+              traditionally called a file.</para>
+            </glossdef>
+          </glossentry>
+
+          <glossentry>
+            <glossterm>File</glossterm>
+
+            <glossdef>
+              <para>A file or more exact a regular file is the information
+              handled by a special part of the Operating System called
+              Filesystem. A file typically consists of two logicaly distinct
+              blocks of data. The first datablock is handled by the Filesystem
+              and typically is used to store administrative attributes like
+              acces permissions etc. The second block is a sequence of bytes
+              that can be described by a certain Fileformat. To describe the
+              content of these second block is what the XCEL is made
+              for.</para>
+            </glossdef>
+          </glossentry>
+
+          <glossentry>
+            <glossterm>XCEL Instance</glossterm>
+
+            <glossdef>
+              <para>An XCEL Instance is an XML file that is valid against the
+              XCEL Schemas. Actually it describes a particular file format,
+              e.g. a 'PNG XCEL instance' is an XCEL-conform representation of
+              the PNG file format.</para>
+            </glossdef>
+          </glossentry>
+
+          <glossentry>
+            <glossterm>Content model</glossterm>
+
+            <glossdef>
+              <para>In this document the term content model is used for the
+              different ways the content of an item can be structured. This
+              structure is specified in the item's 'order' attribute. Valid
+              values for it are 'all', 'sequence' and 'choice', each
+              constituting a different content model. These three content
+              models are described later in the text.</para>
+            </glossdef>
+          </glossentry>
+        </glossdiv>
+      </glossary>
+    </section>
+
+    <section>
+      <title>Abbreviated Terms</title>
+
+      <para></para>
+    </section>
+  </chapter>
+
+  <chapter>
+    <title>Concepts</title>
+
+    <para>The XCEL describes structures in a hierarchical treelike form. Items
+    are non-terminal Elements in the tree. They can contain an undefined
+    number of other Elements. A file format is always described by an item
+    (root item) with nested additional items containing other items with
+    different content models. Structures like loops and choices are expressed
+    with content models. The XCEL uses a declarative programming style. That
+    means that the XCEL focuses on what sort of things can occur but not on
+    how to find them. If the XCEL Processor finds an XCEL Element that
+    describes properly what is given by a sequence of bytes in the binary
+    file, we say 'the Element matches'. If the Root Item of an XCEL Instance
+    matches, the XCEL Instance is a proper (and valid) description for the
+    binary data of any particular processed file. E.g. if the Root Item of the
+    PNG XCEL Instance matches, the particular binary file processed should be
+    one described through the PNG file format.</para>
+  </chapter>
+
+  <chapter>
+    <title>XCEL main structure</title>
+
+    <para>An XCEL Instance consists of four main structural parts:
+    preprocessing, description, templates and postprocessing.</para>
+
+    <sect1>
+      <title>Preprocessing</title>
+
+      <para>This area is reserved for configuration tasks that affect the
+      behaviour of the XCEL Processor.</para>
+    </sect1>
+
+    <sect1>
+      <title>Format description</title>
+
+      <para>The structure of the digital object is described in here.</para>
+    </sect1>
+
+    <sect1>
+      <title>Templates</title>
+
+      <para>Usually file formats use identical structures to describe
+      different things. The template section contains those re-occurring
+      structures, which can be reused at different points in the XCEL
+      Tree.</para>
+    </sect1>
+
+    <sect1>
+      <title>Postprocessing</title>
+
+      <para>The postprocessing part of the XCEL is processed after the binary
+      file has been read completely. It can therefore modify the internal
+      representation of the data with respect to the results of the parsing
+      process. In the postprocessing section it is possible, for instance, to
+      define decompression algorithms or filters, which have to be applied to
+      the complete data.</para>
+    </sect1>
+  </chapter>
+
+  <chapter>
+    <title>XCEL elements</title>
+
+    <section>
+      <title>Items</title>
+
+      <para>Items are used in two ways:</para>
+
+      <orderedlist>
+        <listitem>
+          <para>1.Items with <emphasis>xsi:type=“structuringItem“</emphasis>
+          describe the structure of a file format by building containers with
+          different content models. There are three different content models:
+          all, choice and sequence.</para>
+        </listitem>
+
+        <listitem>
+          <para>1.Items with <emphasis>xsi:type=“contextItem“</emphasis> or
+          <emphasis>xsi:type=“definitionItem“</emphasis> are used to define a
+          semantical relation between XCEL Elements or to name a group of
+          Elements.</para>
+        </listitem>
+      </orderedlist>
+
+      <section>
+        <title>Structuring Items</title>
+
+        <section>
+          <title>Content model: <emphasis>sequence</emphasis></title>
+
+          <para>The content model sequence (attribute:
+          <emphasis>order=“sequence“</emphasis>)is the default content model
+          for Items. A sequence is an ordered list of Elements. The single
+          Elements in a sequence must occur in the given sequential order
+          within the binary file.</para>
+
+          <para>An Item with content model sequence matches, if all of its
+          children have matched at the current parsing position, i.e. at the
+          position defined by the XCEL Tag 'startPosition'. Usually its
+          attribute 'type' has value 'sequential':</para>
+
+          <para><emphasis>&lt;startPosition xsi:type=“sequential“/&gt;
+          </emphasis></para>
+
+          <para>This means, the XCEL Processor is obliged to find the
+          corresponding byte sequence within the binary file searching at the
+          current parsing position.</para>
+        </section>
+
+        <section>
+          <title>Content model: <emphasis>all</emphasis></title>
+
+          <para>The content model all (attribute:
+          '<emphasis>order=“all“</emphasis>') describes that all of its child
+          elements can occur at any position within the items range, i.e. they
+          are not strictly bounded to their sequential order. All children
+          which are non-optional (optional=“false“) must match at least one
+          time, otherwise the parent all Item does not match. Children with
+          attribute <emphasis>multiple=“true“</emphasis> can match several
+          times, i.e. in an unlimited number. Items with content model all
+          must be processed by the XCEL Processor as long as there are
+          matching children.</para>
+
+          <para>The child elements should also be processed in the given
+          order. Therefore children supposed to match many times should be put
+          at first within an Item with content model all. Please refer to the
+          section [XCEL Processors] to get an exact description on how an item
+          is processed.</para>
+        </section>
+
+        <section>
+          <title>Content Model: <emphasis>choice</emphasis></title>
+
+          <para>The content model choice expressed by the attribute
+          <emphasis>order=“choice“</emphasis> defines a set of different
+          options. The Item is processed only once. If one of its child
+          elements matches, the whole Item matches, i.e. no further child
+          element is allowed to be matched. The children of a choice Item are
+          optional by default. Therefore the attribute 'optional' does not
+          have to be included here. However, the XCEL Processor should ignore
+          this attribute if included anyway (as this done by the Planets
+          Extractor).</para>
+
+          <para>A choice Item is similar to a Symbol with labeled values. The
+          difference is that a Symbol with labeled values demands for all
+          values must having the same type.</para>
+
+          <para>The choice Item matches, if one of its children has matched at
+          the given parsing position.</para>
+        </section>
+      </section>
+
+      <section>
+        <title>Semantic Items</title>
+
+        <para>Semantic Items deal with the interpretation of single chunks of
+        the binary file. They are included in the
+        <emphasis>&lt;description&gt;</emphasis> record of the XCEL. There are
+        two types of Semantic Items, <emphasis>definitionItem and
+        contextItem.</emphasis> Both are used to group parts of the
+        description into units. A definition item gives a unit a name. For
+        example it is used to bundle the symbols „hour“, „minute“ and „second“
+        in a unit named „time“. The definition items are used to interpret a
+        part of the XCEL as a property in the sense of an XCDL Property. A
+        context item expresses that parts of the description belong together.
+        A context item is used to build relations between single properties in
+        the XCDL.</para>
+      </section>
+    </section>
+
+    <section>
+      <title>Symbols</title>
+
+      <para>A symbol is the smallest unit in the XCEL. It holds a single value
+      consisting of several bytes and usually adds a name to it. There are
+      four types of symbols: normal symbols, symbols with valid values,
+      symbols with non-valid values and symbols with label-value-pairs.</para>
+
+      <para><emphasis>A normal symbol</emphasis> has a range, an optional name
+      and an interpretation to describe a part of the byte stream in the
+      binary file.</para>
+
+      <para><emphasis>A symbol with valid values</emphasis> defines a list of
+      values of which one option has to match the byte stream at the given
+      file position. Values can be defined as string or as regular expression
+      (Qt.4.2 Style).</para>
+
+      <para><emphasis>A symbol with non-valid values</emphasis> defines a list
+      of values, which must not occur at the given file position. Values can
+      be defined as string or as regular expression (Qt.4.2 Style).</para>
+
+      <para><emphasis>A symbol with label-value-pairs</emphasis> is used to
+      assign a meaning to single values that can occur at the given position.
+      It decodes the value and assigns it to a name from the Names Lib Schema,
+      based on the definition in the file format description. It's the label
+      which is transferred to the XCDL not the value.</para>
+
+      <para>Symbols with labelled values are similar to choice items but with
+      the restriction that the values of a symbol must have the same
+      type.</para>
+
+      <para>A symbol matches if the interpretation of the binary value</para>
+
+      <orderedlist>
+        <listitem>
+          <para>1.is valid (if valid values or non-valid values are
+          defined)</para>
+        </listitem>
+
+        <listitem>
+          <para>has a valid label (if labelled values are defined).</para>
+        </listitem>
+      </orderedlist>
+
+      <para>If no labels, valid values or non-valid values are defined the
+      symbol always matches.</para>
+    </section>
+
+    <section>
+      <title>Properties</title>
+
+      <para>A property is a special form of a symbol in the way, that its
+      value is determined by the file format specification. Properties
+      therefore are important components to identify the right processing
+      brunch in the XCEL tree for a given binary object. A property matches if
+      the interpretation of the binary data at the current reading position
+      and the value of the property are the same. Values can be defined as
+      string or as regular expression (Qt.4.2 Style).</para>
+    </section>
+
+    <section>
+      <title>Processings</title>
+
+      <para>Processings are used to either modify the XCEL, i.e. the syntax
+      tree used for parsing, or the binary data with so called
+      „buildIn-methods“.</para>
+
+      <para>There are four types of processing:</para>
+
+      <orderedlist>
+        <listitem>
+          <para>1.type=“pushXCEL“</para>
+        </listitem>
+
+        <listitem>
+          <para>1.type=“pullXCEL“</para>
+        </listitem>
+
+        <listitem>
+          <para>1.type=“pushBinary“</para>
+        </listitem>
+
+        <listitem>
+          <para>1.type=“pullBinary“</para>
+        </listitem>
+      </orderedlist>
+
+      <para>A push processing references a chunk of information and modifies
+      it with processing methods. A pull processing references a chunk of
+      information and moves it to the place from where the processing has been
+      called.</para>
+
+      <para>Processings can refer its targets by their identifier or by name.
+      For this purpose the attributes „xcelRef“ and „xcelNameRef“ exist.
+      Usually during processing the targets are referenced by their Ids and
+      during postprocessing by their names.</para>
+
+      <para>A processing consists of one ore more methods, which are
+      identified by a name and the method's parameters. A parameter can be a
+      value, a reference to an XCEL element or a mathematical expression which
+      can include also references to other XCEL elements.</para>
+
+      <section>
+        <title>Push XCEL processing</title>
+
+        <para>A processing with the attribute type=“pushXCEL“ is used to
+        modify one specific element in the XCEL tree with one or more built-In
+        methods.</para>
+
+        <para>Typical use: The length of a data chunk is given by a previous
+        read symbol. A processing is used to set the length of the data chunk
+        after the length is known but before the data chunk will be
+        processed.</para>
+      </section>
+
+      <section>
+        <title>Pull XCEL processing</title>
+
+        <para>A processing with the attribute type=“pullXCEL“ is used to move
+        an XCEL Element to the current position of the XCEL Tree. The element
+        can be modified by one or more built-in methods.</para>
+
+        <para>Typical use: A frequently used structure is defined in the
+        template area of an XCEL instance. The processing is used to copy the
+        structure at runtime to the current position. The template structure
+        can be modified with buildin methods.</para>
+      </section>
+
+      <section>
+        <title>Push binary processing</title>
+
+        <para>Not defined</para>
+      </section>
+
+      <section>
+        <title>Pull binary processing</title>
+
+        <para>Not defined</para>
+      </section>
+
+      <section>
+        <title>Built-In methods</title>
+
+        <orderedlist>
+          <listitem>
+            <para>setLength:</para>
+
+            <para>The BuildIn-Method setLength is used to modify the length of
+            its target. The method accepts one or two parameters.</para>
+
+            <para>The first parameter always defines the value, i.e. the
+            length of the object. The second parameter can can further specify
+            the data type, if it differs from the default uint8. If two
+            parameters are given the first parameter will be multiplied with
+            the lenght in bytes the second parameter indicates. E.g.</para>
+
+            <para>setLength(5,uint32) == 20 bytes.</para>
+
+            <para>setLength(5) == 5 bytes.</para>
+
+            <para>setLength(5,uint8) == 5 bytes.</para>
+          </listitem>
+
+          <listitem>
+            <para>SetByteOrder</para>
+
+            <para>The built-in method setByteOrder is used to change the byte
+            order in the target object. It accepts one parameter. Valid values
+            are „bigEndian“ and „littleEndian“.</para>
+          </listitem>
+
+          <listitem>
+            <para>SetName</para>
+
+            <para>The built-in method setName can change the name of its
+            target object. The method accepts one paramter.</para>
+          </listitem>
+
+          <listitem>
+            <para>AddFilter</para>
+
+            <para>The built-in method addFilter adds a filter to the
+            filterChain of an object. It accepts several parameters. The first
+            parameter always gives the name of the filter or compression
+            method. The following parameters identify further values, which
+            are necessary to apply the filter method. For example the
+            png-filter for adaptive filtering needs the following additional
+            parameters: <emphasis>width, heigth, bitsPerSample, imageType,
+            interlace</emphasis>.</para>
+          </listitem>
+
+          <listitem>
+            <para>The BuildIn-Method <emphasis>setStartposition</emphasis>
+            defines the startposition of the referred object. Like
+            <emphasis>setLength</emphasis> it accepts two parameters, which
+            contain the actual value and optional the data type.</para>
+          </listitem>
+        </orderedlist>
+      </section>
+
+      <section>
+        <title>XCLProcessParameters</title>
+
+        <para>XCLProcessParameters can refer its values in two different ways.
+        Either by the xcelRef/ xcelNameRef attribute or by value. The value
+        can be a given name or number or can be represented as a mathematical
+        term. To refer an Expression by its name or by its ID means to refer
+        to its interpreted value. This indicates that the Expression must
+        allready been read. It is also possible to call values by reference in
+        a mathematical expression. For that you have to prepend a „#“ to the
+        ID of the referred Expression. E.g.</para>
+
+        <para>#5 + 16 means that the interpreted value of the expression with
+        the ID 5 is summated with 16.</para>
+      </section>
+    </section>
+  </chapter>
+
+  <chapter>
+    <title>XCEL architecture</title>
+
+    <sect1>
+      <title>Files:</title>
+
+      <para><emphasis>Files with prefix XCELBasic builds the core of the
+      XCEL.</emphasis></para>
+
+      <para>XCELBasicStructure.xsd</para>
+
+      <para>XCELBasicExtension.xsd</para>
+
+      <para>XCELBasicBuildInMethods.xsd</para>
+
+      <para>XCLBasicNamesLib.xsd</para>
+
+      <para>XCLBasicdatatypesLib.xsd</para>
+
+      <para></para>
+
+      <para><emphasis>The following extensions are
+      available:</emphasis></para>
+
+      <para>XCELAudiExtension.xsd</para>
+
+      <para>XCELImageExtension.xsd</para>
+
+      <para>XCELTextExtension.xsd</para>
+
+      <para>XCELImageNamesLib.xsd</para>
+
+      <para>XCELAudioNamesLib.xsd</para>
+
+      <para>XCELTextNamesLib.xsd</para>
+
+      <figure>
+        <title>Figure 6.1 XCEL Architecture</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="resources/xcelarc.png" />
+          </imageobject>
+        </mediaobject>
+      </figure>
+    </sect1>
+  </chapter>
+
+  <chapter>
+    <title>Extending the XCEL</title>
+
+    <para>Extending the XCEL can be done by</para>
+
+    <itemizedlist>
+      <listitem>
+        <para>Creating a new XCEL instance</para>
+      </listitem>
+
+      <listitem>
+        <para>Creating a new XCEL NamesLib</para>
+      </listitem>
+
+      <listitem>
+        <para>Extending the XCEL BasicStructure</para>
+      </listitem>
+
+      <listitem>
+        <para>Writing plugins for the XCEL processor</para>
+      </listitem>
+    </itemizedlist>
+
+    <section>
+      <title>Creating a new XCEL Instance</title>
+
+      <para>An XCEL instance is a description of a digital object. Usually a
+      digital object has a certain type, e.g. text, image, audio etc. One
+      presumption of the XCEL is that objects with the same type use the same
+      concepts. For that the XCEL uses a set of controlled and documented
+      terms to give the same things the same name. These terms are defined in
+      XML Schemas with the name convention XCL&lt;type&gt;NamesLib.xsd, e.g.
+      XCLImageNamesLib.xsd. To support the creation of an XCEL instance we
+      recommend to restrict the XCEL elements defined in the
+      XCELBasicStructure.xsd to contain only terms that are described in the
+      NamesLib of their type. This can be done by defining and extending the
+      basic types in a file with the naming convention
+      XCEL&lt;type&gt;Extension.xsd. We recommend to create new XCEL instances
+      by associating them with the type specific XML Schemas. Thus your XML
+      validator should be able to check the structure AND the used
+      terms.</para>
+
+      <example>
+        <title>XCEL Document Head</title>
+
+        <para>To describe an image format in XCEL you should start
+        with:</para>
+
+        <programlisting format="linespecific" language="XML">&lt;XCELDocument xmlns="http://www.planets-project.eu/xcl/schemas/xcelstructure"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl 
+	schemas/XCELImageExtension.xsd"&gt;</programlisting>
+      </example>
+
+      <para>For more information see our "How to XCEL a file format"
+      tutorial.</para>
+    </section>
+
+    <section>
+      <title>Creating a new Names Lib</title>
+
+      <para>A NamesLib is basically a list of terms that represents concepts
+      that are used by digital objects of a certain type.</para>
+
+      <example>
+        <title>Creating a NamesLib: Head</title>
+
+        <para>The first you should do when creating a NamesLib is to define
+        the namespace and to include the BasicNamesLib by writing</para>
+
+        <programlisting>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+	xmlns:tns="http://www.planets-project.eu/xcl/schemas/xcl"
+	targetNamespace="http://www.planets-project.eu/xcl/schemas/xcl"
+	elementFormDefault="qualified"&gt;
+&lt;xs:include schemaLocation="XCLBasicNamesLib.xsd"/&gt;</programlisting>
+      </example>
+
+      <para>Than you simply can define a a new type with an enumeration of the
+      terms you like to use for the type specific concepts. We prefer to give
+      our terms the basic type xs:string.</para>
+
+      <example>
+        <title>(XCLImageNameslib.xsd) - Creating a NamesLib: Defining a new
+        type</title>
+
+        <programlisting>&lt;xs:simpleType name="xclImageBasicNames"&gt;
+	&lt;xs:restriction base="xs:string"&gt;
+		&lt;xs:enumeration value="1931IEC_ChromaticityRedX"&gt;
+		&lt;xs:annotation&gt;
+			&lt;xs:documentation&gt; 
+			value x of pair xy specifying red 
+			colour according to 1031 IEC
+			&lt;/xs:documentation&gt;
+		&lt;/xs:annotation&gt;
+		&lt;/xs:enumeration&gt;
+		&lt;xs:enumeration value="1931IEC_ChromaticityRedY"&gt;
+		&lt;xs:annotation&gt;
+			&lt;xs:documentation&gt;
+			value y of pair xy specifying red 
+			colour according to 1031 IEC
+			&lt;/xs:documentation&gt;
+		&lt;/xs:annotation&gt;
+		&lt;/xs:enumeration&gt;
+... 
+&lt;/xs:simpleType&gt;</programlisting>
+      </example>
+
+      <para><emphasis>To support a more dynamic behaviour of your
+      validator/editor you can group your terms in different schema types. But
+      we recommend to provide one union that contains all
+      types.</emphasis></para>
+
+      <example>
+        <title>(XCLImageNameslib.xsd) - Creating a NamesLib: Grouping terms in
+        diff. schema types</title>
+
+        <programlisting>&lt;!-- ************************** union type for all image specific xcl namings *********************** --&gt;
+&lt;xs:simpleType name="xclImageNamesDefinitions"&gt;
+&lt;xs:union memberTypes="nm:xclImageBasicNames nm:xclImageExtendedNames nm:xclImageValueLabels nm:xclBasicNameDefinitions"/&gt;
+&lt;/xs:simpleType&gt; </programlisting>
+      </example>
+    </section>
+
+    <section>
+      <title>Extending the XCEL BasicStructure</title>
+
+      <para>To make use of a new NamesLib you have to extend the definitions
+      of at least two types. A sample file for creating an extension is
+      provided with the XCELBasicExtension.xsd. The new extension should
+      follow the name convention XCL[type]Extension.xsd (where [type] refers
+      to a specific domain of digital objects for example: image, audio, etc).
+      The next step is to define the namespace, to include your NamesLib and
+      to include the XCELBasicStructure.xsd by writing:</para>
+
+      <example>
+        <title>(XCLImageExtension.xsd) - Extending XCEL BasicStructure:
+        Defining Namespace, including NamesLib and
+        XCELBasicStructure.xsd</title>
+
+        <programlisting>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+	xmlns:tns="http://www.planets-project.eu/xcl/schemas/xcl"
+	targetNamespace="http://www.planets-project.eu/xcl/schemas/xcl"
+	elementFormDefault="qualified"&gt;
+
+	
+	&lt;xs:include schemaLocation="XCELBasicStructure.xsd"/&gt;
+	&lt;xs:include schemaLocation="XCELImageNamesLib.xsd"/&gt;</programlisting>
+      </example>
+
+      <para>Now you can define that the terms from your NamesLib can be used
+      as names and labels by writing:</para>
+
+      <example>
+        <title>(XCLImageExtension.xsd) - Extending XCEL BasicStructure:
+        Defining terms from NamesLib to be used as names and lables</title>
+
+        <programlisting>&lt;xs:simpleType name="extendedNameDefinitions"&gt;
+	&lt;xs:union memberTypes=" 
+		tns:xclBasicNameDefinitions tns:xclImageNamesDefinitions"/&gt;
+/xs:simpleType&gt;</programlisting>
+      </example>
+
+      <para>This will allow you to use terms from the XCLBasicNamesLib and the
+      type specific terms from your NamesLib (here:
+      tns:xclImageNamesDefinitions). You can also define what values should be
+      used in your XML instance document by modifying the
+      extendedValueDefinitions</para>
+
+      <example>
+        <title>(XCLImageExtension.xsd) - Extending XCEL BasicStructure: Define
+        the values to be used</title>
+
+        <programlisting>&lt;xs:simpleType name="extendedValueDefinitions"&gt;
+		&lt;xs:union memberTypes=" xs:string xs:int"/&gt;
+&lt;/xs:simpleType&gt;</programlisting>
+      </example>
+
+      <para><emphasis>Adding new datatypes or new methods to the XCEL can be
+      done by defining the types Example
+      (XCELImageExtension.xsd)</emphasis></para>
+
+      <example>
+        <title>(XCLImageExtension.xsd) - Extending XCEL BasicStructure: Adding
+        datatypes and methods</title>
+
+        <programlisting>&lt;xs:simpleType name="interpretationType"&gt;
+		&lt;xs:annotation&gt;
+			&lt;xs:documentation&gt;
+				The interpretation Type defines which
+				datatypes are available for symbols and properties.
+			&lt;/xs:documentation&gt;
+		&lt;/xs:annotation&gt;
+		&lt;xs:union memberTypes="tns:xclDataTypeDefinition"/&gt;
+	&lt;/xs:simpleType&gt;
+	
+	
+	&lt;xs:simpleType name="methodType"&gt;
+		&lt;xs:annotation&gt;
+			&lt;xs:documentation&gt;
+				The Method Type is used to define the 
+				known methods that can be used in the 
+				processing element.
+				Methods are used for manipulating the XCEL 
+				Tree or the binary Data, that is described by the 
+				XCEL.
+				A Method must have a direct corresponding 
+				Plugin in the XCEL Processor.
+			&lt;/xs:documentation&gt;
+		&lt;/xs:annotation&gt;
+		&lt;xs:union memberTypes="tns:basicMethodType"/&gt;
+	&lt;/xs:simpleType&gt;</programlisting>
+      </example>
+
+      <para>New datatypes should be defined in a file with the name convention
+      XCL[type]datatypesLib.xsd. New methods should be defined in a file with
+      the name convention XCEL[type]BuildInMethods.xsd. Where [type] refers to
+      the domain (e.g. image, audio etc.).</para>
+    </section>
+  </chapter>
+
+  <chapter>
+    <title>XCEL processors</title>
+
+    <section>
+      <title>States</title>
+
+      <para>The state of XCEL processor is defined by the current element E,
+      its context C and the underlying byte sequence BS. State {E,C,BS} An
+      XCEL element has</para>
+
+      <orderedlist>
+        <listitem>
+          <para>a <emphasis>type</emphasis></para>
+
+          <para>enumeration: {ITEM_TYPE, symbol_TYPE, PROPERTY_TYPE,
+          PROCESSING_TYPE}</para>
+        </listitem>
+
+        <listitem>
+          <para>a <emphasis>quantification</emphasis>:</para>
+
+          <para>bool:isMultiple</para>
+        </listitem>
+
+        <listitem>
+          <para>it <emphasis>can be optional</emphasis></para>
+
+          <para>bool:isOptional</para>
+        </listitem>
+
+        <listitem>
+          <para>it <emphasis>can be valid</emphasis> (match to the binary
+          stream)</para>
+
+          <para>bool:isValid</para>
+        </listitem>
+      </orderedlist>
+
+      <para>The context of an element is given by its parents (Items). They
+      can define</para>
+
+      <orderedlist>
+        <listitem>
+          <para>a <emphasis>range</emphasis> (byte positions in the binary
+          stream)</para>
+
+          <para>unsigned int:start (default 0)</para>
+
+          <para>unsigned int:end (default the filelength)</para>
+        </listitem>
+
+        <listitem>
+          <para>a <emphasis>content model</emphasis></para>
+
+          <para>enumeration: {all,choice,sequence}</para>
+        </listitem>
+      </orderedlist>
+    </section>
+
+    <section>
+      <title>Rules</title>
+
+      <para>A rule describes how an XCELProcessor should behave if a state
+      {E,C,BS} is given.</para>
+
+      <section>
+        <title>For contexts with content model all</title>
+
+        <para>All objects within the „all-item“ have to match without specific
+        order.</para>
+
+        <para>If an XCEL element with quantification isMultiple occurs, the
+        processor has to check if its repetition matches again to the byte
+        stream. The element is tested as long against the byte stream as it
+        matches. It also will be tested again in the next iterations of the
+        all context. The element can only repeat as often as it matches to the
+        byte stream. The element can only repeat as often as the range
+        prescribes.</para>
+
+        <para>An element without quantification isMultiple can only match one
+        time in the given context.</para>
+
+        <para>A non optional element must occure in at least one
+        iteration.</para>
+
+        <para>The processor escapes from the context if no element
+        matches.</para>
+
+        <para>The processing fails if one or more of its non-optional subitems
+        haven't matched after the last iteration.</para>
+      </section>
+
+      <section>
+        <title>For contexts with content model sequence</title>
+
+        <para>All objects within the „sequence-item“ have to match in a
+        specified order.</para>
+
+        <para>If an XCEL element with quantification isMultiple occures the
+        processor has to check if its repetition matches again to the byte
+        stream. The element is tested as long against the byte stream as it
+        matches. The element can only repeat as often as the range
+        prescribes.</para>
+
+        <para>An element without quantification isMultiple can only match one
+        time in the given context.</para>
+
+        <para>A non optional element must occur at the given position.
+        Otherwise the context does not match.</para>
+
+        <para>The processor escapes the context if all elements are
+        successfully processed or if a non optional element does not
+        match.</para>
+
+        <para>The processing fails if either one of its subitems doesn't match
+        at its specified position.</para>
+      </section>
+
+      <section>
+        <title>For contexts with content model choice</title>
+
+        <para>If an XCEL element with quantification isMultiple occures the
+        processor has to check if its repetition matches again to the byte
+        stream. The Element can only repeat as often as the range
+        prescribes.</para>
+
+        <para>An element without quantification isMultiple can only match one
+        time in the given context.</para>
+
+        <para>The optional attribute is ignored.</para>
+
+        <para>The processor escapes the context as soon as one element - and
+        possibly its repetitions - matches.</para>
+
+        <para>The subitems are read until one subitem matches. The processing
+        fails if no subitem matches the byte stream.</para>
+      </section>
+    </section>
+  </chapter>
+</book>

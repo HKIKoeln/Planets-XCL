@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	* fmt_xxx_docx.xsd
+       * This module is part of the XCL software system
+       *
+       * Written by Sebastian Beyl, Volker Heydegger, Johanna Puhl, Jan Schnasse, Manfred Thaller, Elona Weiper 2006 - 2009
+       * Nameslib-Webservice by Stefan T. Oertel
+       *
+       * Copyright (C) 2006 - 2009 Sebastian Beyl, Volker Heydegger, Johanna Puhl, Jan Schnasse, Manfred Thaller, Elona Weiper
+       *
+       * This program is free software; you can redistribute it and/or modify
+       * it under the terms of the GNU General Public License as published by
+       * the Free Software Foundation; either version 2 of the License, or
+       * (at your option) any later version.
+       *
+       * This program is distributed in the hope that it will be useful,
+       * but WITHOUT ANY WARRANTY; without even the implied warranty of
+       * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+       * GNU General Public License for more details.
+   	*
+-->
+
+
+<!-- extensible characterisation language: properties' name definitions library for XCDL and XCEL documents -->
+<!-- created by PLANETS, PC2, University of Cologne (HKI ) -->
+<!-- Generation info:
+   Date:                    2009-05-26
+   Time:                    20:38:05
+   Host:                    planetarium.hki.uni-koeln.de
+   Ontology Base URI:       http://planetarium.hki.uni-koeln.de/public/XCL/ontology/XCLOntology.owl#
+   RDF used for extraction: xcl.rdf
+-->
+
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+    xmlns:tns="http://www.planets-project.eu/xcl/schemas/xcl"
+    targetNamespace="http://www.planets-project.eu/xcl/schemas/xcl"
+    elementFormDefault="qualified">
+
+		<xs:simpleType name="fmt_xxx_docx" id="properties">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="artist" id="id31">
+					<xs:annotation>
+						<xs:documentation>
+                       Person who created the digital object.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="documentTitle" id="id78">
+					<xs:annotation>
+						<xs:documentation>
+                       Title of the document, if different of fileName (possibly only occuring in pdf-files).
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="rightAdjustment" id="id271">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="BackgroundColourRGB" id="id32">
+					<xs:annotation>
+						<xs:documentation>
+                       Hex-Value of a background-colour.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="lineBreak" id="id183">
+					<xs:annotation>
+						<xs:documentation>
+                       Content-property describing if a string content breaks to a new line
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="caps" id="id168">
+					<xs:annotation>
+						<xs:documentation>
+                       Text-property caps.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fontColour" id="id160">
+					<xs:annotation>
+						<xs:documentation>
+                       Font color in text formats.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="embeddedObjectHeight" id="id358">
+					<xs:annotation>
+						<xs:documentation>
+                       Height of an embedded Object (i.e.: Image, Multimedia-file, table....)
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="bold" id="id161">
+					<xs:annotation>
+						<xs:documentation>
+                       Text-property 'bold'.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="boldItalic" id="id368">
+					<xs:annotation>
+						<xs:documentation>
+                       Marks text as bold italic.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="italic" id="id162">
+					<xs:annotation>
+						<xs:documentation>
+                       text-property italic
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="defaultFont" id="id268">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fillColour" id="id241">
+					<xs:annotation>
+						<xs:documentation>
+                       Fill-colour for vector-object.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fontName" id="id159">
+					<xs:annotation>
+						<xs:documentation>
+                       Name of  font
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fontChange" id="id381">
+					<xs:annotation>
+						<xs:documentation>
+                       Entry to mark up a change in font-use within an XCDLl-description-file.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="footnote" id="id170">
+					<xs:annotation>
+						<xs:documentation>
+                       Marks up a certain position in normdata to specify them as a footnote related to other normdata.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="mergedCellsHorizontal" id="id356">
+					<xs:annotation>
+						<xs:documentation>
+                       Number of cells in a horizontal row that are merged to one cell.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="hidden" id="id169">
+					<xs:annotation>
+						<xs:documentation>
+                       Text is hidden
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="hypertextLink" id="id184">
+					<xs:annotation>
+						<xs:documentation>
+                       Defines that some textdata contain a hyperlink.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="imageTextRelation" id="id380">
+					<xs:annotation>
+						<xs:documentation>
+                       Refers to a property-set for an embedded image (id-number).
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="imageData" id="id19">
+					<xs:annotation>
+						<xs:documentation>
+                       Reference to embedded imageData.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="documentLanguage" id="id190">
+					<xs:annotation>
+						<xs:documentation>
+                       Language of the document.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="embeddedObject" id="id146">
+					<xs:annotation>
+						<xs:documentation>
+                       Specifies the URL/Path or ID to an embedded object.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="paragraph" id="id207">
+					<xs:annotation>
+						<xs:documentation>
+                       Describes structured continuous text data.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="pageBreak" id="id182">
+					<xs:annotation>
+						<xs:documentation>
+                       Property describing if a textual content breaks to a new page (Unit not yet decided)
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="panoseNumber" id="id369">
+					<xs:annotation>
+						<xs:documentation>
+                       A PANOSE classification number consists of 10 concatenated values. Each value from a given category was computed from a specific visual metric, such as the weight of the font and the presence or absence of serifs. [cit. Wikipedia]
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="TrayNumber" id="id366">
+					<xs:annotation>
+						<xs:documentation>
+                       Number of the tray in a selected printer, can be stored in the document.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="marginTop" id="id261">
+					<xs:annotation>
+						<xs:documentation>
+                       distance between text and margin in a formatted text-document
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="pageNumberStart" id="id365">
+					<xs:annotation>
+						<xs:documentation>
+                       Page-Number for the start of a new document-section
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="customPageSize" id="id264">
+					<xs:annotation>
+						<xs:documentation>
+                       Size of a Text-Page in unit W x H
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fontWidth_betweenLetters" id="id370">
+					<xs:annotation>
+						<xs:documentation>
+                       Variability of the width of the font:
+fixed (monospace)
+variable
+default.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="resolutionImage" id="id373">
+					<xs:annotation>
+						<xs:documentation>
+                       Resolution of images. Measured in dpi.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="marginRight" id="id263">
+					<xs:annotation>
+						<xs:documentation>
+                       distance between text and margin in a formatted text-document
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="smallCaps" id="id167">
+					<xs:annotation>
+						<xs:documentation>
+                       text-property smallCaps
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="strike" id="id164">
+					<xs:annotation>
+						<xs:documentation>
+                       text-property strike
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fontSize" id="id158">
+					<xs:annotation>
+						<xs:documentation>
+                       Size - normally measured in points - which is applied to a font (rendering information).
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="normDataText" id="id383">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="tableNumberOfColumns" id="id202">
+					<xs:annotation>
+						<xs:documentation>
+                       Number of Columns in a Table
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="tableNumberOfRows" id="id201">
+					<xs:annotation>
+						<xs:documentation>
+                       Number of Rows in a Table
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="textDirection" id="id367">
+					<xs:annotation>
+						<xs:documentation>
+                       Direction of text running in the document,
+could be right-to-left or left-to-right (also top-down or bottom-up).
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="rgb" id="id132">
+					<xs:annotation>
+						<xs:documentation>
+                       ColourSpace: RGB triple
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="underline" id="id163">
+					<xs:annotation>
+						<xs:documentation>
+                       text-property underline
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="mergedCellsVertical" id="id361">
+					<xs:annotation>
+						<xs:documentation>
+                       "Number of cells in a vertical column that are merged to one cell."
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="normData" id="id7">
+                    <xs:annotation>
+				        <xs:documentation>
+				                      Normdata of any kind of type: pixelvalues, utf8-textdata and so on...
+				        </xs:documentation>
+                    </xs:annotation>
+				</xs:enumeration>
+
+			</xs:restriction>
+		</xs:simpleType>
+							
+</xs:schema>

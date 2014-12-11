@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<copra xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://www.planets-project.eu/xcl/schemas/xcl" 
+xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl  copra.xsd">
+<set source="c:/comparator/test/testXCDLImage1.xcdl" target="c:/comparator/test/testXCDLImage2.xcdl">
+<property id="151" name="bitsPerSample" state="complete">
+<metrics>
+<metric id="1" name="equal">
+<result state="ok">true</result>
+</metric>
+<metric id="2" name="intDiff">
+<result state="ok">0</result>
+</metric>
+</metrics>
+</property>
+<property id="18" name="compression" state="complete">
+<metrics>
+<metric id="1" name="equal">
+<result state="ok">true</result>
+</metric>
+</metrics>
+</property>
+<property id="39" name="filter" state="complete">
+<metrics>
+<metric id="1" name="equal">
+<result state="ok">true</result>
+</metric>
+</metrics>
+</property>
+<property id="8" name="gamma" state="complete">
+<metrics>
+<metric id="1" name="equal">
+<result state="ok">true</result>
+</metric>
+<metric id="10" name="percDeviation">
+<result state="ok">0</result>
+</metric>
+<metric id="2" name="intDiff">
+<result state="ok">0</result>
+</metric>
+</metrics>
+</property>
+<property id="2" name="imageHeight" state="complete">
+<metrics>
+<metric id="1" name="equal">
+<result state="ok">true</result>
+</metric>
+<metric id="10" name="percDeviation">
+<result state="ok">0</result>
+</metric>
+<metric id="2" name="intDiff">
+<result state="ok">0</result>
+</metric>
+<metric id="6" name="intRatio">
+<result state="ok">1.000000</result>
+</metric>
+</metrics>
+</property>
+<property id="20" name="imageType" state="complete">
+<metrics>
+<metric id="1" name="equal">
+<result state="ok">true</result>
+</metric>
+</metrics>
+</property>
+<property id="30" name="imageWidth" state="complete">
+<metrics>
+<metric id="1" name="equal">
+<result state="ok">true</result>
+</metric>
+<metric id="10" name="percDeviation">
+<result state="ok">0</result>
+</metric>
+<metric id="2" name="intDiff">
+<result state="ok">0</result>
+</metric>
+</metrics>
+</property>
+<property id="45" name="interlace" state="complete">
+<metrics>
+<metric id="1" name="equal">
+<result state="ok">true</result>
+</metric>
+</metrics>
+</property>
+<property id="7" name="normData" state="partial">
+<metrics>
+<metric id="11" name="hammingDistance">
+<result state="ok">2</result>
+</metric>
+<metric id="123" name="valueSetMatch_3">
+<result state="failed">code_B_37: Metric is not allowed for normalised data with information type 'image'.</result>
+</metric>
+<metric id="15" name="levenstheinDistance">
+<result state="failed">code_B_37: Metric is not allowed for normalised data with information type 'image'.</result>
+</metric>
+<metric id="17" name="euclidDistance">
+<result state="ok">2.236068</result>
+</metric>
+<metric id="20" name="RMSE">
+<result state="ok">0.069877</result>
+</metric>
+</metrics>
+</property>
+<property id="10" name="backgroundColour" compStatus="missing"/>
+<property id="49" name="planarConfiguration" compStatus="missing"/>
+<property id="9" name="orientation" compStatus="missing"/>
+<property id="22" name="resolutionUnit" compStatus="missing"/>
+<property id="23" name="resolutionX" compStatus="missing"/>
+<property id="24" name="resolutionY" compStatus="missing"/>
+<property id="144" name="scanDocName" compStatus="missing"/>
+<property id="11" name="transparency" compStatus="missing"/>
+</set>
+</copra>

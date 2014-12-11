@@ -1,0 +1,99 @@
+TIFF Directory at offset 0x8 (8)
+  Subfile Type: (0 = 0x0)
+  Image Width: 32 Image Length: 32
+  Resolution: 72, 72 pixels/inch
+  Bits/Sample: 16
+  Compression Scheme: None
+  Photometric Interpretation: min-is-black
+  Samples/Pixel: 1
+  Rows/Strip: 32
+  Planar Configuration: single image plane
+  Photoshop Data: <present>, 1420 bytes
+  Tag 37724: 0x41,0x64,0x6f,0x62,0x65,0x20,0x50,0x68,0x6f,0x74,0x6f,0x73,0x68,0x6f,0x70,0x20,0x44,0x6f,0x63,0x75,0x6d,0x65,0x6e,0x74,0x20,0x44,0x61,0x74,0x61,0x20,0x42,0x6c,0x6f,0x63,0x6b,0x0
+Strip 0:
+  00 00 0a 00 12 00 1c 00 24 00 2e 00 36 00 40 00 48 00 52 00 5a 00 64 00
+  6c 00 76 00 7e 00 88 00 90 00 9a 00 a2 00 ac 00 b4 00 be 00 c6 00 d0 00
+  d8 00 e2 00 ea 00 f4 00 fc 00 ef ff d5 ff b9 ff 02 00 0c 00 14 00 1e 00
+  26 00 30 00 38 00 42 00 4a 00 54 00 5c 00 66 00 6e 00 78 00 80 00 8a 00
+  92 00 9c 00 a4 00 ae 00 b6 00 c0 00 c8 00 d2 00 da 00 e4 00 ec 00 f6 00
+  fe 00 e9 ff cf ff b3 ff 04 00 0e 00 16 00 20 00 28 00 32 00 3a 00 44 00
+  4c 00 56 00 5e 00 68 00 70 00 7a 00 82 00 8c 00 94 00 9e 00 a6 00 b0 00
+  b8 00 c2 00 ca 00 d4 00 dc 00 e6 00 ee 00 f8 00 ff ff e3 ff c9 ff ad ff
+  06 00 10 00 18 00 22 00 2a 00 34 00 3c 00 46 00 4e 00 58 00 60 00 6a 00
+  72 00 7c 00 84 00 8e 00 96 00 a0 00 a8 00 b2 00 ba 00 c4 00 cc 00 d6 00
+  de 00 e8 00 f0 00 fa 00 f9 ff dd ff c3 ff a7 ff 08 00 12 00 1a 00 24 00
+  2c 00 36 00 3e 00 48 00 50 00 5a 00 62 00 6c 00 74 00 7e 00 86 00 90 00
+  98 00 a2 00 aa 00 b4 00 bc 00 c6 00 ce 00 d8 00 e0 00 ea 00 f2 00 fc 00
+  f3 ff d7 ff bd ff a1 ff 0a 00 14 00 1c 00 26 00 2e 00 38 00 40 00 4a 00
+  52 00 5c 00 64 00 6e 00 76 00 80 00 88 00 92 00 9a 00 a4 00 ac 00 b6 00
+  be 00 c8 00 d0 00 da 00 e2 00 ec 00 f4 00 fe 00 ed ff d1 ff b7 ff 9b ff
+  0c 00 16 00 1e 00 28 00 30 00 3a 00 42 00 4c 00 54 00 5e 00 66 00 70 00
+  78 00 82 00 8a 00 94 00 9c 00 a6 00 ae 00 b8 00 c0 00 ca 00 d2 00 dc 00
+  e4 00 ee 00 f6 00 00 01 e7 ff cb ff b1 ff 95 ff 0e 00 18 00 20 00 2a 00
+  32 00 3c 00 44 00 4e 00 56 00 60 00 68 00 72 00 7a 00 84 00 8c 00 96 00
+  9e 00 a8 00 b0 00 ba 00 c2 00 cc 00 d4 00 de 00 e6 00 f0 00 f8 00 fb ff
+  e1 ff c5 ff ab ff 8f ff 10 00 1a 00 22 00 2c 00 34 00 3e 00 46 00 50 00
+  58 00 62 00 6a 00 74 00 7c 00 86 00 8e 00 98 00 a0 00 aa 00 b2 00 bc 00
+  c4 00 ce 00 d6 00 e0 00 e8 00 f2 00 fa 00 f5 ff db ff bf ff a5 ff 89 ff
+  12 00 1c 00 24 00 2e 00 36 00 40 00 48 00 52 00 5a 00 64 00 6c 00 76 00
+  7e 00 88 00 90 00 9a 00 a2 00 ac 00 b4 00 be 00 c6 00 d0 00 d8 00 e2 00
+  ea 00 f4 00 fc 00 ef ff d5 ff b9 ff 9f ff 83 ff 14 00 1e 00 26 00 30 00
+  38 00 42 00 4a 00 54 00 5c 00 66 00 6e 00 78 00 80 00 8a 00 92 00 9c 00
+  a4 00 ae 00 b6 00 c0 00 c8 00 d2 00 da 00 e4 00 ec 00 f6 00 fe 00 e9 ff
+  cf ff b3 ff 99 ff 7d ff 16 00 20 00 28 00 32 00 3a 00 44 00 4c 00 56 00
+  5e 00 68 00 70 00 7a 00 82 00 8c 00 94 00 9e 00 a6 00 b0 00 b8 00 c2 00
+  ca 00 d4 00 dc 00 e6 00 ee 00 f8 00 ff ff e3 ff c9 ff ad ff 93 ff 77 ff
+  18 00 22 00 2a 00 34 00 3c 00 46 00 4e 00 58 00 60 00 6a 00 72 00 7c 00
+  84 00 8e 00 96 00 a0 00 a8 00 b2 00 ba 00 c4 00 cc 00 d6 00 de 00 e8 00
+  f0 00 fa 00 f9 ff dd ff c3 ff a7 ff 8d ff 71 ff 1a 00 24 00 2c 00 36 00
+  3e 00 48 00 50 00 5a 00 62 00 6c 00 74 00 7e 00 86 00 90 00 98 00 a2 00
+  aa 00 b4 00 bc 00 c6 00 ce 00 d8 00 e0 00 ea 00 f2 00 fc 00 f3 ff d7 ff
+  bd ff a1 ff 87 ff 6b ff 1c 00 26 00 2e 00 38 00 40 00 4a 00 52 00 5c 00
+  64 00 6e 00 76 00 80 00 88 00 92 00 9a 00 a4 00 ac 00 b6 00 be 00 c8 00
+  d0 00 da 00 e2 00 ec 00 f4 00 fe 00 ed ff d1 ff b7 ff 9b ff 81 ff 65 ff
+  1e 00 28 00 30 00 3a 00 42 00 4c 00 54 00 5e 00 66 00 70 00 78 00 82 00
+  8a 00 94 00 9c 00 a6 00 ae 00 b8 00 c0 00 ca 00 d2 00 dc 00 e4 00 ee 00
+  f6 00 00 01 e7 ff cb ff b1 ff 95 ff 7b ff 5f ff 20 00 2a 00 32 00 3c 00
+  44 00 4e 00 56 00 60 00 68 00 72 00 7a 00 84 00 8c 00 96 00 9e 00 a8 00
+  b0 00 ba 00 c2 00 cc 00 d4 00 de 00 e6 00 f0 00 f8 00 fb ff e1 ff c5 ff
+  ab ff 8f ff 75 ff 59 ff 22 00 2c 00 34 00 3e 00 46 00 50 00 58 00 62 00
+  6a 00 74 00 7c 00 86 00 8e 00 98 00 a0 00 aa 00 b2 00 bc 00 c4 00 ce 00
+  d6 00 e0 00 e8 00 f2 00 fa 00 f5 ff db ff bf ff a5 ff 89 ff 6f ff 53 ff
+  24 00 2e 00 36 00 40 00 48 00 52 00 5a 00 64 00 6c 00 76 00 7e 00 88 00
+  90 00 9a 00 a2 00 ac 00 b4 00 be 00 c6 00 d0 00 d8 00 e2 00 ea 00 f4 00
+  fc 00 ef ff d5 ff b9 ff 9f ff 83 ff 69 ff 4d ff 26 00 30 00 38 00 42 00
+  4a 00 54 00 5c 00 66 00 6e 00 78 00 80 00 8a 00 92 00 9c 00 a4 00 ae 00
+  b6 00 c0 00 c8 00 d2 00 da 00 e4 00 ec 00 f6 00 fe 00 e9 ff cf ff b3 ff
+  99 ff 7d ff 63 ff 47 ff 28 00 32 00 3a 00 44 00 4c 00 56 00 5e 00 68 00
+  70 00 7a 00 82 00 8c 00 94 00 9e 00 a6 00 b0 00 b8 00 c2 00 ca 00 d4 00
+  dc 00 e6 00 ee 00 f8 00 ff ff e3 ff c9 ff ad ff 93 ff 77 ff 5d ff 41 ff
+  2a 00 34 00 3c 00 46 00 4e 00 58 00 60 00 6a 00 72 00 7c 00 84 00 8e 00
+  96 00 a0 00 a8 00 b2 00 ba 00 c4 00 cc 00 d6 00 de 00 e8 00 f0 00 fa 00
+  f9 ff dd ff c3 ff a7 ff 8d ff 71 ff 57 ff 3b ff 2c 00 36 00 3e 00 48 00
+  50 00 5a 00 62 00 6c 00 74 00 7e 00 86 00 90 00 98 00 a2 00 aa 00 b4 00
+  bc 00 c6 00 ce 00 d8 00 e0 00 ea 00 f2 00 fc 00 f3 ff d7 ff bd ff a1 ff
+  87 ff 6b ff 51 ff 35 ff 2e 00 38 00 40 00 4a 00 52 00 5c 00 64 00 6e 00
+  76 00 80 00 88 00 92 00 9a 00 a4 00 ac 00 b6 00 be 00 c8 00 d0 00 da 00
+  e2 00 ec 00 f4 00 fe 00 ed ff d1 ff b7 ff 9b ff 81 ff 65 ff 4b ff 2f ff
+  30 00 3a 00 42 00 4c 00 54 00 5e 00 66 00 70 00 78 00 82 00 8a 00 94 00
+  9c 00 a6 00 ae 00 b8 00 c0 00 ca 00 d2 00 dc 00 e4 00 ee 00 f6 00 00 01
+  e7 ff cb ff b1 ff 95 ff 7b ff 5f ff 45 ff 29 ff 32 00 3c 00 44 00 4e 00
+  56 00 60 00 68 00 72 00 7a 00 84 00 8c 00 96 00 9e 00 a8 00 b0 00 ba 00
+  c2 00 cc 00 d4 00 de 00 e6 00 f0 00 f8 00 fb ff e1 ff c5 ff ab ff 8f ff
+  75 ff 59 ff 3f ff 23 ff 34 00 3e 00 46 00 50 00 58 00 62 00 6a 00 74 00
+  7c 00 86 00 8e 00 98 00 a0 00 aa 00 b2 00 bc 00 c4 00 ce 00 d6 00 e0 00
+  e8 00 f2 00 fa 00 f5 ff db ff bf ff a5 ff 89 ff 6f ff 53 ff 39 ff 1d ff
+  36 00 40 00 48 00 52 00 5a 00 64 00 6c 00 76 00 7e 00 88 00 90 00 9a 00
+  a2 00 ac 00 b4 00 be 00 c6 00 d0 00 d8 00 e2 00 ea 00 f4 00 fc 00 ef ff
+  d5 ff b9 ff 9f ff 83 ff 69 ff 4d ff 33 ff 17 ff 38 00 42 00 4a 00 54 00
+  5c 00 66 00 6e 00 78 00 80 00 8a 00 92 00 9c 00 a4 00 ae 00 b6 00 c0 00
+  c8 00 d2 00 da 00 e4 00 ec 00 f6 00 fe 00 e9 ff cf ff b3 ff 99 ff 7d ff
+  63 ff 47 ff 2d ff 11 ff 3a 00 44 00 4c 00 56 00 5e 00 68 00 70 00 7a 00
+  82 00 8c 00 94 00 9e 00 a6 00 b0 00 b8 00 c2 00 ca 00 d4 00 dc 00 e6 00
+  ee 00 f8 00 ff ff e3 ff c9 ff ad ff 93 ff 77 ff 5d ff 41 ff 27 ff 0b ff
+  3c 00 46 00 4e 00 58 00 60 00 6a 00 72 00 7c 00 84 00 8e 00 96 00 a0 00
+  a8 00 b2 00 ba 00 c4 00 cc 00 d6 00 de 00 e8 00 f0 00 fa 00 f9 ff dd ff
+  c3 ff a7 ff 8d ff 71 ff 57 ff 3b ff 21 ff 05 ff 3e 00 48 00 50 00 5a 00
+  62 00 6c 00 74 00 7e 00 86 00 90 00 98 00 a2 00 aa 00 b4 00 bc 00 c6 00
+  ce 00 d8 00 e0 00 ea 00 f2 00 fc 00 f3 ff d7 ff bd ff a1 ff 87 ff 6b ff
+  51 ff 35 ff 1b ff ff fe

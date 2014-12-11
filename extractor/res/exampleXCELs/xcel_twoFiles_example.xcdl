@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XCELDocument xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl
+    schemas/XCELBasicExtension.xsd">
+    <preProcessing> 
+    </preProcessing>
+    <formatDescription>
+        
+          <item xsi:type="structuringItem" identifier="wholeProcessing" externalSource="file://./main.exp">
+              <processing type="configureParser">
+                  <processingMethod name="setAddressingScheme">
+                      <param value="separator"/>
+                      <param value="10"/>
+                  </processingMethod>
+              </processing>
+              
+              <symbol identifier="Hello" name="normData" interpretation="ASCII" length="1"/>
+              
+              <item xsi:type="structuringItem" identifier="WorldFile" externalSource="file://./world.exp" length="1">
+                  
+                  <symbol identifier="World" name="normData" interpretation="ASCII" length="1"/>
+                  
+              </item>
+              
+              <symbol identifier="END" name="normData" interpretation="ASCII" length="1"/>
+              
+          </item>   
+        
+    </formatDescription>
+    <postProcessing>
+        
+    </postProcessing>
+    </XCELDocument>

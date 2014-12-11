@@ -1,0 +1,2181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- RTF file format specification (version 1.7); using  xcel version 1.0--> 
+	<!-- date of creation: 2007-01-31-->
+	<!-- created by HKI, University at Cologne -->
+	<!-- status: incomplete -->
+	<!-- comments taken from 'Microsoft Office Word 2003 Rich Text Format (RTF) Specification'  (=version 1.7)  
+		except comments put in [ ] , which are HKI comments
+		
+		The specification uses the following symbols:
+		Syntax 		Meaning
+		#PCDATA 	Text (without control words).
+		#SDATA 	Hexadecimal data.
+		#BDATA 	Binary data.
+		'c' 		A literal.
+		<text>		A nonterminal.
+		A 		The (terminal) control word a, without a parameter.
+		a or aN 		The (terminal) control word a, with a parameter.
+		A? 		Item a is optional.
+		A+ 		One or more repetitions of item a.
+		A* 		Zero or more repetitions of item a.
+		A b 		Item a followed by item b.
+		A | b 		Item a or item b.
+		a & b 		Item a and/or item b, in any order.	
+	-->
+	
+	<XCELDocument xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl
+		schemas/XCELTextExtension.xsd">
+	
+	
+	<!-- ********************* xcel header section:   ********************* -->
+<preProcessing>
+	
+</preProcessing>
+	<formatDescription>
+	
+	<!-- ***************    xcel structure-processing section:  ********************* -->
+	<!-- <item xsi:type="structuringItem" identifier="IDT02" >  -->
+		<!-- ***************  RTF file   *********************** -->
+		<item xsi:type="structuringItem" identifier="IDT01" order="sequence" originalName="rtfFile">
+		<!-- 
+			An RTF file has the following syntax:
+			<File>::=	'{' <header> <document> '}'			
+		-->
+			<property  identifier="IDT02" interpretation="ASCII">
+				<range>
+					<startposition xsi:type="fixed">0</startposition>
+					<length xsi:type="fixed">1</length>
+				</range>
+				<value>{</value>
+				<name>delimiter</name>
+			</property>
+			<!-- ***********************   RTF Header  and document section ********************** -->
+			<item xsi:type="structuringItem" identifier="IDT03" order="sequence">
+			<!-- 
+				[Note: RTF header and document areas are modeled within a single item.  RTF spec v1.7 does not
+				explicitely forbid to mix control words from what is called <header> and<document> in the specification,
+				although the definitions in the specification suggest that .
+				In fact, some applications write <document> related control words between <header> control words.
+				(Concretely: We found the control word '\deflangN'  between <header> control words in RTF files created with
+				Wordpad an Word (WINXP professional/ Office 2003). 'deflangN' is listed as a <document> section control 
+				word (in <docfmt>), however. ]
+								
+				The header has the following syntax:
+				<header>::=	\rtf?<charset> <deffont> \deff? <fonttbl> <filetbl>? <colortbl>? <stylesheet>? <listtables>? <revtbl>? <rsidtable>? <generator>?
+				
+				The document area has the following syntax:
+				<document> <info>? <docfmt>* <section>+
+			-->	
+				<item xsi:type="structuringItem" identifier="IDT04" order="all">
+					<!-- [control char alternative #1 backslash:]   -->
+					<item xsi:type="structuringItem" identifier="IDT05" order="sequence" multiple="true">
+						<property  identifier="IDT06" interpretation="ASCII">
+							<range>
+								<startposition xsi:type="sequential"/>
+								<length xsi:type="fixed">1</length>
+							</range>
+							<value>\</value>
+							<name>delimiter</name>
+						</property>
+						
+						<!--[Control words listed in the ' Header' paragraph of the specification: ]  -->
+						<item xsi:type="structuringItem" identifier="IDT07">
+							<!-- 
+								RTF Version
+								An entire RTF file is considered a group and must be enclosed in braces. The \rtfN control word
+								must follow the opening brace. The numeric parameter N identifies the major version of the RTF
+								Specification used. The RTF standard described in this specification, although titled as version 1.7,
+								continues to correspond syntactically to RTF Specification version 1. Therefore, the numeric
+								parameter N for the \rtf control word should still be emitted as 1.					
+							-->
+							<item xsi:type="structuringItem" identifier="IDT08">
+								<property  identifier="IDT09" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">3</length>
+									</range>
+									<value>rtf</value>
+									<name>rtfVersionCW</name>
+								</property>
+								<symbol  identifier="IDT10" interpretation="ASCII">
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">1</length>
+									</range>
+									<valueInterpretation>
+										<valueLabel>version</valueLabel>
+										<value>1</value>
+									</valueInterpretation>	
+									<name>rtfVersion</name>    
+								</symbol>
+							</item>	
+							<!-- 
+								Character Set
+								After specifying the RTF version, you must declare the character set used in this document. The
+								control word for the character set must precede any plain text or any table control words. The RTF
+								Specification currently supports the following character sets:
+								
+								Control word 	Character set
+								
+								\ansi		 ANSI (the default)
+								\mac		 Apple Macintosh
+								\pc 		IBM PC code page 437
+								\pca 		IBM PC code page 850, used by IBM Personal System/2 (not implemented in version 1 of
+								Microsoft Word for OS/2)
+							-->						
+							<item xsi:type="structuringItem" identifier="IDT11" order="all">
+								<symbol  identifier="IDT12" interpretation="ASCII">
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">4</length>
+									</range>
+									<valueInterpretation>
+										<valueLabel>ANSI</valueLabel>
+										<value>ansi</value>
+									</valueInterpretation>	
+									<name>charset</name>
+								</symbol>
+								<symbol  identifier="IDT13" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">3</length>
+									</range>
+									<valueInterpretation>
+										<valueLabel>macintosh</valueLabel>
+										<value>mac</value>
+										<valueLabel>pcCP850</valueLabel>
+										<value>pca</value>
+									</valueInterpretation>	
+									<name>charset</name>
+								</symbol>
+								<symbol  identifier="IDT14" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">2</length>
+									</range>
+									<valueInterpretation>
+										<valueLabel>pcCP437</valueLabel>
+										<value>pc</value>
+									</valueInterpretation>	
+									<name>charset</name>
+								</symbol>
+							</item>	
+							<!-- 
+								Unicode RTF
+								Word 2002 and Word 2003 are Unicode-enabled applications. Text is handled using the 16-bit
+								Unicode character encoding scheme. Expressing this text in RTF requires a new mechanism,
+								because until this release (version 1.6), RTF has only handled 7-bit characters directly and 8-bit
+								characters encoded as hexadecimal. The Unicode mechanism described here can be applied to any
+								RTF destination or body text.
+								
+								\ansicpgN 
+								This keyword represents the ANSI code page used to perform the Unicode to ANSI conversion
+								when writing RTF text. N represents the code page in decimal. This is typically set to the default
+								ANSI code page of the run-time environment (for example, \ansicpg1252 for U.S. Windows).
+								The reader can use the same ANSI code page to convert ANSI text back to Unicode. Possible
+								values include the following:
+								
+								Control word: 	Meaning:
+								437 		United States IBM
+								708 		Arabic (ASMO 708)
+								709 		Arabic (ASMO 449+, BCON V4)
+								710 		Arabic (transparent Arabic)
+								711 		Arabic (Nafitha Enhanced)
+								720		Arabic (transparent ASMO)
+								819		Windows 3.1 (United States and Western Europe)
+								850		IBM multilingual
+								852		Eastern European
+								860		Portuguese
+								862		Hebrew
+								863 		French Canadian
+								864		Arabic
+								865 		Norwegian
+								866 		Soviet Union
+								874		Thai
+								932 		Japanese
+								936 		Simplified Chinese
+								949 		Korean
+								950 		Traditional Chinese
+								1250		Windows 3.1 (Eastern European)
+								1251		Windows 3.1 (Cyrillic)
+								1252		Western European
+								1253		Greek
+								1254 		Turkish
+								1255 		Hebrew
+								1256 		Arabic
+								1257 		Baltic
+								1258 		Vietnamese
+								1361		Johab
+								
+								This keyword should be emitted in the RTF header section right after the \ansi, \mac, \pc or
+								\pca keyword.
+							-->
+							<item xsi:type="structuringItem" identifier="IDT15">
+								<item xsi:type="structuringItem" identifier="IDT16">
+									<property  identifier="IDT17" interpretation="ASCII" >
+										<range>
+											<startposition xsi:type="sequential"/>
+											<length xsi:type="fixed">7</length>
+										</range>
+										<value>ansicpg</value>
+										<name>ansiCodepageCW</name>
+									</property>
+									<symbol  identifier="IDT18" interpretation="ASCII">
+										<range>
+											<startposition xsi:type="sequential"/>
+											<length xsi:type="fixed">3</length>
+										</range>
+										<valueInterpretation>
+											<valueLabel>cp437</valueLabel>
+											<value>437</value>
+											<valueLabel>cp708</valueLabel> 
+											<value>708</value>
+											<valueLabel>cp709</valueLabel>
+											<value>709</value>
+											<valueLabel>cp710</valueLabel>
+											<value>710</value>
+											<valueLabel>cp711</valueLabel>
+											<value>711</value>
+											<valueLabel>cp720</valueLabel>
+											<value>720</value>
+											<valueLabel>cp819</valueLabel>
+											<value>819</value>
+											<valueLabel>cp850</valueLabel>
+											<value>850</value>
+											<valueLabel>cp852</valueLabel>
+											<value>852</value>
+											<valueLabel>cp860</valueLabel>
+											<value>860</value>
+											<valueLabel>cp862</valueLabel>
+											<value>862</value>
+											<valueLabel>cp863</valueLabel>
+											<value>863</value>
+											<valueLabel>cp864</valueLabel>
+											<value>864</value>
+											<valueLabel>cp865</valueLabel>
+											<value>865</value>
+											<valueLabel>cp866</valueLabel>
+											<value>866</value>
+											<valueLabel>cp874</valueLabel>
+											<value>874</value>
+											<valueLabel>cp932</valueLabel>
+											<value>932</value>
+											<valueLabel>cp936</valueLabel>
+											<value>936</value>
+											<valueLabel>cp949</valueLabel>
+											<value>949</value>
+											<valueLabel>cp950</valueLabel>
+											<value>950</value>
+										</valueInterpretation>	
+										<name>ansiCodepage</name>    
+									</symbol>
+									<symbol  identifier="IDT19" interpretation="ASCII">
+										<range>
+											<startposition xsi:type="sequential"/>
+											<length xsi:type="fixed">4</length>
+										</range>
+										<valueInterpretation>
+											<valueLabel>cp1250</valueLabel>
+											<value>1250</value>
+											<valueLabel>cp1251</valueLabel>
+											<value>1251</value>
+											<valueLabel>cp1252</valueLabel>
+											<value>1252</value>
+											<valueLabel>cp1253</valueLabel>
+											<value>1253</value>
+											<valueLabel>cp1254</valueLabel>
+											<value>1254</value>
+											<valueLabel>cp1255</valueLabel>
+											<value>1255</value>
+											<valueLabel>cp1256</valueLabel>
+											<value>1256</value>
+											<valueLabel>cp1257</valueLabel>
+											<value>1257</value>
+											<valueLabel>cp1258</valueLabel>
+											<value>1258</value>
+											<valueLabel>cp1361</valueLabel>
+											<value>1361</value>
+										</valueInterpretation>	
+										<name>ansiCodepage</name>    
+									</symbol>
+								</item>	
+								<!-- 
+									[ !! TODO !!  :  ]
+									
+									\upr 
+									This keyword represents a destination with two embedded destinations, one represented using
+									Unicode and the other using ANSI. This keyword operates in conjunction with the \ud keyword
+									to provide backward compatibility. The general syntax is as follows:
+									{\upr{keyword ansi_text}{\*\ud{keyword Unicode_text}}}
+									Notice that this keyword destination does not use the \* keyword; this forces the old RTF
+									readers to pick up the ANSI representation and discard the Unicode one.
+									
+									\ud 
+									This is a destination that is represented in Unicode. The text is represented using a mixture of
+									ANSI translation and use of \uN keywords to represent characters that do not have the exact
+									ANSI equivalent.
+									
+									\uN 
+									This keyword represents a single Unicode character that has no equivalent ANSI representation
+									based on the current ANSI code page. N represents the Unicode character value expressed as a
+									decimal number.
+									This keyword is followed immediately by equivalent character(s) in ANSI representation. In this
+									way, old readers will ignore the \uN keyword and pick up the ANSI representation properly.
+									When this keyword is encountered, the reader should ignore the next N characters, where N
+									corresponds to the last \ucN value encountered.
+									As with all RTF keywords, a keyword-terminating space may be present (before the ANSI
+									characters) that is not counted in the characters to skip. While this is not likely to occur (or
+									recommended), a \bin keyword, its argument, and the binary data that follows are considered
+									one character for skipping purposes. If an RTF scope delimiter character (that is, an opening or
+									closing brace) is encountered while scanning skippable data, the skippable data is considered to
+									be ended before the delimiter. This makes it possible for a reader to perform some rudimentary
+									error recovery. To include an RTF delimiter in skippable data, it must be represented using the
+									appropriate control symbol (that is, escaped with a backslash,) as in plain text. Any RTF control
+									word or symbol is considered a single character for the purposes of counting skippable
+									characters.
+									An RTF writer, when it encounters a Unicode character with no corresponding ANSI character,
+									should output \uN followed by the best ANSI representation it can manage. Also, if the Unicode
+									character translates into an ANSI character stream with a count of bytes differing from the
+									current Unicode Character Byte Count, it should emit the \ucN keyword prior to the \uN
+									keyword to notify the reader of the change.
+									RTF control words generally accept signed 16-bit numbers as arguments. For this reason,
+									Unicode values greater than 32767 must be expressed as negative numbers.
+								-->
+								<!--
+									\ucN 
+									This keyword represents the number of bytes corresponding to a given \uN Unicode character.
+									This keyword may be used at any time, and values are scoped like character properties. That is,
+									a \ucN keyword applies only to text following the keyword, and within the same (or deeper)
+									nested braces. On exiting the group, the previous \uc value is restored. The reader must keep a
+									stack of counts seen and use the most recent one to skip the appropriate number of characters
+									when it encounters a \uN keyword. When leaving an RTF group that specified a \uc value, the
+									reader must revert to the previous value. A default of 1 should be assumed if no \uc keyword
+									has been seen in the current or outer scopes.
+									A common practice is to emit no ANSI representation for Unicode characters within a Unicode
+									destination context (that is, inside a \ud destination). Typically, the destination will contain a
+									\uc0 control sequence. There is no need to reset the count on leaving the \ud destination,
+									because the scoping rules will ensure the previous value is restored.
+								-->
+								<item xsi:type="structuringItem" identifier="IDT20">
+									<property  identifier="IDT21" interpretation="ASCII" >
+										<range>
+											<startposition xsi:type="sequential"/>
+											<length xsi:type="fixed">2</length>
+										</range>
+										<value>uc</value>
+										<name>nbBytesUniCharCW</name>
+									</property>
+									<processing type="pullXCEL" xcelRef="TEMPL01">
+										<processingMethod name="setName">
+											<param value="nbBytesUniChar"/>
+										</processingMethod>
+									</processing>
+								</item>
+							</item>
+							<!-- 
+								[ Note: There seems to be a fault in the specification; we assume that  '\stshfbi'  has also a 'N' value.]
+								
+								Default Fonts
+								Default font settings can be used to tell the program what regional settings are appropriate as
+								defaults. For example, having a Japanese font set in \stshfdbchN would tell Word to enable
+								Japanese formatting options. N refers to an entry in the font table.
+								
+								<deffont> 	\stshfdbchN \stshflochN \stshfhichN \stshfbi
+								
+								\stshfdbchN	Defines what font should be used by default in the style sheet for East Asian characters.
+								\stshflochN 	Defines what font should be used by default in the style sheet for ASCII characters.
+								\stshfhichN	Defines what font should be used by default in the style sheet for High-ANSI characters.
+								\stshfbi 		Defines what font should be used by default in the style sheet for Complex Scripts (BiDi)
+								characters.
+								
+								Default font settings can be used to tell the program what regional settings are appropriate as
+								defaults. For example, having a Japanese font set in \stshfdbchN would tell Word to enable
+								Japanese formatting options. N refers to an entry in the font table.
+							-->
+							<item xsi:type="structuringItem" identifier="IDT22" order="all">
+								<item xsi:type="structuringItem" identifier="IDT23">
+									<property  identifier="IDT24" interpretation="ASCII" >
+										<range>
+											<startposition xsi:type="sequential"/>
+											<length xsi:type="fixed">9</length>
+										</range>
+										<value>stshfdbch</value>
+										<name>deffontEastAsianCW</name> 
+									</property>
+									<processing type="pullXCEL" xcelRef="TEMPL01">
+										<processingMethod name="setName">
+											<param value="aName" />
+										</processingMethod>
+										
+									</processing> 
+								</item>
+								<item xsi:type="structuringItem" identifier="IDT25">
+									<property  identifier="IDT26" interpretation="ASCII" >
+										<range>
+											<startposition xsi:type="sequential"/>
+											<length xsi:type="fixed">9</length>
+										</range>
+										<value>stshfloch</value>
+										<name>deffontAsciiCW</name>
+									</property>	
+									<processing type="pullXCEL" xcelRef="TEMPL01">
+										<processingMethod name="setName">
+											<param value="aName" />
+										</processingMethod>
+										
+									</processing> 
+								</item>
+								<item xsi:type="structuringItem" identifier="IDT27">
+									<property  identifier="IDT28" interpretation="ASCII" >
+										<range>
+											<startposition xsi:type="sequential"/>
+											<length xsi:type="fixed">9</length>
+										</range>
+										<value>stshfhich</value>
+										<name>deffontHighAnsiCW</name>
+									</property>
+									<processing type="pullXCEL" xcelRef="TEMPL01">
+										<processingMethod name="setName">
+											<param value="aName" />
+										</processingMethod>
+										
+									</processing>  
+								</item>
+								<item xsi:type="structuringItem" identifier="IDT29">
+									<property  identifier="IDT30" interpretation="ASCII" >
+										<range>
+											<startposition xsi:type="sequential"/>
+											<length xsi:type="fixed">7</length>
+										</range>
+										<value>stshfbi</value>
+										<name>deffontBiDiCW</name>
+									</property>
+									<processing type="pullXCEL" xcelRef="TEMPL01">
+										<processingMethod name="setName">
+											<param value="aName" />
+										</processingMethod>
+										
+									</processing> 
+								</item>	
+							</item>	
+							<!-- 
+								If an RTF file uses a default font, the default font number is specified with the
+								
+								\deffN 
+								
+								control word, which must precede the font-table group. The RTF writer supplies the default font number used in
+								the creation of the document as the numeric argument N. The RTF reader then translates this
+								number through the font table into the most similar font available from the reader's operating
+								system.				
+							-->	
+							<item xsi:type="structuringItem" identifier="IDT31" >
+								<property  identifier="IDT32" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">4</length>
+									</range>
+									<value>deff</value>
+									<name>deffontCW</name> 
+								</property>
+								<processing type="pullXCEL" xcelRef="TEMPL01">
+									<processingMethod name="setName">
+										<param value="aName" />
+									</processingMethod>
+									
+								</processing> 
+							</item>
+							<!-- 
+								Font Table
+								The \fonttbl control word introduces the font table group. Unique \fN control words define each
+								font available in the document, and are used to reference that font throughout the document. The
+								font table group has the following syntax:
+								
+								<fonttbl> '{' \fonttbl (<fontinfo> | ('{' <fontinfo> '}'))+ '}'
+								
+								<fontinfo> 	<fontnum> <fontfamily> <fcharset>? <fprq>? <panose>? <nontaggedname>? <fontemb>?
+										<codepage>? <fontname> <fontaltname>? ';'
+										
+								<fontnum>		 \f
+								<fontfamily>	 	\fnil | \froman | \fswiss | \fmodern | \fscript | \fdecor | \ftech | \fbidi
+								<fcharset>		 \fcharset
+								<fprq>		 	\fprq
+								<panose>	 	<data>
+								<nontaggedname>	 \*\fname
+								<fontname>		 #PCDATA
+								<fontaltname> 		'{\*' \falt #PCDATA '}'
+								<fontemb> 		'{\*' \fontemb <fonttype> <fontfname>? <data>? '}'
+								<fonttype> 		\ftnil | \fttruetype
+								<fontfname>		 '{\*' \fontfile <codepage>? #PCDATA '}'
+								<codepage>		 \cpg
+								
+								Note For <fontemb>, either <fontfname> or <data> must be present, although both may be
+								present.
+								All fonts available to the RTF writer can be included in the font table, even if the document doesn't
+								use all the fonts.
+								RTF also supports font families so that applications can attempt to intelligently choose fonts if the
+								exact font is not present on the reading system. RTF uses the following control words to describe
+								the various font families.							
+							-->
+							<item xsi:type="structuringItem" identifier="IDT33" order="sequence" originalName="fontTable">
+								<property  identifier="IDT34" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">7</length>
+									</range>
+									<value>fonttbl</value>
+									<name>fonttableGroupCW</name> 
+								</property>
+								<item xsi:type="structuringItem" identifier="IDT35" order="all">
+									<!-- 
+										[ the <fontinfo> section can repeatedly  occur; if so, it is for each iteration packed in braces:]									
+									-->
+									<item xsi:type="structuringItem" identifier="IDT36" order="sequence" multiple="true">
+										<property  identifier="IDT37" interpretation="ASCII">
+											<range>
+												<startposition xsi:type="sequential"/>
+												<length xsi:type="fixed">1</length>
+											</range>
+											<value>{</value>  
+											<name>delimiter</name> 
+										</property>
+										
+										<processing type="pullXCEL" xcelRef="TEMPL02"> 
+											<processingMethod name="setName">
+												<param value="fontinfo"/>
+											</processingMethod>
+											
+										</processing>
+											<!-- this template defines the <fontinfo> table -->
+										
+										<property  identifier="IDT38" interpretation="ASCII">
+											<range>
+												<startposition xsi:type="sequential"/>
+												<length xsi:type="fixed">1</length>
+											</range>
+											<value>}</value>  
+											<name>delimiter</name> 
+										</property>
+									</item>	
+									<!-- 
+										[ <fontinfo> can also occur exactly one time: in this case, the braces can miss ( NO(!) must!) ] : 									
+									-->
+									<item xsi:type="structuringItem" identifier="IDT39">	
+										<processing type="pullXCEL" xcelRef="TEMPL02"> 
+											<processingMethod name="setName">
+												<param value="fontinfo"/>
+											</processingMethod>
+											
+										</processing>   <!-- this template defines the <fontinfo> table -->
+									</item>
+								</item>
+							</item>	
+							<!-- 
+								Generator
+								Word 2002 and Word 2003 allow the RTF emitter application to stamp the document with its name,
+								version, and build number. The generator area has the following syntax:
+								
+								<generator> 	‘{‘ \*\generator <name> ‘;’ ‘}’
+								<name>	 #PCDATA, the name of the program, the version, the build, and any other information about
+										the emitting program can be listed here. Word 2002 lists {\*\generator Microsoft Word
+										10.0.XXXX} – Word 2003 lists {\*\generator Microsoft Word 11.0.XXXX} in which XXXX is
+										replaced by the build number. Only ASCII text is allowed in this field.									
+							-->
+							<item xsi:type="structuringItem" identifier="IDT40" order="sequence">
+								<property  identifier="IDT41" interpretation="ASCII">
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">11</length>
+									</range>
+									<value>*\generator</value>
+									<name>generatorCW</name> 
+								</property>
+								<item xsi:type="definitionItem" identifier="IDT42">
+									<symbol  identifier="IDT43" multiple="true" interpretation="ASCII">
+										<range>
+											<startposition xsi:type="sequential"/>
+											<length xsi:type="fixed">1</length>
+										</range>
+										<nonValidValues>
+											<value>;</value>
+										</nonValidValues>
+									</symbol>
+									<name>creationSoftware</name> 
+								</item>
+							</item>
+							<!-- 
+								[Following control words are listed in the  'Document Area' of the specification:]								
+							-->
+							<!-- 
+								[ !! TODO !!:]
+								
+								Information Group
+								The \info control word introduces the information group, which contains information about the
+								document. This can include the title, author, keywords, comments, and other information specific
+								to the file. This information is for use by a document-management utility, if available.
+								The information group has the following syntax:
+								<info> '{' \info <title>? & <subject>? & <author>? & <manager>? & <company>? <operator>? &
+								<category>? & <keywords>? & <comment>? & \version? & <doccomm>? & \vern? &
+								<creatim>? & <revtim>? & <printim>? & <buptim>? & \edmins? & \nofpages? &
+								\nofwords? \nofchars? & \id? '}'
+								<title> '{' \title #PCDATA '}'
+								<subject> '{' \subject #PCDATA '}'
+								<author> '{' \author #PCDATA '}'
+								<manager> {' \manager #PCDATA '}'
+								<company> {' \company #PCDATA '}'
+								<operator> '{' \operator #PCDATA '}'
+								<category> {' \category #PCDATA '}'
+								<keywords> '{' \keywords #PCDATA '}'
+								<comment> '{' \comment #PCDATA '}'
+								<doccomm> '{' \doccomm #PCDATA '}'
+								<hlinkbase> '{' \hlinkbase #PCDATA '}'
+								<creatim> '{' \creatim <time> '}'
+								<revtim> '{' \revtim <time> '}'
+								<printim> '{' \printim <time> '}'
+								<buptim> '{' \buptim <time> '}'
+								<time> \yr? \mo? \dy? \hr? \min? \sec?
+								Some applications, such as Word, ask the user to type this information when saving the document
+								in its native format. If the document is then saved as an RTF file or translated into RTF, the RTF
+								writer specifies this information using control words in the following table. These control words are
+								destinations, and both the control words and the text should be enclosed in braces ({ }).
+								Microsoft Office Word 2003 Rich Text Format (RTF) Specification 30
+								Control word Meaning
+								\title Title of the document. This is a destination control word.
+								\subject Subject of the document. This is a destination control word.
+								\author Author of the document. This is a destination control word.
+								\manager Manager of the author. This is a destination control word.
+								\company Company of the author. This is a destination control word.
+								\operator Person who last made changes to the document. This is a destination control word.
+								\category Category of the document. This is a destination control word.
+								\keywords Selected keywords for the document. This is a destination control word.
+								\comment Comments; text is ignored. This is a destination control word.
+								\versionN Version number of the document.
+								\doccomm Comments displayed in the Summary Info or Properties dialog box in Word. This is a
+								destination control word.
+								\hlinkbase The base address that is used for the path of all relative hyperlinks inserted in the document.
+								This can be a path or an Internet address (URL).
+								The \userprops control word introduces the user-defined document properties. Unique
+								\propname control words define each user-defined property in the document. This group has the
+								following syntax:
+								<userprops> ‘{\*’ \userprops (‘{’ <propinfo> ‘}’*) ‘}’
+								<propinfo> <propname> <proptype> <staticval> <linkval>?
+								<propname> ‘{’ \propname #PCDATA ‘}’
+								<proptype> \proptype
+								<staticval> \staticval
+								<linkval> \linkval
+								Control word Meaning
+								\propname The name of the user-defined property.
+								\staticval The value of the property.
+								\linkval The name of a bookmark that contains the text to display as the value of the property.
+								\proptypeN Specifies the type of the property:
+								3 Integer
+								5 Real number
+								7 Date
+								11 Boolean
+								30 Text
+								The RTF writer may automatically enter other control words, including those in the following table.
+								Microsoft Office Word 2003 Rich Text Format (RTF) Specification 31
+								Control word Meaning
+								\vernN Internal version number
+								\creatim Creation time
+								\revtim Revision time
+								\printim Last print time
+								\buptim Backup time
+								\edminsN Total editing time (in minutes)
+								\yrN Year
+								\moN Month
+								\dyN Day
+								\hrN Hour
+								\minN Minute
+								\secN Seconds
+								\nofpagesN Number of pages
+								\nofwordsN Number of words
+								\nofcharsN Number of characters including spaces
+								\nofcharswsN Number of characters not including spaces
+								\idN Internal ID number
+								Any control word described in the previous table that does not have a numeric parameter specifies
+								a date; all dates are specified with the \yr \mo \dy \hr \min \sec controls. An example of an
+								information group follows:
+								{\info{\title Template}{\author John Doe}{\operator JOHN
+								DOE}{\creatim\yr1999\mo4\dy27\min1}{\revtim\yr1999\mo4\dy27\min1}{\printim\yr1999\mo
+								3\dy17\hr23\min5}{\version2}{\edmins2}{\nofpages183}{\nofwords53170}{\nofchars303071
+								}{\*\company Microsoft}{\nofcharsws372192}{\vern8247}}
+							
+							-->
+							<!-- 
+								Document Formatting Properties
+								After the information group (if there is one), there may be some document formatting control
+								words (described as <docfmt> in the document area syntax description). These control words
+								specify the attributes of the document, such as margins and footnote placement. These attributes
+								must precede the first plain-text character in the document.
+								The control words that specify document formatting are listed in the following table (measurements
+								are in twips; a twip is one-twentieth of a point). For omitted control words, RTF uses the default
+								values.
+								Note that three of the document-protection control words (\formprot, \revprot, and
+								\annotprot) are mutually exclusive; only one of the three can apply to any given document. On
+								the other hand, \readprot indicates that the document is set to Read-Only protection, but allows
+								exceptions, and can appear with \annotprot control words for backward compatibility.
+								Also, there is currently no method for storing passwords in RTF, so any document that associates a
+								password with a protection level will lose the password protection in RTF.
+								For more information about bidirectional controls, see Bidirectional Language Support in this
+								specification.
+							-->
+							<!-- 
+								General properties
+							-->
+							<!--
+								\deftabN 		Default tab width in twips (the default is 720).    [DONE]
+								\hyphhotzN 		Hyphenation hot zone in twips (the amount of space at the right margin in which words are
+											hyphenated).
+								\hyphconsecN 		N is the maximum number of consecutive lines that are allowed to end in a hyphen. 0
+											means no limit.
+								\hyphcaps 		Toggles hyphenation of capitalized words (the default is on). Append 1 or leave control word
+											by itself to toggle property on; append 0 to turn it off.
+								\hyphauto 		Toggles automatic hyphenation (the default is off). Append 1 or leave control word
+											by itself to toggle property on; append 0 to turn it off.
+								\linestartN 		Beginning line number (the default is 1).   [DONE]
+								\fracwidth 		Uses fractional character widths when printing (QuickDraw only).
+								\*\nextfile 		The argument is the name of the next file to print or index; it must be enclosed in braces.
+											This is a destination control word.
+								\*\template 		The argument is the name of a related template file; it must be enclosed in braces. This is a
+											destination control word.
+								\makebackup 		Backup copy is made automatically when the document is saved.
+								\defformat 		Tells the RTF reader that the document should be saved in RTF format.
+								\psover 			Prints PostScript over the text.
+								\doctemp 		Document is a boilerplate document. For Word for Windows, this is a template; for Word for
+											the Macintosh, this is a stationery file.
+								\deflangN 		Defines the default language used in the document used with a \plain control word. See the
+											section on Font/Character Formatting Properties in this Specification for a list of possible
+											values for N.	[DONE]
+								\deflangfeN 		Default language ID for Asian/Middle Eastern text in Word.
+								\windowcaption 	Sets the caption text for the document window. This is a string value.
+								\doctypeN 		An integer (0–2) that describes the document type for AutoFormat.
+											0 	General document (for formatting most documents, the default)
+											1 	Letter (for formatting letters, and used by Letter Wizard)
+											2 	E-mail (for formatting e-mail, and used by WordMail)
+								\fromtext 		Indicates document was originally plain text.
+								\fromhtml 		Indicates the document was originally HTML and may contain encapsulated HTML tags. This
+											keyword may be followed by a version number (currently 1).
+								\horzdoc 		Horizontal rendering.	 [DONE]
+								\vertdoc 		Vertical rendering.	 [DONE]
+								\jcompress 		Compressing justification (default).
+								\jexpand 		Expanding justification.
+								\lnongrid 		Define line based on the grid.
+							
+							
+							-->
+							<item xsi:type="structuringItem" identifier="IDT41_1">
+								<property  identifier="IDT41_1_1" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">6</length>
+									</range>
+									<value>deftab</value>
+									<name>deftabCW</name>
+								</property>
+								<processing type="pullXCEL" xcelRef="TEMPL01">
+									<processingMethod name="setName">
+										<param value="defaultTabWidth"/>
+									</processingMethod>
+								</processing>
+							</item>	
+							<item xsi:type="structuringItem" identifier="IDT41_2">
+								<property  identifier="IDT41_2_1" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">9</length>
+									</range>
+									<value>linestart</value>
+									<name>linestartCW</name>
+								</property>
+								<processing type="pullXCEL" xcelRef="TEMPL01">
+									<processingMethod name="setName">
+										<param value="linestart"/>
+									</processingMethod>
+								</processing>
+							</item>	
+							<item xsi:type="structuringItem" identifier="IDT41_3">
+								<property  identifier="IDT41_3_1" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">7</length>
+									</range>
+									<value>deflang</value>
+									<name>deflangCW</name>
+								</property>
+								<processing type="pullXCEL" xcelRef="TEMPL01">
+									<processingMethod name="setName">
+										<param value="defaultLanguage"/>
+									</processingMethod>
+								</processing>
+							</item>
+							<item xsi:type="structuringItem" identifier="IDT41_4">
+								<property  identifier="IDT41_4_1" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">7</length>
+									</range>
+									<value>horzdoc</value>
+									<name>horizontalRendering</name>
+								</property>
+							</item>
+							<item xsi:type="structuringItem" identifier="IDT41_5">
+								<property  identifier="IDT41_5_1" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">7</length>
+									</range>
+									<value>vertdoc</value>
+									<name>verticalRendering</name>
+								</property>
+							</item>
+							<!-- 
+								Document Views and Zoom Level
+							-->	
+							<!--	
+								\viewkindN
+								An integer (0 through 5) that represents the view mode of the document.
+								0 None
+								1 Page Layout view
+								2 Outline view
+								3 Master Document view
+								5 Online Layout view
+							-->	
+							<item xsi:type="structuringItem" identifier="IDT42a">
+								<property  identifier="IDT42_1" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">8</length>
+									</range>
+									<value>viewkind</value>
+									<name>viewModeCW</name>
+								</property>
+								<symbol  identifier="IDT42_2" interpretation="ASCII">
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">1</length>
+									</range>
+									<valueInterpretation>
+										<valueLabel>none</valueLabel>
+										<value>0</value>
+										<valueLabel>pageLayoutView</valueLabel>
+										<value>1</value>
+										<valueLabel>outlineView</valueLabel>
+										<value>2</value>
+										<valueLabel>masterDocumentView</valueLabel>
+										<value>3</value>
+										<valueLabel>onlineLayoutView</valueLabel>
+										<value>5</value>
+									</valueInterpretation>	
+									<name>viewMode</name>    
+								</symbol>
+							</item>	
+							<!--	
+								[!!  TODO !!: ]
+								\viewscaleN 		Zoom level of the document; the N argument is a value representing a percentage (the
+											default is 100).
+								\viewzkN 		An integer (0 through 2) that represents the zoom kind of the document.
+											0 	None
+											1 	Full page
+											2 	Best fit
+								\private			Obsolete destination. It has no leading \*. It should be skipped.
+								\viewbkspN 		Boolean:
+											0 	Background shapes will not in Page Layout View (default if omitted).
+											1 	Background shapes will show in Page Layout View.	
+							-->
+							<!-- 
+								Footnotes and Endnotes
+							-->
+							<!--
+								\fetN Footnote/endnote type. This indicates what type of notes are present in the document.
+								0 Footnotes only or nothing at all (the default)
+								1 Endnotes only
+								2 Both footnotes and endnotes
+								For backward compatibility, if \fet1 is emitted, \endnotes or \enddoc will be emitted
+								along with \aendnotes or \aenddoc. RTF readers that understand \fet will need to ignore
+								the footnote-positioning control words and use the endnote control words instead.
+								\ftnsep Text argument separates footnotes from the document. This is a destination control word.
+								\ftnsepc Text argument separates continued footnotes from the document. This is a destination
+								control word.
+								\ftncn Text argument is a notice for continued footnotes. This is a destination control word.
+								\aftnsep Text argument separates endnotes from the document. This is a destination control word.
+								\aftnsepc Text argument separates continued endnotes from the document. This is a destination
+								control word.
+								\aftncn Text argument is a notice for continued endnotes. This is a destination control word.
+								\endnotes Footnotes at the end of the section (the default).
+								\enddoc Footnotes at the end of the document.
+								\ftntj Footnotes beneath text (top justified).
+								\ftnbj Footnotes at the bottom of the page (bottom justified).
+								\aendnotes Endnotes at end of section (the default).
+								\aenddoc Endnotes at end of document.
+								\aftnbj Endnotes at bottom of page (bottom justified).
+								\aftntj Endnotes beneath text (top justified).
+								\ftnstartN Beginning footnote number (the default is 1).
+								\aftnstartN Beginning endnote number (the default is 1).
+								\ftnrstpg Restart footnote numbering each page.
+								\ftnrestart Footnote numbers restart at each section. Microsoft Word for the Macintosh uses this control
+								to restart footnote numbering at each page.
+								\ftnrstcont Continuous footnote numbering (the default).
+								\aftnrestart Restart endnote numbering each section.
+								\aftnrstcont Continuous endnote numbering (the default).
+								\ftnnar Footnote numbering—Arabic numbering (1, 2, 3, …).
+								\ftnnalc Footnote numbering—Alphabetic lowercase (a, b, c, …).
+								\ftnnauc Footnote numbering—Alphabetic uppercase (A, B, C, …).
+								\ftnnrlc Footnote numbering—Roman lowercase (i, ii, iii, …).
+								Microsoft Office Word 2003 Rich Text Format (RTF) Specification 34
+								Control word Meaning
+								\ftnnruc Footnote numbering—Roman uppercase (I, II, III, …).
+								\ftnnchi Footnote numbering—Chicago Manual of Style (*, †, ‡, §).
+								\ftnnchosung Footnote Korean numbering 1 (*chosung).
+								\ftnncnum Footnote Circle numbering (*circlenum).
+								\ftnndbnum Footnote kanji numbering without the digit character (*dbnum1).
+								\ftnndbnumd Footnote kanji numbering with the digit character (*dbnum2).
+								\ftnndbnumt Footnote kanji numbering 3 (*dbnum3).
+								\ftnndbnumk Footnote kanji numbering 4 (*dbnum4).
+								\ftnndbar Footnote double-byte numbering (*dbchar).
+								\ftnnganada Footnote Korean numbering 2 (*ganada).
+								\ftnngbnum Footnote Chinese numbering 1 (*gb1).
+								\ftnngbnumd Footnote Chinese numbering 2 (*gb2).
+								\ftnngbnuml Footnote Chinese numbering 3 (*gb3).
+								\ftnngbnumk Footnote Chinese numbering 4 (*gb4).
+								\ftnnzodiac Footnote numbering—Chinese Zodiac numbering 1 (* zodiac1).
+								\ftnnzodiacd Footnote numbering—Chinese Zodiac numbering 2 (* zodiac2).
+								\ftnnzodiacl Footnote numbering—Chinese Zodiac numbering 3 (* zodiac3).
+								\aftnnar Endnote numbering—Arabic numbering (1, 2, 3, …).
+								\aftnnalc Endnote numbering—Alphabetic lowercase (a, b, c, …).
+								\aftnnauc Endnote numbering—Alphabetic uppercase (A, B, C, …).
+								\aftnnrlc Endnote numbering—Roman lowercase (i, ii, iii, …).
+								\aftnnruc Endnote numbering—Roman uppercase (I, II, III, …).
+								\aftnnchi Endnote numbering—Chicago Manual of Style (*, †, ‡, §).
+								\aftnnchosung Endnote Korean numbering 1 (*chosung).
+								\aftnncnum Endnote Circle numbering (*circlenum).
+								\aftnndbnum Endnote kanji numbering without the digit character (*dbnum1).
+								\aftnndbnumd Endnote kanji numbering with the digit character (*dbnum2).
+								\aftnndbnumt Endnote kanji numbering 3 (*dbnum3).
+								\aftnndbnumk Endnote kanji numbering 4 (*dbnum4).
+								\aftnndbar Endnote double-byte numbering (*dbchar).
+								\aftnnganada Endnote Korean numbering 2 (*ganada).
+								\aftnngbnum Endnote Chinese numbering 1 (*gb1).
+								\aftnngbnumd Endnote Chinese numbering 2 (*gb2).
+								\aftnngbnuml Endnote Chinese numbering 3 (*gb3).
+								\aftnngbnumk Endnote Chinese numbering 4 (*gb4).
+								\aftnnzodiac Endnote numbering—Chinese Zodiac numbering 1 (* zodiac1).
+								\aftnnzodiacd Endnote numbering—Chinese Zodiac numbering 2 (* zodiac2).
+								\aftnnzodiacl Endnote numbering—Chinese Zodiac numbering 3 (* zodiac3).							
+							-->
+							<!-- 
+								Page Information
+							-->
+							<!--
+								\paperwN 		Paper width in twips (the default is 12,240).	[DONE]
+								\paperhN 		Paper height in twips (the default is 15,840).	[DONE]
+								\pszN 			Used to differentiate between paper sizes with identical dimensions in Microsoft Windows
+											NT®. Values 1 through 41 correspond to paper sizes defined in DRIVINI.H in the Windows
+											3.1 SDK (DMPAPER_ values). Values greater than or equal to 42 correspond to user-defined
+											forms in Windows NT.
+								\marglN 		Left margin in twips (the default is 1800).	[DONE]
+								\margrN 		Right margin in twips (the default is 1800).	[DONE]
+								\margtN 		Top margin in twips (the default is 1440).	[DONE]
+								\margbN 		Bottom margin in twips (the default is 1440).	[DONE]
+								\facingp 		Facing pages (activates odd/even headers and gutters).
+								\gutterN 		Gutter width in twips (the default is 0).		[DONE] [=Spaltenzwischenraum]
+								\rtlgutter 		Gutter is positioned on the right.
+								\gutterprl 		Parallel gutter.
+								\margmirror 		Switches margin definitions on left and right pages. Used in conjunction with \facingp.
+								\landscape 		Landscape format.
+								\pgnstartN 		Beginning page number (the default is 1).	[DONE]
+								\widowctrl 		Enable widow and orphan control.
+								\twoonone 		Print two logical pages on one physical page.
+								\bookfold 		Book fold printing. Allows for printing documents that can easily be made into pamphlets.
+											This will print two pages side by side in landscape mode, and will print to the back of the
+											sheet if the printer supports duplex printing.
+								\bookfoldrev 		Reverse book fold printing for bidirectional languages.
+								\bookfoldsheetsN 	Sheets per booklet; this should be a multiple of four.	
+							-->
+							<item xsi:type="structuringItem" identifier="IDT44_1">
+								<property  identifier="IDT44_1_1" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">6</length>
+									</range>
+									<value>paperw</value>
+									<name>paperwCW</name>
+								</property>
+								<processing type="pullXCEL" xcelRef="TEMPL01">
+									<processingMethod name="setName">
+										<param value="paperWidth"/>
+									</processingMethod>
+								</processing>
+							</item>	
+							<item xsi:type="structuringItem" identifier="IDT44_2">
+								<property  identifier="IDT44_2_1" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">6</length>
+									</range>
+									<value>paperh</value>
+									<name>paperhCW</name>
+								</property>
+								<processing type="pullXCEL" xcelRef="TEMPL01">
+									<processingMethod name="setName">
+										<param value="paperHeight"/>
+									</processingMethod>
+								</processing>
+							</item>	
+							<item xsi:type="structuringItem" identifier="IDT44_3">
+								<property  identifier="IDT44_3_1" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">5</length>
+									</range>
+									<value>margl</value>
+									<name>marglCW</name>
+								</property>
+								<processing type="pullXCEL" xcelRef="TEMPL01">
+									<processingMethod name="setName">
+										<param value="leftMargin"/>
+									</processingMethod>
+								</processing>
+							</item>	
+							<item xsi:type="structuringItem" identifier="IDT44_4">
+								<property  identifier="IDT44_4_1" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">5</length>
+									</range>
+									<value>margr</value>
+									<name>margrCW</name>
+								</property>
+								<processing type="pullXCEL" xcelRef="TEMPL01">
+									<processingMethod name="setName">
+										<param value="rightMargin"/>
+									</processingMethod>
+								</processing>
+							</item>	
+							<item xsi:type="structuringItem" identifier="IDT44_5">
+								<property  identifier="IDT44_5_1" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">5</length>
+									</range>
+									<value>margt</value>
+									<name>margtCW</name>
+								</property>
+								<processing type="pullXCEL" xcelRef="TEMPL01">
+									<processingMethod name="setName">
+										<param value="topMargin"/>
+									</processingMethod>
+								</processing>
+							</item>	
+							<item xsi:type="structuringItem" identifier="IDT44_6">
+								<property  identifier="IDT44_6_1" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">5</length>
+									</range>
+									<value>margb</value>
+									<name>margbCW</name>
+								</property>
+								<processing type="pullXCEL" xcelRef="TEMPL01">
+									<processingMethod name="setName">
+										<param value="bottomMargin"/>
+									</processingMethod>
+								</processing>
+							</item>
+							<item xsi:type="structuringItem" identifier="IDT44_7">
+								<property  identifier="IDT44_7_1" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">6</length>
+									</range>
+									<value>gutter</value>
+									<name>gutterCW</name>
+								</property>
+								<processing type="pullXCEL" xcelRef="TEMPL01">
+									<processingMethod name="setName">
+										<param value="gutterWidth"/>
+									</processingMethod>
+								</processing>
+							</item>	
+							<item xsi:type="structuringItem" identifier="IDT44_8">
+								<property  identifier="IDT44_8_1" interpretation="ASCII" >
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">8</length>
+									</range>
+									<value>pgnstart</value>
+									<name>pgnstartCW</name>
+								</property>
+								<processing type="pullXCEL" xcelRef="TEMPL01">
+									<processingMethod name="setName">
+										<param value="BeginningPageNumber"/>
+									</processingMethod>
+								</processing>
+							</item>	
+							<!-- 
+								!!TODO!!
+								Linked Styles
+								
+								\linkstyles		 Update document styles automatically based on template.													
+							-->
+							<!-- 
+								!!TODO:!!
+								
+								Compatibility Options
+								
+								\notabind Don't add automatic tab stop for hanging indent.
+								\wraptrsp Wrap trailing spaces onto the next line.
+								\prcolbl Print all colors as black.
+								\noextrasprl Don't add extra space to line height for showing raised/lowered characters.
+								\nocolbal Don't balance columns.
+								\cvmme Treat old-style escaped quotation marks (\") as current style ("") in mail merge data
+								documents.
+								\sprstsp Suppress extra line spacing at top of page. Basically, this means to ignore any line spacing
+								larger than Auto at the top of a page.
+								\sprsspbf Suppress space before paragraph property after hard page or column break.
+								\otblrul Combine table borders as done in Word 5.x for the Macintosh. Contradictory table border
+								information is resolved in favor of the first cell.
+								\transmf Metafiles are considered transparent; don't blank the area behind metafiles.
+								\swpbdr If a paragraph has a left border (not a box) and the Different Odd And Even or Mirror
+								Margins check box is selected, Word will print the border on the right for odd-numbered
+								pages.
+								\brkfrm Show hard (manual) page breaks and column breaks in frames.
+								\sprslnsp Suppress extra line spacing like WordPerfect version 5.x.
+								\subfontbysize Substitute fonts based on size first.
+								\truncatefontheight Round down to the nearest font size instead of rounding up.
+								\truncex Don't add leading (extra space) between rows of text.
+								\bdbfhdr Print body before header/footer. Option for compatibility with Word 5.x for the Macintosh.
+								\dntblnsbdb Don't balance SBCS/DBCS characters. Option for compatibility with Word 6.0 (Japanese).
+								\expshrtn Expand character spaces on line-ending with SHIFT+RETURN. Option for compatibility with
+								Word 6.0 (Japanese).
+								\lytexcttp Don’t center exact line height lines.
+								\lytprtmet Use printer metrics to lay out document.
+								\msmcap Small caps like Word 5.x for the Macintosh.
+								\nolead No external leading. Option for compatibility with Word 5.x for the Macintosh.
+								\nospaceforul Don't add space for underline. Option for compatibility with Word 6.0 (Japanese).
+								\noultrlspc Don't underline trailing spaces. Option for compatibility with Word 6.0 (Japanese).
+								\noxlattoyen Don't translate backslash to Yen sign. Option for compatibility with Word 6.0 (Japanese).
+								\oldlinewrap Lines wrap like Word 6.0.
+								\sprsbsp Suppress extra line spacing at bottom of page.
+								\sprstsm Does nothing. This keyword should be ignored.
+								\wpjst Do full justification like WordPerfect 6.x for Windows.
+								\wpsp Set the width of a space like WordPerfect 5.x.
+								\wptab Advance to next tab stop like WordPerfect 6.x.
+								\splytwnine Don’t lay out AutoShapes like Word 97.
+								\ftnlytwnine Don’t lay out footnotes like Word 6.0, Word 95, and Word 97.
+								\htmautsp Use HTML paragraph auto spacing.
+								\useltbaln Don’t forget last tab alignment.
+								\alntblind Don’t align table rows independently.
+								\lytcalctblwd Don’t lay out tables with raw width.
+								\lyttblrtgr Don’t allow table rows to lay out apart.
+								\oldas Use Word 95 Auto spacing.
+								\lnbrkrule Don’t use Word 97 line breaking rules for Asian text.
+								\bdrrlswsix Use Word 6.0/Word 95 borders rules.
+								\nolnhtadjtbl Don't adjust line height in table.
+								\ApplyBrkRules Use line breaking rules compatible with Thai text.
+								\rempersonalinfo This will indicate to the emitting program to remove personal information such as the
+								author’s name as a document property or in a comment.
+								\snapgridtocell Snap text to grid inside table with inline objects.
+								\wrppunct Allow hanging punctuation in character grid.
+								\asianbrkrule Use Asian rules for line breaks with character grid.
+								\nobrkwrptbl Don’t break wrapped tables across pages.
+								\toplinepunct Turns on a check box in the Paragraph Formatting dialogue box with a setting to allow
+								punctuation at the start of the line to compress.
+								\viewnobound Hide white space between pages.
+								\donotshowmarkup Don't show markup while reviewing.
+								\donotshowcomments Don't show comments while reviewing.
+								\donotshowinsdel Don't show insertions and deletions while reviewing.
+								\donotshowprops Don't show formatting while reviewing.
+								\allowfieldendsel Enables selecting the entire field with the first or last character.
+								\nocompatoptions Specifies that all compatibility options should be set to default.
+								\nogrowautofit Don’t allow tables set to “autofit to contents” to extend into the margins when in Print
+								Layout. This is the new default behavior for Word 2003, which keeps tables within the
+								margins.
+								\newtblstyruls Use the new Word 2003 table style rules. Applies the top border of a column in a more
+								intuitive place when there is a header row in the table. Word 2002 places the top border of
+								a column under the heading row, rather than above it as Word 2003 does.
+								This new behavior also fixes an issue with shading not displaying correctly for cells using
+								conditional formatting.	
+							-->
+							<!-- 
+								!!TODO!!
+								
+								Forms
+								
+								\formprot This document is protected for forms.
+								\allprot This document has no unprotected areas.
+								\formshade This document has form field shading on.
+								\formdisp This document currently has a forms drop-down box or check box selected.
+								\printdata This document has print form data only on.						
+							-->
+							<!-- 
+								!!TODO!!
+								
+								Revision Marks
+								
+								\revprot This document is protected for revisions. The user can edit the document, but revision
+								marking cannot be disabled.
+								\revisions Turns on revision marking.
+								\revpropN Argument indicates how revised text will be displayed:
+								0 No properties shown
+								1 Bold
+								2 Italic
+								3 Underline (default)
+								4 Double underline
+								\revbarN Vertical lines mark altered text, based on the argument:
+								0 No marking
+								1 Left margin
+								2 Right margin
+								3 Outside (the default: left on left pages, right on right pages)							
+							-->
+							<!-- 
+								!!TODO!!
+								
+								Write Protection (Read Only)
+								\readprot This document is protected for editing, except in areas marked as exceptions by \protstart
+								and \protend. This was introduced in Word 2003 and \annotprot is emitted with it for
+								backward compatibility.
+								
+								Comment Protection (Annotations)
+								\annotprot This document is protected for comments (annotations). The user cannot edit the document
+								but can insert comments (annotations).	
+								
+								Style and Formatting Protection
+								\stylelock The document contains styles and formatting restrictions.
+								\stylelockenforced The styles and formatting restrictions are being enforced.
+								\stylelockbackcomp Style lockdown backward compatibility flag, indicating we emitted protection keywords to
+								get documents with styles and formatting restrictions to behave in a reasonable way when
+								opened by older versions.
+								\autofmtoverride Allow AutoFormat to override styles and formatting restrictions. When style protection is on,
+								the user cannot add direct formatting. This setting allows AutoFormat actions to apply direct
+								formatting when needed.
+								\enforceprotN Enforce protection. Assumes that a protection was specified (\annotprot, \readprot,
+								\formprot, \revprot)
+								\protlevelN Level of protection
+								0 Track Changes (\revprot is also emitted)
+								1 Comments (\annotprot also emitted)
+								2 Forms (\formprot also emitted)
+								3 Read Only (\readprot also emitted)
+								
+								Tables
+								\tsdN Sets the default table style for this document. N references an entry in the table styles list.
+								
+								Bidirectional Controls
+								\rtldoc This document will be formatted to have Arabic-style pagination.
+								\ltrdoc This document will have English-style pagination (the default).
+								
+								Click-and-Type
+								\ctsN Index to the style to be used for Click-and-Type (0 is the default).
+								
+								Kinsoku Characters (Far East)
+								\jsksu Indicates that the strict Kinsoku set must be used for Japanese; \jsku should not be
+								present if \ksulangN is present and the language N is Japanese.
+								\ksulangN N indicates which language the customized Kinsoku characters defined in the \fchars and
+								\lchars destinations belong to.
+								\*\fchars List of following Kinsoku characters.
+								\*\lchars List of leading Kinsoku characters.
+								\nojkernpunct Kerning for Latin text only, as opposed to Latin text and punctions (Asian Typography
+								option).
+								
+								Drawing Grid
+								\dghspaceN Drawing grid horizontal spacing in twips (the default is 120).
+								\dgvspaceN Drawing grid vertical spacing in twips (the default is 120).
+								\dghoriginN Drawing grid horizontal origin in twips (the default is 1701).
+								\dgvoriginN Drawing grid vertical origin in twips (the default is 1984).
+								\dghshowN Show Nth horizontal gridline (the default is 3).
+								\dgvshowN Show Nth vertical gridline (the default is 0).
+								\dgsnap Snap to drawing grid.
+								\dgmargin Drawing grid to follow margins.	
+							-->
+							<!-- 
+								Page Borders
+								\pgbrdrhead Page border surrounds header.
+								\pgbrdrfoot Page border surrounds footer.
+								\pgbrdrt Page border top.
+								\pgbrdrb Page border bottom.
+								\pgbrdrl Page border left.
+								\pgbrdrr Page border right.
+								\brdrartN Page border art; the N argument is a value from 1 to 165 representing the number of the
+								border.
+								\pgbrdroptN 8 Page border measure from text. Always display in front option is set to off.
+								32 Page border measure from edge of page. Always display in front option is set to
+								on.
+								40 Page border measure from edge of page. Always display in front option is set to
+								off.
+								\pgbrdrsnap Align paragraph borders and table edges with page border.
+							-->
+							<!-- 
+								SECTION TEXT
+								
+								Each section in the RTF file has the following syntax:
+								
+								<section> <secfmt>* <hdrftr>? <para>+ (\sect <section>)?
+								
+								
+								Section Formatting Properties
+								At the beginning of each section, there may be section-formatting control words (described as
+								<secfmt> in the section text syntax description). These control words specify section-formatting
+								properties, which apply to the text following the control word, with the exception of the sectionbreak
+								control words (those beginning with \sbk). Section-break control words describe the break
+								preceding the text. These control words can appear anywhere in the section, not just at the start.
+								Note that if the \sectd control word is not present, the current section inherits all section
+								properties defined in the previous section.
+								
+								The section-formatting control words are listed in the following table.
+								\sect New section.
+								\sectd Reset to default section properties.
+								\endnhere Endnotes included in the section.
+								\binfsxnN N is the printer bin used for the first page of the section. If this control is not defined, then the
+								first page uses the same printer bin as defined by the \binsxnN control.
+								\binsxnN N is the printer bin used for the pages of the section.
+								\dsN Designates section style. If a section style is specified, style properties must be specified with
+								the section.
+								\pnseclvlN Used for multilevel lists. This property sets the default numbering style for each corresponding
+								\pnlvlN control word (bullets and numbering property for paragraphs) within that section. This
+								is a destination control word.
+								\sectunlocked This section is unlocked for forms.
+								
+								Section Break
+								\sbknone No section break.
+								\sbkcol Section break starts a new column.
+								\sbkpage Section break starts a new page (the default).
+								\sbkeven Section break starts at an even page.
+								\sbkodd Section break starts at an odd page.
+								
+								Columns
+								\colsN Number of columns for "snaking" (the default is 1).
+								\colsxN Space between columns in twips (the default is 720).
+								\colnoN Column number to be formatted; used to specify formatting for variable-width columns.
+								\colsrN Space to right of column in twips; used to specify formatting for variable-width columns.
+								\colwN Width of column in twips; used to override the default constant width setting for variable-width
+								columns.
+								\linebetcol Line between columns.
+								
+								Footnotes and Endnotes
+								\sftntj Footnotes beneath text (top justified).
+								\sftnbj Footnotes at the bottom of the page (bottom justified).
+								\sftnstartN Beginning footnote number (the default is 1).
+								\saftnstartN Beginning endnote number (the default is 1).
+								\sftnrstpg Restart footnote numbering each page.
+								\sftnrestart Footnote numbers restart at each section. Microsoft Word for the Macintosh uses this control to
+								restart footnote numbering at each page.
+								\sftnrstcont Continuous footnote numbering (the default).
+								\saftnrestart Restart endnote numbering each section.
+								\saftnrstcont Continuous endnote numbering (the default).
+								\sftnnar Footnote numbering—Arabic numbering (1, 2, 3, …).
+								\sftnnalc Footnote numbering—Alphabetic lowercase (a, b, c, …).
+								\sftnnauc Footnote numbering—Alphabetic uppercase (A, B, C, …).
+								\sftnnrlc Footnote numbering—Roman lowercase (i, ii, iii, …).
+								\sftnnruc Footnote numbering—Roman uppercase (I, II, III, …).
+								\sftnnchi Footnote numbering—Chicago Manual of Style (*, †, ‡, §).
+								\sftnnchosung Footnote Korean numbering 1 (*chosung).
+								\sftnncnum Footnote Circle numbering (*circlenum).
+								\sftnndbnum Footnote kanji numbering without the digit character (*dbnum1).
+								\sftnndbnumd Footnote kanji numbering with the digit character (*dbnum2).
+								\sftnndbnumt Footnote kanji numbering 3 (*dbnum3).
+								\sftnndbnumk Footnote kanji numbering 4 (*dbnum4).
+								\sftnndbar Footnote double-byte numbering (*dbchar).
+								\sftnnganada Footnote Korean numbering 2 (*ganada).
+								\sftnngbnum Footnote Chinese numbering 1 (*gb1).
+								\sftnngbnumd Footnote Chinese numbering 2 (*gb2).
+								\sftnngbnuml Footnote Chinese numbering 3 (*gb3).
+								\sftnngbnumk Footnote Chinese numbering 4 (*gb4).
+								\sftnnzodiac Footnote numbering—Chinese Zodiac numbering 1 (* zodiac1).
+								\sftnnzodiacd Footnote numbering—Chinese Zodiac numbering 2 (* zodiac2).
+								\sftnnzodiacl Footnote numbering—Chinese Zodiac numbering 3 (* zodiac3).
+								\saftnnar Endnote numbering—Arabic numbering (1, 2, 3, …).
+								\saftnnalc Endnote numbering—Alphabetic lowercase (a, b, c, …).
+								\saftnnauc Endnote numbering—Alphabetic uppercase (A, B, C, …).
+								\saftnnrlc Endnote numbering—Roman lowercase (i, ii, iii, …).
+								\saftnnruc Endnote numbering—Roman uppercase (I, II, III, …).
+								\saftnnchi Endnote numbering—Chicago Manual of Style (*, †, ‡, §).
+								\saftnnchosung Endnote Korean numbering 1 (*chosung).
+								\saftnncnum Endnote Circle numbering (*circlenum).
+								\saftnndbnum Endnote kanji numbering without the digit character (*dbnum1).
+								\saftnndbnumd Endnote kanji numbering with the digit character (*dbnum2).
+								\saftnndbnumt Endnote kanji numbering 3 (*dbnum3).
+								\saftnndbnumk Endnote kanji numbering 4 (*dbnum4).
+								\saftnndbar Endnote double-byte numbering (*dbchar).
+								\saftnnganada Endnote Korean numbering 2 (*ganada).
+								\saftnngbnum Endnote Chinese numbering 1 (*gb1).
+								\saftnngbnumd Endnote Chinese numbering 2 (*gb2).
+								\saftnngbnuml Endnote Chinese numbering 3 (*gb3).
+								\saftnngbnumk Endnote Chinese numbering 4 (*gb4).
+								\saftnnzodiac Endnote numbering—Chinese Zodiac numbering 1 (* zodiac1).
+								\saftnnzodiacd Endnote numbering—Chinese Zodiac numbering 2 (* zodiac2).
+								\saftnnzodiacl Endnote numbering—Chinese Zodiac numbering 3 (* zodiac3)
+								
+								Line Numbering
+								\linemodN Line-number modulus amount to increase each line number (the default is 1).
+								\linexN Distance from the line number to the left text margin in twips (the default is 360).
+								The automatic distance is 0.
+								\linestartsN Beginning line number (the default is 1).
+								\linerestart Line numbers restart at \linestarts value.
+								\lineppage Line numbers restart on each page.
+								\linecont Line numbers continue from the preceding section.
+								
+								Page Information
+								\pgwsxnN N is the page width in twips. A \sectd resets the value to that specified by \paperwN in the
+								document properties.
+								\pghsxnN N is the page height in twips. A \sectd resets the value to that specified by \paperhN in the
+								document properties.
+								\marglsxnN N is the left margin of the page in twips. A \sectd resets the value to that specified by
+								\marglN in the document properties.
+								\margrsxnN N is the right margin of the page in twips. A \sectd resets the value to that specified by
+								\margrN in the document properties.
+								\margtsxnN N is the top margin of the page in twips. A \sectd resets the value to that specified by
+								\margtN in the document properties.
+								\margbsxnN N is the bottom margin of the page in twips. A \sectd resets the value to that specified by
+								\margbN in the document properties.
+								\guttersxnN N is the width of the gutter margin for the section in twips. A \sectd resets the value to that
+								specified by \gutterN from the document properties. If Facing Pages is turned off, the gutter
+								is added to the left margin of all pages. If Facing Pages is turned on, the gutter is added to the
+								left side of odd-numbered pages and the right side of even-numbered pages.
+								\margmirsxn Switches margin definitions on left and right pages. Used in conjunction with \facingp.
+								\lndscpsxn Page orientation is in landscape format. To mix portrait and landscape sections within a
+								document, the \landscape control should not be used so that the default for a section is
+								portrait, which may be overridden by the \lndscpsxn control.
+								\titlepg First page has a special format.
+								\headeryN Header is N twips from the top of the page (the default is 720).
+								\footeryN Footer is N twips from the bottom of the page (the default is 720).
+								
+								Page Numbers
+								\pgnstartsN Beginning page number (the default is 1).
+								\pgncont Continuous page numbering (the default).
+								\pgnrestart Page numbers restart at \pgnstarts value.
+								\pgnxN Page number is N twips from the right margin (the default is 720). This control word is
+								understood but not used by current versions (6.0 or later) of Word.
+								\pgnyN Page number is N twips from the top margin (the default is 720). This control word is
+								understood but not used by current versions (6.0 or later) of Word.
+								\pgndec Page-number format is decimal.
+								\pgnucrm Page-number format is uppercase Roman numeral.
+								\pgnlcrm Page-number format is lowercase Roman numeral.
+								\pgnucltr Page-number format is uppercase letter.
+								\pgnlcltr Page-number format is lowercase letter.
+								\pgnbidia Page-number format is Abjad Jawaz if language is Arabic and Biblical Standard if language is
+								Hebrew.
+								\pgnbidib Page-number format is Alif Ba Tah if language is Arabic and Non-standard Decimal if language is
+								Hebrew.
+								\pgnchosung Korean numbering 1 (* chosung).
+								\pgncnum Circle numbering (*circlenum).
+								\pgndbnum Kanji numbering without the digit character.
+								\pgndbnumd Kanji numbering with the digit character.
+								\pgndbnumt Kanji numbering 3 (*dbnum3).
+								\pgndbnumk Kanji numbering 4 (*dbnum4).
+								\pgndecd Double-byte decimal numbering.
+								\pgnganada Korean numbering 2 (*ganada).
+								\pgngbnum Chinese numbering 1 (*gb1).
+								\pgngbnumd Chinese numbering 2 (*gb2).
+								\pgngbnuml Chinese numbering 3 (*gb3).
+								\pgngbnumk Chinese numbering 4 (*gb4).
+								\pgnzodiac Chinese Zodiac numbering 1 (*zodiac1).
+								\pgnzodiacd Chinese Zodiac numbering 2 (*zodiac2).
+								\pgnzodiacl Chinese Zodiac numbering 3 (*zodiac3).
+								\pgnhindia Hindi vowel numeric format.
+								\pgnhindib Hindi consonants.
+								\pgnhindic Hindi digits.
+								\pgnhindid Hindi descriptive (cardinal) text.
+								\phnthaia Thai letters.
+								\pgnthaib Thai digits.
+								\pgnthaic Thai descriptive.
+								\pgnvieta Vietnamese descriptive.
+								\pgnid Page number in dashes (Korean).
+								\pgnhnN Indicates which heading level is used to prefix a heading number to the page number. This
+								control word can only be used in conjunction with numbered heading styles.
+								A 0 (zero) specifies to not show heading level (the default).
+								Values 1 through 9 correspond to heading levels 1 through 9.
+								\pgnhnsh Hyphen separator character. This separator and the successive ones appear between the
+								heading level number and the page number.
+								\pgnhnsp Period separator character.
+								\pgnhnsc Colon separator character.
+								\pgnhnsm Em dash (—) separator character.
+								\pgnhnsn En dash (–) separator character.
+								
+								Vertical Alignment
+								\vertalt Text is top-aligned (the default).
+								\vertalb Text is bottom-aligned.
+								\vertalc Text is centered vertically.
+								\vertalj Text is justified vertically.
+								
+								Bidirectional Controls
+								\rtlsect This section will snake (newspaper style) columns from right to left.
+								\ltrsect This section will snake (newspaper style) columns from left to right (the default).
+								
+								Asian Controls
+								\horzsect Horizontal rendering.
+								\vertsect Vertical rendering.	
+								
+								Text Flow
+								\stextflow Section property for specifying text flow:
+								0 Text flows left to right and top to bottom
+								1 Text flows top to bottom and right to left, vertical
+								2 Text flows left to right and bottom to top
+								3 Text flows right to left and top to bottom
+								4 Text flows left to right and top to bottom, vertical
+								5 Text flows vertically, non-vertical font
+								
+								Page Borders
+								\pgbrdrhead Page border surrounds header.
+								\pgbrdrfoot Page border surrounds footer.
+								\pgbrdrt Page border top.
+								\pgbrdrb Page border bottom.
+								\pgbrdrl Page border left.
+								\pgbrdrr Page border right.
+								\brdrartN Page border art; the N argument is a value from 1 through 165 representing the number of the
+								border.
+								\pgbrdroptN 8 Page border measure from text. Always display in front option is set to off.
+								32 Page border measure from edge of page. Always display in front option is set to on.
+								40 Page border measure from edge of page. Always display in front option is set to off.
+								\pgbrdrsnap Align paragraph borders and table edges with page border.
+								
+								Line and Character Grid
+								\sectexpandN Character space basement (character pitch minus font size) N in device-independent units (a
+								device-independent unit is 1/294912th of an inch).
+								\sectlinegridN Line grid, where N is the line pitch in 20ths of a point.
+								\sectdefaultcl Default state of section. Indicates \sectspecifycl and \sectspecifyl are not emitted.
+								\sectspecifycl Specify number of characters per line only.
+								\sectspecifyl Specify both number of characters per line and number of lines per page.
+								\sectspecifygenN Indicates that text should snap to the character grid. Note that the N is part of the keyword.	
+							-->
+							<!-- 
+								HEADERS AND FOOTERS
+								Headers and footers are RTF destinations. Each section in the document can have its own set of
+								headers and footers. If no headers or footers are defined for a given section, the headers and
+								footers from the previous section (if any) are used. Headers and footers have the following syntax:
+								
+								<hdrftr> 	'{' <hdrctl> <para>+ '}' <hdrftr>?
+								<hdrctl> 	\header | \footer | \headerl | \headerr | \headerf | \footerl | \footerr | \footerf
+								
+								Note Each separate <hdrftr> group must have a distinct <hdrctl> introducing it.
+								
+								\header Header on all pages. This is a destination control word.
+								\footer Footer on all pages. This is a destination control word.
+								\headerl Header on left pages only. This is a destination control word.
+								\headerr Header on right pages only. This is a destination control word.
+								\headerf Header on first page only. This is a destination control word.
+								\footerl Footer on left pages only. This is a destination control word.
+								\footerr Footer on right pages only. This is a destination control word.
+								\footerf Footer on first page only. This is a destination control word.	
+							-->
+							<!-- 
+								Paragraph Text
+								There are two kinds of paragraphs: plain and table. A table is a collection of paragraphs. A table
+								row is a contiguous series of paragraphs partitioned into cells. The \intbl control word marks the
+								paragraph as being part of a table. Additional keywords related to table styles are documented
+								next, and refer to properties of the cell the paragraph resides within. For more information, see the
+								Table Definitions section of this Specification. This control word is inherited by subsequent
+								paragraphs not reset by the \pard control word.
+								
+								<para> 		<textpar> | <row>
+								<textpar> 	<pn>? <brdrdef>? <parfmt>* <apoctl>* <tabdef>? <shading>? (/v /spv)? (\subdocument |
+										<char>+)(\par <para>)?
+								<row> 		(<tbldef> <cell>+ <tbldef> \row) | (<tbldef> <cell>+ \row) | (<cell>+ <tbldef> \row)
+								<cell> 		(<nestrow>? <tbldef>?) & <textpar>+ \cell
+								<nestrow> 	<nestcell>+ ‘{\*’\nesttableprops <tbldef> \nestrow ‘}’
+								<nestcell> 	<textpar>+ \nestcell						
+							-->
+							<!-- 
+								Paragraph Formatting Properties
+								These control words (described as <parfmt> in the paragraph-text syntax description) specify
+								generic paragraph formatting properties. These control words can appear anywhere in the body of
+								the paragraph, not just at the beginning.
+								Note If the \pard control word is not present, the current paragraph inherits all paragraph
+								properties from the previous paragraph.
+								The paragraph-formatting control words are listed in the following table:
+								
+								Control word 			Meaning
+								\par 				New paragraph.
+								\ pard 				Resets to default paragraph properties.
+								
+								[ !! TODO !! :]
+								\spv 				Style separator feature that causes the paragraph mark to not appear even in ShowAll. Used to
+												nest paragraphs within the document view or outline without generating a new heading.
+								\hyphpar 			Toggles automatic hyphenation for the paragraph. Append 1 or nothing to toggle property on;
+												append 0 to turn it off.
+								\intbl 				Paragraph is part of a table.
+								\itapN 				Paragraph nesting level, where 0 is the main document, 1 is a table cell, 2 is a nested table cell,
+												3 is a doubly nested table cell, and so forth. The default is 1.
+								\keep 				Keep paragraph intact.
+								\keepn 				Keep paragraph with the next paragraph.
+								\levelN 				N is the outline level of the paragraph.
+								\noline 				No line numbering.
+								\nowidctlpar 			No widow/orphan control. This is a paragraph-level property and is used to override the
+												document-level \widowctrl.
+								\widctlpar 			Widow/orphan control is used for the current paragraph. This is a paragraph property used to
+												override the absence of the document-level \widowctrl.
+								\outlinelevelN 			Outline level of paragraph. The N argument is a value from 0 to 8 representing the outline level
+												of the paragraph. In the default case, no outline level is specified (same as body text).
+								\pagebb 			Break page before the paragraph.
+								\sbys 				Side-by-side paragraphs.
+								\sN				Designates paragraph style. If a paragraph style is specified, style properties must be specified
+												with the paragraph. N references an entry in the style sheet.
+							
+							-->
+							<item xsi:type="structuringItem" identifier="IDT47">
+								<property  identifier="IDT48" interpretation="ASCII">
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">3</length>
+									</range>
+									<value>par</value>
+									<name>paragraphSettingCW</name>
+								</property>
+							</item>	
+							<item xsi:type="structuringItem" identifier="IDT49">
+								<property  identifier="IDT50" interpretation="ASCII">
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">4</length>
+									</range>
+									<value>pard</value>
+									<name>paragraphResettingCW</name>
+								</property>
+							</item>	
+							<!-- 
+								Character Text
+								
+								Character text has the following syntax:
+								<char> 		<ptext> | <atext> | '{' <char> '}'
+								<ptext> 		(<chrfmt>* <data>+ )+
+								<data> 		#PCDATA | <spec> | <pict> | <obj> | <do> | <foot> | <annot> | <field> | <idx> | <toc> | <book>
+							-->	
+							<!--	
+								Font (Character) Formatting Properties
+								These control words (described as <chrfmt> in the syntax description) change font (character)
+								formatting properties. A control word preceding plain text turns on the specified attribute. Some
+								control words (indicated in the following table by an asterisk following the description) can be
+								turned off by appending 0 to the control word. For example, \b turns on bold, while \b0 turns off
+								bold.
+								The font (character) formatting control words are listed in the following table.
+							
+							[ !!TODO!!, except \b, \f, \fs :]
+							
+							\plain Reset font (character) formatting properties to a default value defined by the application (for
+							example, bold, underline and italic are disabled; font size is reset to 12 point). The associated
+							font (character) formatting properties (described in the section Associated Character Properties
+							of this Specification) are also reset.
+							\animtextN Animated text properties:
+							1 Las Vegas Lights
+							2 Blinking Background
+							3 Sparkle Text
+							4 Marching Black Ants
+							5 Marching Red Ants
+							6 Shimmer
+							\accnone No accent characters (over dot/over comma).
+							\accdot Over-dot accent.
+							\acccomma Over-comma accent.
+							\acccircle Over-circle accent.
+							\accunderdot Under-dot accent.
+							
+								\b 		Bold.*
+								
+							\caps All capitals.*
+							\cbN Background color (the default is 0). N specifies the color as an index of the color table.
+							\cchsN Indicates any characters not belonging to the default document character set and tells which
+							character set they do belong to. Macintosh character sets are represented by values greater than
+							255. The values for N correspond to the values for the \fcharset control word.
+							\cfN Foreground color (the default is 0). N specifies the color as an index of the color table.
+							\charscalexN Character scaling value. The N argument is a value representing a percentage (the default is
+							100).
+							\csN Designates character style. If a character style is specified, style properties must be specified
+							with the character run. N refers to an entry in the style table.
+							\cgridN Character grid.
+							\g Destination related to character grids.
+							\gcw Grid column width.
+							\gridtbl Destination keyword related to character grids.
+							\deleted Marks the text as deletion.*
+							\dnN Subscript position in half-points (the default is 6).
+							\embo Emboss.
+							\expndN Expansion or compression of the space between characters in quarter-points; a negative value
+							compresses (the default is 0).
+							\expndtwN Expansion or compression of the space between characters in twips; a negative value
+							compresses. For backward compatibility, both \expndtw and \expnd should be emitted.
+							\fittextN Fit the text in the current group in N twips. When N is set to -1 (\fittext-1), it indicates a
+							continuation of the previous \fittextN run. In other words, {\fittext1000 Fit this}
+							{\fittext-1 text} fits the string “Fit this text” in 1000 twips.
+							
+								\fN 		Font number. N refers to an entry in the font table.
+								\fsN 		Font size in half-points (the default is 24).
+								
+							\i Italic.*
+							\impr Engrave.
+							\kerningN Point size (in half-points) above which to kern character pairs. \kerning0 turns off kerning.
+							
+							Control word Meaning
+							\langfeN Applies a language to a character. N is a number corresponding to a language. The \plain
+							control word resets the language property to the language defined by \deflangfeN in the
+							document properties.
+							\langfenpN Applies a language to a character. N is a number corresponding to a language. The \plain
+							control word resets the language property to the language defined by \deflangfeN in the
+							document properties. Usually follows \langfeN.
+							\langN Applies a language to a character. N is a number corresponding to a language. The \plain
+							control word resets the language property to the language defined by \deflangN in the
+							document properties.
+							\langnpN Applies a language to a character. N is a number corresponding to a language. The \plain
+							control word resets the language property to the language defined by \deflangN in the
+							document properties. It is identical to \langN, but needed when \noproof is written together
+							with \lang1024 in order to preserve the language of the text that is not being checked for
+							spelling or grammar. Usually follows \langN.
+							\ltrch The character data following this control word is treated as a left-to-right run (the default).
+							\rtlch The character data following this control word is treated as a right-to-left run.
+							\noproof Do not check spelling or grammar for text in the group. Serves the function of \lang1024.
+							Usually \lang1024 is emitted with it for backward compatibility with old readers.
+							\nosupersub Turns off superscripting or subscripting.
+							\nosectexpand Disables character space basement.
+							\outl Outline.*
+							\rtlch The character data following this control word is treated as a right-to-left run.
+							\scaps Small capitals.*
+							\shad Shadow.*
+							\strike Strikethrough.*
+							\striked1 Double strikethrough. \striked0 turns it off.
+							\sub Subscripts text and shrinks point size according to font information.
+							\super Superscripts text and shrinks point size according to font information.
+							\ul Continuous underline. \ul0 turns off all underlining.
+							\ulcN Underline color.
+							\uld Dotted underline.
+							\uldash Dashed underline.
+							\uldashd Dash-dotted underline.
+							\uldashdd Dash-dot-dotted underline.
+							\uldb Double underline.
+							\ulhwave Heavy wave underline.
+							\ulldash Long dashed underline.
+							\ulnone Stops all underlining.
+							\ulth Thick underline.
+							\ulthd Thick dotted underline.
+							\ulthdash Thick dashed underline.
+							\ulthdashd Thick dash-dotted underline.
+							\ulthdashdd Thick dash-dot-dotted underline.
+							\ulthldash Thick long dashed underline.
+							\ululdbwave Double wave underline.
+							\ulw Word underline.
+							Control word Meaning
+							\ulwave Wave underline.
+							\upN Superscript position in half-points (the default is 6).
+							\v Hidden text.*
+							\webhidden Indicates that the text in the group is hidden in the Word 2002 Web View and will not be emitted
+							upon saving as Web page.
+							-->	
+							<!-- 
+								\fN 		Font number. N refers to an entry in the font table.
+							-->
+							<item xsi:type="contextItem" identifier="IDT51"  originalName="fontnumber">
+								<property  identifier="IDT52" interpretation="ASCII">
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">1</length>
+									</range>
+									<value>f</value>  
+									<name>fontNumberCW</name> 
+								</property>
+								<processing type="pullXCEL" xcelRef="TEMPL01">
+									<processingMethod name="setName">
+										<param value="fontNumber"/>
+									</processingMethod>
+								</processing>	
+							</item>
+							<!-- 
+								\fsN 		Font size in half-points (the default is 24).							
+							-->
+							<item xsi:type="contextItem" identifier="IDT53"  originalName="fontSize">
+								<property  identifier="IDT54" interpretation="ASCII">
+									<range>
+										<startposition xsi:type="sequential"/>
+										<length xsi:type="fixed">2</length>
+									</range>
+									<value>fs</value>  
+									<name>fontSizeCW</name> 
+								</property>
+								<processing type="pullXCEL" xcelRef="TEMPL01">
+									<processingMethod name="setName">
+										<param value="fontSize"/>  <!-- TODO: NamesLib: Definieren wie oben!!   -->
+									</processingMethod>
+								</processing>	
+							</item>
+							<!-- 
+								\b 		Bold.*							
+							-->
+							<item xsi:type="structuringItem" identifier="IDT55" order="all">
+								<item xsi:type="structuringItem" identifier="IDT56" order="all" originalName="boldEnd">
+									<property  identifier="IDT57" interpretation="ASCII">
+										<range>
+											<startposition xsi:type="sequential"/>
+											<length xsi:type="fixed">2</length>
+										</range>
+										<value>b0</value>  
+										<name>boldEndCW</name> 
+									</property>
+								</item>
+								<item xsi:type="structuringItem" identifier="IDT58" order="all" originalName="boldStart">	
+									<property  identifier="IDT59" interpretation="ASCII">
+										<range>
+											<startposition xsi:type="sequential"/>
+											<length xsi:type="fixed">1</length>
+										</range>
+										<value>b</value>  
+										<name>boldStartCW</name> 
+									</property>
+								</item>	
+							</item>		
+						</item>   <!-- end of allowed control words   -->	
+					</item>	
+										
+					<!-- [control char alternative #2: space character (0x20):]    -->
+					<item xsi:type="structuringItem" identifier="IDT60">
+						<property  identifier="IDT61" interpretation="ASCII">
+							<range>
+								<startposition xsi:type="sequential"/>
+								<length xsi:type="fixed">1</length>
+							</range>
+							<value>32</value>   <!-- 0x20  -->
+							<name>delimiter</name> 
+						</property>
+						<item xsi:type="definitionItem" identifier="IDT62">
+							<symbol  identifier="IDT63" multiple="true" interpretation="ASCII">
+								<range>
+									<startposition xsi:type="sequential"/>
+									<length xsi:type="fixed">1</length>
+								</range>
+								<nonValidValues>
+									<value>\</value>
+									<value>{</value>
+								</nonValidValues>
+							</symbol>
+							<name>normData</name> 
+						</item>
+					</item>	
+					<!-- [ control char alternative #3: opening brace character (=group start): ]    -->
+					<item xsi:type="structuringItem" identifier="IDT64">
+						<property  identifier="IDT65" interpretation="ASCII">
+							<range>
+								<startposition xsi:type="sequential"/>
+								<length xsi:type="fixed">1</length>
+							</range>
+							<value>{</value>  
+							<name>delimiter</name> 
+						</property>
+					</item>
+					<!-- [ control char alternative #4:closing brace character (=group end): ]    -->
+					<item xsi:type="structuringItem" identifier="IDT66">
+						<property  identifier="IDT67" interpretation="ASCII">
+							<range>
+								<startposition xsi:type="sequential"/>
+								<length xsi:type="fixed">1</length>
+							</range>
+							<value>}</value>  
+							<name>delimiter</name> 
+						</property>
+					</item>						
+				</item>							
+			
+			</item>   
+			<!-- end of RTF Header and document section     -->	
+		</item>  
+	<!-- end of  xcel structure-processing section   -->
+	<!--    <item>     -->
+	</formatDescription>
+	<templates>
+	<item xsi:type="structuringItem" identifier="templateRootItem">
+	<!-- ************************   Template section    ******************************* -->
+	<!-- <template>     -->					
+		<!--  +++++++++++    Template #1    ++++++++++    -->					
+		<item xsi:type="definitionItem" identifier="TEMPL01">
+			<symbol  identifier="TEMPL01_01" interpretation="ASCII" multiple="true">
+				<range>
+					<startposition xsi:type="sequential"/>
+					<length xsi:type="fixed">1</length>
+				</range>
+				<validValues>
+					<value>0</value>
+					<value>1</value>
+					<value>2</value>
+					<value>3</value>
+					<value>4</value>
+					<value>5</value>
+					<value>6</value>
+					<value>7</value>
+					<value>8</value>
+					<value>9</value>
+				</validValues>
+			</symbol>
+			<name>deffontNumber</name>
+		</item>	
+		
+		<!--   +++++++      Template #2      ++++++++++    -->
+		<item xsi:type="contextItem" identifier="TEMPL02"  originalName="fontinfo">
+			<item xsi:type="structuringItem" identifier="blub" order="all">
+			<item xsi:type="structuringItem" identifier="TEMPL02_01" order="sequence" multiple="true">
+				<property  identifier="TEMPL02_02" interpretation="ASCII">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">1</length>
+					</range>
+					<value>\</value>  
+					<name>delimiter</name> 
+				</property>
+				<!--   [the single entries within the fontinfo table are now to follow:]   -->  
+				<item xsi:type="structuringItem" identifier="TEMPL02_03" order="all" multiple="true">
+					<item xsi:type="structuringItem" identifier="TEMPL02_04" order="sequence" originalName="fontnum">
+						<property  identifier="TEMPL02_05" interpretation="ASCII">
+							<range>
+								<startposition xsi:type="sequential"/>
+								<length xsi:type="fixed">1</length>
+							</range>
+							<value>f</value>  
+							<name>fontNumberCW</name> 
+						</property>
+						<processing type="pullXCEL" xcelRef="TEMPL01">
+							<processingMethod name="setName">
+								<param value="fontNumber"/>
+							</processingMethod>
+						</processing>	
+					</item>	
+					<!-- 
+						RTF also supports font families so that applications can attempt to intelligently choose fonts if the
+						exact font is not present on the reading system. RTF uses the following control words to describe
+						the various font families.
+						
+						Control word	Font family					Examples
+						
+						\fnil		 Unknown or default fonts (the default)		 Not applicable
+						\froman		 Roman, proportionally spaced serif fonts 	Times New Roman, Palatino
+						\fswiss		 Swiss, proportionally spaced sans serif fonts	 Arial
+						\fmodern	 Fixed-pitch serif and sans serif fonts 		Courier New, Pica
+						\fscript		 Script fonts 					Cursive
+						\fdecor		 Decorative fonts 				Old English, ITC Zapf Chancery
+						\ftech		 Technical, symbol, and mathematical fonts 	Symbol
+						\fbidi		 Arabic, Hebrew, or other bidirectional font	 Miriam
+					-->
+					<item xsi:type="structuringItem" identifier="TEMPL02_06" order="all" originalName="fontfamily">
+						<symbol  identifier="TEMPL02_07" interpretation="ASCII">
+							<range>
+								<startposition xsi:type="sequential"/>
+								<length xsi:type="fixed">4</length>
+							</range>
+							<valueInterpretation>
+								<valueLabel>nilFonts</valueLabel> 
+								<value>fnil</value>
+							</valueInterpretation>	  
+							<name>fontFamily</name> 
+						</symbol>
+						<symbol  identifier="TEMPL02_08" interpretation="ASCII">
+							<range>
+								<startposition xsi:type="sequential"/>
+								<length xsi:type="fixed">5</length>
+							</range>
+							<valueInterpretation>
+								<valueLabel>techFonts</valueLabel> 
+								<value>ftech</value>
+								<valueLabel>bidiFonts</valueLabel> 
+								<value>fbidi</value>
+							</valueInterpretation>	  
+							<name>fontFamily</name> 
+						</symbol>
+						<symbol  identifier="TEMPL02_09" interpretation="ASCII">
+							<range>
+								<startposition xsi:type="sequential"/>
+								<length xsi:type="fixed">6</length>
+							</range>
+							<valueInterpretation>
+								<valueLabel>romanFonts</valueLabel> 
+								<value>froman</value>
+								<valueLabel>swissFonts</valueLabel> 
+								<value>fswiss</value>
+								<valueLabel>decorFonts</valueLabel> 
+								<value>fdecor</value>
+							</valueInterpretation>	  
+							<name>fontFamily</name> 
+						</symbol>
+						<symbol  identifier="TEMPL02_10" interpretation="ASCII">
+							<range>
+								<startposition xsi:type="sequential"/>
+								<length xsi:type="fixed">7</length>
+							</range>
+							<valueInterpretation>
+								<valueLabel>modernFonts</valueLabel> 
+								<value>fmodern</value>
+								<valueLabel>scriptFonts</valueLabel> 
+								<value>fscript</value>
+							</valueInterpretation>	  
+							<name>fontFamily</name> 
+						</symbol>
+					</item>	
+					<!-- 
+						\fcharsetN 
+						Specifies the character set of a font in the font table. Values for N are defined by Windows header files:
+						
+						0 			ANSI
+						1 			Default
+						2 			Symbol
+						3 			Invalid
+						77			 Mac
+						128 			Shift Jis
+						129 			Hangul
+						130 			Johab
+						134 			GB2312
+						136 			Big5
+						161 			Greek
+						162 			Turkish
+						163 			Vietnamese
+						177 			Hebrew
+						178 			Arabic
+						179 			Arabic Traditional
+						180 			Arabic user
+						181 			Hebrew user
+						186 			Baltic
+						204 			Russian
+						222 			Thai
+						238 			Eastern European
+						254 			PC 437
+						255 			OEM
+						
+						\falt Indicates alternate font name to use if the specified font in the font table is not available. '{\*'
+						\falt <Alternate Font Name>'}'
+						\fprqN Specifies the pitch of a font in the font table.
+						\*\panose Destination keyword. This destination contains a 10-byte Panose 1 number. Each byte
+						represents a single font property as described by the Panose 1 standard specification.
+						\*\fname This is an optional control word in the font table to define the nontagged font name. This is the
+						actual name of the font without the tag, used to show which character set is being used. For
+						example, Arial is a nontagged font name, and Arial (Cyrillic) is a tagged font name. This control
+						word is used by WordPad. Word ignores this control word (and never creates it).
+						\fbiasN Used to arbitrate between two fonts when a particular character can exist in either a non- East
+						Asian or East Asian font. Word 97 through Word 2003 emit the \fbiasN keyword only in the
+						context of bullets or list information (that is, a \listlevel destination). The default value of 0 for N
+						indicates a non-East Asian font. A value of 1 indicates an East Asian font. Additional values may
+						be defined in future releases.	
+						
+					-->
+					<item xsi:type="structuringItem" identifier="TEMPL02_11">
+						<property  identifier="TEMPL02_12" interpretation="ASCII">
+							<range>
+								<startposition xsi:type="sequential"/>
+								<length xsi:type="fixed">8</length>
+							</range>
+							<value>fcharset</value>
+							<name>fontCharsetCW</name>
+						</property>
+						<item xsi:type="structuringItem" identifier="TEMPL02_13" order="all">
+							<symbol  identifier="TEMPL02_14" interpretation="ASCII">
+								<range>
+									<startposition xsi:type="sequential"/>
+									<length xsi:type="fixed">1</length>
+								</range>
+								<valueInterpretation>
+									<valueLabel>ansi</valueLabel>
+									<value>0</value>
+									<valueLabel>default</valueLabel>
+									<value>1</value>
+									<valueLabel>symbol</valueLabel>
+									<value>2</value>
+									<valueLabel>invalid</valueLabel>
+									<value>3</value>
+								</valueInterpretation>	
+								<name>charsetFont</name>    
+							</symbol>
+							<symbol  identifier="TEMPL02_15" interpretation="ASCII">
+								<range>
+									<startposition xsi:type="sequential"/>
+									<length xsi:type="fixed">2</length>
+								</range>
+								<valueInterpretation>
+									<valueLabel>mac</valueLabel>
+									<value>77</value>
+								</valueInterpretation>	
+								<name>charsetFont</name>    
+							</symbol>
+							<symbol  identifier="TEMPL02_16" interpretation="ASCII">
+								<range>
+									<startposition xsi:type="sequential"/>
+									<length xsi:type="fixed">3</length>
+								</range>
+								<valueInterpretation>
+									<valueLabel>shiftJis</valueLabel>
+									<value>128</value>
+									<valueLabel>hangul</valueLabel>
+									<value>129</value>
+									<valueLabel>johab</valueLabel>
+									<value>130</value>
+									<valueLabel>gb2312</valueLabel>
+									<value>134</value>
+									<valueLabel>big5</valueLabel>
+									<value>136</value>
+									<valueLabel>greek</valueLabel>
+									<value>161</value>
+									<valueLabel>turkish</valueLabel>
+									<value>162</value>
+									<valueLabel>vietnamese</valueLabel>
+									<value>163</value>
+									<valueLabel>hebrew</valueLabel>
+									<value>177</value>
+									<valueLabel>arabic</valueLabel>
+									<value>178</value>
+									<valueLabel>arabicTraditional</valueLabel>
+									<value>179</value>
+									<valueLabel>arabicUser</valueLabel>
+									<value>180</value>
+									<valueLabel>hebrewUser</valueLabel>
+									<value>181</value>
+									<valueLabel>baltic</valueLabel>
+									<value>186</value>
+									<valueLabel>russian</valueLabel>
+									<value>204</value>
+									<valueLabel>thai</valueLabel>
+									<value>222</value>
+									<valueLabel>easternEuropean</valueLabel>
+									<value>238</value>
+									<valueLabel>pc437</valueLabel>
+									<value>254</value>
+									<valueLabel>oem</valueLabel>
+									<value>255</value>
+								</valueInterpretation>	
+								<name>charsetFont</name>    
+							</symbol>
+						</item>	
+					</item>
+					<!-- 
+						!! TODO: !!
+						
+						<fprq> \fprq
+						<panose> <data>
+						<nontaggedname> \*\fname
+						<fontaltname> '{\*' \falt #PCDATA '}'
+						<fontemb> '{\*' \fontemb <fonttype> <fontfname>? <data>? '}'
+						<fonttype> \ftnil | \fttruetype
+						<fontfname> '{\*' \fontfile <codepage>? #PCDATA '}'
+						<codepage> \cpg
+					-->
+				</item>	
+			</item>
+			<!-- Steuerzeichen Alternative 2: Leerzeichen    -->
+			<item xsi:type="structuringItem" identifier="TEMPL02_17" order="sequence">
+				<property  identifier="TEMPL02_18" interpretation="ASCII">
+					<range>
+						<startposition xsi:type="sequential"/>
+						<length xsi:type="fixed">1</length>
+					</range>
+					<value> </value>   <!-- 0x20  -->
+					<name>delimiter</name> 
+				</property>
+				<item xsi:type="definitionItem" identifier="TEMPL02_19" originalName="fontname">
+					<symbol  identifier="TEMPL02_20" multiple="true" interpretation="ASCII" originalName="pcdata" >
+						<range>
+							<startposition xsi:type="sequential"/>
+							<length xsi:type="fixed">1</length>
+						</range>
+						<nonValidValues>
+							<value>\</value>
+							<value>;</value>
+						</nonValidValues>
+					</symbol>
+				               <name>fontname</name>	
+				</item>	
+			</item>
+			</item>
+		</item>   <!-- End of template #2  -->	
+		</item>
+	</templates>
+	<!-- <template  -->					
+	<postProcessing></postProcessing>
+</XCELDocument>				
+	

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+    * This module is part of the XCL software system    
+    * Written by Volker Heydegger (2009)
+    * Copyright (C)  2006 - 2009   Sebastian Beyl, Elona Chudobkaite, Volker Heydegger, Jan Schnasse, Manfred Thaller 
+    *    
+    * License information
+    * This program is free software; you can redistribute it and/or modify
+    * it under the terms of the GNU General Public License as published by
+    * the Free Software Foundation; either version 2 of the License, or
+    * (at your option) any later version.
+    *
+    * This program is distributed in the hope that it will be useful,
+    * but WITHOUT ANY WARRANTY; without even the implied warranty of
+    * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    * GNU General Public License for more details.
+    *
+-->
+<xs:schema 	xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"    
+    targetNamespace="http://www.planets-project.eu/xcl/schemas/xcl"
+    elementFormDefault="qualified"
+    version="1.0" 
+    xml:lang="en" >  
+    
+    
+    <!--********************************** copra section  (root element)********************************************* -->
+    <xs:element name="copra">
+        <xs:annotation>
+            <xs:documentation>
+                Root element for comparison results description.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="copraType"/>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <!-- ............complex type:  copraType ................. -->
+    <xs:complexType name="copraType">
+        <xs:annotation>
+            <xs:documentation>
+                see specification for description.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="set" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="error" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>                      
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element> 
+        </xs:sequence>                   
+    </xs:complexType>
+    <!-- *****************************  set section (child of: 'copra')  *********************************************** -->
+    <xs:element name="set">
+        <xs:annotation>
+            <xs:documentation>              
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>                
+                <xs:element ref="property" minOccurs="1" maxOccurs="unbounded"/>                
+            </xs:sequence> 
+            <xs:attribute name="source" type="xs:string" use="required"/>
+            <xs:attribute name="target" type="xs:string" use="required"/>      
+        </xs:complexType>
+    </xs:element>    
+    <!-- *****************************  error section (child of: 'copra')  *********************************************** -->
+    <xs:element name="error">
+        <xs:annotation>
+            <xs:documentation>             
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension  base="xs:string"/>               
+            </xs:simpleContent>          
+        </xs:complexType>                 
+    </xs:element>
+    <!-- ************************  property section (child of: 'set')  ******************************* -->
+    <xs:element name="property">
+        <xs:annotation>
+            <xs:documentation>               
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="data" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="metrics" minOccurs="0" maxOccurs="1"/>                
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:int" use="required"/>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="state" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <!-- ************************  data section (child of: 'property')  ******************************* -->
+    <xs:element name="data">
+        <xs:annotation>
+            <xs:documentation>               
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="src" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="tar" minOccurs="0" maxOccurs="1"/>                
+            </xs:sequence>            
+        </xs:complexType>
+    </xs:element>
+    <!-- ************************  src section (child of: 'data')  ******************************* -->
+    <xs:element name="src">
+        <xs:annotation>
+            <xs:documentation>               
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="value" minOccurs="0" maxOccurs="unbounded"/>                               
+            </xs:sequence>            
+        </xs:complexType>
+    </xs:element>
+    <!-- ************************  tar section (child of: 'data')  ******************************* -->
+    <xs:element name="tar">
+        <xs:annotation>
+            <xs:documentation>               
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="value" minOccurs="0" maxOccurs="unbounded"/>                               
+            </xs:sequence>            
+        </xs:complexType>
+    </xs:element>
+    <!-- ****************** metrics section (child of: 'property') **************************  -->
+    <xs:element name="metrics">
+        <xs:annotation>
+            <xs:documentation>             
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="metric" minOccurs="1" maxOccurs="unbounded"/>                               
+            </xs:sequence>                 
+        </xs:complexType>
+    </xs:element>
+    <!-- ****************** metric section (child of: 'metrics') **************************  -->
+    <xs:element name="metric">
+        <xs:annotation>
+            <xs:documentation>             
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="result" minOccurs="1" maxOccurs="1"/>                 
+            </xs:sequence>    
+            <xs:attribute name="id" type="xs:int" use="required"/>
+            <xs:attribute name="name" type="xs:string" use="required"/>            
+        </xs:complexType>
+    </xs:element>
+    <!-- ****************** result section (child of: 'metric') **************************  -->
+    <xs:element name="result">
+        <xs:annotation>
+            <xs:documentation>             
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension  base="xs:string">
+                    <xs:attribute name="state" type="xs:string" use="required"/>   			
+                </xs:extension>
+            </xs:simpleContent>          
+        </xs:complexType>                 
+    </xs:element>
+</xs:schema>    

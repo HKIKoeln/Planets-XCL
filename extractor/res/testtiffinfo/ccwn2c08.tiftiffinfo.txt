@@ -1,0 +1,142 @@
+TIFF Directory at offset 0x8 (8)
+  Subfile Type: (0 = 0x0)
+  Image Width: 32 Image Length: 32
+  Resolution: 72, 72 pixels/inch
+  Bits/Sample: 8
+  Compression Scheme: None
+  Photometric Interpretation: RGB color
+  Samples/Pixel: 3
+  Rows/Strip: 32
+  Planar Configuration: single image plane
+  Photoshop Data: <present>, 1670 bytes
+  Tag 37724: 0x41,0x64,0x6f,0x62,0x65,0x20,0x50,0x68,0x6f,0x74,0x6f,0x73,0x68,0x6f,0x70,0x20,0x44,0x6f,0x63,0x75,0x6d,0x65,0x6e,0x74,0x20,0x44,0x61,0x74,0x61,0x20,0x42,0x6c,0x6f,0x63,0x6b,0x0
+Strip 0:
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  c1 ff d6 5b fd 8d 30 ff 67 5b ff 7d b2 ff bd fc ff fc ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 88 ff b6
+  07 ff 60 0c ff 5a 0f ff 51 0d ff 41 09 ff 2a 34 ff 3b cc ff c4 ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 88 ff bc 08 ff 6c
+  12 ff 6a 17 ff 64 1b ff 5c 1a ff 4c 15 ff 35 18 ff 1c 32 ff 0b a4 ff 83
+  fe ff fd ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff cd ff e5 09 ff 78 12 ff 76
+  1d ff 74 24 ff 6f 28 ff 67 27 ff 58 23 ff 40 26 ff 26 3e ff 11 51 ff 07
+  95 ff 54 f8 ff f3 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 45 ff a0 11 ff 80 1d ff 7f
+  28 ff 7e 30 ff 7a 36 ff 73 35 ff 64 31 ff 4c 36 ff 30 4e ff 1b 60 ff 11
+  6f ff 09 9b ff 3c f9 ff f0 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff b2 ff db 0a ff 87 19 ff 89 27 ff 89
+  33 ff 87 3d ff 85 43 ff 7e 43 ff 71 3f ff 59 45 ff 3c 5d ff 26 6f ff 1d
+  7e ff 13 8b ff 0a b2 ff 3c fb ff f1 ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff 36 ff a4 12 ff 90 22 ff 91 31 ff 92
+  3e ff 91 49 ff 8f 50 ff 89 52 ff 7d 4e ff 65 55 ff 48 6d ff 33 7f ff 29
+  8c ff 1f 9a ff 14 aa ff 0a ca ff 3c fe ff fa ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff cb ff ea 0a ff 96 1b ff 98 2a ff 99 3b ff 9b
+  4a ff 9b 56 ff 99 5e ff 95 61 ff 8a 5d ff 72 65 ff 54 7d ff 41 8d ff 36
+  9b ff 2b aa ff 1f ba ff 13 ca ff 0a e6 ff 51 ff ff fb ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff 67 ff c3 11 ff 9e 22 ff a0 33 ff a2 44 ff a4
+  55 ff a5 62 ff a3 6c ff a0 70 ff 96 6c ff 80 76 ff 61 8d ff 4f 9c ff 43
+  aa ff 37 b9 ff 2b ca ff 1e db ff 13 ee ff 09 fd fc 6b ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff f1 ff fa 14 ff a9 18 ff a6 29 ff a8 3c ff ab 4d ff ac
+  5f ff ae 6e ff ae 7a ff ab 7f ff a3 7c ff 8d 87 ff 6f 9c ff 5e ab ff 52
+  ba ff 44 c9 ff 37 da ff 2a ed ff 1e fc fb 12 ff e8 08 ff e9 7f ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff a4 ff e1 0d ff ac 1e ff ae 31 ff b1 44 ff b3 56 ff b5
+  68 ff b7 7a ff b8 87 ff b6 8e ff b0 8c ff 9b 98 ff 7d ac ff 6e bb ff 60
+  c9 ff 52 da ff 43 ec ff 36 fc fc 29 ff e8 1d ff d3 12 ff bf 08 ff de 99
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff 61 ff d0 12 ff b5 25 ff b7 38 ff b9 4b ff bb 5f ff bd
+  72 ff c0 84 ff c1 94 ff c1 9c ff bc 9c ff a9 a9 ff 8c bb ff 7d ca ff 6f
+  da ff 5f eb ff 51 fc fc 43 ff e9 35 ff d4 28 ff c0 1c ff ae 11 ff 9c 07
+  ff cd 91 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff 1f ff c3 18 ff be 2b ff c0 3f ff c1 53 ff c3 67 ff c6
+  7b ff c8 8e ff ca a0 ff cb ab ff c8 ac ff b7 ba ff 9b cb ff 8d da ff 7d
+  eb ff 6e fb fc 5e ff ea 50 ff d5 42 ff c2 34 ff b0 27 ff 9f 1b ff 8d 10
+  ff 7e 08 ff d6 b7 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff d2 ff f5 0a ff c5 1d ff c7 30 ff c9 44 ff cb 59 ff cd 6f ff ce
+  83 ff d1 98 ff d3 ab ff d5 b9 ff d4 bc ff c5 ca ff ab da ff 9d ea ff 8c
+  fb fd 7c ff eb 6d ff d7 5d ff c4 4f ff b2 41 ff a1 33 ff 8f 26 ff 7f 1a
+  ff 6e 0f ff 69 15 fe d6 c4 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff 93 ff ea 0f ff cf 22 ff d1 36 ff d2 4a ff d4 5f ff d6 75 ff d8
+  8b ff d9 a0 ff db b5 ff de c7 ff df cc ff d4 db ff bc ea ff ac fa fd 9c
+  ff ec 8b ff d8 7c ff c6 6c ff b4 5c ff a2 4d ff 91 3f ff 81 31 ff 71 24
+  ff 61 18 ff 52 0d fb 4d 14 fb d7 cd ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff 67 ff e9 12 ff db 26 ff dc 3a ff dd 4f ff de 65 ff df 7b ff e1
+  92 ff e3 a8 ff e5 be ff e7 d2 ff e9 dd ff e2 eb ff cd fa fd bc ff ee ac
+  ff da 9b ff c8 8a ff b6 7a ff a5 6a ff 94 5a ff 83 4c ff 73 3e ff 62 30
+  ff 52 23 ff 43 17 ff 34 0d f8 36 18 fc e0 dd ff ff ff ff ff ff ff ff ff
+  ff ff ff 3c ff ec 16 ff e7 2a ff e8 3e ff e9 54 ff ea 69 ff eb 80 ff ec
+  97 ff ed ae ff ee c5 ff f0 dc ff f2 ed ff f0 fa fe de ff f0 cd ff dd bb
+  ff ca aa ff b8 99 ff a6 89 ff 94 79 ff 81 69 ff 6f 5a ff 5d 4d ff 4b 40
+  ff 3b 34 ff 2b 29 ff 1d 1e ff 10 15 fe 28 2f ff e3 e5 ff ff ff ff ff ff
+  fd ff ff 12 ff f4 19 ff f4 2d ff f5 42 ff f5 57 ff f7 6d ff f8 84 ff f9
+  9b ff f9 b2 ff fa ca ff fb e2 fe fc f8 fc fc ff f1 ef ff e0 e0 ff ce d1
+  ff bc c3 ff aa b5 ff 98 a7 ff 87 9a ff 77 8d ff 67 81 ff 58 74 ff 49 68
+  ff 3c 5c ff 2e 51 ff 21 45 ff 16 3b ff 0b 30 ff 31 50 ff ed f1 ff ff ff
+  de ff ff 0a fb fc 1c fa fd 30 fa fd 45 f9 fd 5b f8 fe 71 f7 fe 87 f6 fe
+  9e f5 fe b5 f4 fe cc f2 ff e3 eb ff fa db fd ff cf ef ff c2 e3 ff b6 d8
+  ff aa cd ff 9e c3 ff 92 b9 ff 86 ae ff 79 a4 ff 6c 99 ff 5f 8e ff 52 83
+  ff 45 78 ff 39 6d ff 2c 61 ff 20 56 ff 14 4a ff 0a 3f fe 41 69 ff f4 f7
+  c0 fa ff 0c ec fd 1f ec fe 33 ea fe 47 ea fe 5d e9 fe 73 e7 fe 89 e6 ff
+  9f e4 ff b5 e0 ff c9 d4 ff e5 bf ff fa b2 fc ff a6 ec ff 9a dd ff 8f d0
+  ff 83 c4 ff 77 b9 ff 6c ae ff 61 a4 ff 57 9a ff 4c 91 ff 43 87 ff 39 7e
+  ff 2f 75 ff 26 6c ff 1e 63 ff 16 5a ff 0e 52 fe 0a 4b fe 4b 79 ff d3 de
+  a5 f3 ff 0e de fe 21 dd fe 35 db ff 49 da ff 5e d8 ff 73 d5 ff 88 d3 ff
+  9d ce ff af bd ff cd a4 ff e8 97 ff f9 8b f9 ff 7f ea ff 74 d9 ff 69 cb
+  ff 5e bd ff 53 b2 ff 49 a6 ff 3f 9b ff 35 91 ff 2c 87 ff 23 7e ff 1a 74
+  ff 13 6b ff 0b 62 fc 06 57 f6 1d 5d f9 7c 9f fd e0 e8 ff ff ff ff ff ff
+  92 ea ff 0f ce ff 21 cc ff 34 ca ff 48 c7 ff 5d c5 ff 71 c1 ff 85 ba ff
+  95 a6 ff b4 8a ff d2 7c ff e9 71 ff f7 66 f6 fe 5a e7 ff 50 d6 ff 46 c6
+  ff 3d b9 ff 33 ac ff 2a a0 ff 20 94 ff 18 8a ff 10 7f ff 09 74 f8 04 66
+  e8 04 54 e7 49 7b f2 af c1 fe fb fc ff ff ff ff ff ff ff ff ff ff ff ff
+  93 e3 ff 0e bc ff 21 b9 ff 34 b7 ff 47 b4 ff 5a ae ff 6c a6 ff 7c 8f ff
+  9b 72 ff bc 62 ff d4 58 ff ea 4e ff f6 43 f3 fe 39 e4 ff 2f d4 ff 26 c3
+  ff 1e b4 ff 16 a7 ff 0f 9b fe 08 8d f4 03 7a de 01 5f cc 1a 59 dc 7c 99
+  f6 e0 e6 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  97 dc ff 0e a9 ff 1f a6 ff 32 a2 ff 44 9c ff 54 91 ff 62 79 ff 81 5b ff
+  a5 4a ff bf 40 ff d6 37 ff eb 2e fe f5 24 f1 fc 1b e1 ff 13 d1 ff 0c c1
+  fc 06 ad f0 02 94 d7 00 71 b6 03 4d bd 49 70 df af bc fd fb fc ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ac dd ff 0c 95 ff 1d 91 ff 2e 89 ff 3d 7d ff 4a 64 ff 67 45 ff 8e 34 ff
+  a9 2a ff c1 21 ff d7 19 ff ea 12 fc f3 0a ed f5 04 d7 e8 01 b4 cd 00 88
+  a9 00 59 98 1a 4d bd 7c 91 ef e0 e4 ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  c9 e5 ff 0a 7f ff 19 76 ff 26 68 ff 33 4f ff 4d 31 ff 77 20 ff 93 16 ff
+  ab 0f ff c2 08 fe d2 04 f6 d2 01 d8 bc 00 a4 9d 00 6d 7c 03 43 93 49 66
+  cd ae b7 fc fb fb ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  f8 fb ff 1a 71 ff 11 54 ff 1c 3b ff 35 1f ff 5e 0f ff 7b 06 fc 8b 02 ef
+  92 00 d6 8f 00 b2 86 00 88 6b 00 54 65 1a 43 a1 7b 8a e8 e0 e2 ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff b0 c5 ff 13 33 ff 18 10 f9 30 06 e7 3d 02 c9 3f 01 a2 3e 00 7d
+  3c 00 59 39 03 3b 6c 49 60 bc af b4 fc fb fb ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff f5 f6 fe dd de f8 dd dd f3 c8 c8 dc b9 b9 c9 ba b8 c3
+  ba b8 bd e6 e4 e5 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ 

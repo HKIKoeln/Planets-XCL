@@ -1,0 +1,51 @@
+Image: basi0g02.tif
+  Format: TIFF (Tagged Image File Format)
+  Class: DirectClass
+  Geometry: 32x32+0+0
+  Resolution: 72x72
+  Print size: 0.444444x0.444444
+  Units: PixelsPerInch
+  Type: Grayscale
+  Base type: Grayscale
+  Endianess: MSB
+  Colorspace: RGB
+  Depth: 8/2-bit
+  Channel depth:
+    gray: 2-bit
+  Channel statistics:
+    gray:
+      min: 0 (0)
+      max: 255 (1)
+      mean: 127.5 (0.5)
+      standard deviation: 95.0329 (0.372678)
+  Histogram:
+       256: (  0,  0,  0) #000000 black
+       256: ( 85, 85, 85) #555555 rgb(85,85,85)
+       256: (170,170,170) #AAAAAA rgb(170,170,170)
+       256: (255,255,255) #FFFFFF white
+  Rendering intent: Undefined
+  Interlace: None
+  Background color: white
+  Border color: rgb(223,223,223)
+  Matte color: grey74
+  Transparent color: black
+  Page geometry: 32x32+0+0
+  Dispose: Undefined
+  Iterations: 0
+  Compression: None
+  Orientation: TopLeft
+  Properties:
+    create-date: 2009-05-06T11:30:17+02:00
+    modify-date: 2009-05-06T11:30:15+02:00
+    signature: 56878250272d4a04f61c00971b40a019738f1b37f85d747046470eb6cd12d09b
+    tiff:rows-per-strip: 32
+  Profiles:
+    Profile-8bim: 1744 bytes
+    unknown[77,111]: chrome Halftone Settings
+    Profile-tiff:37724: 36 bytes
+  Artifacts:
+    verbose: true
+  Tainted: False
+  Filesize: 2.95kb
+  Number pixels: 1kb
+  Version: ImageMagick 6.4.5 2008-12-02 Q16 OpenMP http://www.imagemagick.org

@@ -1,0 +1,37 @@
+<XCELDocument xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl
+    schemas/XCELBasicExtension.xsd">
+    <preProcessing> 
+        <item xsi:type="structuringItem" identifier="preproc1">
+            
+            <processing type="configureParser" >
+                <processingMethod name="setSymbolDoesNotMatchHandle">
+                    <param value="skipWhiteSpace"/>
+                </processingMethod>
+            </processing>
+            
+            <!--    <processing type="configureParser" >
+                <processingMethod name="setCheckFirstHandle">
+                <param value="skip"/>
+                <param value="%.*$"/>
+                </processingMethod>
+                </processing>
+            -->
+            
+        </item>
+    </preProcessing>
+    
+    <formatDescription>
+        <item xsi:type="structuringItem" identifier="i1" order="sequence">
+            <symbol identifier="i2" interpretation="ASCII" print="true" multiple="false">
+                <range>
+                    <startposition xsi:type="fixed">162453</startposition>
+                    <length xsi:type="fixed">4</length>
+                </range>
+                
+            </symbol>
+        </item>
+    </formatDescription>
+    <postProcessing></postProcessing>
+</XCELDocument>

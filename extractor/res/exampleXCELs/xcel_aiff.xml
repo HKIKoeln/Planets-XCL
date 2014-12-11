@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- AIFF file format specification (version 1.3); using  xcel version 1.0--> 
+	<!-- date of creation: 2007-01-25-->
+	<!-- created by HKI, University at Cologne -->
+	<!-- comments  from: Audio Interchange File Format: "AIFF". A Standard for Sampled Sound Files. Version 1.3.
+	       Apple Computer, Inc.;   HKI comments in [ ]   -->
+	<!-- status: incomplete (contains common and sound data chunks)  -->
+	
+	<XCELDocument xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl
+	schemas/XCELAudioExtension.xsd">
+	
+	<!-- 
+		File Structure
+		
+		Audio IFF conforms to the "EA IFF 85" Standard for Interchange Format Files developed by
+		Electronic Arts.
+		Audio IFF is primarily an interchange format, although application designers should find it flexible
+		enough to use as a data storage format as well. If an application does choose to use a different storage
+		format, it should be able to convert to and from the format defined in this document. This will facilitate
+		the sharing of sound data between applications.
+		The "EA IFF 85" Standard for Interchange Format Files defines an overall structure for storing
+		data in files. Audio IFF conforms to the "EA IFF 85" standard. 
+		An "EA IFF 85" file is made up of a number of chunks of data. Chunks are the building blocks of "EA
+		IFF 85" files. A chunk consists of some header information followed by data.
+		
+		A chunk can be represented using our C-like language in the following manner:
+		
+		typedef struct {
+		ID ckID; /* chunk ID */
+		long ckSize; /* chunk Size */
+		char ckData[]; /* data */
+		} Chunk;
+		
+		ckID describes the format of the data portion a chunk. A program can determine how to interpret the
+		chunk data by examining ckID.
+		ckSize is the size of the data portion of the chunk, in bytes. It does not include the 8 bytes used by
+		ckID and ckSize.
+		
+		
+		There is a required Common Chunk which contains important parameters describing the waveform, such as its length and sample rate. 
+		The Sound Data chunk, which contains the actual waveform data, is also required if the waveform data has a length greater than 0
+		(ie, there actually is waveform data in the FORM). All other chunks are optional. Among the other optional chunks are ones which define markers, 
+		list instrument parameters, store application-specific information, etc. All of these chunks are described in detail in the following sections of this document.
+		
+		All applications that use FORM AIFF must be able to read the 2 required chunks and can choose to selectively ignore the optional chunks.
+		A program that copies a FORM AIFF should copy all of the chunks in the FORM AIFF, even those it chooses not to interpret.
+		
+		There are no restrictions upon the order of the chunks within a FORM AIFF.
+		
+		Here is a graphical overview of an example, minimal AIFF file. It consists of a single FORM AIFF containing the 2 required chunks, a Common Chunk and a Sound Data Chunk.
+		
+		__________________________
+		| FORM AIFF Chunk	   |
+		|   ckID  = 'FORM'         |
+		|   formType = 'AIFF'      |
+		|    __________________    |
+		|   | Common Chunk     |   |
+		|   |	ckID = 'COMM'  |   |
+		|   |__________________|   |
+		|    __________________    |
+		|   | Sound Data Chunk |   |
+		|   |	ckID = 'SSND'  |   |
+		|   |__________________|   |
+		|__________________________|
+		
+				
+				-->
+	
+	<!-- ********************* xcel header section:   ********************* -->
+	
+	<!-- 
+		Data Organization		
+		All data is stored in Motorola 68000 (ie, big endian) format. The bytes of multiple-byte values are stored with the high-order
+		(ie, most significant) bytes first. 
+	-->
+	<preProcessing>
+		<processing type="pushXCEL" xcelRef="IDA02">
+			<processingMethod name="setByteOrder">
+				<param value="bigEndian"/>
+			</processingMethod>
+		</processing>
+	</preProcessing>
+	
+	<formatDescription>
+	<!-- ***************    xcel sequential-processing section:  ********************* -->
+			
+		<!-- ***************  "EA IFF 85" container chunk:   *********************** -->
+		<item xsi:type="structuringItem" identifier="IDA02" order="sequence" originalName="containerChunk">
+			<!-- 
+				ckID
+				ckID is always 'FORM' for AIFF. This indicates that this is a FORM chunk.
+			-->
+			<property  identifier="IDA02_S01" interpretation="ASCII">
+				<range>
+					<startposition xsi:type="fixed">0</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<value>FORM</value>
+				<name>aiffHeaderChunkId</name>
+			</property>
+			
+			<!-- 
+				ckSize
+				ckSize contains the size of data portion of the 'FORM' chunk. Note that the data portion has been
+				broken into two parts, formType and chunks.
+			-->
+			<symbol  identifier="IDA02_S02" interpretation="int32" originalName="ckSize">    <!-- !!! SIGNED int32 (long) !!! -->
+				<range>
+					<startposition xsi:type="fixed">4</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<name>aiffFormChunkSize</name>
+			</symbol>
+			
+			<!-- 
+				formType
+				formType describes what's in the 'FORM' chunk. For Audio IFF files, formType is always 'AIFF'.
+				This indicates that the chunks within the FORM pertain to sampled sound. A FORM chunk of
+				formType 'AIFF' is called a FORM AIFF.
+			-->
+			<property  identifier="IDA02_S03" interpretation="ASCII" originalName="formType">
+				<range>
+					<startposition xsi:type="fixed">8</startposition>
+					<length xsi:type="fixed">4</length>
+				</range>
+				<value>AIFF</value>	
+				<name>aiffFormType</name> 
+			</property>
+			
+			<!-- 
+				chunks
+				chunks are the chunks contained within the FORM. These chunks are called local chunks. A FORM
+				AIFF along with its local chunks make up an Audio IFF file.
+				
+				Local Chunk Types
+				There are two types of chunks, those that are required and those that are optional. The Common Chunk
+				is required. The Sound Data chunk is required if the sampled sound has greater than zero length. All
+				other chunks are optional. 
+			-->
+			<item xsi:type="structuringItem" identifier="IDA02_I01" order="all" multiple="true" originalName="chunks">
+				<!-- 
+					Common chunk
+					The Common Chunk describes fundamental parameters of the sampled sound.
+					
+					typedef struct {
+					ID             chunkID;
+					long           chunkSize;
+					short          numChannels;
+					unsigned long  numSampleFrames;
+					short          sampleSize;
+					extended       sampleRate;
+					} CommonChunk;
+					
+					One and only one Common Chunk is required in every FORM AIFF.
+				-->
+				<item xsi:type="structuringItem" identifier="IDA02_I01_I01" originalName="commonChunk">
+					<!-- 
+						ckID is always 'COMM'. ckSize is the size of the data portion of the chunk, in bytes. It does not
+						include the 8 bytes used by ckID and ckSize. For the Common Chunk, ckSize is always 18.
+					-->
+					<property 	identifier="IDA02_I01_I01_S01" interpretation="ASCII" originalName="ckId">
+						<range>
+							<startposition xsi:type="sequential"/>
+							<length xsi:type="fixed">4</length>
+						</range>
+						<value>COMM</value><!-- [The chunk ID string ends with the space character (0x20).]  -->	
+						<name>aiffcomChunkId</name>  
+					</property>
+					<symbol  identifier="IDA02_I01_I01_S02" interpretation="int32" originalName="ckSize">
+						<range>
+							<startposition xsi:type="sequential"/>
+							<length xsi:type="fixed">4</length>
+						</range>
+						<name>aiffComChunkSize</name>
+					</symbol>
+					<!-- 
+						numChannels contains the number of audio channels for the sound. A value of 1 means monophonic
+						sound, 2 means stereo, and 4 means four channel sound, etc. Any number of audio channels may be
+						represented.
+					-->
+					<symbol  identifier="IDA02_I01_I01_S03" interpretation="int16" originalName="numChannels">
+						<range>
+							<startposition xsi:type="sequential"/>
+							<length xsi:type="fixed">2</length>
+						</range>
+						<name>numberOfChannels</name>
+					</symbol>
+					<!-- 
+						numSampleFrames contains the number of sample frames in the Sound Data Chunk. Note that
+						numSampleFrames is the number of sample frames, not the number of bytes nor the number of sample
+						points in the Sound Data Chunk. The total number of sample points in the file is numSampleFrames
+						times numChannels.
+					-->
+					<symbol  identifier="IDA02_I01_I01_S04" interpretation="uint32" originalName="numSampleFrames">
+						<range>
+							<startposition xsi:type="sequential"/>
+							<length xsi:type="fixed">4</length>
+						</range>
+						<name>numSampleFrames</name>
+					</symbol>
+					<!-- 
+						sampleSize is the number of bits in each sample point. It can be any number from 1 to 32. 
+						Each sample point in a sample frame is a linear, 2's complement value. The sample points are from 1 to
+						32 bits wide, as determined by the sampleSize parameter in the Common Chunk. Sample points are
+						stored in an integral number of contiguous bytes. One to 8 bit wide sample points are stored in one byte,
+						9 to 16 bit wide sample points are stored in two bytes, 17 to 24 bit wide sample points are stored in 3
+						bytes, and 25 to 32 bit wide samples are stored in 4 bytes. When the width of a sample point is less
+						than a multiple of 8 bits, the sample point data is left justified, with the remaining bits zeroed. An
+						example case is illustrated below. A 12 bit sample point, binary 101000010111, is stored left justified
+						in two bytes. The remaining bits are set to zero.
+						
+						[Total number of sound data bytes= numSampleFrames*numChannels*sampleSize(rounded to byte size);
+						i.e.: sample sizes from 1 to 8 bit wide are stored in 1 byte, 9 to 16 bits in 2 bytes etc.]
+					-->
+					<!--<processing type="pushXCEL" xcelRef="IDA02_I01_I02_I01_S01">
+						<processingMethod name="mathOperationMulti" id="PM01">
+							<param valueRef="IDA02_I01_I01_S03"/>
+							<param valueRef="IDA02_I01_I01_S04"/>
+						</processingMethod>
+					</processing>-->
+					
+					<!-- 
+						sampleSize is the number of bits in each sample point. It can be any number from 1 to 32. 
+					-->
+					<item xsi:type="structuringItem" identifier="IDA02_I01_I01_I01" order="all" multiple="false">
+						<item xsi:type="structuringItem" identifier="IDA02_I01_I01_I01_I01">
+							<symbol  identifier="IDA02_I01_I01_I01_I01_S01" interpretation="int16" originalName="sampleSize">
+								<range>
+									<startposition xsi:type="sequential"/>
+									<length xsi:type="fixed">4</length>
+								</range>
+								<validValues>
+									<startRange>1</startRange>
+									<endRange>8</endRange>
+								</validValues>
+								<name>bitsPerSamplePoint</name>
+							</symbol>
+							<!-- [ continue with calculating the sound data's length: ]  -->
+							<!--<processing type="pushXCEL" xcelRef="IDA02_I01_I02_I01_S01">
+								<processingMethod name="mathOperationMulti" id="PM02">
+									<param valueRef="PM01"/>
+									<param valueRef="1"/>  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Warum x 1 ???????????
+									</processingMethod>-->
+							<processing type="pushXCEL" xcelRef="IDA02_I01_I02_I01_S01">
+								<processingMethod name="setLength">
+									<param value="#IDA02_I01_I01_S03*#IDA02_I01_I01_S04*1"/>
+								</processingMethod>
+							</processing>
+						</item>	
+						<item xsi:type="structuringItem" identifier="IDA02_I01_I01_I01_I02">
+							<symbol  identifier="IDA02_I01_I01_I01_I02_S01" interpretation="int16" originalName="sampleSize">
+								<range>
+									<startposition xsi:type="sequential"/>
+									<length xsi:type="fixed">4</length>
+								</range>
+								<validValues>
+									<startRange>9</startRange>
+									<endRange>16</endRange>
+								</validValues>
+								<name>bitsPerSamplePoint</name>
+							</symbol>
+							<!-- [ continue with calculating the sound data's length: ]  -->
+							<!--<processing type="pushXCEL" xcelRef="IDA02_I01_I02_I01_S01">
+								<processingMethod name="mathOperationMulti" id="PM03">
+									<param valueRef="PM01"/>
+									<param valueRef="2"/>
+								</processingMethod>
+								<processingMethod name="setLength">
+									<param valueRef="PM03"/>
+								</processingMethod>
+								
+							</processing>-->
+							<processing type="pushXCEL" xcelRef="IDA02_I01_I02_I01_S01">
+								<processingMethod name="setLength">
+									<param value="#IDA02_I01_I01_S03*#IDA02_I01_I01_S04*2"/>
+								</processingMethod>
+							</processing>
+						</item>	
+						<item xsi:type="structuringItem" identifier="IDA02_I01_I01_I01_I03">
+							<symbol  identifier="IDA02_I01_I01_I01_I03_S01" interpretation="int16" originalName="sampleSize">
+								<range>
+									<startposition xsi:type="sequential"/>
+									<length xsi:type="fixed">4</length>
+								</range>
+								<validValues>
+									<startRange>17</startRange>
+									<endRange>24</endRange>
+								</validValues>
+								<name>bitsPerSamplePoint</name>
+							</symbol>
+							<!-- [ continue with calculating the sound data's length: ]  -->
+							<!--<processing type="pushXCEL" xcelRef="IDA02_I01_I02_I01_S01">
+								<processingMethod name="mathOperationMulti" id="PM04">
+									<param valueRef="PM01"/>
+									<param valueRef="3"/>
+								</processingMethod>
+								<processingMethod name="setLength">
+									<param valueRef="PM04"/>
+								</processingMethod>
+							</processing>-->
+							<processing type="pushXCEL" xcelRef="IDA02_I01_I02_I01_S01">
+								<processingMethod name="setLength">
+									<param value="#IDA02_I01_I01_S03*#IDA02_I01_I01_S04*3"/>
+								</processingMethod>
+							</processing>
+						</item>	
+						<item xsi:type="structuringItem" identifier="IDA02_I01_I01_I01_I04">
+							<symbol  identifier="IDA02_I01_I01_I01_I04_S01" interpretation="int16" originalName="sampleSize">
+								<range>
+									<startposition xsi:type="sequential"/>
+									<length xsi:type="fixed">4</length>
+								</range>
+								<validValues>
+									<startRange>25</startRange>
+									<endRange>32</endRange>
+								</validValues>
+								<name>bitsPerSamplePoint</name>
+							</symbol>
+							<!-- [ continue with calculating the sound data's length: ]  -->
+							<!--<processing type="pushXCEL" xcelRef="IDA02_I01_I02_I01_S01">
+								<processingMethod name="mathOperationMulti" id="PM05">
+									<param valueRef="PM01"/>
+									<param valueRef="4"/>
+								</processingMethod>
+								<processingMethod name="setLength">
+									<param valueRef="PM05"/>
+								</processingMethod>
+							</processing>-->
+							<processing type="pushXCEL" xcelRef="IDA02_I01_I02_I01_S01">
+								<processingMethod name="setLength">
+									<param value="#IDA02_I01_I01_S03*#IDA02_I01_I01_S04*4"/>
+								</processingMethod>
+							</processing>
+						</item>	
+					</item>	
+					<!-- 
+						sampleRate is the sample rate at which the sound is to be played back, in sample frames per second.
+						[ dataType ] extended: 80 bit IEEE Standard 754 floating point number (Standard Apple Numeric
+						Environment [SANE] data type Extended).
+					-->
+					<symbol  identifier="IDA02_I01_I01_S06" interpretation="IEEE_754" originalName="sampleRate">
+						<range>
+							<startposition xsi:type="sequential"/>
+							<length xsi:type="fixed">10</length>
+						</range>
+						<name>sampleRate</name>
+					</symbol>
+				</item>
+				
+				<!-- 
+					Sound Data Chunk
+					The Sound Data Chunk contains the actual sample frames.
+					
+					#define SoundDataID 'SSND' /* ckID for Sound Data Chunk */
+					typedef struct {
+					ID ckID;
+					long ckSize;
+					unsigned long offset;
+					unsigned long blockSize;
+					unsigned char soundData[];
+					} SoundDataChunk;		
+					
+				-->
+				<item xsi:type="structuringItem" identifier="IDA02_I01_I02" originalName="soundDataChunk">
+					<!-- 
+						ckID is always 'SSND'. ckSize is the size of the data portion of the chunk, in bytes. It does not
+						include the 8 bytes used by ckID and ckSize.
+					-->
+					<property 	identifier="IDA02_I01_I02_S01" interpretation="ASCII" originalName="ckId">
+						<range>
+							<startposition xsi:type="sequential"/>
+							<length xsi:type="fixed">4</length>
+						</range>
+						<value>SSND</value><!-- The chunk ID string ends with the space character (0x20). -->	
+						<name>aiffDataChunkId</name>  
+					</property>
+					<symbol  identifier="IDA02_I01_I02_S02" interpretation="int32" originalName="ckSize">
+						<range>
+							<startposition xsi:type="sequential"/>
+							<length xsi:type="fixed">4</length>
+						</range>
+						<name>aiffComChunkSize</name>
+					</symbol>
+					<!-- 
+						offset determines where the first sample frame in the soundData starts. offset is in bytes. Most
+						applications won't use offset and should set it to zero. 	
+					-->
+					<symbol  identifier="IDA02_I01_I02_S03" interpretation="uint32" originalName="offset">
+						<range>
+							<startposition xsi:type="sequential"/>
+							<length xsi:type="fixed">4</length>
+						</range>
+						<name>firstSampleFrameOffset</name>    
+					</symbol>
+					<!-- 
+						blockSize is used in conjunction with offset for block-aligning sound data. It contains the size in bytes
+						of the blocks that sound data is aligned to. As with offset, most applications won't use blockSize and
+						should set it to zero. 
+					-->
+					<symbol  identifier="IDA02_I01_I02_S04" interpretation="uint32" originalName="blockSize">
+						<range>
+							<startposition xsi:type="sequential"/>
+							<length xsi:type="fixed">4</length>
+						</range>
+						<name>dataBlockLength</name>    
+					</symbol>
+					<!-- 
+						soundData contains the sample frames that make up the sound. The number of sample frames in the
+						soundData is determined by the numSampleFrames parameter in the Common Chunk.
+					-->
+					<item xsi:type="definitionItem" identifier="IDA02_I01_I02_I01">
+						<symbol  identifier="IDA02_I01_I02_I01_S01"  originalName="soundData">
+							<range>
+								<startposition xsi:type="sequential"/>
+								<length xsi:type="processed"/>
+							</range>
+							<name>dataBlock</name>
+						</symbol>
+						<name>normData</name>
+					</item>	
+				</item>
+			</item>	
+		</item>		 <!-- End: AIFF FORM chunk -->
+	
+	</formatDescription>
+	<templates>
+		
+	</templates>
+	<postProcessing></postProcessing>
+</XCELDocument>

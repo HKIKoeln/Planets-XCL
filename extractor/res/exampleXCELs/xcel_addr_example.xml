@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XCELDocument xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl
+    schemas/XCELBasicExtension.xsd">
+    <preProcessing/>
+
+    <formatDescription>
+        <item xsi:type="structuringItem" identifier="addr_exmp" order="sequence">
+
+            <processing type="configureParser">
+                <processingMethod name="setAddressingScheme">
+                    <param value="seperator"/>
+                    <param value="10"/>
+                </processingMethod>
+            </processing>
+
+            <processing type="configureParser">
+                <processingMethod name="goToLastAddress"/>
+            </processing>
+            
+            <item xsi:type="structuringItem" identifier="repeat" multiple="true">
+                
+                <processing type="configureParser">
+                    <processingMethod name="goToPreviousAddress"/>
+                </processing>
+
+                <symbol identifier="aRow" interpretation="ASCII">
+                    <range>
+                        <startposition xsi:type="sequential"/>
+                        <length xsi:type="fixed">1</length>
+                    </range>
+                </symbol>
+                
+            </item>
+            
+            <processing type="configureParser">
+                <processingMethod name="setAddressingScheme">
+                    <param value="byte"/>
+                </processingMethod>
+            </processing>
+
+        </item>
+
+    </formatDescription>
+    <templates> </templates>
+    <postProcessing/>
+</XCELDocument>

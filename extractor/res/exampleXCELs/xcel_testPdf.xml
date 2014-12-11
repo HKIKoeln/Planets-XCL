@@ -1,0 +1,1253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XCELDocument xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl
+                                schemas/XCELBasicExtension.xsd">
+
+<!-- 
+Subject:    XCEL for PDF 1.4
+Created by HKI, 2007
+
+History:  07/05/31  first version for testobject:  test01.pdf  complete.
+
+-->  
+    
+    <!--
+        #################################
+    
+        PREPROCESSING:
+    
+        ################################   
+    -->
+    <preProcessing> 
+    </preProcessing>
+
+    <!-- 
+        #################################
+        
+        FORMAT DESCRIPTION:
+        
+        ################################
+    -->
+<formatDescription>
+    <item identifier="PDFRootItem" originalName="PDFFile" xsi:type="structuringItem" order="sequence">
+        
+        <!-- §§§§§§§§§§§     File Header     §§§§§§§§§§§§§§
+            
+            The first line of a PDF file is a header identifying the version of the PDF specification
+            to which the file conforms. For a file conforming to PDF version 1.4, the
+            header should be
+            %PDF−1.4
+            However, since any file conforming to an earlier version of PDF also conforms to
+            version 1.4, an application that processes PDF 1.4 can also accept files with any of
+            the following headers:
+            %PDF−1.0
+            %PDF−1.1
+            %PDF−1.2
+            %PDF−1.3            
+        -->
+        
+        <item  identifier="PDFHeader" originalName="header" xsi:type="structuringItem" order="sequence">
+            <symbol identifier="PDFVersion" originalName="version" interpretation="uint8">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">8</length>
+                </range>
+                <validValues> 
+                    <value>37 80 68 70 45 49 46 48</value>  <!-- = %PDF-1.0  -->
+                    <value>37 80 68 70 45 49 46 49</value>
+                    <value>37 80 68 70 45 49 46 50</value>
+                    <value>37 80 68 70 45 49 46 51</value>
+                    <value>37 80 68 70 45 49 46 52</value>
+                    <value>37 80 68 70 45 49 46 53</value>
+                    <value>37 80 68 70 45 49 46 54</value>  <!-- = %PDF-1.6  -->
+                </validValues>
+                <name>signature</name>    
+            </symbol>
+            <processing type="pullXCEL" xcelRef="TEMPL_whitespaceAll"/>      
+            
+            <item  identifier="header_comment" xsi:type="structuringItem" optional="true" multiple="true">
+                <processing type="pullXCEL" xcelRef="TEMPL_comment"/>
+            </item>
+            <processing type="pullXCEL" xcelRef="TEMPL_whitespaceAll"/>    
+        </item> <!--Header Ende-->
+   
+        <item  identifier="PDFBody" 
+            originalName="body" 
+            xsi:type="structuringItem"
+            order="sequence">  
+            
+            <item identifier="pdfObjectList"  xsi:type="structuringItem" order="all">
+                
+                
+                <processing type="pullXCEL" xcelRef="TEMPL_whitespaceAll"/> 
+                
+        
+                
+                 <item  identifier="indirectObject_Start"  xsi:type="structuringItem" order="sequence" multiple="true">
+                     <item  identifier="indirectObject_Start_ObjectNumber" originalName="objectNumber" xsi:type="definitionItem">
+                         <symbol identifier="indirectObject_ObjectNumber_Part"  interpretation="uint8" multiple="true">
+                             <range>
+                                 <startposition xsi:type="sequential"/>
+                                 <length xsi:type="fixed">1</length>
+                             </range>
+                             <validValues> 
+                                 <startRange>48</startRange>  <!-- =0  -->
+                                 <endRange>57</endRange>
+                             </validValues>
+                         </symbol>
+                         <name>PDFObjectNumber</name>
+                     </item>
+                     <item identifier="delimiter01" xsi:type="structuringItem">
+                         <processing type="pullXCEL" xcelRef="TEMPL_whitespaceSansEOL"/>                     
+                     </item> 
+                     <item  identifier="indirectObject_Start_generationNumber" originalName="generationNumber" xsi:type="definitionItem">
+                         <symbol identifier="indirectObject_generationNumber_Part"  interpretation="uint8" multiple="true">
+                             <range>
+                                 <startposition xsi:type="sequential"/>
+                                 <length xsi:type="fixed">1</length>
+                             </range>
+                             <validValues> 
+                                 <startRange>48</startRange>  <!-- =0  -->
+                                 <endRange>57</endRange>
+                             </validValues>
+                         </symbol>
+                         <name>PDFObjectGenerationNumber</name>
+                     </item>
+                     <item identifier="delimiter02" xsi:type="structuringItem">
+                         <processing type="pullXCEL" xcelRef="TEMPL_whitespaceSansEOL"/>                     
+                     </item> 
+                     <item  identifier="indirectObject_Start_keyword" originalName="keyword" xsi:type="structuringItem">
+                         <property identifier="indirectObject_Start_keyword_obj"  originalName="obj" interpretation="ASCII">
+                             <range>
+                                 <startposition xsi:type="sequential"/>
+                                 <length xsi:type="fixed">3</length>
+                             </range>
+                             <value>obj</value>
+                         </property>
+                     </item>  
+                 </item>                
+                 
+                 <processing type="pullXCEL" xcelRef="TEMPL_noise"/> 
+                 
+              
+                
+                <property identifier="dummerDummy" interpretation="ASCII" multiple="true">
+                    <range>
+                        <startposition xsi:type="sequential"/>
+                        <length xsi:type="fixed">3</length>
+                    </range>
+                    <value>293</value>
+                    <name>SODiesUndDas</name>
+                </property>
+                <processing type="pullXCEL" xcelRef="TEMPL_noise"/>
+                     <!-- 
+                         +++++++++++++++++++
+                         Dictionary Object:
+                         +++++++++++++++++++
+                     -->
+                     
+                     <item identifier="dictionaryObject" originalName="dictionaryObject"  xsi:type="structuringItem" order="sequence" multiple="true">
+                         <processing type="pullXCEL" xcelRef="TEMPL_dictObjStartDelimiter"/>                    
+                         <processing type="pullXCEL" xcelRef="TEMPL_noise"/> 
+                         
+                         <item identifier="dictionaryObjectList" xsi:type="structuringItem" order="choice">
+                             <!-- 
+                             ************************
+                             Catalog Dictionary:
+                             ************************
+                             -->
+                             <item identifier="catalogDict" originalName="documentCatalog"  xsi:type="structuringItem" order="sequence">                                 
+                                 
+                                 <item identifier="catalogDictEntry" originalName="entry"  xsi:type="structuringItem" order="all">                                     
+                                     
+                                     <item identifier="catalogDictEntry_Type" originalName="Type"  xsi:type="structuringItem" order="sequence" multiple="true">
+                                         <property identifier="catalogDictEntry_KEY_nameObj_Type" interpretation="ASCII">
+                                             <range>
+                                                 <startposition xsi:type="sequential"/>
+                                                 <length xsi:type="fixed">5</length>
+                                             </range>
+                                             <value>/Type</value>  
+                                         </property>
+                                         <processing type="pullXCEL" xcelRef="TEMPL_noise"/>                                          
+                                         <property identifier="VALUE_nameObj_Catalog" originalName="Catalog" interpretation="ASCII">
+                                             <range>
+                                                 <startposition xsi:type="sequential"/>
+                                                 <length xsi:type="fixed">8</length>
+                                             </range>
+                                             <value>/Catalog</value>
+                                         </property>
+                                     </item>
+                                     
+                                     <item identifier="catalogDictEntry_Version" originalName="Version"  xsi:type="structuringItem" order="sequence" optional="true">
+                                         <property identifier="KEY_nameObj_Version" interpretation="ASCII">
+                                             <range>
+                                                 <startposition xsi:type="sequential"/>
+                                                 <length xsi:type="fixed">8</length>
+                                             </range>
+                                             <value>/Version</value>  
+                                         </property>
+                                         <processing type="pullXCEL" xcelRef="TEMPL_noise"/>                                         
+                                         <item identifier="VALUE_nameObj_Version"  xsi:type="definitionItem" order="sequence">
+                                             <processing type="pullXCEL" xcelRef="TEMPL_nameObjDelimiter"/>
+                                             <symbol identifier="name_VersionPart01"  interpretation="uint8" multiple="true">
+                                                 <range>
+                                                     <startposition xsi:type="sequential"/>
+                                                     <length xsi:type="fixed">1</length>
+                                                 </range>
+                                                 <validValues> 
+                                                     <startRange>48</startRange>  <!-- =0  -->
+                                                     <endRange>57</endRange>
+                                                 </validValues>
+                                             </symbol>
+                                             <property identifier="name_VersionPart02" interpretation="uint8">
+                                                 <range>
+                                                     <startposition xsi:type="sequential"/>
+                                                     <length xsi:type="fixed">1</length>
+                                                 </range>
+                                                 <value>46</value>   <!-- =  .  -->
+                                             </property>
+                                             <symbol identifier="name_VersionPart03"  interpretation="uint8" multiple="true">
+                                                 <range>
+                                                     <startposition xsi:type="sequential"/>
+                                                     <length xsi:type="fixed">1</length>
+                                                 </range>
+                                                 <validValues> 
+                                                     <startRange>48</startRange>  <!-- =0  -->
+                                                     <endRange>57</endRange>
+                                                 </validValues>
+                                             </symbol>
+                                             <name>PDFversion</name>  <!-- Todo: Eintrag in names lib !!  -->
+                                         </item>
+                                     </item>
+                                     
+                                     <item identifier="catalogDictEntry_Pages" originalName="Pages"  xsi:type="structuringItem" order="sequence" multiple="true">
+                                         <property identifier="KEY_nameObj_Pages" interpretation="ASCII">
+                                             <range>
+                                                 <startposition xsi:type="sequential"/>
+                                                 <length xsi:type="fixed">6</length>
+                                             </range>
+                                             <value>/Pages</value>   
+                                         </property>
+                                         <processing type="pullXCEL" xcelRef="TEMPL_noise"/> 
+                                         <item  identifier="VALUE_indirObj_referencePageTreeNode" originalName="pageTreeNode"  xsi:type="structuringItem">
+                                             <processing type="pullXCEL" xcelRef="TEMPL_indirectObjectReference"/>
+                                         </item> 
+                                     </item>
+                                     
+                                     <item identifier="catalogDictEntry_PageLayout" 
+                                         originalName="PageLayout"  
+                                         xsi:type="structuringItem" 
+                                         order="sequence" 
+                                         optional="true"
+                                         multiple="true">
+                                         <property identifier="KEY_nameObj_PageLayout" interpretation="ASCII">
+                                             <range>
+                                                 <startposition xsi:type="sequential"/>
+                                                 <length xsi:type="fixed">11</length>
+                                             </range>
+                                             <value>/PageLayout</value>   <!-- =  PageLayout   -->
+                                         </property>
+                                         <processing type="pullXCEL" xcelRef="TEMPL_noise"/>  
+                                         <processing type="pullXCEL" xcelRef="TEMPL_nameObjDelimiter"/>
+                                         <item  identifier="VALUE_nameObj_PageLayout" originalName="PageLayout"  xsi:type="definitionItem" order="choice">
+                                             <property identifier="name_SinglePage" interpretation="ASCII">
+                                                 <range>
+                                                     <startposition xsi:type="sequential"/>
+                                                     <length xsi:type="fixed">10</length>
+                                                 </range>
+                                                 <value>SinglePage</value> 
+                                             </property>
+                                             <property identifier="name_OneColumn" interpretation="ASCII">
+                                                 <range>
+                                                     <startposition xsi:type="sequential"/>
+                                                     <length xsi:type="fixed">9</length>
+                                                 </range>
+                                                 <value>OneColumn</value> 
+                                             </property>
+                                             <property identifier="name_TwoColumnLeft" interpretation="ASCII">
+                                                 <range>
+                                                     <startposition xsi:type="sequential"/>
+                                                     <length xsi:type="fixed">13</length>
+                                                 </range>
+                                                 <value>TwoColumnLeft</value> 
+                                             </property>
+                                             <property identifier="name_TwoColumnRight" interpretation="ASCII">
+                                                 <range>
+                                                     <startposition xsi:type="sequential"/>
+                                                     <length xsi:type="fixed">14</length>
+                                                 </range>
+                                                 <value>TwoColumnRight</value> 
+                                             </property>
+                                             <name>pageLayout</name>    <!-- !! new namesLib entry !! -->
+                                         </item>    
+                                     </item>  
+                                    
+                                     <!-- 
+                                         OpenAction:  
+                                         Array or dictionary.
+                                         A value specifying a destination to be displayed or
+                                         an action to be performed when the document is opened. The value is
+                                         either an array defining a destination (see Section 8.2.1, “Destinations”)
+                                         or an action dictionary representing an action (Section 8.5, “Actions”). If
+                                         this entry is absent, the document should be opened to the top of the
+                                         first page at the default magnification factor.                                
+                                     -->
+                                 
+                                     <!--                                       
+                                    <item identifier="catalogDictEntry_OpenAction" originalName="OpenAction"  xsi:type="structuringItem" order="sequence">
+                                         <property identifier="KEY_OpenAction" interpretation="ASCII">
+                                             <range>
+                                                 <startposition xsi:type="sequential"/>
+                                                 <length xsi:type="fixed">10</length>
+                                             </range>
+                                             <value>OpenAction</value>   
+                                         </property>
+                                         <processing type="pullXCEL" xcelRef="TEMPL_noise"/> 
+                                         <item  identifier="OpenAction_type"  xsi:type="structuringItem" order="choice">
+                                            <item identifier="OpenAction_destinationArray"  xsi:type="structuringItem" order="sequence">
+                                                <processing type="pullXCEL" xcelRef="TEMPL_arrayObjStartDelimiter"/> 
+                                                <item  identifier="openAction_page"  xsi:type="structuringItem">
+                                                    <processing type="pullXCEL" xcelRef="TEMPL_indirectObjectReference"/>
+                                                </item> 
+                                                <processing type="pullXCEL" xcelRef="TEMPL_noise"/>
+                                                <processing type="pullXCEL" xcelRef="TEMPL_nameObjDelimiter"/>
+                                                <item  identifier="destinationArray_nameObj_list" xsi:type="definitionItem" order="choice">
+                                                    <symbol identifier="name_with3Chars" interpretation="ASCII">
+                                                            <range>
+                                                                <startposition xsi:type="sequential"/>
+                                                                <length xsi:type="fixed">3</length>
+                                                            </range>
+                                                            <validValues>
+                                                                <value>XYZ</value>
+                                                                <value>Fit</value>
+                                                            </validValues>
+                                                    </symbol>
+                                                    <symbol identifier="name_with4chars" interpretation="ASCII">
+                                                            <range>
+                                                                <startposition xsi:type="sequential"/>
+                                                                <length xsi:type="fixed">4</length>
+                                                            </range>
+                                                            <validValues>
+                                                                <value>FitH</value>
+                                                                <value>FitV</value>
+                                                                <value>FitR</value>
+                                                                <value>FitB</value>
+                                                            </validValues>
+                                                    </symbol>
+                                                    <symbol identifier="name_with5chars" interpretation="ASCII">
+                                                        <range>
+                                                            <startposition xsi:type="sequential"/>
+                                                            <length xsi:type="fixed">5</length>
+                                                        </range>
+                                                        <validValues>
+                                                            <value>FitBV</value>
+                                                            <value>FitBH</value>
+                                                        </validValues>
+                                                    </symbol>
+                                                    <name>documentWindowLocation</name>
+                                                </item>   
+                                                <processing type="pullXCEL" xcelRef="TEMPL_noise"/>
+                                               
+                                                    !! NOT YET COMPLETE ( only implemented "page /FitH null" so far)!!   :
+                                                                                                     
+                                                <item  identifier="OpenAction_positionAndZoomFaktors"  xsi:type="structuringItem" order="sequence">
+                                                    <property identifier="nullObjKeyword" interpretation="ASCII">
+                                                        <range>
+                                                            <startposition xsi:type="sequential"/>
+                                                            <length xsi:type="fixed">4</length>
+                                                        </range>
+                                                        <value>null</value>   
+                                                    </property>
+                                                </item>   
+                                                <processing type="pullXCEL" xcelRef="TEMPL_arrayObjEndDelimiter"/>
+                                            </item>
+                                            <item identifier="OpenAction_dictionary"  xsi:type="structuringItem" order="sequence">
+                                                
+                                            </item>
+                                        </item>
+                                    </item>   -->
+                                     
+                                     <!-- end open action -->
+                                     <!--   !!! NOT YET IMPLEMENTED !!!  -->
+                         
+                                    <!--<processing type="pullXCEL" xcelRef="TEMPL_noise"/>-->
+                                    <!--TODO  :more name objects  -->
+                                     
+                               </item>    <!-- ende catalog dict entry  -->
+                             </item>    <!-- end: catalog dictionary  -->
+                             
+                             
+                           
+                             <!-- 
+                                 ***************************
+                                 Stream Dictionary: 
+                                 
+                                 Reference: PDF 1.4, 3.2.7 (stream objects), 3.3 (filters) 
+                                 ***************************
+                             -->                                 
+                             <item identifier="streamDict" originalName="StreamDictionary"  xsi:type="structuringItem" order="sequence" multiple="true">
+                                  <item identifier="streamDictEntries" originalName="entry"  xsi:type="structuringItem" order="sequence">                                                                          
+                                     <item identifier="streamDictEntry_List"  xsi:type="structuringItem" order="all">
+                                         
+                                         <!--  KEYWORD: Filter  
+                                               Type: name or array (Optional).
+                                             The name of a filter to be applied in processing the stream
+                                             data found between the keywords stream and endstream, or an array
+                                             of such names. Multiple filters should be specified in the order in
+                                             which they are to be applied.                                     
+                                         -->
+                                         <item identifier="streamDictEntry_Filter" originalName="filter" xsi:type="structuringItem" order="sequence">
+                                             <property identifier="streamDictEntry_KEY_nameObj_filter" interpretation="ASCII">
+                                                 <range>
+                                                     <startposition xsi:type="sequential"/>
+                                                     <length xsi:type="fixed">7</length>
+                                                 </range>
+                                                 <value>/Filter</value>
+                                             </property>
+                                             <processing type="pullXCEL" xcelRef="TEMPL_noise"/>
+                                             <!-- If there is more than one single filter to be applied, names are part of an array:   -->
+                                             <item  identifier="filters1_array_start" xsi:type="structuringItem" order="all" optional="true">
+                                                 <processing type="pullXCEL" xcelRef="TEMPL_arrayObjStartDelimiter"/>         
+                                             </item>    
+                                                  <!--   Filter types:    -->   
+                                             <item  identifier="Filter_list"  xsi:type="contextItem" order="sequence" multiple="true">
+                                                     <!-- <processing type="pullXCEL" xcelRef="TEMPL_noise"/> -->
+                                                     <processing type="pullXCEL" xcelRef="TEMPL_nameObjDelimiter"/> 
+                                                     <!-- <processing type="pullXCEL" xcelRef="TEMPL_noise"/> -->
+                                                     <item  identifier="Filter_names"  xsi:type="structuringItem" order="choice">
+                                                         <item  identifier="Filter_names_group9"  xsi:type="definitionItem" order="sequence">
+                                                             <symbol identifier="filters_9" interpretation="ASCII">
+                                                                 <range>
+                                                                     <startposition xsi:type="sequential"/>
+                                                                     <length xsi:type="fixed">9</length>
+                                                                 </range>
+                                                                 <validValues>
+                                                                     <value>LZWDecode</value>
+                                                                     <value>DCTDecode</value>    
+                                                                 </validValues>    
+                                                             </symbol>
+                                                             <name>filterMethod</name>
+                                                         </item>    
+                                                         <item  identifier="Filter_group11"  xsi:type="definitionItem" order="sequence">
+                                                             <symbol identifier="filters_11" interpretation="ASCII">
+                                                                 <range>
+                                                                     <startposition xsi:type="sequential"/>
+                                                                     <length xsi:type="fixed">11</length>
+                                                                 </range>
+                                                                 <validValues>
+                                                                     <value>FlateDecode</value>
+                                                                     <value>JBIG2Decode</value>  
+                                                                </validValues>                                                   
+                                                             </symbol>
+                                                             <name>filterMethod</name>
+                                                         </item>    
+                                                         <item  identifier="Filter_group13"  xsi:type="definitionItem" order="sequence">
+                                                             <property identifier="filters_13" interpretation="ASCII">
+                                                                 <range>
+                                                                     <startposition xsi:type="sequential"/>
+                                                                     <length xsi:type="fixed">13</length>
+                                                                 </range>
+                                                                 <value>ASCII85Decode</value>   
+                                                             </property>  
+                                                             <name>filterMethod</name>
+                                                         </item>
+                                                         <item  identifier="Filter_group14"  xsi:type="definitionItem" order="sequence">
+                                                             <symbol identifier="filters_14" interpretation="ASCII">
+                                                                 <range>
+                                                                     <startposition xsi:type="sequential"/>
+                                                                     <length xsi:type="fixed">14</length>
+                                                                 </range>
+                                                                 <validValues>
+                                                                     <value>CCITTFaxDecode</value>
+                                                                     <value>ASCIIHexDecode</value>                                                         
+                                                                 </validValues>                                                   
+                                                             </symbol>  
+                                                             <name>filterMethod</name>
+                                                         </item>    
+                                                         <item  identifier="Filter_group15"  xsi:type="definitionItem" order="sequence">
+                                                             <property identifier="filters_15" interpretation="ASCII">
+                                                                 <range>
+                                                                     <startposition xsi:type="sequential"/>
+                                                                     <length xsi:type="fixed">15</length>
+                                                                 </range>
+                                                                 <value>RunLengthDecode</value>   
+                                                             </property>                                             
+                                                             <name>filterMethod</name>
+                                                         </item>                                                            
+                                                     </item>
+                                                    <!-- <processing type="pullXCEL" xcelRef="TEMPL_noise"/> -->
+                                               </item>     
+                                             
+                                              <processing type="pullXCEL" xcelRef="TEMPL_noise"/> 
+                                             
+                                             <!-- in case of filter array, closing bracket must follow:   -->                                             
+                                             <item identifier="filters1_array_end" xsi:type="structuringItem" order="sequence" optional="true">
+                                                 <processing type="pullXCEL" xcelRef="TEMPL_arrayObjEndDelimiter"/>         
+                                             </item>  
+                                             
+                                             <processing type="pullXCEL" xcelRef="TEMPL_noise"/>
+                                         </item>
+                                         
+                                         
+                                         
+                                         <!-- KEYWORD: Length    
+                                             Type: integer (Required) 
+                                         The number of bytes from the beginning of the line following
+                                         the keyword stream to the last byte just before the keyword
+                                         endstream. (There may be an additional EOL marker, preceding
+                                         endstream, that is not included in the count and is not logically part
+                                         of the stream data.) See “Stream Extent,” above, for further discussion.
+                                         -->
+                                         <item identifier="streamDictEntry_Length" originalName="length" xsi:type="structuringItem" order="sequence" multiple="true">
+                                             <property identifier="streamDictEntry_KEY_nameObj_length" interpretation="ASCII">
+                                                 <range>
+                                                     <startposition xsi:type="sequential"/>
+                                                     <length xsi:type="fixed">7</length>
+                                                 </range>
+                                                 <value>/Length</value>
+                                             </property>
+                                             <processing type="pullXCEL" xcelRef="TEMPL_noise"/>   
+                                             <!-- 
+                                                 (HKI comment)   The length of  the stream can either be expressed directly by 
+                                                 giving the corresponding integer immediately after the ' /Length' name object OR as 
+                                                 (as for general) an indirect object:
+                                             -->    
+                                             <item  identifier="streamDictEntry_stream_Length"  xsi:type="structuringItem" order="sequence">                                                
+                                                 <item identifier="stream_Length_choice"  xsi:type="structuringItem" order="choice">
+                                                     <item identifier="stream_Length_VALUE_indirObjRef"  xsi:type="structuringItem">
+                                                         <processing type="pullXCEL" xcelRef="TEMPL_indirectObjectReference"/>                                                            
+                                                     </item>  
+                                                     <item identifier="stream_Length_VALUE_intObj"  xsi:type="structuringItem"> 
+                                                         <processing type="pullXCEL" xcelRef="TEMPL_intObj"/>                                                             
+                                                     </item>    
+                                                 </item>  
+                                                 <processing type="pullXCEL" xcelRef="TEMPL_noise"/>   
+                                             </item>
+                                         </item>    
+                                         <!-- 
+                                          TODO           more name objects to follow                                             
+                                          -->                                        
+                                     </item>    
+                                  </item>     
+                             </item>
+                           
+                                         
+                             
+                         </item>    <!-- end:  Dictionary Object List   -->
+                         
+                         <!--<processing type="pullXCEL" xcelRef="TEMPL_noise"/>  -->
+                         <processing type="pullXCEL" xcelRef="TEMPL_dictObjEndDelimiter"/>   
+                     </item> <!--  End   Dictionaries: -->
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                          <!--    *********** Page Objects:   *************  
+                                 Reference p.88 f.
+                                The leaves of the page tree are page objects, each of which is a dictionary specifying
+                                 the attributes of a single page of the document. Table 3.18 shows the contents
+                                 of this dictionary (see also implementation note 21 in Appendix H). The table                                
+                                 also identifies which attributes a page may inherit from its ancestor nodes in the
+                                 page tree, as described under “Inheritance of Page Attributes” on page 91.
+                                 Attributes that are not explicitly identified in the table as inheritable cannot be
+                                 inherited.
+                             -->
+                             <!-- 
+                             ******************************    
+                             Page object Dictionary:                                            <!! TODO: Reihenfolge /Pages /Page überprüfen !!
+                             ******************************
+                             -->
+                            <item identifier="pageObjectDict" originalName="pageObject"  xsi:type="structuringItem" order="sequence" multiple="true">                                 
+                                <item identifier="pageObjectDictEntry" originalName="entry"  xsi:type="structuringItem" order="all">
+                                     <!-- KEYWORD: Type   -->
+                                    <item identifier="pageObjectDictEntry_Type" originalName="Type"  xsi:type="structuringItem" order="sequence">
+                                         <property identifier="pageObjDict_KEY_nameObj_Type" interpretation="ASCII">
+                                             <range>
+                                                 <startposition xsi:type="sequential"/>
+                                                 <length xsi:type="fixed">5</length>
+                                             </range>
+                                             <value>/Type</value>   
+                                         </property>
+                                         <processing type="pullXCEL" xcelRef="TEMPL_noise"/>
+                                         <property identifier="name_Page" originalName="Page" interpretation="uint8">
+                                             <range>
+                                                 <startposition xsi:type="sequential"/>
+                                                 <length xsi:type="fixed">5</length>
+                                             </range>
+                                             <value>/Page</value>  
+                                         </property>
+                                     </item>
+                                     <!-- KEYWORD: Parent:    -->
+                                     <item identifier="pageObjDictEntry_Parent" originalName="Parent"  xsi:type="structuringItem" order="sequence">
+                                         <property identifier="IDKEY_nameObj_Parent" interpretation="ASCII">
+                                             <range>
+                                                 <startposition xsi:type="sequential"/>
+                                                 <length xsi:type="fixed">7</length>
+                                             </range>
+                                             <value>/Parent</value>  
+                                         </property>
+                                         <processing type="pullXCEL" xcelRef="TEMPL_noise"/> 
+                                         <item  identifier="VALUE_indirObjRef_referencePageDictParent" xsi:type="structuringItem">
+                                             <processing type="pullXCEL" xcelRef="TEMPL_indirectObjectReference"/>
+                                        </item> 
+                                     </item>
+                                     <!-- KEYWORD: Resources  -->
+                                     <item identifier="pageObjDictEntry_Resources" originalName="Resources"  xsi:type="structuringItem" order="sequence">
+                                         <property identifier="KEY_nameObj_Resources" interpretation="ASCII">
+                                             <range>
+                                                 <startposition xsi:type="sequential"/>
+                                                 <length xsi:type="fixed">10</length>
+                                             </range>
+                                             <value>/Resources</value>   <!-- =  Resources   -->
+                                         </property>
+                                         <processing type="pullXCEL" xcelRef="TEMPL_noise"/> 
+                                         <item  identifier="VALUE_indirObjRef_refPageDictResources"  xsi:type="structuringItem">
+                                             <processing type="pullXCEL" xcelRef="TEMPL_indirectObjectReference"/>
+                                         </item> 
+                                     </item>
+                                     <!-- KEYWORD: Mediabox     -->
+                                    <item identifier="pageObjectDictEntry_Mediabox" originalName="Mediabox"  xsi:type="structuringItem" order="sequence" optional="true">
+                                        <property identifier="KEY_nameObj_Mediabox" interpretation="ASCII">
+                                            <range>
+                                                <startposition xsi:type="sequential"/>
+                                                <length xsi:type="fixed">9</length>
+                                            </range>
+                                            <value>/Mediabox</value>
+                                        </property>
+                                        <processing type="pullXCEL" xcelRef="TEMPL_noise"/> 
+                                        <item xsi:type="structuringItem" identifier="VALUE_arrayObj_Mediabox" order="sequence">                                     
+                                            <processing type="pullXCEL" xcelRef="TEMPL_arrayObjStartDelimiter"/> 
+                                            <item identifier="VALUE_arrayObj_mediabox_coordinates"  xsi:type="definitionItem" order="sequence">
+                                                <item identifier="mediabox_llx"  xsi:type="definitionItem" order="sequence">
+                                                     <symbol identifier="mediabox_llx_part01"  interpretation="uint8" multiple="true">
+                                                         <range>
+                                                             <startposition xsi:type="sequential"/>
+                                                             <length xsi:type="fixed">1</length>
+                                                         </range>
+                                                         <validValues> 
+                                                             <startRange>48</startRange>  
+                                                             <endRange>57</endRange>
+                                                         </validValues>
+                                                     </symbol>
+                                                     <property identifier="mediabox_llx_part02"  interpretation="uint8" optional="true">
+                                                         <range>
+                                                             <startposition xsi:type="sequential"/>
+                                                             <length xsi:type="fixed">1</length>
+                                                         </range>
+                                                         <value>46</value>
+                                                     </property> 
+                                                     <symbol identifier="mediabox_llx_part03"  interpretation="uint8" multiple="true" optional="true">
+                                                         <range>
+                                                             <startposition xsi:type="sequential"/>
+                                                             <length xsi:type="fixed">1</length>
+                                                         </range>
+                                                         <validValues> 
+                                                             <startRange>48</startRange>  <!-- =0  -->
+                                                             <endRange>57</endRange>
+                                                         </validValues>
+                                                     </symbol>
+                                                     <name>mediaboxLowerLeftXCoordinate</name>
+                                                </item>
+                                                <item identifier="mediabox_lly"  xsi:type="definitionItem" order="sequence">
+                                                     <symbol identifier="mediabox_lly_part01"  interpretation="uint8" multiple="true">
+                                                         <range>
+                                                             <startposition xsi:type="sequential"/>
+                                                             <length xsi:type="fixed">1</length>
+                                                         </range>
+                                                         <validValues> 
+                                                             <startRange>48</startRange>  <!-- =0  -->
+                                                             <endRange>57</endRange>
+                                                         </validValues>
+                                                     </symbol>
+                                                     <property identifier="mediabox_lly_part02"  interpretation="uint8" optional="true">
+                                                         <range>
+                                                             <startposition xsi:type="sequential"/>
+                                                             <length xsi:type="fixed">1</length>
+                                                         </range>
+                                                         <value>46</value>
+                                                     </property> 
+                                                     <symbol identifier="mediabox_lly_part03"  interpretation="uint8" multiple="true" optional="true">
+                                                         <range>
+                                                             <startposition xsi:type="sequential"/>
+                                                             <length xsi:type="fixed">1</length>
+                                                         </range>
+                                                         <validValues> 
+                                                             <startRange>48</startRange>  <!-- =0  -->
+                                                             <endRange>57</endRange>
+                                                         </validValues>
+                                                     </symbol>
+                                                     <name>mediaboxLowerLeftYCoordinate</name>
+                                                 </item>
+                                                <item identifier="mediabox_urx"  xsi:type="definitionItem" order="sequence">
+                                                     <symbol identifier="mediabox_urx_part01"  interpretation="uint8" multiple="true">
+                                                         <range>
+                                                             <startposition xsi:type="sequential"/>
+                                                             <length xsi:type="fixed">1</length>
+                                                         </range>
+                                                         <validValues> 
+                                                             <startRange>48</startRange>  <!-- =0  -->
+                                                             <endRange>57</endRange>
+                                                         </validValues>
+                                                     </symbol>
+                                                     <property identifier="mediabox_urx_part02"  interpretation="uint8" optional="true">
+                                                         <range>
+                                                             <startposition xsi:type="sequential"/>
+                                                             <length xsi:type="fixed">1</length>
+                                                         </range>
+                                                         <value>46</value>
+                                                     </property> 
+                                                     <symbol identifier="mediabox_urx_part03"  interpretation="uint8" multiple="true" optional="true">
+                                                         <range>
+                                                             <startposition xsi:type="sequential"/>
+                                                             <length xsi:type="fixed">1</length>
+                                                         </range>
+                                                         <validValues> 
+                                                             <startRange>48</startRange>  <!-- =0  -->
+                                                             <endRange>57</endRange>
+                                                         </validValues>
+                                                     </symbol>
+                                                     <name>mediaboxUpperRightXCoordinate</name>
+                                                 </item>
+                                                <item identifier="mediabox_ury"  xsi:type="definitionItem" order="sequence">
+                                                     <symbol identifier="mediabox_ury_part01"  interpretation="uint8" multiple="true">
+                                                         <range>
+                                                             <startposition xsi:type="sequential"/>
+                                                             <length xsi:type="fixed">1</length>
+                                                         </range>
+                                                         <validValues> 
+                                                             <startRange>48</startRange>  <!-- =0  -->
+                                                             <endRange>57</endRange>
+                                                         </validValues>
+                                                     </symbol>
+                                                     <property identifier="mediabox_ury_part02"  interpretation="uint8" optional="true">
+                                                         <range>
+                                                             <startposition xsi:type="sequential"/>
+                                                             <length xsi:type="fixed">1</length>
+                                                         </range>
+                                                         <value>46</value>
+                                                     </property> 
+                                                     <symbol identifier="mediabox_ury_part03"  interpretation="uint8" multiple="true" optional="true">
+                                                         <range>
+                                                             <startposition xsi:type="sequential"/>
+                                                             <length xsi:type="fixed">1</length>
+                                                         </range>
+                                                         <validValues> 
+                                                             <startRange>48</startRange>  <!-- =0  -->
+                                                             <endRange>57</endRange>
+                                                         </validValues>
+                                                     </symbol>
+                                                     <name>mediaboxUpperRightYCoordinate</name>
+                                                 </item>
+                                                <name>mediabox</name>
+                                            </item>   
+                                            <processing type="pullXCEL" xcelRef="TEMPL_arrayObjEndDelimiter"/> 
+                                        </item>                                             
+                                    </item> 
+                                    <!-- KEYWORD: Contents:    -->       
+                                    <item identifier="pageObjDictEntry_Contents" originalName="Contents"  xsi:type="structuringItem" order="sequence">
+                                        <property identifier="KEY_nameObj_Contents" interpretation="ASCII">
+                                            <range>
+                                                <startposition xsi:type="sequential"/>
+                                                <length xsi:type="fixed">9</length>
+                                            </range>
+                                            <value>/Contents</value>   <!-- =  Contents   -->
+                                        </property>
+                                        <processing type="pullXCEL" xcelRef="TEMPL_noise"/> 
+                                           <item  identifier="VALUE_indirObjRef_refPageObjDictContents" xsi:type="structuringItem">
+                                               <processing type="pullXCEL" xcelRef="TEMPL_indirectObjectReference"/>
+                                           </item> 
+                                    </item>
+                                    <processing type="pullXCEL" xcelRef="TEMPL_noise"/>  
+                                </item>
+                            </item>                     
+                       
+                     
+                     
+                    <!-- 
+                    +++++++++++++++++++
+                    Stream Object:
+                    +++++++++++++++++++
+                    -->
+  <!--                <item identifier="streamObject" originalName="streamObject"  xsi:type="structuringItem" order="sequence">
+                         
+                         
+                         <processing type="pullXCEL" xcelRef="TEMPL_streamObjStartDelimiter"/>                        
+                             (HKI Comment)        Although defined otherwise,
+                          there may be an EOL Marker set before the actual stream starts 
+                          and therefore the length of the string between the two keywords
+                          'stream' and 'endstream' may differ from the declaration in the
+                          stream dictionary!!  Therefore we test for an EOL Marker:
+                           -->   
+                      <!--    <item identifier="stream_EOLMarker"  xsi:type="structuringItem" order="sequence" optional="true">
+                              <processing type="pullXCEL" xcelRef="TEMPL_EOLMarker"/> 
+                          </item>    
+                         
+                          <item identifier="contentStream"  xsi:type="structuringItem" order="sequence">
+                               <processing type="pushBinary">
+                                   
+                                   <processingMethod name="setLength">
+                                       <param valueRef="streamDictEntry_stream_Length"/>  stream length? -->
+                           <!--        </processingMethod>
+                                   
+                                   <processingMethod name="addFilter">
+                                      <param value="compression"/>                                    
+                                      <param nameRef="zlibDeflateInflate"/>                                      
+                                  </processingMethod>
+                              </processing>                                
+                          </item>  
+                         <processing type="pullXCEL" xcelRef="TEMPL_noise"/>   
+                         <processing type="pullXCEL" xcelRef="TEMPL_streamObjEndDelimiter"/>   
+                     </item>    
+                -->
+                
+                     <!-- TODO       more objects to follow    -->                              
+                     <processing type="pullXCEL" xcelRef="TEMPL_noise"/>              
+             
+                 
+                 <!-- indirect object end:   -->
+                 <item identifier="indirectObjectEnd" xsi:type="structuringItem" order="sequence" multiple="true">
+                     <item  identifier="objectEnd_keyword" originalName="keyword" xsi:type="structuringItem">
+                         <property identifier="keyword_endobj"  originalName="endobj" interpretation="uint8">
+                             <range>
+                                 <startposition xsi:type="sequential"/>
+                                 <length xsi:type="fixed">6</length>
+                             </range>
+                             <value>101 110 100 111 98 106</value>   <!--  = endobj    -->
+                         </property>
+                     </item>  
+                 </item>   
+                 <!-- end: indirect object  -->      
+               
+             </item>
+                <!-- end of indirect object list -->
+             </item>  
+              <!-- end of body -->
+        
+        
+        
+        
+        
+        
+        </item><!--Root Ende-->
+</formatDescription>
+<!-- 
+#################################
+
+TEMPLATES:
+
+################################
+-->
+    <templates>
+        
+        <!-- Name object delimiter '/':    -->       
+        <item identifier="TEMPL_nameObjDelimiter" xsi:type="structuringItem" order="sequence" multiple="true">
+            <property identifier="nameObjDelimiter" interpretation="uint8">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <value>47</value>   <!-- =  /   -->
+            </property>              
+        </item>       
+        
+        
+        <!-- Dictionary Object Start Delimiter '<<'  :     -->      
+        <item identifier="TEMPL_dictObjStartDelimiter" xsi:type="structuringItem" order="sequence" multiple="true">
+            <property identifier="dictObjStartDelimiter" interpretation="uint8">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">2</length>
+                </range>
+                <value>60 60</value>   <!-- =   << -->
+            </property>
+        </item>
+        
+        <!-- Dictionary ObjectEnd Delimiter '>>'  :     -->
+        <item identifier="TEMPL_dictObjEndDelimiter" xsi:type="structuringItem" order="sequence" multiple="true">
+            <property identifier="dictObjEndDelimiter" interpretation="uint8">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">2</length>
+                </range>
+                <value>62 62</value>   <!-- = >>  -->
+            </property>
+        </item>     
+        
+        <!-- Array Object Start Delimiter '['  :     -->
+        <item identifier="TEMPL_arrayObjStartDelimiter" xsi:type="structuringItem" order="sequence" multiple="true">
+            <property identifier="arrayObjStartDelimiter" interpretation="uint8">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <value>91</value>   <!-- = [  -->
+            </property>
+        </item>
+        
+        <!-- Array Object End Delimiter ' ]'  :     -->
+        <item identifier="TEMPL_arrayObjEndDelimiter" xsi:type="structuringItem" order="sequence" multiple="true">
+            <property identifier="arrayObjEndDelimiter" interpretation="uint8">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <value>93</value>   <!-- = ]  -->
+            </property>
+        </item>
+        
+        <!-- Stream Object Start Delimiter   'stream' :     -->
+        <item identifier="TEMPL_streamObjStartDelimiter" xsi:type="structuringItem" order="sequence" optional="true" multiple="true">
+            <property identifier="streamObjStartDelimiter" interpretation="ASCII" optional="true">
+                <range>                                  
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">6</length>
+                </range>
+                <value>stream</value> 
+            </property>    
+        </item>    
+        
+        <!-- Stream Object End Delimiter   'endstream' :     -->
+        <item identifier="TEMPL_streamObjEndDelimiter" xsi:type="structuringItem" order="sequence" multiple="true">
+            <property identifier="streamObjEndDelimiter" interpretation="ASCII">
+                <range>                                  
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">9</length>
+                </range>
+                <value>endstream</value> 
+            </property>    
+        </item>    
+        
+        <!-- WhitespaceSansEOL (without EOL markers):  -->
+        <item identifier="TEMPL_whitespaceSansEOL" xsi:type="structuringItem" order="sequence">
+            <symbol identifier="whitespaceSansEOL" interpretation="uint8" multiple="true">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <validValues>
+                    <value>0</value>
+                    <value>9</value>
+                    <value>12</value>
+                    <value>32</value> 
+                </validValues>
+            </symbol>
+        </item>   
+        
+        
+        <!-- noise (= whitespaceAll and comment lines):    -->     
+        <item identifier="TEMPL_noise"  xsi:type="structuringItem" order="all" optional="true" multiple="false">
+            <item identifier="ws_noise" xsi:type="structuringItem" optional="true" multiple="true">
+                <processing type="pullXCEL" xcelRef="TEMPL_whitespaceAll"/>                     
+            </item>    
+            <item identifier="comment_noise" xsi:type="structuringItem" optional="true" multiple="true">
+                <processing type="pullXCEL" xcelRef="TEMPL_comment"/>                     
+            </item>  
+        </item> 
+        
+        
+        
+        <!-- Whitespace All (all of the whitespace chars):  -->
+        <item identifier="TEMPL_whitespaceAll" xsi:type="structuringItem" order="sequence">
+            <symbol identifier="whitespaceAll" interpretation="uint8" multiple="true" optional="true">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <validValues>
+                    <value>0</value>
+                    <value>9</value>
+                    <value>10</value>
+                    <value>12</value>
+                    <value>13</value>
+                    <value>32</value> 
+                </validValues>
+            </symbol>
+        </item>   
+        
+        
+        <!-- EOL Markers:  -->
+        <item identifier="TEMPL_EOLMarker" xsi:type="structuringItem" order="sequence">
+            <symbol identifier="EOL_marker" interpretation="uint8">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <validValues>
+                    <value>13</value>
+                    <value>10</value>
+                </validValues>
+            </symbol>
+        </item>         
+        
+        <!--  Comment lines:  -->
+        <item identifier="TEMPL_comment" xsi:type="structuringItem" order="sequence" optional="true">           
+            <property  identifier="comment_delimiter" interpretation="uint8">
+                    <range>
+                        <startposition xsi:type="sequential"/>
+                        <length xsi:type="fixed">1</length>
+                    </range>
+                   <value>37</value>   <!--     =%     -->
+            </property>
+            <symbol identifier="comment_char" interpretation="uint8" multiple="true">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <nonValidValues>
+                    <value>13</value>
+                    <value>10</value>
+                </nonValidValues>
+            </symbol>
+            <processing type="pullXCEL" xcelRef="TEMPL_EOLMarker"/>
+        </item>     
+        
+       
+        <!-- default name object (all chars allowed except whitespaces):    -->     
+        <item identifier="IDTEMPL_defaultNameObject" xsi:type="definitionItem" order="sequence">
+            <symbol identifier="defaultNameObj" interpretation="uint8" multiple="true">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <nonValidValues>
+                    <value>0</value>
+                    <value>9</value>
+                    <value>10</value>
+                    <value>12</value>
+                    <value>13</value>
+                    <value>32</value> 
+                </nonValidValues>
+            </symbol>
+            <name>NAME_defaultNameObj</name>
+        </item>   
+               
+        <!-- default integer number object :    -->     
+        <item identifier="TEMPL_intObj" xsi:type="definitionItem" order="sequence">
+            <property identifier="intObj_hyphenMinus" interpretation="uint8" optional="true">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <value>45</value>
+            </property>
+            <symbol identifier="intNb" interpretation="uint8" multiple="true">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <validValues>
+                    <startRange>48</startRange>
+                    <endRange>57</endRange>
+                </validValues>
+            </symbol>
+            <name>NAME_intObj</name>
+        </item>
+        
+          <!-- default real number object:    -->
+        <item identifier="TEMPL_realNb"  xsi:type="definitionItem" order="sequence">
+            <property identifier="realNb_hyphenMinus" optional="true" interpretation="uint8">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <value>45</value>   <!--  =   -     -->
+            </property>            
+            <processing type="pullXCEL" xcelRef="TEMPL_intObj"/>                                                       
+            <property identifier="realNbDelimiter"  interpretation="uint8" optional="true">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <value>46</value>
+            </property> 
+            <item xsi:type="structuringItem" identifier="realNbExpansion"  optional="true">
+                <processing type="pullXCEL" xcelRef="TEMPL_intObj"/>
+            </item>
+            <name>NAME_realNb</name>
+        </item>
+        
+        <!-- indirect object reference :    -->
+        <item  identifier="TEMPL_indirectObjectReference"  xsi:type="structuringItem">
+            <item identifier="indirectObjRef" xsi:type="definitionItem" order="sequence">
+                <item identifier="objectNumber" originalName="objectNumber" xsi:type="definitionItem">
+                    <symbol identifier="objectNumberPart"  interpretation="uint8" multiple="true">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">1</length>
+                        </range>
+                        <validValues> 
+                            <startRange>48</startRange>     <!-- =0  -->
+                            <endRange>57</endRange>
+                        </validValues>
+                    </symbol>
+                    <name>PDFObjectNumber</name>
+                </item>
+                <item identifier="indirectObj_objectPart_delimiter01" xsi:type="structuringItem">
+                    <processing type="pullXCEL" xcelRef="TEMPL_whitespaceSansEOL"/>                     
+                </item> 
+                <item identifier="generationNumber" originalName="generationNumber" xsi:type="definitionItem">
+                    <symbol identifier="generationNumberPart"  interpretation="uint8" multiple="true">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">1</length>
+                        </range>
+                        <validValues> 
+                            <startRange>48</startRange>  <!-- =0  -->
+                            <endRange>57</endRange>
+                        </validValues>
+                    </symbol>
+                    <name>PDFObjectGenerationNumber</name>
+                </item>
+                <item identifier="indirectObj_objectPart_delimiter02" xsi:type="structuringItem">
+                    <processing type="pullXCEL" xcelRef="TEMPL_whitespaceSansEOL"/>                     
+                </item> 
+                <item identifier="reference_keyword" xsi:type="structuringItem">
+                    <property identifier="keyword_R"  originalName="R" interpretation="ASCII">
+                        <range>
+                            <startposition xsi:type="sequential"/>
+                            <length xsi:type="fixed">1</length>
+                        </range>
+                        <value>R</value> 
+                    </property>
+                </item>
+                <name>indirectObjectReference</name>    
+            </item>        
+        </item>
+        
+        <!-- literal string:   ACHTUNG:   
+            Processing für test auf balanced parenthesis und maskierte runde Klammern 
+            und backslash einfügen;
+            siehe PDF 1.4, S.29 f.
+        -->
+        
+        <item  identifier="TEMPL_litString"  xsi:type="structuringItem" order="sequence">
+            <property identifier="litStringOpeningParenthesis" interpretation="ASCII">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <value>(</value>
+            </property>
+            <item identifier="litStringContent"  xsi:type="definitionItem"  optional="true" order="sequence">
+                <symbol identifier="litString_char" interpretation="uint8" multiple="true">
+                    <range>
+                        <startposition xsi:type="sequential"/>
+                        <length xsi:type="fixed">1</length>
+                    </range>
+                    <validValues>
+                        <startRange>0</startRange>
+                        <endRange>255</endRange>
+                    </validValues>
+                </symbol>
+                <name>NAME_litstring</name>
+            </item>    
+            <property identifier="litStringClosingParenthesis" interpretation="ASCII">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <value>)</value>
+            </property>
+        </item>
+        
+        <!-- hex string:   -->
+       <!-- Hexadecimal Strings
+              Reference: p. 32f.
+        Strings may also be written in hexadecimal form; this is useful for including arbitrary
+        binary data in a PDF file. A hexadecimal string is written as a sequence of
+        hexadecimal digits (0–9 and either A–F or a–f) enclosed within angle brackets
+        (< and >):        
+        <4E6F762073686D6F7A206B6120706F702E>        
+            Each pair of hexadecimal digits defines one byte of the string.
+            
+            [!!     HKI comment:  following is not yet implemented:     !!]            
+            
+            White-space characters
+            (such as space, tab, carriage return, line feed, and form feed) are ignored.
+            If the final digit of a hexadecimal string is missing—that is, if there is an odd
+            number of digits—the final digit is assumed to be 0. For example,
+            <901FA3>
+            is a 3-byte string consisting of the characters whose hexadecimal codes are 90, 1F,
+           and A3, but
+            <901FA>
+            is a 3-byte string containing the characters whose hexadecimal codes are 90, 1F,
+           and A0.
+       -->         
+        
+        <item  identifier="TEMPL_hexString"  xsi:type="structuringItem" order="sequence">
+            <property identifier="hexStringOpeningAngle" interpretation="uint8">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <value>60</value>    <!--    =    <     -->
+            </property>
+            <item identifier="hexStringContent"  xsi:type="definitionItem"  optional="true" order="sequence">
+                <property identifier="hexString_hexNumber" matchingBehaviour="regexp" multiple="true">
+                    <range>
+                        <startposition xsi:type="sequential"/>
+                        <length xsi:type="fixed">2</length>
+                    </range>
+                    <value>[0-9a-fA-F]{2}</value>       <!--    auch möglich:  \xn   ??  -->
+                </property>
+                <name>NAME_hexString</name>  
+            </item>    
+            <property identifier="hexStringClosingAngle" interpretation="uint8">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <value>62</value>  <!--   =    >      -->
+            </property>
+        </item>   
+        
+        <!--date string:  .-->
+        <item  identifier="TEMPL_dateString"  xsi:type="structuringItem" order="sequence">
+            <property identifier="dateStringOpeningParenthesis" interpretation="ASCII">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <value>(</value>
+            </property>
+            <item identifier="dateStringContent"  xsi:type="definitionItem"  optional="true" order="sequence">
+                <property identifier="dateString" matchingBehaviour="regexp">
+                    <range>
+                        <startposition xsi:type="sequential"/>
+                        <length xsi:type="fixed">25</length>
+                    </range>
+                    <value>D:[0-9]{16}[+-Z][0-9]{2}'[0-9]{2}'</value>    <!-- soll sein:  D:NNNNNNNNNNNNNNNNONN'NN', wobei O= +,- oder Z  -->
+                </property>
+                <name>NAME_litstring</name>
+            </item>    
+            <property identifier="IDlitStringClosingParenthesis" interpretation="ASCII">
+                <range>
+                    <startposition xsi:type="sequential"/>
+                    <length xsi:type="fixed">1</length>
+                </range>
+                <value>)</value>
+            </property>
+        </item>
+          
+        
+   </templates>    
+        
+    <!-- 
+        #################################
+        
+        POST PROCESSING:
+        
+        ################################
+    -->
+    <postProcessing>       
+    </postProcessing>
+
+</XCELDocument>

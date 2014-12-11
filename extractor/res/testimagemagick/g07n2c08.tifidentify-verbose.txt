@@ -1,0 +1,127 @@
+Image: g07n2c08.tif
+  Format: TIFF (Tagged Image File Format)
+  Class: DirectClass
+  Geometry: 32x32+0+0
+  Resolution: 72x72
+  Print size: 0.444444x0.444444
+  Units: PixelsPerInch
+  Type: Palette
+  Base type: TrueColor
+  Endianess: MSB
+  Colorspace: RGB
+  Depth: 8-bit
+  Channel depth:
+    red: 8-bit
+    green: 8-bit
+    blue: 1-bit
+  Channel statistics:
+    red:
+      min: 0 (0)
+      max: 255 (1)
+      mean: 72.5283 (0.284425)
+      standard deviation: 88.9814 (0.348947)
+    green:
+      min: 0 (0)
+      max: 255 (1)
+      mean: 104.532 (0.40993)
+      standard deviation: 97.0302 (0.38051)
+    blue:
+      min: 0 (0)
+      max: 255 (1)
+      mean: 61.5088 (0.241211)
+      standard deviation: 109.094 (0.427818)
+  Histogram:
+       245: (  0,156,  0) #009C00 rgb(0,156,0)
+       156: (  0,  0,  0) #000000 black
+       128: (  0,255,  0) #00FF00 lime
+         8: (  0,  0,255) #0000FF blue
+         8: ( 23,  0,  0) #170000 rgb(23,0,0)
+         8: ( 23, 23,255) #1717FF rgb(23,23,255)
+         8: ( 37,  0,  0) #250000 rgb(37,0,0)
+         8: ( 37, 37,255) #2525FF rgb(37,37,255)
+         8: ( 49,  0,  0) #310000 rgb(49,0,0)
+         8: ( 49, 49,255) #3131FF rgb(49,49,255)
+         8: ( 60,  0,  0) #3C0000 rgb(60,0,0)
+         8: ( 60, 60,255) #3C3CFF rgb(60,60,255)
+         8: ( 71,  0,  0) #470000 rgb(71,0,0)
+         8: ( 71, 71,255) #4747FF rgb(71,71,255)
+         8: ( 80,  0,  0) #500000 rgb(80,0,0)
+         8: ( 80, 80,255) #5050FF rgb(80,80,255)
+         8: ( 89,  0,  0) #590000 rgb(89,0,0)
+         8: ( 89, 89,255) #5959FF rgb(89,89,255)
+         8: ( 98,  0,  0) #620000 rgb(98,0,0)
+         8: ( 98, 98,255) #6262FF rgb(98,98,255)
+         8: (107,  0,  0) #6B0000 rgb(107,0,0)
+         8: (107,107,255) #6B6BFF rgb(107,107,255)
+         8: (115,  0,  0) #730000 rgb(115,0,0)
+         8: (115,115,255) #7373FF rgb(115,115,255)
+         8: (123,  0,  0) #7B0000 rgb(123,0,0)
+         8: (123,123,255) #7B7BFF rgb(123,123,255)
+         8: (131,  0,  0) #830000 rgb(131,0,0)
+         8: (131,131,255) #8383FF rgb(131,131,255)
+         8: (138,  0,  0) #8A0000 rgb(138,0,0)
+         8: (138,138,255) #8A8AFF rgb(138,138,255)
+         8: (146,  0,  0) #920000 rgb(146,0,0)
+         8: (146,146,255) #9292FF rgb(146,146,255)
+         8: (153,  0,  0) #990000 rgb(153,0,0)
+         8: (153,153,255) #9999FF rgb(153,153,255)
+         8: (160,  0,  0) #A00000 rgb(160,0,0)
+         8: (160,160,255) #A0A0FF rgb(160,160,255)
+         8: (167,  0,  0) #A70000 rgb(167,0,0)
+         8: (167,167,255) #A7A7FF rgb(167,167,255)
+         8: (174,  0,  0) #AE0000 rgb(174,0,0)
+         8: (174,174,255) #AEAEFF rgb(174,174,255)
+         8: (181,  0,  0) #B50000 rgb(181,0,0)
+         8: (181,181,255) #B5B5FF rgb(181,181,255)
+         8: (187,  0,  0) #BB0000 rgb(187,0,0)
+         8: (187,187,255) #BBBBFF rgb(187,187,255)
+         8: (194,  0,  0) #C20000 rgb(194,0,0)
+         8: (200,  0,  0) #C80000 rgb(200,0,0)
+         8: (206,  0,  0) #CE0000 rgb(206,0,0)
+         8: (213,  0,  0) #D50000 rgb(213,0,0)
+         8: (219,  0,  0) #DB0000 rgb(219,0,0)
+         8: (225,  0,  0) #E10000 rgb(225,0,0)
+         8: (231,  0,  0) #E70000 rgb(231,0,0)
+         8: (231,231,255) #E7E7FF rgb(231,231,255)
+         8: (237,  0,  0) #ED0000 rgb(237,0,0)
+         8: (237,237,255) #EDEDFF rgb(237,237,255)
+         8: (243,  0,  0) #F30000 rgb(243,0,0)
+         8: (243,243,255) #F3F3FF rgb(243,243,255)
+         8: (249,  0,  0) #F90000 rgb(249,0,0)
+         8: (249,249,255) #F9F9FF rgb(249,249,255)
+         8: (255,  0,  0) #FF0000 red
+         8: (255,255,255) #FFFFFF white
+         7: (194,194,255) #C2C2FF rgb(194,194,255)
+         7: (206,206,255) #CECEFF rgb(206,206,255)
+         7: (213,213,255) #D5D5FF rgb(213,213,255)
+         7: (219,219,255) #DBDBFF rgb(219,219,255)
+         6: (200,200,255) #C8C8FF rgb(200,200,255)
+         5: (225,225,255) #E1E1FF rgb(225,225,255)
+  Rendering intent: Undefined
+  Interlace: None
+  Background color: white
+  Border color: rgb(223,223,223)
+  Matte color: grey74
+  Transparent color: black
+  Page geometry: 32x32+0+0
+  Dispose: Undefined
+  Iterations: 0
+  Compression: None
+  Orientation: TopLeft
+  Properties:
+    create-date: 2009-05-06T11:30:19+02:00
+    modify-date: 2009-05-06T11:30:16+02:00
+    signature: f8901763eec2444a6a8e063cfe69f80c8f9689db0d7929e594acad2cefd9f468
+    tiff:rows-per-strip: 32
+  Profiles:
+    Profile-8bim: 1560 bytes
+    Profile-tiff:37724: 36 bytes
+  Artifacts:
+    verbose: true
+  Tainted: False
+  Filesize: 4.79kb
+  Number pixels: 1kb
+  Pixels per second: 1kb
+  User time: 0.010u
+  Elapsed time: 0:02
+  Version: ImageMagick 6.4.5 2008-12-02 Q16 OpenMP http://www.imagemagick.org

@@ -1,0 +1,62 @@
+Image: cm7n0g04.tif
+  Format: TIFF (Tagged Image File Format)
+  Class: DirectClass
+  Geometry: 32x32+0+0
+  Resolution: 72x72
+  Print size: 0.444444x0.444444
+  Units: PixelsPerInch
+  Type: Grayscale
+  Base type: Grayscale
+  Endianess: MSB
+  Colorspace: RGB
+  Depth: 8/4-bit
+  Channel depth:
+    gray: 4-bit
+  Channel statistics:
+    gray:
+      min: 0 (0)
+      max: 255 (1)
+      mean: 224.005 (0.878451)
+      standard deviation: 79.9086 (0.313367)
+  Histogram:
+       871: (255,255,255) #FFFFFF white
+       101: (  0,  0,  0) #000000 black
+         6: (187,187,187) #BBBBBB rgb(187,187,187)
+         6: (238,238,238) #EEEEEE rgb(238,238,238)
+         5: ( 51, 51, 51) #333333 grey20
+         5: (119,119,119) #777777 rgb(119,119,119)
+         5: (221,221,221) #DDDDDD rgb(221,221,221)
+         4: ( 34, 34, 34) #222222 rgb(34,34,34)
+         4: (153,153,153) #999999 grey60
+         3: ( 17, 17, 17) #111111 rgb(17,17,17)
+         3: (102,102,102) #666666 grey40
+         3: (136,136,136) #888888 rgb(136,136,136)
+         3: (170,170,170) #AAAAAA rgb(170,170,170)
+         3: (204,204,204) #CCCCCC grey80
+         2: ( 68, 68, 68) #444444 rgb(68,68,68)
+  Rendering intent: Undefined
+  Interlace: None
+  Background color: white
+  Border color: rgb(223,223,223)
+  Matte color: grey74
+  Transparent color: black
+  Page geometry: 32x32+0+0
+  Dispose: Undefined
+  Iterations: 0
+  Compression: None
+  Orientation: TopLeft
+  Properties:
+    create-date: 2009-05-06T11:30:19+02:00
+    modify-date: 2009-05-06T11:30:16+02:00
+    signature: f3b5e025de61c4d76fbfd2ff5d3c616882ce3aea8878723d239abee2aff78704
+    tiff:rows-per-strip: 32
+  Profiles:
+    Profile-8bim: 1710 bytes
+    unknown[77,111]: chrome Halftone Settings
+    Profile-tiff:37724: 36 bytes
+  Artifacts:
+    verbose: true
+  Tainted: False
+  Filesize: 2.91kb
+  Number pixels: 1kb
+  Version: ImageMagick 6.4.5 2008-12-02 Q16 OpenMP http://www.imagemagick.org

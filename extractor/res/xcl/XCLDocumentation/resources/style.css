@@ -1,0 +1,70 @@
+body {
+	background-color: #FFFFFF;
+
+}
+div.book {
+	background-color: #FFFFFF;
+	width: 955px;
+}
+
+img {
+	border:0px;
+}
+div.titlepage {
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+h1 {
+	margin-top: 0px;
+	border-top: solid 4px #465FA6;
+	color: #465FA6;
+}
+
+h2 {
+	margin-top: 0px;
+	border-top: solid 1px #465FA6;
+	color: #465FA6;
+}
+h3 {
+	border-top: solid 1px #465FA6;
+	color: #465FA6;
+}
+
+div.mediaobject {
+ text-align: center;
+ margin-bottom: 25px;
+}
+
+/* Menu */
+
+dl {
+	margin: 0;
+}
+dd {
+	font-size: 90%;
+	padding-left: 15px;
+}
+p
+{
+text-align:justify;
+}
+dl, dd {
+list-style-type: none;
+padding: 0px;
+border-top: 1px solid #FFFFFF;
+}
+dt {
+margin-bottom: 0px;
+}
+
+b {
+	color: #465FA6;
+}
+
+div.list-of-figures dl dt, div.list-of-tables dl dt, div.list-of-examples dl dt {
+	font-size: 80%
+}
+
+
+

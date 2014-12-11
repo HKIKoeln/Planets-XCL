@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xcdl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.planets-project.eu/xcl/schemas/xcl" xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl ../res/xcl/xcdl/XCDLCore.xsd" id="0" >
+    <object id="o1" >
+        <normData type="text" id="nd1" >Ein Text, nur für Marbella </normData>
+        <property id="p76" source="raw" cat="descr" >
+            <name id="idNULL2" >fontChange</name>
+            <valueSet id="i_i1_i97_s1" >
+                <labValue>
+                    <val></val>
+                    <type>string</type>
+                </labValue>
+                <dataRef ind="normSpecific" propertySetId="id_0" />
+                <dataRef ind="normSpecific" propertySetId="id_1" />
+                <dataRef ind="normSpecific" propertySetId="id_2" />
+                <dataRef ind="normSpecific" propertySetId="id_3" />
+                <dataRef ind="normSpecific" propertySetId="id_4" />
+            </valueSet>
+        </property>
+        <property id="p85" source="raw" cat="descr" >
+            <name id="id84" >numberOfPages</name>
+            <valueSet id="i_i1_i70" >
+                <labValue>
+                    <val>1</val>
+                    <type>string</type>
+                </labValue>
+            </valueSet>
+        </property>
+        <property id="p98" source="raw" cat="descr" >
+            <name id="id159" >font</name>
+            <valueSet id="i_i1_i74_i1_i3" >
+                <labValue>
+                    <val>Courier</val>
+                    <type>XCLLabel</type>
+                </labValue>
+                <dataRef ind="normSpecific" propertySetId="id_0" />
+            </valueSet>
+            <valueSet id="i_i1_i74_i2_i3" >
+                <labValue>
+                    <val>Arial</val>
+                    <type>XCLLabel</type>
+                </labValue>
+                <dataRef ind="normSpecific" propertySetId="id_1" />
+            </valueSet>
+            <valueSet id="i_i1_i74_i3_i3" >
+                <labValue>
+                    <val>Times New Roman</val>
+                    <type>XCLLabel</type>
+                </labValue>
+                <dataRef ind="normSpecific" propertySetId="id_2" />
+            </valueSet>
+            <valueSet id="i_i1_i74_i4_i3" >
+                <labValue>
+                    <val>Helvetica</val>
+                    <type>XCLLabel</type>
+                </labValue>
+                <dataRef ind="normSpecific" propertySetId="id_3" />
+            </valueSet>
+            <valueSet id="i_i1_i74_i5_i3" >
+                <labValue>
+                    <val>Calibri</val>
+                    <type>XCLLabel</type>
+                </labValue>
+                <dataRef ind="normSpecific" propertySetId="id_4" />
+            </valueSet>
+        </property>
+        <property id="p104" source="raw" cat="descr" >
+            <name id="id158" >fontSize</name>
+            <valueSet id="i_i1_i97_i2" >
+                <labValue>
+                    <val>11</val>
+                    <type>string</type>
+                </labValue>
+                <dataRef ind="normSpecific" propertySetId="id_0" />
+                <dataRef ind="normSpecific" propertySetId="id_1" />
+                <dataRef ind="normSpecific" propertySetId="id_2" />
+                <dataRef ind="normSpecific" propertySetId="id_3" />
+                <dataRef ind="normSpecific" propertySetId="id_4" />
+            </valueSet>
+        </property>
+        <propertySet id="id_0" >
+            <valueSetRelations>
+                <ref valueSetId="i_i1_i97_i2" name="fontSize" />
+                <ref valueSetId="i_i1_i97_s1" name="fontChange" />
+                <ref valueSetId="i_i1_i74_i1_i3" name="font" />
+            </valueSetRelations>
+            <dataRef>
+                <ref begin="0" end="3" id="nd1" />
+            </dataRef>
+        </propertySet>
+        <propertySet id="id_1" >
+            <valueSetRelations>
+                <ref valueSetId="i_i1_i97_i2" name="fontSize" />
+                <ref valueSetId="i_i1_i97_s1" name="fontChange" />
+                <ref valueSetId="i_i1_i74_i2_i3" name="font" />
+            </valueSetRelations>
+            <dataRef>
+                <ref begin="4" end="9" id="nd1" />
+            </dataRef>
+        </propertySet>
+        <propertySet id="id_2" >
+            <valueSetRelations>
+                <ref valueSetId="i_i1_i97_i2" name="fontSize" />
+                <ref valueSetId="i_i1_i97_s1" name="fontChange" />
+                <ref valueSetId="i_i1_i74_i3_i3" name="font" />
+            </valueSetRelations>
+            <dataRef>
+                <ref begin="10" end="17" id="nd1" />
+            </dataRef>
+        </propertySet>
+        <propertySet id="id_3" >
+            <valueSetRelations>
+                <ref valueSetId="i_i1_i97_i2" name="fontSize" />
+                <ref valueSetId="i_i1_i97_s1" name="fontChange" />
+                <ref valueSetId="i_i1_i74_i4_i3" name="font" />
+            </valueSetRelations>
+            <dataRef>
+                <ref begin="18" end="25" id="nd1" />
+            </dataRef>
+        </propertySet>
+        <propertySet id="id_4" >
+            <valueSetRelations>
+                <ref valueSetId="i_i1_i97_i2" name="fontSize" />
+                <ref valueSetId="i_i1_i97_s1" name="fontChange" />
+                <ref valueSetId="i_i1_i74_i5_i3" name="font" />
+            </valueSetRelations>
+            <dataRef>
+                <ref begin="26" end="26" id="nd1" />
+            </dataRef>
+        </propertySet>
+    </object>
+</xcdl>

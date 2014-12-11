@@ -1,0 +1,428 @@
+<format puid='fmt_imageMagick'>
+<property>
+<id>2</id>
+<name>imageHeight</name>
+<description>Height of an image. Corresponds to the y-axis of a Cartesian coordinate system.</description>
+<unit></unit>
+<type>int</type>
+<metrics>
+<m>
+<mId>
+1</mId><mName>
+equal</mName><mDescription>
+simple comparison of two values (A, B) of any type on equality. Type of output value: Boolean (true, false).</mDescription><mType>
+12</mType></m>
+<m>
+<mId>
+2</mId><mName>
+intDiff</mName><mDescription>
+Arithmetical difference of two integer values (A - B)</mDescription><mType>
+16</mType></m>
+<m>
+<mId>
+6</mId><mName>
+intRatio</mName><mDescription>
+Quotient of two integer values (A / B). </mDescription><mType>
+17</mType></m>
+<m>
+<mId>
+10</mId><mName>
+percDeviation</mName><mDescription>
+Percental deviation of two values (A,B) of type integer or rational, according to the equation: PercDev= d/A*100. A is the source value, d is the difference of values B and A (B-A). The output value indicates the percental deviation of value B from value A. An output value of PercDev=0.0 indicates equal values.</mDescription><mType>
+17</mType></m>
+</metrics>
+</property>
+<property>
+<id>30</id>
+<name>imageWidth</name>
+<description>Width of an image. Corresponds to the x-axis.</description>
+<unit></unit>
+<type>int</type>
+<metrics>
+<m>
+<mId>
+1</mId><mName>
+equal</mName><mDescription>
+simple comparison of two values (A, B) of any type on equality. Type of output value: Boolean (true, false).</mDescription><mType>
+12</mType></m>
+<m>
+<mId>
+2</mId><mName>
+intDiff</mName><mDescription>
+Arithmetical difference of two integer values (A - B)</mDescription><mType>
+16</mType></m>
+<m>
+<mId>
+6</mId><mName>
+intRatio</mName><mDescription>
+Quotient of two integer values (A / B). </mDescription><mType>
+17</mType></m>
+<m>
+<mId>
+10</mId><mName>
+percDeviation</mName><mDescription>
+Percental deviation of two values (A,B) of type integer or rational, according to the equation: PercDev= d/A*100. A is the source value, d is the difference of values B and A (B-A). The output value indicates the percental deviation of value B from value A. An output value of PercDev=0.0 indicates equal values.</mDescription><mType>
+17</mType></m>
+</metrics>
+</property>
+<property>
+<id>20</id>
+<name>imageType</name>
+<description>Interpretation of image pixels representing the colour type of an image</description>
+<unit></unit>
+<type>XCLLabel</type>
+<metrics>
+<m>
+<mId>
+1</mId><mName>
+equal</mName><mDescription>
+simple comparison of two values (A, B) of any type on equality. Type of output value: Boolean (true, false).</mDescription><mType>
+12</mType></m>
+</metrics>
+</property>
+<property>
+<id>6</id>
+<name>byteOrder</name>
+<description>Ordering of bytes for multi-byte data values within a file (intel or motorola)</description>
+<unit></unit>
+<type>XCLLabel</type>
+<metrics>
+<m>
+<mId>
+1</mId><mName>
+equal</mName><mDescription>
+simple comparison of two values (A, B) of any type on equality. Type of output value: Boolean (true, false).</mDescription><mType>
+12</mType></m>
+</metrics>
+</property>
+<property>
+<id>6</id>
+<name>bitsPerSample</name>
+<description>Ordering of bytes for multi-byte data values within a file (intel or motorola)</description>
+<unit></unit>
+<type>XCLLabel</type>
+<metrics>
+<m>
+<mId>
+1</mId><mName>
+equal</mName><mDescription>
+simple comparison of two values (A, B) of any type on equality. Type of output value: Boolean (true, false).</mDescription><mType>
+12</mType></m>
+</metrics>
+</property>
+<property>
+<id>12</id>
+<name>bitsPerSampleRed</name>
+<description>Number of bits per red colour channel.</description>
+<unit>bit</unit>
+<type>int</type>
+<metrics>
+</metrics>
+</property>
+<property>
+<id>14</id>
+<name>bitsPerSampleGreen</name>
+<description>Number of bits per green colour channel.</description>
+<unit>bit</unit>
+<type>int</type>
+<metrics>
+</metrics>
+</property>
+<property>
+<id>15</id>
+<name>bitsPerSampleBlue</name>
+<description>Number of bits per blue colour channel.</description>
+<unit>bit</unit>
+<type>int</type>
+<metrics>
+</metrics>
+</property>
+<property>
+<id>126</id>
+<name>1931CIE_ChromaticityRedX</name>
+<description>value x of pair xy specifying red colour according to 1931 CIE color space</description>
+<unit></unit>
+<type>uint16</type>
+<metrics>
+</metrics>
+</property>
+<property>
+<id>128</id>
+<name>1931CIE_ChromaticityGreenX</name>
+<description>value x of pair xy specifying green colour according to 1931 CIE color space</description>
+<unit></unit>
+<type>uint16</type>
+<metrics>
+</metrics>
+</property>
+<property>
+<id>129</id>
+<name>1931CIE_ChromaticityGreenY</name>
+<description>value y of pair xy specifying green colour according to 1931 CIE color space</description>
+<unit></unit>
+<type>uint16</type>
+<metrics>
+</metrics>
+</property>
+<property>
+<id>130</id>
+<name>1931CIE_ChromaticityBlueX</name>
+<description>value x of pair xy specifying blue colour according to 1931 CIE color space</description>
+<unit></unit>
+<type>uint16</type>
+<metrics>
+</metrics>
+</property>
+<property>
+<id>131</id>
+<name>1931CIE_ChromaticityBlueY</name>
+<description>value y of pair xy specifying green colour according to 1931 CIE color space</description>
+<unit></unit>
+<type>uint16</type>
+<metrics>
+</metrics>
+</property>
+<property>
+<id>28</id>
+<name>whitePointX</name>
+<description>chromaticity of a computer display's nominal white x value</description>
+<unit></unit>
+<type>int</type>
+<metrics>
+<m>
+<mId>
+1</mId><mName>
+equal</mName><mDescription>
+simple comparison of two values (A, B) of any type on equality. Type of output value: Boolean (true, false).</mDescription><mType>
+12</mType></m>
+</metrics>
+</property>
+<property>
+<id>29</id>
+<name>whitePointY</name>
+<description>chromaticity of a computer display's nominal white y value</description>
+<unit></unit>
+<type>int</type>
+<metrics>
+<m>
+<mId>
+1</mId><mName>
+equal</mName><mDescription>
+simple comparison of two values (A, B) of any type on equality. Type of output value: Boolean (true, false).</mDescription><mType>
+12</mType></m>
+</metrics>
+</property>
+<property>
+<id>29</id>
+<name>gamma</name>
+<description>chromaticity of a computer display's nominal white y value</description>
+<unit></unit>
+<type>int</type>
+<metrics>
+<m>
+<mId>
+1</mId><mName>
+equal</mName><mDescription>
+simple comparison of two values (A, B) of any type on equality. Type of output value: Boolean (true, false).</mDescription><mType>
+12</mType></m>
+</metrics>
+</property>
+<property>
+<id>25</id>
+<name>rgbPalette</name>
+<description>palette for index-coloured image type. Each pixel is a composition of red, green and blue colour values which shall appear in exactly this order. Called "Palette Color" in Tiff</description>
+<unit></unit>
+<type>int</type>
+<metrics>
+<m>
+<mId>
+11</mId><mName>
+hammingDistance</mName><mDescription>
+The hamming distance counts the number of non-corresponding symbols of two ordered sequences. The sequences must  have equal length.</mDescription><mType>
+16</mType></m>
+<m>
+<mId>
+12</mId><mName>
+simpleMatchCoefficientN</mName><mDescription>
+Simple match coefficient is a distance measure that uses the hamming distance. In addition, the ratio of non-corresponding values (hamming distance) to the total number of compared pairs of values is calculated. N indicates the n-grams used for comparison. Default setting is N=1. The result is a rational number from range 0.0 to 1.0, indicating maximum similarity (0.0) to minimum (1.0).</mDescription><mType>
+17</mType></m>
+</metrics>
+</property>
+<property>
+<id>23</id>
+<name>resolutionX</name>
+<description>number of pixels per resolution unit in horizontal direction</description>
+<unit></unit>
+<type>int</type>
+<metrics>
+<m>
+<mId>
+1</mId><mName>
+equal</mName><mDescription>
+simple comparison of two values (A, B) of any type on equality. Type of output value: Boolean (true, false).</mDescription><mType>
+12</mType></m>
+<m>
+<mId>
+2</mId><mName>
+intDiff</mName><mDescription>
+Arithmetical difference of two integer values (A - B)</mDescription><mType>
+16</mType></m>
+<m>
+<mId>
+6</mId><mName>
+intRatio</mName><mDescription>
+Quotient of two integer values (A / B). </mDescription><mType>
+17</mType></m>
+<m>
+<mId>
+10</mId><mName>
+percDeviation</mName><mDescription>
+Percental deviation of two values (A,B) of type integer or rational, according to the equation: PercDev= d/A*100. A is the source value, d is the difference of values B and A (B-A). The output value indicates the percental deviation of value B from value A. An output value of PercDev=0.0 indicates equal values.</mDescription><mType>
+17</mType></m>
+</metrics>
+</property>
+<property>
+<id>24</id>
+<name>resolutionY</name>
+<description>number of pixels per resolution unit in vertical direction</description>
+<unit></unit>
+<type>int</type>
+<metrics>
+<m>
+<mId>
+1</mId><mName>
+equal</mName><mDescription>
+simple comparison of two values (A, B) of any type on equality. Type of output value: Boolean (true, false).</mDescription><mType>
+12</mType></m>
+<m>
+<mId>
+2</mId><mName>
+intDiff</mName><mDescription>
+Arithmetical difference of two integer values (A - B)</mDescription><mType>
+16</mType></m>
+<m>
+<mId>
+6</mId><mName>
+intRatio</mName><mDescription>
+Quotient of two integer values (A / B). </mDescription><mType>
+17</mType></m>
+<m>
+<mId>
+10</mId><mName>
+percDeviation</mName><mDescription>
+Percental deviation of two values (A,B) of type integer or rational, according to the equation: PercDev= d/A*100. A is the source value, d is the difference of values B and A (B-A). The output value indicates the percental deviation of value B from value A. An output value of PercDev=0.0 indicates equal values.</mDescription><mType>
+17</mType></m>
+</metrics>
+</property>
+<property>
+<id>22</id>
+<name>resolutionUnit</name>
+<description>measure unit for measuring resolution (e. g. cm, mm, etc.)</description>
+<unit></unit>
+<type>XCLLabel</type>
+<metrics>
+<m>
+<mId>
+1</mId><mName>
+equal</mName><mDescription>
+simple comparison of two values (A, B) of any type on equality. Type of output value: Boolean (true, false).</mDescription><mType>
+12</mType></m>
+</metrics>
+</property>
+<property>
+<id>120</id>
+<name>fileSize</name>
+<description>The length in bytes of the complete file</description>
+<unit>byte</unit>
+<type>int</type>
+<metrics>
+</metrics>
+</property>
+<property>
+<id>45</id>
+<name>interlace</name>
+<description>algorithm for encoding raster image data in multiple layers with the purpose of improved transmission and image built up.</description>
+<unit></unit>
+<type>XCLLabel</type>
+<metrics>
+<m>
+<mId>
+1</mId><mName>
+equal</mName><mDescription>
+simple comparison of two values (A, B) of any type on equality. Type of output value: Boolean (true, false).</mDescription><mType>
+12</mType></m>
+</metrics>
+</property>
+<property>
+<id>45</id>
+<name>compression</name>
+<description>algorithm for encoding raster image data in multiple layers with the purpose of improved transmission and image built up.</description>
+<unit></unit>
+<type>XCLLabel</type>
+<metrics>
+<m>
+<mId>
+1</mId><mName>
+equal</mName><mDescription>
+simple comparison of two values (A, B) of any type on equality. Type of output value: Boolean (true, false).</mDescription><mType>
+12</mType></m>
+</metrics>
+</property>
+<property>
+<id>45</id>
+<name>orientation</name>
+<description>algorithm for encoding raster image data in multiple layers with the purpose of improved transmission and image built up.</description>
+<unit></unit>
+<type>XCLLabel</type>
+<metrics>
+<m>
+<mId>
+1</mId><mName>
+equal</mName><mDescription>
+simple comparison of two values (A, B) of any type on equality. Type of output value: Boolean (true, false).</mDescription><mType>
+12</mType></m>
+</metrics>
+</property>
+<property>
+<id>4</id>
+<name>signature</name>
+<description>A sequence of bytes that uniquely identifies a certain fileformat</description>
+<unit></unit>
+<type>string</type>
+<metrics>
+<m>
+<mId>
+1</mId><mName>
+equal</mName><mDescription>
+simple comparison of two values (A, B) of any type on equality. Type of output value: Boolean (true, false).</mDescription><mType>
+12</mType></m>
+<m>
+<mId>
+15</mId><mName>
+levenshteinDistance</mName><mDescription>
+The Levenshtein distance (syn. Edit distance) is a distance measure for strings. Two strings are compared with respect to the  three basic operations insert, delete and replace in order to transform string A into string B. The value for this metric is the number of operations needed for transformation.</mDescription><mType>
+16</mType></m>
+</metrics>
+</property>
+<property>
+<id>4</id>
+<name>rowsPerStrip</name>
+<description>A sequence of bytes that uniquely identifies a certain fileformat</description>
+<unit></unit>
+<type>string</type>
+<metrics>
+<m>
+<mId>
+1</mId><mName>
+equal</mName><mDescription>
+simple comparison of two values (A, B) of any type on equality. Type of output value: Boolean (true, false).</mDescription><mType>
+12</mType></m>
+<m>
+<mId>
+15</mId><mName>
+levenshteinDistance</mName><mDescription>
+The Levenshtein distance (syn. Edit distance) is a distance measure for strings. Two strings are compared with respect to the  three basic operations insert, delete and replace in order to transform string A into string B. The value for this metric is the number of operations needed for transformation.</mDescription><mType>
+16</mType></m>
+</metrics>
+</property>
+</format>

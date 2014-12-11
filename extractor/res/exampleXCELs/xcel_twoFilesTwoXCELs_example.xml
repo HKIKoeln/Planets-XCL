@@ -1,0 +1,62 @@
+<XCELDocument xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.planets-project.eu/xcl/schemas/xcl
+    schemas/XCELBasicExtension.xsd">
+    <preProcessing> 
+        <item xsi:type="structuringItem" identifier="preproc1">
+            
+            <processing type="configureParser" >
+                <processingMethod name="setSymbolDoesNotMatchHandle">
+                    <param value="skipWhiteSpace"/>
+                </processingMethod>
+            </processing>
+
+        </item>
+    </preProcessing>
+    
+    <formatDescription>
+        
+        <item xsi:type="structuringItem" identifier="wholeProcessing" externalSource="main.exp">
+            <processing type="configureParser">
+                <processingMethod name="setAddressingScheme">
+                    <param value="separator"/>
+                    <param value="10"/>
+                </processingMethod>
+            </processing>
+            
+            <symbol identifier="Hello" interpretation="ASCII" length="1" name="normData"/>
+            
+            <processing type="configureParser">
+                <processingMethod name="setAddressingScheme">
+                    <param value="byte"/>
+                </processingMethod>
+            </processing>
+            <symbol identifier="LineFeed" interpretation="ASCII" length="1" />
+            
+            <processing type="configureParser">
+                <processingMethod name="setAddressingScheme">
+                    <param value="separator"/>
+                    <param value="10"/>
+                </processingMethod>
+            </processing>
+            
+            <symbol identifier="WorldFileName" interpretation="ASCII" length="1"/>
+           
+            
+            
+            <processing type="pushXCEL" xcelRef="WorldFile" >
+                <processingMethod name="extract">
+                    <param valueRef="WorldFileName"/>
+                    <param value="/home/jn/Extractor/res/xcl/xcel/xcel_docs/xcel_png.xml"/>
+                </processingMethod>
+            </processing>
+            
+           
+            <symbol identifier="WorldFile" interpretation="ASCII"  name="normData"  length="0"/>
+            <symbol identifier="END" name="normData" interpretation="ASCII" length="1"/>
+            
+        </item>   
+        
+    </formatDescription>
+    <postProcessing></postProcessing>
+</XCELDocument>

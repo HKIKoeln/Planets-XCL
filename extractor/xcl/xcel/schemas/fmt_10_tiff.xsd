@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	* fmt_10_tiff.xsd
+       * This module is part of the XCL software system
+       *
+       * Written by Sebastian Beyl, Volker Heydegger, Johanna Puhl, Jan Schnasse, Manfred Thaller, Elona Weiper 2006 - 2009
+       * Nameslib-Webservice by Stefan T. Oertel
+       *
+       * Copyright (C) 2006 - 2009 Sebastian Beyl, Volker Heydegger, Johanna Puhl, Jan Schnasse, Manfred Thaller, Elona Weiper
+       *
+       * This program is free software; you can redistribute it and/or modify
+       * it under the terms of the GNU General Public License as published by
+       * the Free Software Foundation; either version 2 of the License, or
+       * (at your option) any later version.
+       *
+       * This program is distributed in the hope that it will be useful,
+       * but WITHOUT ANY WARRANTY; without even the implied warranty of
+       * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+       * GNU General Public License for more details.
+   	*
+-->
+
+
+<!-- extensible characterisation language: properties' name definitions library for XCDL and XCEL documents -->
+<!-- created by PLANETS, PC2, University of Cologne (HKI ) -->
+<!-- Generation info:
+   Date:                    2009-05-26
+   Time:                    20:36:04
+   Host:                    planetarium.hki.uni-koeln.de
+   Ontology Base URI:       http://planetarium.hki.uni-koeln.de/public/XCL/ontology/XCLOntology.owl#
+   RDF used for extraction: xcl.rdf
+-->
+
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.planets-project.eu/xcl/schemas/xcl"
+    xmlns:tns="http://www.planets-project.eu/xcl/schemas/xcl"
+    targetNamespace="http://www.planets-project.eu/xcl/schemas/xcl"
+    elementFormDefault="qualified">
+
+		<xs:simpleType name="fmt_10_tiff" id="properties">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="1931CIE_ChromaticityBlueX" id="id130">
+					<xs:annotation>
+						<xs:documentation>
+                       Value x of pair xy specifying blue colour according to 1931 CIE colour-space.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="1931CIE_ChromaticityBlueY" id="id131">
+					<xs:annotation>
+						<xs:documentation>
+                       Value y of pair xy specifying green colour according to 1931 CIE colour space.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="1931CIE_ChromaticityGreenX" id="id128">
+					<xs:annotation>
+						<xs:documentation>
+                       Value x of pair xy specifying green colour according to 1931 CIE colour space.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="1931CIE_ChromaticityGreenY" id="id129">
+					<xs:annotation>
+						<xs:documentation>
+                       Value y of pair xy specifying green colour according to 1931 CIE colour space.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="1931CIE_ChromaticityRedX" id="id126">
+					<xs:annotation>
+						<xs:documentation>
+                       Value x of pair xy specifying red colour according to 1931 CIE colour space.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="1931CIE_ChromaticityRedY" id="id127">
+					<xs:annotation>
+						<xs:documentation>
+                       Value y of pair xy specifying red colour according to 1931 CIE colour space.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="artist" id="id31">
+					<xs:annotation>
+						<xs:documentation>
+                       Person who created the digital object.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="clipPath" id="id200">
+					<xs:annotation>
+						<xs:documentation>
+                       Clipping Paths attached to image (possible in Tiff and photoshop-files), defined by markers, angles and bézier-curves.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="documentCreationDate" id="id36">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="GDALMetadata" id="id63">
+					<xs:annotation>
+						<xs:documentation>
+                       Used by the GDAL library, holds an XML list of name=value pairs
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="ICCProfileName" id="id43">
+					<xs:annotation>
+						<xs:documentation>
+                       Name of the description of the colour space (in the form of an International Colour Consortium (ICC) profile) to which the samples in the image conform, should be something like: sRGB IEC1966-2.1, Adobe RGB ´98, for cmyk: ISO Coated V2 (ECI) and ISO Uncoated.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="IPTC_Metadata" id="id65">
+					<xs:annotation>
+						<xs:documentation>
+                       Standards of the International Press Telecommunications Council (IPTC) and Newspaper Association of America (NAA) for annotating content of any medial kind.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="imageHeight" id="id2">
+					<xs:annotation>
+						<xs:documentation>
+                       Height of an image in pixel
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="imageWidth" id="id30">
+					<xs:annotation>
+						<xs:documentation>
+                       Width of an image. Corresponds to the x-axis.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="creationSoftware" id="id3">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="thresholding" id="id61">
+					<xs:annotation>
+						<xs:documentation>
+                       For black and white images that represent shades of gray, the technique used to convert from gray to black and white pixels...
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="xmp_Metadata" id="id66">
+					<xs:annotation>
+						<xs:documentation>
+                       XML packet containing XMP metadata. (700) XMP is an extensible way to include metadata such as meaningful descriptions and titles, searchable keywords, and up-to-date author and copyright information
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="bitsPerSampleBlue" id="id15">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="bitsPerSampleGreen" id="id14">
+					<xs:annotation>
+						<xs:documentation>
+                       Number of bits per green colour channel
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="bitsPerSampleRed" id="id12">
+					<xs:annotation>
+						<xs:documentation>
+                       Number of bits per red colour channel
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="bitsPerSample" id="id151">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="cellLengthBilevel" id="id282">
+					<xs:annotation>
+						<xs:documentation>
+                       The height of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file (y-axis)
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="cellHeight" id="id133">
+					<xs:annotation>
+						<xs:documentation>
+                       "The height of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file. "
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="cellWidth" id="id134">
+					<xs:annotation>
+						<xs:documentation>
+                       The width of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="colourPalette" id="id25">
+					<xs:annotation>
+						<xs:documentation>
+                       A colour map for palette colour images. 
+Usually for RGB coloured pictures. Should be an array of hex-colour-values... depending on bitdepth
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="compressionAlgorithm" id="id18">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="copyrightNote" id="id35">
+					<xs:annotation>
+						<xs:documentation>
+                       Defines the holder of the copyright.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="extraSamples" id="id37">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="fillOrder" id="id21">
+					<xs:annotation>
+						<xs:documentation>
+                       The logical order of bits within a byte.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="grayResponseCurve" id="id138">
+					<xs:annotation>
+						<xs:documentation>
+                       For grayscale data, the optical density of each possible pixel value.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="grayResponseUnit" id="id139">
+					<xs:annotation>
+						<xs:documentation>
+                       0
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="hostMachineOS" id="id140">
+					<xs:annotation>
+						<xs:documentation>
+                       The computer and/or operating system in use at the time of object creation
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="textualAnnotation" id="id58">
+					<xs:annotation>
+						<xs:documentation>
+                       General textual annotation - not formatted in any kind of metadata-standards like METS.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="colourSpaceName" id="id20">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="maxSampleValue" id="id47">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="minSampleValue" id="id46">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="normDataImage" id="id323">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="numberOfInks" id="id197">
+					<xs:annotation>
+						<xs:documentation>
+                       numberOfInks (=number of Channels). Should be interesting only if bitDepth/ColourSpace is different than the usual ones...
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="imageOrientation" id="id48">
+					<xs:annotation>
+						<xs:documentation>
+                       Orientation of the image, e.g., landscape or portrait.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="photoshop" id="id64">
+					<xs:annotation>
+						<xs:documentation>
+                       Collection of Photoshop 'Image Resource Blocks'.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="planarConfiguration" id="id49">
+					<xs:annotation>
+						<xs:documentation>
+                       How the components of each pixel are stored
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="resolutionUnit" id="id22">
+					<xs:annotation>
+						<xs:documentation>
+                       Name of the Unit  that measures the resolution of theiImage.
+If it is none: default is generally inch.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="resolutionX" id="id23">
+					<xs:annotation>
+						<xs:documentation>
+                       The number of pixels per ResolutionUnit in the ImageWidth direction.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="resolutionY" id="id24">
+					<xs:annotation>
+						<xs:documentation>
+                       The number of pixels per ResolutionUnit in the ImageHeigth direction.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="rowsPerStrip" id="id116">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="sRGB" id="id235">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="samplesPerPixel" id="id26">
+					<xs:annotation>
+						<xs:documentation>
+                       The number of components per pixel.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="analogueDocumentName" id="id144">
+					<xs:annotation>
+						<xs:documentation>
+                       The name of the document before it was digitised.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="scannerInformation" id="id51">
+					<xs:annotation>
+						<xs:documentation>
+                       Name and other information of the scanner that digitised the image.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="scannerModel" id="id50">
+					<xs:annotation>
+						<xs:documentation>
+                       Name of the scanner model used to digitise the image.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="stripByteCount" id="id145">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="subfileType" id="id146">
+					<xs:annotation>
+						<xs:documentation>
+                       
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="documentLanguage" id="id190">
+					<xs:annotation>
+						<xs:documentation>
+                       Language of the document.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="tileByteCounts" id="id150">
+					<xs:annotation>
+						<xs:documentation>
+                       For each tile, the number of (compressed) bytes in that tile.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="tileLength" id="id148">
+					<xs:annotation>
+						<xs:documentation>
+                       "The tile length (height) in pixels. This is the number of rows in each tile. "
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="tileWidth" id="id147">
+					<xs:annotation>
+						<xs:documentation>
+                       "The tile width in pixels. This is the number of columns in each tile"
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="whitePointX" id="id28">
+					<xs:annotation>
+						<xs:documentation>
+                       Chromaticity of a computer display's nominal white.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="whitePointY" id="id29">
+					<xs:annotation>
+						<xs:documentation>
+                       Chromaticity of a computer display's nominal white.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:enumeration>
+				<xs:enumeration value="normData" id="id7">
+                    <xs:annotation>
+				        <xs:documentation>
+				                      Normdata of any kind of type: pixelvalues, utf8-textdata and so on...
+				        </xs:documentation>
+                    </xs:annotation>
+				</xs:enumeration>
+
+			</xs:restriction>
+		</xs:simpleType>
+							
+</xs:schema>

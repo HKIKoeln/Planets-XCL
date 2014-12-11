@@ -1,0 +1,40 @@
+Image: BLK.BMP
+  Format: BMP (Microsoft Windows bitmap image)
+  Class: DirectClass
+  Geometry: 200x144+0+0
+  Units: PixelsPerCentimeter
+  Type: Grayscale
+  Endianess: Undefined
+  Colorspace: Gray
+  Depth: 8-bit
+  Channel depth:
+    gray: 8-bit
+  Channel statistics:
+    gray:
+      min: 2 (0.00784314)
+      max: 2 (0.00784314)
+      mean: 2 (0.00784314)
+      standard deviation: 0 (0)
+  Histogram:
+     28800: (  2,  2,  2) #020202 rgb(2,2,2)
+  Rendering intent: Undefined
+  Interlace: None
+  Background color: white
+  Border color: rgb(223,223,223)
+  Matte color: grey74
+  Transparent color: black
+  Page geometry: 200x144+0+0
+  Dispose: Undefined
+  Iterations: 0
+  Compression: Undefined
+  Orientation: Undefined
+  Properties:
+    create-date: 2008-04-28T16:41:42+02:00
+    modify-date: 2008-04-28T16:41:39+02:00
+    signature: 3ae28ca36ded757756bbc483c35afe741edcf15b9abaaa5695c6a80640a08702
+  Artifacts:
+    verbose: true
+  Tainted: False
+  Filesize: 84.4277kb
+  Number pixels: 28.125kb
+  Version: ImageMagick 6.4.0 04/07/08 Q16 http://www.imagemagick.org

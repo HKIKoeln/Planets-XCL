@@ -1,0 +1,56 @@
+TIFF Directory at offset 0x8 (8)
+  Subfile Type: (0 = 0x0)
+  Image Width: 32 Image Length: 32
+  Resolution: 72, 72 pixels/inch
+  Bits/Sample: 8
+  Compression Scheme: None
+  Photometric Interpretation: min-is-black
+  Samples/Pixel: 1
+  Rows/Strip: 32
+  Planar Configuration: single image plane
+  Photoshop Data: <present>, 1420 bytes
+  Tag 37724: 0x41,0x64,0x6f,0x62,0x65,0x20,0x50,0x68,0x6f,0x74,0x6f,0x73,0x68,0x6f,0x70,0x20,0x44,0x6f,0x63,0x75,0x6d,0x65,0x6e,0x74,0x20,0x44,0x61,0x74,0x61,0x20,0x42,0x6c,0x6f,0x63,0x6b,0x0
+Strip 0:
+  7f 87 8e 96 9d a4 ab b2 b8 be c4 c9 ce d3 d8 dc e1 e4 e8 eb ee f1 f4 f6
+  f8 fa fb fc fd fe fe ff 76 7f 87 8e 96 9d a4 ab b2 b8 be c4 c9 ce d3 d8
+  dc e1 e4 e8 eb ee f1 f4 f6 f8 fa fb fc fd fe fe 6f 76 7f 87 8e 96 9d a4
+  ab b2 b8 be c4 c9 ce d3 d8 dc e1 e4 e8 eb ee f1 f4 f6 f8 fa fb fc fd fe
+  67 6f 76 7f 87 8e 96 9d a4 ab b2 b8 be c4 c9 ce d3 d8 dc e1 e4 e8 eb ee
+  f1 f4 f6 f8 fa fb fc fd 60 67 6f 76 7f 87 8e 96 9d a4 ab b2 b8 be c4 c9
+  ce d3 d8 dc e1 e4 e8 eb ee f1 f4 f6 f8 fa fb fc 59 60 67 6f 76 7f 87 8e
+  96 9d a4 ab b2 b8 be c4 c9 ce d3 d8 dc e1 e4 e8 eb ee f1 f4 f6 f8 fa fb
+  52 59 60 67 6f 76 7f 87 8e 96 9d a4 ab b2 b8 be c4 c9 ce d3 d8 dc e1 e4
+  e8 eb ee f1 f4 f6 f8 fa 4c 52 59 60 67 6f 76 7f 87 8e 96 9d a4 ab b2 b8
+  be c4 c9 ce d3 d8 dc e1 e4 e8 eb ee f1 f4 f6 f8 45 4c 52 59 60 67 6f 76
+  7f 87 8e 96 9d 00 00 00 00 00 00 c9 ce d3 d8 dc e1 e4 e8 eb ee f1 f4 f6
+  3f 45 4c 52 59 60 67 6f 76 7f 87 8e 00 00 00 00 00 00 00 00 c9 ce d3 d8
+  dc e1 e4 e8 eb ee f1 f4 3a 3f 45 4c 52 59 60 67 6f 76 7f 00 00 00 9d a4
+  ab b2 00 00 00 c9 ce d3 d8 dc e1 e4 e8 eb ee f1 34 3a 3f 45 4c 52 59 60
+  67 6f 76 00 00 8e 96 9d a4 ab b2 00 00 c4 c9 ce d3 d8 dc e1 e4 e8 eb ee
+  2f 34 3a 3f 45 4c 52 59 60 67 6f 00 00 87 8e 96 9d a4 00 00 00 be c4 c9
+  ce d3 d8 dc e1 e4 e8 eb 2a 2f 34 3a 3f 45 4c 52 59 60 67 00 00 7f 87 8e
+  96 00 00 00 00 b8 be c4 c9 ce d3 d8 dc e1 e4 e8 26 2a 2f 34 3a 3f 45 4c
+  52 59 60 00 00 76 7f 87 00 00 00 00 00 b2 b8 be c4 c9 ce d3 d8 dc e1 e4
+  21 26 2a 2f 34 3a 3f 45 4c 52 59 00 00 6f 76 00 00 00 96 00 00 ab b2 b8
+  be c4 c9 ce d3 d8 dc e1 1d 21 26 2a 2f 34 3a 3f 45 4c 52 00 00 67 00 00
+  00 87 8e 00 00 a4 ab b2 b8 be c4 c9 ce d3 d8 dc 19 1d 21 26 2a 2f 34 3a
+  3f 45 4c 00 00 00 00 00 76 7f 87 00 00 9d a4 ab b2 b8 be c4 c9 ce d3 d8
+  16 19 1d 21 26 2a 2f 34 3a 3f 45 00 00 00 00 67 6f 76 7f 00 00 96 9d a4
+  ab b2 b8 be c4 c9 ce d3 13 16 19 1d 21 26 2a 2f 34 3a 3f 00 00 00 59 60
+  67 6f 76 00 00 8e 96 9d a4 ab b2 b8 be c4 c9 ce 0f 13 16 19 1d 21 26 2a
+  2f 34 3a 00 00 4c 52 59 60 67 6f 00 00 87 8e 96 9d a4 ab b2 b8 be c4 c9
+  0d 0f 13 16 19 1d 21 26 2a 2f 34 00 00 00 4c 52 59 60 00 00 00 7f 87 8e
+  96 9d a4 ab b2 b8 be c4 0a 0d 0f 13 16 19 1d 21 26 2a 2f 34 00 00 00 00
+  00 00 00 00 6f 76 7f 87 8e 96 9d a4 ab b2 b8 be 08 0a 0d 0f 13 16 19 1d
+  21 26 2a 2f 34 00 00 00 00 00 00 60 67 6f 76 7f 87 8e 96 9d a4 ab b2 b8
+  06 08 0a 0d 0f 13 16 19 1d 21 26 2a 2f 34 3a 3f 45 4c 52 59 60 67 6f 76
+  7f 87 8e 96 9d a4 ab b2 04 06 08 0a 0d 0f 13 16 19 1d 21 26 2a 2f 34 3a
+  3f 45 4c 52 59 60 67 6f 76 7f 87 8e 96 9d a4 ab 03 04 06 08 0a 0d 0f 13
+  16 19 1d 21 26 2a 2f 34 3a 3f 45 4c 52 59 60 67 6f 76 7f 87 8e 96 9d a4
+  02 03 04 06 08 0a 0d 0f 13 16 19 1d 21 26 2a 2f 34 3a 3f 45 4c 52 59 60
+  67 6f 76 7f 87 8e 96 9d 01 02 03 04 06 08 0a 0d 0f 13 16 19 1d 21 26 2a
+  2f 34 3a 3f 45 4c 52 59 60 67 6f 76 7f 87 8e 96 00 01 02 03 04 06 08 0a
+  0d 0f 13 16 19 1d 21 26 2a 2f 34 3a 3f 45 4c 52 59 60 67 6f 76 7f 87 8e
+  00 00 01 02 03 04 06 08 0a 0d 0f 13 16 19 1d 21 26 2a 2f 34 3a 3f 45 4c
+  52 59 60 67 6f 76 7f 87 00 00 00 01 02 03 04 06 08 0a 0d 0f 13 16 19 1d
+  21 26 2a 2f 34 3a 3f 45 4c 52 59 60 67 6f 76 7f

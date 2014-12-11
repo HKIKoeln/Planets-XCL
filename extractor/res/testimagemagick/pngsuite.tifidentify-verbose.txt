@@ -1,0 +1,62 @@
+Image: pngsuite.tif
+  Format: TIFF (Tagged Image File Format)
+  Class: DirectClass
+  Geometry: 256x256+0+0
+  Resolution: 72x72
+  Print size: 3.55556x3.55556
+  Units: PixelsPerInch
+  Type: TrueColor
+  Base type: TrueColor
+  Endianess: MSB
+  Colorspace: RGB
+  Depth: 8-bit
+  Channel depth:
+    red: 8-bit
+    green: 8-bit
+    blue: 8-bit
+  Channel statistics:
+    red:
+      min: 0 (0)
+      max: 255 (1)
+      mean: 128.92 (0.505569)
+      standard deviation: 101.593 (0.398404)
+    green:
+      min: 0 (0)
+      max: 255 (1)
+      mean: 129.913 (0.509463)
+      standard deviation: 101.702 (0.398831)
+    blue:
+      min: 0 (0)
+      max: 255 (1)
+      mean: 108.413 (0.42515)
+      standard deviation: 102.847 (0.403321)
+  Rendering intent: Undefined
+  Interlace: None
+  Background color: white
+  Border color: rgb(223,223,223)
+  Matte color: grey74
+  Transparent color: black
+  Page geometry: 256x256+0+0
+  Dispose: Undefined
+  Iterations: 0
+  Compression: None
+  Orientation: TopLeft
+  Properties:
+    create-date: 2009-05-06T11:30:19+02:00
+    modify-date: 2009-05-06T11:30:16+02:00
+    signature: 7fcf8ac366b5882df343a58c5f4eca3736ea8a69ee3a8cfa4227603199eea2a5
+    tiff:rows-per-strip: 10
+  Profiles:
+    Profile-8bim: 3724 bytes
+    Caption Writer[177,122]: 0x00000000: 4c386f16 33ff113f ff5fffff ffff2b3d 3effffff  zL8o-3--?-_----+=>--
+0x00000014: 7f5bffff ffff33ff ff74ffff 3affff6f ffff2cff  --[----3--t--:--o--,
+0x00000028: ffff4bff ffff32ff ff7335ff 32ffffff ffffffff  ---K---2--s5-2------
+0x0000003c: 38ffff69 ffffffff 6f43ff69 ff4c79ff 46ff6cff  -8--i----oC
+0x00000050: 69ff4c79 ff46ff6c ff00                        -i-Ly
+    Profile-tiff:37724: 36 bytes
+  Artifacts:
+    verbose: true
+  Tainted: False
+  Filesize: 196kb
+  Number pixels: 64kb
+  Version: ImageMagick 6.4.5 2008-12-02 Q16 OpenMP http://www.imagemagick.org

@@ -1,0 +1,46 @@
+Image: basn0g01.tif
+  Format: TIFF (Tagged Image File Format)
+  Class: DirectClass
+  Geometry: 32x32+0+0
+  Resolution: 72x72
+  Print size: 0.444444x0.444444
+  Units: PixelsPerInch
+  Type: Bilevel
+  Base type: Bilevel
+  Endianess: MSB
+  Colorspace: RGB
+  Depth: 8/1-bit
+  Channel depth:
+    gray: 1-bit
+  Channel statistics:
+    gray:
+      min: 0 (0)
+      max: 255 (1)
+      mean: 124.512 (0.488281)
+      standard deviation: 127.465 (0.499863)
+  Histogram:
+       524: (  0,  0,  0) #000000 black
+       500: (255,255,255) #FFFFFF white
+  Rendering intent: Undefined
+  Interlace: None
+  Background color: white
+  Border color: rgb(223,223,223)
+  Matte color: grey74
+  Transparent color: black
+  Page geometry: 32x32+0+0
+  Dispose: Undefined
+  Iterations: 0
+  Compression: None
+  Orientation: TopLeft
+  Properties:
+    create-date: 2009-05-06T11:30:19+02:00
+    modify-date: 2009-05-06T11:30:16+02:00
+    signature: fc4d2ed3385658f4b1bedea797f74e92058ab3163c8a09b3500d1d7e0fbd00ac
+    tiff:document: /home/Johanna/kdevelop/Extractor/res/tiffsuitneu/basn0g01.tif
+    tiff:rows-per-strip: 64
+  Artifacts:
+    verbose: true
+  Tainted: False
+  Filesize: 1.28kb
+  Number pixels: 1kb
+  Version: ImageMagick 6.4.5 2008-12-02 Q16 OpenMP http://www.imagemagick.org

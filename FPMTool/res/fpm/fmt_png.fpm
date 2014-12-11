@@ -1,0 +1,688 @@
+<format puid='fmt_13_png'>
+    <property>
+        <id>4</id>
+        <name>signature</name>
+        <description>A sequence of bytes that uniquely identifies a certain fileformat</description>
+        <unit/>
+        <type>XCLLabel</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+            <m>
+                <mId> 15</mId>
+                <mName> levenshteinDistance</mName>
+                <mDescription> The Levenshtein distance (syn. Edit distance) is a distance measure
+                    for strings. Two strings are compared with respect to the three basic operations
+                    insert, delete and replace in order to transform string A into string B. The
+                    value for this metric is the number of operations needed for transformation.</mDescription>
+                <mType> 16</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>30</id>
+        <name>imageWidth</name>
+        <description>Width of an image. Corresponds to the x-axis of an image.</description>
+        <unit>pixel</unit>
+        <type>int</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+            <m>
+                <mId> 2</mId>
+                <mName> intDiff</mName>
+                <mDescription> Arithmetical difference of two integer values (A - B)</mDescription>
+                <mType> 16</mType>
+            </m>
+            <m>
+                <mId> 6</mId>
+                <mName> intRatio</mName>
+                <mDescription> Quotient of two integer values (A / B). </mDescription>
+                <mType> 17</mType>
+            </m>
+            <m>
+                <mId> 10</mId>
+                <mName> percDeviation</mName>
+                <mDescription> Percental deviation of two values (A,B) of type integer or rational,
+                    according to the equation: PercDev= d/A*100. A is the source value, d is the
+                    difference of values B and A (B-A). The output value indicates the percental
+                    deviation of value B from value A. An output value of PercDev=0.0 indicates
+                    equal values.</mDescription>
+                <mType> 17</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>2</id>
+        <name>imageHeight</name>
+        <description>Height of an image. Corresponds to the y-axis of a Cartesian coordinate
+            system.</description>
+        <unit>pixel</unit>
+        <type>int</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+            <m>
+                <mId> 2</mId>
+                <mName> intDiff</mName>
+                <mDescription> Arithmetical difference of two integer values (A - B)</mDescription>
+                <mType> 16</mType>
+            </m>
+            <m>
+                <mId> 6</mId>
+                <mName> intRatio</mName>
+                <mDescription> Quotient of two integer values (A / B). </mDescription>
+                <mType> 17</mType>
+            </m>
+            <m>
+                <mId> 10</mId>
+                <mName> percDeviation</mName>
+                <mDescription> Percental deviation of two values (A,B) of type integer or rational,
+                    according to the equation: PercDev= d/A*100. A is the source value, d is the
+                    difference of values B and A (B-A). The output value indicates the percental
+                    deviation of value B from value A. An output value of PercDev=0.0 indicates
+                    equal values.</mDescription>
+                <mType> 17</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>151</id>
+        <name>bitsPerSample</name>
+        <description>Number of bits per sample component.</description>
+        <unit>bit</unit>
+        <type>int</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+            <m>
+                <mId> 2</mId>
+                <mName> intDiff</mName>
+                <mDescription> Arithmetical difference of two integer values (A - B)</mDescription>
+                <mType> 16</mType>
+            </m>
+            <m>
+                <mId> 6</mId>
+                <mName> intRatio</mName>
+                <mDescription> Quotient of two integer values (A / B). </mDescription>
+                <mType> 17</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>20</id>
+        <name>imageType</name>
+        <description>Interpretation of image pixels representing the colour type of an image</description>
+        <unit/>
+        <type>XCLLabel</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>18</id>
+        <name>compression</name>
+        <description>algorithm applied to image data for the purpose of minimizing storage size</description>
+        <unit/>
+        <type>XCLLabel</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>39</id>
+        <name>filter</name>
+        <description>transformation applied to an array of scanlines with the aim of improving their
+            compressibility.</description>
+        <unit/>
+        <type>XCLLabel</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>45</id>
+        <name>interlace</name>
+        <description>algorithm for encoding raster image data in multiple layers with the purpose of
+            improved transmission and image built up.</description>
+        <unit/>
+        <type>XCLLabel</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>7</id>
+        <name>normData</name>
+        <description>XCL specific data, sp. reference for description</description>
+        <unit/>
+        <type/>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+            <m>
+                <mId> 15</mId>
+                <mName> levenshteinDistance</mName>
+                <mDescription> The Levenshtein distance (syn. Edit distance) is a distance measure
+                    for strings. Two strings are compared with respect to the three basic operations
+                    insert, delete and replace in order to transform string A into string B. The
+                    value for this metric is the number of operations needed for transformation.</mDescription>
+                <mType> 16</mType>
+            </m>
+            <m>
+                <mId> 11</mId>
+                <mName> hammingDistance</mName>
+                <mDescription> The hamming distance counts the number of non-corresponding symbols
+                    of two ordered sequences. The sequences must have equal length.</mDescription>
+                <mType> 16</mType>
+            </m>
+            <m>
+                <mId> 12</mId>
+                <mName> simpleMatchCoefficientN</mName>
+                <mDescription> Simple match coefficient is a distance measure that uses the hamming
+                    distance. In addition, the ratio of non-corresponding values (hamming distance)
+                    to the total number of compared pairs of values is calculated. N indicates the
+                    n-grams used for comparison. Default setting is N=1. The result is a rational
+                    number from range 0.0 to 1.0, indicating maximum similarity (0.0) to minimum
+                    (1.0).</mDescription>
+                <mType> 17</mType>
+            </m>           
+            <m>
+                <mId> 17</mId>
+                <mName> euclidDistance</mName>
+                <mDescription> Euclidian distance (syn. L2 distance) is a distance measure; the
+                    square root of the sum of the single squred differnces of corresponding values
+                    of two sets.</mDescription>
+                <mType> 17</mType>
+            </m>
+            <m>
+                <mId> 20</mId>
+                <mName> RMSE</mName>
+                <mDescription> Root mean squared error is a widely used measure for deviation. It is
+                    calculated as the square root of the quotient of the summed up squared
+                    diffeences of corresponding values of two sets and as denominator the number of
+                    values (values in both sets must have the same number).</mDescription>
+                <mType> 17</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>41</id>
+        <name>gamma</name>
+        <description>exponent that describes approximations to certain non-linear transfer functions
+            encountered in image capture and reproduction. Within this International Standard, gamma
+            is the exponent in the transfer function from display_output to image_sample:
+            image_sample = display_output^ gamma, where both display_output and image_sample are
+            scaled to the range 0 to 1.The value is encoded as integer, representing gamma times
+            100000.EXAMPLE A gamma of 1/2.2 would be stored as the integer 45455.</description>
+        <unit/>
+        <type>int</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+            <m>
+                <mId> 2</mId>
+                <mName> intDiff</mName>
+                <mDescription> Arithmetical difference of two integer values (A - B)</mDescription>
+                <mType> 16</mType>
+            </m>
+            <m>
+                <mId> 6</mId>
+                <mName> intRatio</mName>
+                <mDescription> Quotient of two integer values (A / B). </mDescription>
+                <mType> 17</mType>
+            </m>
+            <m>
+                <mId> 10</mId>
+                <mName> percDeviation</mName>
+                <mDescription> Percental deviation of two values (A,B) of type integer or rational,
+                    according to the equation: PercDev= d/A*100. A is the source value, d is the
+                    difference of values B and A (B-A). The output value indicates the percental
+                    deviation of value B from value A. An output value of PercDev=0.0 indicates
+                    equal values.</mDescription>
+                <mType> 17</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>25</id>
+        <name>rgbPalette</name>
+        <description>palette for index-coloured image type. Each pixel is a composition of red,
+            green and blue colour values which shall appear in exactly this order</description>
+        <unit/>
+        <type>int</type>
+        <metrics>
+            <m>
+                <mId> 11</mId>
+                <mName> hammingDistance</mName>
+                <mDescription> The hamming distance counts the number of non-corresponding symbols
+                    of two ordered sequences. The sequences must have equal length.</mDescription>
+                <mType> 16</mType>
+            </m>
+            <m>
+                <mId> 12</mId>
+                <mName> simpleMatchCoefficientN</mName>
+                <mDescription> Simple match coefficient is a distance measure that uses the hamming
+                    distance. In addition, the ratio of non-corresponding values (hamming distance)
+                    to the total number of compared pairs of values is calculated. N indicates the
+                    n-grams used for comparison. Default setting is N=1. The result is a rational
+                    number from range 0.0 to 1.0, indicating maximum similarity (0.0) to minimum
+                    (1.0).</mDescription>
+                <mType> 17</mType>
+            </m>           
+        </metrics>
+    </property>  
+    <property>
+        <id>32</id>
+        <name>backgroundColour</name>
+        <description>solid colour for the background of an image to be used when presenting the
+            image.</description>
+        <unit/>
+        <type>int</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+            <m>
+                <mId> 6</mId>
+                <mName> intRatio</mName>
+                <mDescription> Quotient of two integer values (A / B). </mDescription>
+                <mType> 17</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>42</id>
+        <name>histogram</name>
+        <description>approximate usage frequency of each colour in the palette index (rgbPalette)
+            </description>
+        <unit/>
+        <type>int</type>
+        <metrics>
+            <m>
+                <mId> 11</mId>
+                <mName> hammingDistance</mName>
+                <mDescription> The hamming distance counts the number of non-corresponding symbols
+                    of two ordered sequences. The sequences must have equal length.</mDescription>
+                <mType> 16</mType>
+            </m>
+            <m>
+                <mId> 17</mId>
+                <mName> euclidDistance</mName>
+                <mDescription> Euclidian distance (syn. L2 distance) is a distance measure; the
+                    square root of the sum of the single squred differnces of corresponding values
+                    of two sets.</mDescription>
+                <mType> 17</mType>
+            </m>
+            <m>
+                <mId> 20</mId>
+                <mName> RMSE</mName>
+                <mDescription> Root mean squared error is a widely used measure for deviation. It is
+                    calculated as the square root of the quotient of the summed up squared
+                    diffeences of corresponding values of two sets and as denominator the number of
+                    values (values in both sets must have the same number).</mDescription>
+                <mType> 17</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>27</id>
+        <name>transparency</name>
+        <description>Alpha information that allows the reference image to be reconstructed</description>
+        <unit/>
+        <type>int</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>28</id>
+        <name>whitePointX</name>
+        <description>chromaticity of a computer display's nominal white x value</description>
+        <unit/>
+        <type>int</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>29</id>
+        <name>whitePointY</name>
+        <description>chromaticity of a computer display's nominal white y value</description>
+        <unit/>
+        <type>int</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+        </metrics>
+    </property>  
+    <property>
+        <id>58</id>
+        <name>textualDataKeyword</name>
+        <description>keyword for textual information associated with the image.</description>
+        <unit/>
+        <type>string</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+            <m>
+                <mId> 15</mId>
+                <mName> levenshteinDistance</mName>
+                <mDescription> The Levenshtein distance (syn. Edit distance) is a distance measure
+                    for strings. Two strings are compared with respect to the three basic operations
+                    insert, delete and replace in order to transform string A into string B. The
+                    value for this metric is the number of operations needed for transformation.</mDescription>
+                <mType> 16</mType>
+            </m>
+        </metrics>
+    </property>      
+    <property>
+        <id>23</id>
+        <name>resolutionX</name>
+        <description>number of pixels per resolution unit in horizontal direction</description>
+        <unit>pixel</unit>
+        <type>int</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+            <m>
+                <mId> 2</mId>
+                <mName> intDiff</mName>
+                <mDescription> Arithmetical difference of two integer values (A - B)</mDescription>
+                <mType> 16</mType>
+            </m>
+            <m>
+                <mId> 6</mId>
+                <mName> intRatio</mName>
+                <mDescription> Quotient of two integer values (A / B). </mDescription>
+                <mType> 17</mType>
+            </m>
+            <m>
+                <mId> 10</mId>
+                <mName> percDeviation</mName>
+                <mDescription> Percental deviation of two values (A,B) of type integer or rational,
+                    according to the equation: PercDev= d/A*100. A is the source value, d is the
+                    difference of values B and A (B-A). The output value indicates the percental
+                    deviation of value B from value A. An output value of PercDev=0.0 indicates
+                    equal values.</mDescription>
+                <mType> 17</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>24</id>
+        <name>resolutionY</name>
+        <description>number of pixels per resolution unit in vertical direction</description>
+        <unit>pixel</unit>
+        <type>int</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+            <m>
+                <mId> 2</mId>
+                <mName> intDiff</mName>
+                <mDescription> Arithmetical difference of two integer values (A - B)</mDescription>
+                <mType> 16</mType>
+            </m>
+            <m>
+                <mId> 6</mId>
+                <mName> intRatio</mName>
+                <mDescription> Quotient of two integer values (A / B). </mDescription>
+                <mType> 17</mType>
+            </m>
+            <m>
+                <mId> 10</mId>
+                <mName> percDeviation</mName>
+                <mDescription> Percental deviation of two values (A,B) of type integer or rational,
+                    according to the equation: PercDev= d/A*100. A is the source value, d is the
+                    difference of values B and A (B-A). The output value indicates the percental
+                    deviation of value B from value A. An output value of PercDev=0.0 indicates
+                    equal values.</mDescription>
+                <mType> 17</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>22</id>
+        <name>resolutionUnit</name>
+        <description>measure unit for measuring resolution</description>
+        <unit/>
+        <type>XCLLabel</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>53</id>
+        <name>suggestedPaletteName</name>
+        <description>name of a reduced palette that may be used when the display device is not
+            capable of displaying the full range of colours in the image.</description>
+        <unit/>
+        <type>string</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+            <m>
+                <mId> 15</mId>
+                <mName> levenshteinDistance</mName>
+                <mDescription> The Levenshtein distance (syn. Edit distance) is a distance measure
+                    for strings. Two strings are compared with respect to the three basic operations
+                    insert, delete and replace in order to transform string A into string B. The
+                    value for this metric is the number of operations needed for transformation.</mDescription>
+                <mType> 16</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>54</id>
+        <name>suggestedPaletteSampleDepth</name>
+        <description>sample depth of a suggested palette.</description>
+        <unit/>
+        <type>int</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+            <m>
+                <mId> 6</mId>
+                <mName> intRatio</mName>
+                <mDescription> Quotient of two integer values (A / B). </mDescription>
+                <mType> 17</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>56</id>
+        <name>suggestedPaletteAlpha</name>
+        <description>alpha value for suggested palette.</description>
+        <unit/>
+        <type>int</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+            <m>
+                <mId> 6</mId>
+                <mName> intRatio</mName>
+                <mDescription> Quotient of two integer values (A / B). </mDescription>
+                <mType> 17</mType>
+            </m>
+            <m>
+                <mId> 10</mId>
+                <mName> percDeviation</mName>
+                <mDescription> Percental deviation of two values (A,B) of type integer or rational,
+                    according to the equation: PercDev= d/A*100. A is the source value, d is the
+                    difference of values B and A (B-A). The output value indicates the percental
+                    deviation of value B from value A. An output value of PercDev=0.0 indicates
+                    equal values.</mDescription>
+                <mType> 17</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>57</id>
+        <name>suggestedPaletteFrequency</name>
+        <description>frequency of suggested palette.</description>
+        <unit/>
+        <type>int</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+            <m>
+                <mId> 6</mId>
+                <mName> intRatio</mName>
+                <mDescription> Quotient of two integer values (A / B). </mDescription>
+                <mType> 17</mType>
+            </m>
+            <m>
+                <mId> 10</mId>
+                <mName> percDeviation</mName>
+                <mDescription> Percental deviation of two values (A,B) of type integer or rational,
+                    according to the equation: PercDev= d/A*100. A is the source value, d is the
+                    difference of values B and A (B-A). The output value indicates the percental
+                    deviation of value B from value A. An output value of PercDev=0.0 indicates
+                    equal values.</mDescription>
+                <mType> 17</mType>
+            </m>
+        </metrics>
+    </property>
+    <property>
+        <id>59</id>
+        <name>textualDataString</name>
+        <description>Textual information associated with the image.</description>
+        <unit/>
+        <type>string</type>
+        <metrics>
+            <m>
+                <mId> 1</mId>
+                <mName> equal</mName>
+                <mDescription> simple comparison of two values (A, B) of any type on equality. Type
+                    of output value: Boolean (true, false).</mDescription>
+                <mType> 12</mType>
+            </m>
+            <m>
+                <mId> 15</mId>
+                <mName> levenshteinDistance</mName>
+                <mDescription> The Levenshtein distance (syn. Edit distance) is a distance measure
+                    for strings. Two strings are compared with respect to the three basic operations
+                    insert, delete and replace in order to transform string A into string B. The
+                    value for this metric is the number of operations needed for transformation.</mDescription>
+                <mType> 16</mType>
+            </m>
+        </metrics>
+    </property>
+</format>

@@ -1,0 +1,84 @@
+%PDF-1.0
+1 0 obj
+<<
+/Type /Catalog
+/Pages 3 0 R
+/Outlines 2 0 R
+>>
+endobj
+2 0 obj
+<<
+/Type /Outlines
+/Count 0
+>>
+endobj
+3 0 obj
+<<
+/Type /Pages
+/Count 1
+/Kids [ 4 0 R ]
+>>
+endobj
+4 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources << /ProcSet 6 0 R >>
+/MediaBox [ 0 0 612 792 ]
+/Contents 5 0 R
+>>
+endobj
+5 0 obj
+<< /Length 612 >>
+stream
+% Draw a black line segment, using
+% the default line width.
+150 250 m
+150 350 l
+S
+% Draw thicker, dashed line segment.
+4 w % Set a linewidth of 4 points.
+[4 6] 0 d
+% Set a dash pattern with 4 units on, 6 units off.
+150 250 m
+400 250 l
+S
+[ ] 0 d %reset dash pattern to a solid line
+1 w %reset linewidth to 1 unit
+% Draw a rectangle, 1 unit light blue border,
+% filled with red
+.5 .75 1 rg % light blue for fill color
+1 0 0 RG % red for stroke color
+200 300 50 75 re
+B
+% Draw a curve using a Bézier curve,
+% filled with gray and with a colored border.
+.5 .1 .2 RG
+0.7 g
+300 300 m
+300 400 400 400 400 300 c
+b
+endstream
+endobj
+6 0 obj
+[
+/PDF
+]
+endobj
+xref
+0 7
+0000000000 65535 f
+0000000016 00000 n
+0000000086 00000 n
+0000000136 00000 n
+0000000200 00000 n
+0000000328 00000 n
+0000000992 00000 n
+trailer
+<<
+/Size 8
+/Root 1 0 R
+>>
+startxref
+1110
+%%EOF

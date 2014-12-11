@@ -1,0 +1,56 @@
+TIFF Directory at offset 0x8 (8)
+  Subfile Type: (0 = 0x0)
+  Image Width: 32 Image Length: 32
+  Resolution: 72, 72 pixels/inch
+  Bits/Sample: 8
+  Compression Scheme: None
+  Photometric Interpretation: min-is-black
+  Samples/Pixel: 1
+  Rows/Strip: 32
+  Planar Configuration: single image plane
+  Photoshop Data: <present>, 1710 bytes
+  Tag 37724: 0x41,0x64,0x6f,0x62,0x65,0x20,0x50,0x68,0x6f,0x74,0x6f,0x73,0x68,0x6f,0x70,0x20,0x44,0x6f,0x63,0x75,0x6d,0x65,0x6e,0x74,0x20,0x44,0x61,0x74,0x61,0x20,0x42,0x6c,0x6f,0x63,0x6b,0x0
+Strip 0:
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ee ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 ee ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff aa 00 66 ff 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff 11 ff 00 ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 77 33 ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff dd ff ff ff ff ff
+  ff ff ff ff 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff 00 ff ff ee ff ff ff ff ff ff 00 ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff 00 ff ff 00 ff ff ff ff ff ff 00 88 ff 00
+  00 00 00 00 dd 00 00 ff ff ff ff ff ff ff 00 cc ff ff 00 ff ff 00 ff ff
+  ff ff 00 ff 77 00 00 ff ff ff 88 00 99 ff 00 dd ff ff ff ff ff ff 00 ff
+  ff 00 ff ff 88 22 ff ff ff ff 00 44 ff ff ff ff 00 00 ff ff ff ff 00 ff
+  ff ff ff ff ff ff 00 ff ff 00 ff ff 00 ff ff ff 00 44 00 00 ff ff 00 00
+  ff ff ff ff ff 00 ff ff ff 00 ff ff ff ff 33 ff ff 00 ff ff 00 ff ff ff
+  00 77 ee ff 66 00 ff ff ff ff ff ff 00 ff ff ff ff 00 ff ff ff 33 ff ff
+  11 ff ff ff 00 ff ff ff 00 ff cc 00 ff ff ff ff ff ff ff 00 ff ff ff ff
+  ff 00 ff ff ff 00 ff ff 00 ff ff 33 bb ff ff ff ff 00 aa ff ff ff ff ff
+  ff ff 00 ff ff ff ff ff ff 00 ff ff ff 00 ff ff 00 ff ff 00 ff ff ff 00
+  22 ff ff ff ff ff ff ff ff 00 ff ff ff ff ff ff ff 00 ff ff ff 00 77 bb
+  22 ff ff 00 ff 99 00 ff ff ff ff ff ff ff ff ff 00 ff ff ff ff ff ff ff
+  ff 00 ff ff ff 00 ff 00 ff ff ff 99 00 00 ff ff ff ff ff ff ff ff ee 00
+  ff ff ff ff ff ff ff ff ff dd 99 00 ff 00 ff 00 ff ff 00 00 ff ff ff ff
+  ff ff ff ff ff bb 00 ff ff ff ff ff ff ff ff ff ff ff 00 00 ff 00 ff 00
+  ff ff 00 ff ff ff ff ff ff ff ff ff 77 00 ff ff ff ff ff ff ff ff ff ff
+  ff ff 00 ff 00 aa ff 00 ff ff dd ff ff ff ff ff ff ff ff 33 22 ff ff ff
+  ff ff ff ff ff ff ff ff ff ff 00 ff 00 ff ff ff ff ff ff ff ff ff ff ff
+  ff ff 00 66 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff 00 bb ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00 ee ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff 00
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff cc 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff bb 00 ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff bb 00 ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff 00 00 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff 00 11 ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+  ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff

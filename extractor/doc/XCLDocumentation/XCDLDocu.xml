@@ -1,0 +1,1375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<book>
+  <title>XCDL</title>
+
+  <subtitle>Extensible Characterisation Definition Language
+  Documentation</subtitle>
+
+  <bookinfo>
+    <author>
+      <surname>UzK - University at Cologne - HKI</surname>
+    </author>
+
+    <bibliomisc>Project: IST-2006-033789 PLANETS</bibliomisc>
+
+    <bibliomisc>Deliverable: PC/2 / D3</bibliomisc>
+  </bookinfo>
+
+  <preface>
+    <title>Preface</title>
+
+    <figure>
+      <title>Planets Logo</title>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="resources/planetsLogo.gif" />
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <table>
+      <title>Paper-Description</title>
+
+      <tgroup cols="2">
+        <tbody>
+          <row>
+            <entry>Project Number</entry>
+
+            <entry>IST-2006-033789</entry>
+          </row>
+
+          <row>
+            <entry>Project Title</entry>
+
+            <entry>PLANETS</entry>
+          </row>
+
+          <row>
+            <entry>Title of Deliverable</entry>
+
+            <entry>XCDL description set</entry>
+          </row>
+
+          <row>
+            <entry>Deliverable Number</entry>
+
+            <entry>D 3</entry>
+          </row>
+
+          <row>
+            <entry>Contributing Sub-project and Work-package</entry>
+
+            <entry>PC/2</entry>
+          </row>
+
+          <row>
+            <entry>Deliverable</entry>
+
+            <entry>Internal</entry>
+          </row>
+
+          <row>
+            <entry>Dissemination Level</entry>
+
+            <entry>PP = Restricted to other programme participants (including
+            the Commission Services)</entry>
+          </row>
+
+          <row>
+            <entry>Deliverable Nature</entry>
+
+            <entry>Report</entry>
+          </row>
+
+          <row>
+            <entry>Contractual Delivery Date</entry>
+
+            <entry>31th July 2007</entry>
+          </row>
+
+          <row>
+            <entry>Actual Delivery Date</entry>
+
+            <entry>30th November 2007</entry>
+          </row>
+
+          <row>
+            <entry>Author(s)</entry>
+
+            <entry>UzK</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+
+    <abstract>
+      <para><emphasis>The aim of this document is to describe the actual
+      status of the XCDL design development. In its later stages it should be
+      read as a language documentation and specification. It also should
+      complement the internal documentation of the XML Schemas that defines
+      the formal structure of the XCDL.</emphasis></para>
+    </abstract>
+
+    <section>
+      <title>Document Control</title>
+
+      <section>
+        <title>Keyword list:</title>
+
+        <para>XCDL, XCL, XCEL, PC, Extensible Characterisation Definition
+        Language, Format Description Language</para>
+      </section>
+
+      <section>
+        <title>Contributors</title>
+        
+        
+
+        <table>
+          <title>Contributors</title>
+          
+          <tgroup cols="4">
+            <thead>
+              <row>
+                <entry align="center">Person</entry>
+                
+                <entry align="center">Role</entry>
+                
+                <entry align="center">Partner</entry>
+                
+                <entry align="center">Contribution</entry>
+              </row>
+            </thead>
+            
+            <tbody>
+              <row>
+                <entry>Thaller, Manfred</entry>
+                
+                <entry>Lead, author</entry>
+                
+                <entry>UzK</entry>
+                
+                <entry>Common coaction</entry>
+              </row>
+              
+              <row>
+                <entry>Schnasse, Jan</entry>
+                
+                <entry>Development, author</entry>
+                
+                <entry>UzK</entry>
+                
+                <entry>Common coaction</entry>
+              </row>
+              
+              <row>
+                <entry>Heydegger, Volker</entry>
+                
+                <entry>Development, author</entry>
+                
+                <entry>UzK</entry>
+                
+                <entry>Common coaction</entry>
+              </row>
+              
+              <row>
+                <entry>Neumann, Johanna</entry>
+                
+                <entry>Development, author</entry>
+                
+                <entry>UzK</entry>
+                
+                <entry>Common coaction</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </section>
+
+      <section>
+        <title>Document Approval</title>
+
+        <table>
+          <title>Document Approval</title>
+
+          <tgroup cols="3">
+            <thead>
+              <row>
+                <entry align="center">Person</entry>
+
+                <entry align="center">Role</entry>
+
+                <entry align="center">Partner</entry>
+              </row>
+            </thead>
+
+            <tbody>
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </section>
+
+      <section>
+        <title>Distribution</title>
+
+        <table>
+          <title>Distribution</title>
+
+          <tgroup cols="3">
+            <thead>
+              <row>
+                <entry align="center">Person</entry>
+
+                <entry align="center">Role</entry>
+
+                <entry align="center">Partner</entry>
+              </row>
+            </thead>
+
+            <tbody>
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </section>
+
+      <section>
+        <title>Revision History</title>
+
+        <table>
+          <title>Revision History</title>
+
+          <tgroup cols="4">
+            <thead>
+              <row>
+                <entry align="center">Issue</entry>
+
+                <entry align="center">Author</entry>
+
+                <entry align="center">Date</entry>
+
+                <entry align="center">Discription</entry>
+              </row>
+            </thead>
+
+            <tbody>
+              <row>
+                <entry>0.1</entry>
+
+                <entry>Heydegger, Volker</entry>
+
+                <entry>30/04/2006</entry>
+
+                <entry>Initial draft version for internal review</entry>
+              </row>
+
+              <row>
+                <entry>0.2</entry>
+
+                <entry>Schnasse, Jan</entry>
+
+                <entry>30/05/2006</entry>
+
+                <entry></entry>
+              </row>
+
+              <row>
+                <entry>0.3</entry>
+
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </section>
+
+      <section>
+        <title>References</title>
+
+        <table>
+          <title>References</title>
+
+          <tgroup cols="4">
+            <thead>
+              <row>
+                <entry align="center">Ref.</entry>
+
+                <entry align="center">Document</entry>
+
+                <entry align="center">Date</entry>
+
+                <entry align="center">Details and Version</entry>
+              </row>
+            </thead>
+
+            <tbody>
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+
+              <row>
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+
+                <entry></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </section>
+    </section>
+
+    <section>
+      <title>Executive Summary</title>
+
+      <para></para>
+    </section>
+  </preface>
+
+  <toc></toc>
+
+  <preface>
+    <title>Introduction</title>
+
+    <section>
+      <title>Summary</title>
+
+      <para>The XCDL is designed with respect to the overall goal to provide a
+      means for describing digital objects. The underlying technology is
+      primarily XML and XML schema which are the technical backbone of the
+      language. The realisation of the XCDL is the instantiation of the XCDL
+      (the XCDL document) applied to a digital object. Digital objects are
+      characterised through certain attributes, the properties of the digital
+      objects. A property has always a dedicated value. Each XCDL document
+      therefore describes digital objects through the specification of its
+      properties values. According to its OAIS definition [OAIS02], a digital
+      object is composed of a set of bit sequences. Three items are always
+      appropriate for digital objects as well: (1) The set of bit sequences is
+      always manifest, i.e. physically located on a storage medium. Operating
+      systems usually organize bit sequences as files on the storage medium.
+      (2) Bit sequences organized as files are subject to a specific
+      formatting, determined by the file format specification (primary
+      format).<footnote>
+          <para>For the possibility to include properties which do not base on
+          the format description or the accordant XCEL description see section
+          &lt;property&gt; .</para>
+        </footnote> This is nothing but a set of interpretation instructions
+      to be applied to the bit sequences. The set of properties for a digital
+      object is also determined by the format specification. (3) Parts of the
+      bit sequences interpreted by the constraints of the primary file format
+      may be subject to additional interpretation rules (secondary format).
+      This is always the case for embedded objects (i.e. object within an
+      object). A digital object described by a XCDL document shall be
+      understood under these presumptions. There a some consequences resulting
+      from this concerning the structure of a digital object and its
+      representation through the XCDL: (1) A digital object can be physically
+      distributed, i.e. the bit sequences can not only be organized in one
+      single file but also in many. This is solved through the
+      &lt;composition&gt; element set. (2) Every sequence of bits formatted by
+      file format X can be captured as a holistic information unit. This is
+      solved through the &lt;object&gt; element set. (3) Sequences of bits can
+      be subject to more than just one single format, i.e. underlie different
+      format specifications (or more general: rules for interpretation). This
+      is solved through the possibility to relate objects with each other
+      using the &lt;objRel&gt; element. As a result of this, from the
+      viewpoint of the XCDL, a digital object is a sequence of bits, subject
+      to X sets of interpretation rules (commonly called ‘format’ or
+      ‘formatting’) organized as one or many files. For example, a sequence of
+      bits can be stored in a single file, formatted as ‘text’ as its primary
+      underlying file format. This digital object can be further decoded by
+      applying another set of interpretation rules which could be defined
+      through the WWW 3C XML standard. For more details on relationships of
+      objects see sections &lt;composition&gt; and see section
+      &lt;dataRef&gt;. Besides this, in practice certain digital objects can
+      only be interpreted in a meaningful way if they are taken as an entity.
+      Examples for this are the shape file format [ESRI98] for geographical
+      data or the new office open XML format [MS05]. In such cases, several
+      digital objects, distributed on several files, potentially with
+      different primary formats, are seen as a single logical unit. The XCDL
+      also provides a solution to cope with such digital entities through
+      applying the &lt;composition&gt; element set.</para>
+    </section>
+  </preface>
+
+  <chapter>
+    <title>Terms, definitions, abbreviated terms</title>
+
+    <para>The terms 'shall' and 'must' refer to mandatory requirements.
+    'should' refers to recommended items and 'may' refers to optional
+    items.</para>
+  </chapter>
+
+  <chapter>
+    <title>Concepts</title>
+
+    <para></para>
+  </chapter>
+
+  <chapter>
+    <title>XCDL Core Schema Elements</title>
+
+    <para>The core XCDL schema elements are included within the ‘XCDLCore.xsd’
+    file.</para>
+
+    <section>
+      <title>&lt;xcdl&gt;</title>
+
+      <para>Every XCDL document starts with the &lt;xcdl&gt; root element set
+      that wraps optionally the &lt;composition&gt; child tag set and at least
+      one &lt;object&gt; element set. A &lt;xcdl&gt; element shall have an
+      identification number (attribute: id). The schema allows any string or
+      integer number to be validated for this ID. It is recommended to use
+      unique identifiers. At least the ID should be unique in a certain
+      namespace to enable extensive use of XCDL functionalities (see
+      &lt;composition&gt;).</para>
+    </section>
+
+    <section>
+      <title>&lt;composition&gt;</title>
+
+      <para>If there is a need to distribute digital objects on various XCDL
+      documents (e.g., large objects may be split on various XCDL documents
+      for the purpose of improved processing) the use of the
+      &lt;composition&gt; element is indicated for consistent binding. Note
+      that this element can be used unbounded in each XCDL document, depending
+      on the number of digital objects it is part of. Example: According to
+      its specification, PNG [PNG03] files may contain an embedded ICC
+      profile. Such a specific ICC profile can be described as a discrete
+      digital object (using the &lt;object&gt; element). Every other digital
+      object that embeds it too can then relate to this modularized object via
+      the &lt;composition&gt; structure (given that the XCDL document provides
+      an identification number that is unique in a certain namespace). Within
+      the &lt;composition&gt; tag set, there is only one child allowed. This
+      is the &lt;xcdlRef&gt; element. It is created to wrap and combine the
+      single partial objects which are referenced to by the &lt;obj&gt;
+      element. It provides an attribute ‘id’ for inserting the appropriate
+      objects reference ID. &lt;xcdlRed&gt; itself provides this attribute for
+      referencing to the appropriate ID of the referenced XCDL document. The
+      &lt;composition&gt; element must be used if there is an actual relation
+      of parts of a digital object on the data level (see &lt;dataRef&gt;) or
+      between digital objects (e.g., embedded objects), otherwise such
+      relations can not be retraced. In such a case, any XCDL builder shall
+      create the element automatically. The element is also designed to be
+      used to describe logical units (compare section 1.). In this case, the
+      attribute ‘use’ shall be used and set on value ‘logical’ to indicate
+      such a relation. This should be done via the user interface for
+      presetting the XCDL output.</para>
+
+      <example>
+        <title>XCDL: Usage of the &lt;composition&gt; element</title>
+
+        <programlisting>&lt;xcdl ... id=”<emphasis id="hki_bgtext_yellow">A123456</emphasis>”&gt;
+	&lt;composition&gt;
+		&lt;xcdlRef id=”<emphasis id="hki_bgtext_green">A123457</emphasis>”&gt;
+			&lt;obj id=”<emphasis id="hki_bgtext_green">1</emphasis>”/&gt;
+		&lt;/xcdlRef&gt;
+		&lt;xcdlRef id=”<emphasis id="hki_bgtext_pink">A123458</emphasis>”&gt;
+			&lt;obj id=”<emphasis id="hki_bgtext_pink">4</emphasis>”/&gt;
+		&lt;/xcdlRef&gt;
+	&lt;/composition&gt;
+	&lt;object id=”<emphasis id="hki_bgtext_yellow">1</emphasis>” ...&gt;
+...
+&lt;/xcdl&gt;
+
+&lt;xcdl ... id=”<emphasis id="hki_bgtext_green">A123457</emphasis>”&gt;
+	&lt;object id=”<emphasis id="hki_bgtext_green">1</emphasis>”&gt;...&lt;/object&gt;
+&lt;/xcdl&gt;
+&lt;xcdl ... id=”<emphasis id="hki_bgtext_pink">A123458</emphasis>”&gt;
+	&lt;object id=”<emphasis id="hki_bgtext_pink">4</emphasis>”&gt;...&lt;/object&gt;
+&lt;/xcdl&gt;</programlisting>
+      </example>
+
+      <para>Example XCDL-1 shows a &lt;composition&gt; structure. The XCDL
+      document with id=”A123456” uses two objects from other XCDL documents
+      (“A123457” and “A123458”). The objects are referenced and identified
+      through their ID provided within the &lt;object&gt; elements. The whole
+      digital object is composed of three objects: The one (id=“1”) that is
+      part of “A123456”and the others which are part of “A123457”, id=”1” and
+      “A123458”, id=”4”. Note: Applying this structure enables to widely
+      distribute digital objects and to describe them by redundancy. The
+      single XCDL documents can be distributed not only locally within a
+      single repository of an archive X or a library Y but also can be
+      distributed on several repositories of different archives Z. As a
+      consequence, digital objects can be described using references to
+      redundant stored objects. This may be helpful to guarantee long-term
+      access to digital objects For more details on the objects ID, see the
+      next section.</para>
+    </section>
+
+    <section>
+      <title>&lt;object&gt;</title>
+
+      <para>Every XCDL document shall include at least one digital object
+      mapped to the &lt;object&gt; element. For all &lt;object&gt; elements an
+      identification number (attribute “id”) is required. Note that this ID
+      only shall be unique within the XCDL document if the wrapping
+      &lt;xcdl&gt; element has a unique ID. The &lt;object&gt; element has two
+      child elements, &lt;data&gt; and &lt;normData&gt; for optional usage and
+      a third one with required usage, the &lt;property&gt; element. The
+      attribute “natFormat” is dedicated to provide information about the
+      native (original, source) format. The designation should be a discrete
+      label from a predefined vocabulary. For this version of the XCDL, the
+      PRONOM identifiers [PRO06] for file formats are recommended.</para>
+
+      <section>
+        <title>&lt;data&gt;</title>
+
+        <para>The &lt;data&gt; element wraps the full data of the source
+        object. By default, character data shall be encoded in UTF-16, binary
+        data shall be represented as hexadecimal encoded binary data. For
+        relation and reference purposes, an identification number (attribute
+        “id”) is required. Note that this ID shall only be unique within the
+        XCDL document. If there are relations in terms of a
+        &lt;composition&gt; structure, the IDs of the XCDL documents
+        (&lt;xcdl&gt; element) should additionally be unique within a certain
+        namespace. Besides others, wrapping the full source objects data may
+        be useful for data based references of properties (see
+        &lt;property&gt;).</para>
+      </section>
+
+      <section>
+        <title>&lt;normData&gt;</title>
+
+        <para>This repeatable element wraps the source data in a context-free
+        representation (normalised to a standard representation). All byte
+        sequences which relate to specific properties or which appear in an
+        encoded representation are removed or decoded to the standard UTF-16
+        representation (also required for &lt;normData&gt;). So normalised
+        data is an abstraction of format internal representation of content
+        data. The representation as normalised data is primarily important for
+        an exact designation of property to data relations as references on
+        normalised data (see &lt;dataRef&gt;). The &lt;normData&gt; element
+        provides two attributes. An identification number (attribute ‘id’) is
+        required, again to realize relational functionality, i.e. to enable
+        references of property values to parts of the data. Attribute ‘type’
+        is optional. If it is used it indicates the type of information the
+        data represents. For details see section 4 about the basic XCDL types.
+        Note that if the normalised data is splitted on more than one
+        &lt;normData&gt; element, the IDs shall reflect the original structure
+        (i.e. order) of the data. Moreover, if there is a reference to
+        normalised data, the entire data shall be normalised by the XCDL
+        builder in order to guarantee the functionality of the referencing
+        mechanism (see &lt;dataRef&gt; for more details). The normalisation is
+        done by a designated tool (software module) , part of the entire
+        extensible characterisation language processing software.</para>
+
+        <para>• This is a text.</para>
+
+        <example>
+          <title>XCDL: Data and normalised data compared</title>
+
+          <programlisting>&lt;data id=”1”&gt;
+{\rtf1\ansi\ansicpg1252\deff0\deflang1031{\fonttbl{\f0\fswiss\fcharset0 Arial;}}\viewkind4\uc1\pard\f0\fs20 \bullet This is a \b text\b0 .\par}
+&lt;/data&gt;
+
+&lt;normData id=”1” type=”text”&gt;
+• This is a text.
+&lt;/normData&gt;</programlisting>
+        </example>
+
+        <para>Example XCDL-2 presents the data from a source object wrapped as
+        a whole in the &lt;data&gt; element and as normalised data in the
+        &lt;normData&gt; element. The source object is formatted in rich-text
+        (RTF, second representation in the example). RTF [RTF01] marks up text
+        with control words which encode a specific property to be applied to a
+        certain sequence of bytes (characters). In this example, ‘text’ is
+        formatted as bold, i.e. the rendered object should appear with the
+        ‘text’ string put in bold letters (first representation). Additionally
+        a bullet is encoded in RTF with control word ‘\bullet’.The normalised
+        string representation abstracts from this internal format specific
+        representation. Any other file that contains exactly the same string
+        but may be described in a different format also uses different
+        controllings for internal format-specific representation. This
+        difference is compensated in the normalised representation. For the
+        purpose of the exact correlation of properties to designated content
+        representing strings (see &lt;dataRef&gt;) and for the purpose of
+        comparing digital objects which come from diverse native formats,
+        normalisation of data is extremely advantageous. Note that neither
+        &lt;data&gt; nor &lt;normData&gt; are defined as required
+        elements.</para>
+
+        <section>
+          <title>Standard representation for images</title>
+
+          <para>The normalised data of an object with type image is
+          represented as a sequence of whole bytes. For images with more than
+          one ribbon, the data is stored in a chunky way (e.g.
+          R,G,B,A,R,G,B,A,...). The byteorder is big endian (most significant
+          (MSB) first, least significant (LSB) last).</para>
+
+          <example>
+            <title>Example, true color image with color depth 16:</title>
+
+            <programlisting>MSB(red_1), LSB(red_1), MSB(green_1), LSB(green_1), MSB(blue_1), 
+LSB(blue_1), MSB(red_2), LSB(red_2), MSB(green_2), LSB(green_2), 
+MSB(blue_2), LSB(blue_2),&nbsp; ..., MSB(red_n), LSB(red_n), MSB(green_n), 
+LSB(green_n), MSB(blue_n), LSB(blue_n) </programlisting>
+          </example>
+        </section>
+      </section>
+
+      <section>
+        <title>&lt;property&gt;</title>
+
+        <para>Properties are the core unit through which a digital object can
+        be characterised. The XCDL maps properties with the &lt;property&gt;
+        element. Three attributes are assigned: Again, an identification
+        number (attribute ‘id’) is required for relational ends. The
+        attributes ‘source’ and ‘cat’ are intended for optional use. ‘Source’
+        indicates the source the property is derived from. In most cases this
+        will be value 'raw', means derived from the source object data. Value
+        'implicit' means the property is not fixed to the source object data
+        but derived from the source objects format specification. Attribute
+        ‘extended’ is assigned if there is no derivation from the source
+        object or the source objects specification. Finally 'added' is
+        dedicated for properties which have been inserted at a later date,
+        deviating from the date of initial creation. The last value could be
+        worthy in case of reconstructed objects. ‘Cat’ can optionally
+        activated. If so, it indicates the category of the property. In the
+        current version there are four possible values: 'descr': descriptive
+        property, i.e. occurrence of object describing property 'hist':
+        history property, i.e. property that may appear in a different shape
+        in the source object which may be resolved in the XCDL document (e.g.,
+        compressed data) 'cont': content property, i.e. relating directly to a
+        byte sequence 'extern': property that refers to external item, i.e.
+        not related to objects data, e.g., software and hardware used to
+        create the object. Note that through applying the last value it is
+        also possible to designate and include properties which are not
+        derived from the source objects data or format specification. In this
+        case, attribute ‘source’ should be set to value ‘external’ (cp.
+        footnote 1).</para>
+
+        <section>
+          <title>&lt;name&gt;</title>
+
+          <para>Every property has a unique name, an intellectual identifier.
+          It assigns a specific meaning to the property. All unique property
+          names are defined (i.e. the functionality of the property precisely
+          maps to a unique name) in external schemas which are subsumed as so
+          called ‘name libraries’ (NameLibs). These libraries are intended to
+          be expanded over time according to the increase of available XCEL
+          descriptions of file formats. Both languages, the XCDL as well as
+          the XCEL share their definitions. For more details see section about
+          Name libraries). The attribute ‘alias’ can be activated to assign
+          the original name of the property as specified in its format
+          specification. In the current version, no defined vocabulary exists.
+          The values are taken from the XCEL descriptions as they appear
+          there.</para>
+
+          <example>
+            <title>XCDL: Usage of &lt;property&gt; and &lt;name&gt;
+            elements</title>
+
+            <programlisting>&lt;property id="2" source="raw" cat="descr"&gt;
+	&lt;name alias="length"&gt;height&lt;/name&gt;
+...
+&lt;/property&gt;
+&lt;!—the corresponding definition entry in ‘XCLImageNamesLib.xsd: --&gt;
+...
+&lt;xs:enumeration value="width"&gt;
+	&lt;xs:annotation&gt;
+		&lt;xs:documentation&gt;
+			Width of an image. 
+			Corresponds to the horizontal dimension(x- axis)
+		&lt;/xs:documentation&gt;
+	&lt;/xs:annotation&gt;
+&lt;/xs:enumeration&gt;
+...</programlisting>
+          </example>
+
+          <para>Example XCDL-3 shows a XCDL structure describing an image
+          property named ‘height’, indicating the vertical dimension of an
+          image. It is derived from the original objects data and categorised
+          as a descriptive property. The source format specification terms
+          this property ‘length’. The definition (reflecting the meaning) of
+          this property is part of the name library
+          ‘XCLImageNamesLib.xsd’.</para>
+        </section>
+
+        <section>
+          <title>&lt;valueSet&gt;</title>
+
+          <para>Properties are primarily described by their assigned values.
+          The XCDL provides two elements each created to take up different
+          kinds of value representations: Raw values (&lt;rawVal&gt;) and
+          labelled values (&lt;labVal&gt;). The element &lt;valueSet&gt; wraps
+          these values. Every value set shall have an identification number
+          (attribute ‘id’). There also shall be at least one value set in
+          presence. Besides these two data representing elements, three more
+          childs are defined: &lt;dataRef&gt;, &lt;propRel&gt; and
+          &lt;objRel&gt;. All of the five childs are defined for optional
+          usage. Nevertheless, a XCDL document shall only be valid if at least
+          one of it appears.</para>
+
+          <section>
+            <title>&lt;rawVal&gt;</title>
+
+            <para>A raw value of a property is the representation of the
+            underlying data according to the representation within the source
+            object. The only modifications this data can be subjected are the
+            required representations as UTF-16 encoded data for character data
+            or hexadecimal binary encoding for binary data. The description of
+            property values as raw data is an option. It may be useful for
+            various tasks and according to the nature of properties.</para>
+
+            <example>
+              <title>XCDL: Usage of element &lt;rawVal&gt;</title>
+
+              <programlisting>... This is a \b text\b0 ... &lt;!-- original data --&gt;
+&lt;property id=”5” source=”raw” cat=”descr”&gt;
+	&lt;name&gt;boldFace&lt;/name&gt;
+	&lt;valueSet id=”1”&gt;
+		&lt;rawVal&gt;text&lt;/val&gt;
+	&lt;/valueSet&gt;
+...
+&lt;/property&gt;</programlisting>
+            </example>
+
+            <para>In example XCDL-4 the value of the property ‘boldFace’ is
+            represented as a raw value. For the relation of the properties
+            value ‘text’ to the specific location within the objects data see
+            section &lt;dataRef&gt;.</para>
+          </section>
+
+          <section>
+            <title>&lt;labVal&gt;</title>
+
+            <para>A labelled value of a property is the representation of the
+            properties data in an interpreted form that goes beyond the simple
+            representation of property values as raw data, which may only be
+            modified by the constraints of the XCDL required encoding
+            representations (UTF-16, hexadecimal binary, see above). The
+            element &lt;val&gt; is created to pick up the distinct labelled
+            value, element &lt;type&gt; indicates the type of labelling.
+            Allowed values for the labelling types are defined in the
+            associated high-level schema ‘XCLDataTypes.xsd’ which is part of
+            the name libraries bundle (see section about Name Libraries). A
+            distinct labelled value can either be one of the predefined fixed
+            labels for property values (using the simple type ‘fixLabelsType’
+            defined in ‘XCDLBasicTypes.xsd’ which is a union type of
+            predefined values (‘value labels’) of the name libraries), an
+            integer or decimal number or any string. If the type of the
+            labelled value is ‘fixLabel’ a XCDL validator shall only validate
+            a XCDL document as correct if one of the predefined values is used
+            in the &lt;val&gt; element. The distinct labelled value given in
+            &lt;val&gt; may optionally be further specified by two attributes,
+            ‘unit’ and ‘base’, particularly in case of integer or decimal
+            numbers. Both are derived from the XCDL basic type ‘measureType’
+            that is defined in the associated ‘XCDLBasicTypes.xsd’.</para>
+
+            <example>
+              <title>XCDL: Property with labelled value</title>
+
+              <programlisting>&lt;property id="1" source="raw" cat="descr"&gt;
+	&lt;name&gt;width&lt;/name&gt;
+	&lt;valueSet id="1"&gt;
+		&lt;labVal&gt;
+			&lt;val unit="pixel"&gt;32&lt;/val&gt;
+			&lt;type&gt;int&lt;/type&gt;
+		&lt;/labVal&gt;
+...
+	&lt;/valueSet&gt;
+&lt;/property&gt;</programlisting>
+            </example>
+
+            <para>Example XCDL-5 shows the representation of the image
+            property ‘width’ as a labelled value. The original binary data
+            representation is transformed to a labelled value, whereas the
+            type of the labelled value is an integer number, the distinct
+            value is the integer number ‘32’. The attribute ‘unit’ indicates
+            the reference unit of the number. Some properties distinct values
+            may be expressed as a sequence of values which are repeatable
+            groups. In such a case, the attribute ‘group’ is used, indicating
+            the number of single values in sequence which form a logical unit.
+            Example XCDL-6 is another one taken from the image domain: A
+            palette with entries for colours mixed in red, green and blue
+            channels may be x times repeatable depending on the bit depth. In
+            this case the 'group' attribute is set on value '3', telling that
+            a meaningful unit consists of succeeding triplets.</para>
+
+            <example>
+              <title>Property with labelled value using the ‘group’
+              attribute.</title>
+
+              <programlisting>&lt;property id="10" source="raw" cat="descr"&gt;
+	&lt;name&gt;rgbPalette&lt;/name&gt;
+	&lt;valueSet id="1"&gt;
+		&lt;labVal&gt;
+			&lt;val&gt;0 255 0 255 0 0 255 255 0 0 0 255&lt;/val&gt;
+			&lt;type group="3"&gt;int&lt;/type&gt;
+		&lt;/labVal&gt;
+...
+	&lt;/valueSet&gt;
+&lt;/property&gt;</programlisting>
+            </example>
+          </section>
+
+          <section>
+            <title>&lt;dataRef&gt;</title>
+
+            <para>Especially for the purpose of comparing digital objects
+            described as XCDL documents it is necessary to indicate the
+            distinct reference of property values to the location within the
+            object, i.e. to the according byte sequences. This is done by
+            using the &lt;dataRef&gt; element. The element is optional but
+            shall not appear more than exactly one time within a value set.
+            The precise reference is indicated by the &lt;ref&gt; child
+            element that can be used repeatable. Therefore the attributes
+            ‘id’, ‘start’ and ‘end’ are provided. The first one is necessary
+            for identifying the &lt;data&gt; or &lt;normdata&gt; element,
+            depending on the data reference indicator ‘ind’ (see this section
+            below). The others pick up the concrete location within the
+            referenced byte sequence, starting with ‘start’ and ending
+            indicated by ‘end’. The start and end values are counted in
+            integer numbers, whereas one single character (for UTF-16 encoded
+            character data) is exactly one number and one hexadecimal number
+            (formed by two characters in the hexadecimal representation) as
+            well. The number of data references depends on the properties and
+            object category. For example, a large text object may have many
+            strings where the characters are formatted in boldface distributed
+            over different locations within the object. In such a case the
+            property ‘boldFace’ has an according number of value sets each
+            with a specification of the exact reference to the location within
+            the digital object, realised through a &lt;dataRef&gt; element
+            (including child &lt;ref&gt;). The attribute ‘ind’ (=indicator) is
+            required. It indicates the type of data reference. Properties’
+            values can either be referenced to the overall data (element
+            &lt;data&gt;) or to normalised data (element &lt;normData&gt;).
+            The following values are predefined: none= no reference to data
+            sourceAll= reference to total source data (&lt;data&gt;)
+            sourceSpecific= reference to specific part of source data normAll=
+            reference to all normalized data (&lt;normData&gt;) normSpecific=
+            reference to specific normalized data If the value is one of the
+            specific values, the &lt;ref&gt; element shall be included.
+            Example XCDL-7 shows a data reference structure within a XCDL
+            document. The original text, formatted in RTF, is intended to be
+            rendered with the words ‘Ashes’ and ‘more’ in boldface. To map
+            this, two &lt;valueSet&gt; elements are created both containing a
+            &lt;dataRef&gt; element with references (&lt;ref&gt;) to the exact
+            location of the properties’ values within the normalised
+            data.</para>
+
+            <example>
+              <title>XCDL:Usage of &lt;dataRef&gt;</title>
+
+              <para><emphasis>Ashes</emphasis> to <emphasis>Ashes</emphasis>
+              once <emphasis>more</emphasis>.</para>
+
+              <programlisting>&lt;data id=”1”&gt;
+{\rtf1\ansi\ansicpg1252\deff0\deflang1031{\fonttbl{\f0\fswiss\fcharset0 Arial;}}\viewkind4\uc1\pard\f0\fs20 \b Ashes\b0 to \b Ashes\b0 once \b more\b0.\par}
+&lt;/data&gt;
+&lt;normData id=”1” type=”text”&gt;
+Ashes to Ashes once more.
+&lt;/normData&gt;
+&lt;property id=”5” source=”raw” cat=”descr”&gt;
+	&lt;name&gt;boldFace&lt;/name&gt;
+	&lt;valueSet id=”1”&gt;
+		&lt;rawVal&gt;Ashes&lt;/val&gt;
+		&lt;dataRef ind=”normSpecific”&gt;
+			&lt;ref id=”1” start=”0” end=”4”/&gt;
+			&lt;ref id=”1” start=”9” end=”13”/&gt;
+		&lt;/dataRef&gt;
+	&lt;/valueSet&gt;
+	&lt;valueSet id=”2”&gt;
+		&lt;rawVal&gt;more&lt;/val&gt;
+		&lt;dataRef ind=”normSpecific”&gt;
+			&lt;ref id=”1” start=”20” end=”23”/&gt;
+		&lt;/dataRef&gt;
+	&lt;/valueSet&gt;
+...
+&lt;/property&gt;</programlisting>
+            </example>
+          </section>
+
+          <section>
+            <title>&lt;propRel&gt;</title>
+
+            <para>Properties can be related to each other. A property relation
+            indicates that the values of the single properties involved can
+            only be interpreted as reasonable if they are understood as an
+            entire logical unit. The attribute ‘id’ identifying the relation
+            is required. The property relations are specified by the usage of
+            the &lt;rel&gt; element. The attribute ‘propId’ indicates the
+            identification number of the related property, ‘valueSetId’ the
+            distinct value set within this property to which a relation
+            exists. Regard example XCDL-8 taken from the image domain. A
+            property called ‘suggestedPaletteName’ with labelled value
+            ‘PALETTENAME’ and data reference to the entire normalised data has
+            two relationships. The first one with four properties identified
+            through their IDs (27 to 30) whereas every single relation within
+            the properties 27 to 30 relates to the properties’ value set #1 of
+            every single property. The second property relationship has almost
+            the same structure, except in relation with property #28 where the
+            related value set is value set #2. Actually these relations simply
+            tell us, that there is a suggested palette specified which name is
+            ‘PALETTENAME’. This palette can have various characteristics. One
+            of the variations concern property #28. The palette can have a
+            suggested palette RGB sequence of triplets with value ‘1000’ and
+            another with value ‘2000’.</para>
+
+            <example>
+              <title>XCDL: Usage of &lt;propRel&gt;</title>
+
+              <programlisting>&lt;property id="26" source="raw" cat="descr"&gt;
+&lt;name&gt;suggestedPaletteName&lt;/name&gt;
+&lt;valueSet id="1"&gt;
+&lt;labVal&gt;
+&lt;val&gt;PALETTENAME&lt;/val&gt;
+&lt;type&gt;string&lt;/type&gt;
+&lt;/labVal&gt;
+&lt;dataRef ind="normAll"/&gt;
+&lt;propRel id="1"&gt;
+&lt;rel propId="27" valSetId="1"/&gt;
+&lt;rel propId="28" valSetId="1"/&gt;
+&lt;rel propId="29" valSetId="1"/&gt;
+&lt;rel propId="30" valSetId="1"/&gt;
+&lt;/propRel&gt;
+&lt;propRel id="2"&gt;
+&lt;rel propId="27" valSetId="1"/&gt;
+&lt;rel propId="28" valSetId="2"/&gt;
+&lt;rel propId="29" valSetId="1"/&gt;
+&lt;rel propId="30" valSetId="1"/&gt;
+&lt;/propRel&gt;
+&lt;/valueSet&gt;
+&lt;/property&gt;
+...
+&lt;property id="28" source="raw" cat="descr"&gt;
+&lt;name&gt;suggestedPaletteRGB&lt;/name&gt;
+&lt;valueSet id="1"&gt;
+&lt;labVal&gt;
+&lt;val&gt;1000 1000 1000&lt;/val&gt;
+&lt;type group="3"&gt;int&lt;/type&gt;
+&lt;/labVal&gt;
+&lt;dataRef ind="normAll"/&gt;
+&lt;propRel id="1"&gt;
+&lt;rel propId="26" valSetId="1"/&gt;
+&lt;rel propId="27" valSetId="1"/&gt;
+&lt;rel propId="29" valSetId="1"/&gt;
+&lt;rel propId="30" valSetId="1"/&gt;
+&lt;/propRel&gt;
+&lt;/valueSet&gt;
+&lt;valueSet id="2"&gt;
+&lt;labVal&gt;
+&lt;val&gt;2000 2000 2000&lt;/val&gt;
+&lt;type group="3"&gt;int&lt;/type&gt;
+&lt;/labVal&gt;
+&lt;dataRef ind="normAll"/&gt;
+&lt;propRel id="1"&gt;
+&lt;rel propId="26" valSet="1"/&gt;
+&lt;rel propId="27" valSet="1"/&gt;
+&lt;rel propId="29" valSet="2"/&gt;
+&lt;rel propId="30" valSet="2"/&gt;
+&lt;/propRel&gt;
+&lt;/valueSet&gt;
+...</programlisting>
+            </example>
+          </section>
+
+          <section>
+            <title>&lt;objRel&gt;</title>
+
+            <para>The &lt;objRel&gt; element is primarily used for relations
+            to objects which occur in the context of embedded objects. The
+            attributes ‘xcdlId’ and ‘objId’ from the &lt;rel&gt; child element
+            provide the identification numbers of the related object within a
+            certain XCDL document. Example XCDL-9 shows the structure of a
+            &lt;property&gt; element with an object relation. The digital
+            object wrapped in the &lt;object id=”1” ...&gt; contains an
+            embedded ICC profile. This embedded ICC profile is outlined as a
+            property (name ‘ICCProfile’) of the object. An ICC profile is an
+            object that can be described for itself. This is done by the
+            second object within the XCDL document (object with id=”2”). The
+            &lt;objRel&gt; element within the property structure relates to
+            this embedded object via providing the xcdlId and the objID
+            values. Note that in this example both objects are described
+            within a single XCDL document. Nevertheless it is also possible to
+            “outsource” the embedded object or to relate to an existing
+            identical object.</para>
+
+            <example>
+              <title>XCDL: Indication of an object relation within
+              &lt;property&gt; element</title>
+
+              <programlisting>&lt;xcdl ... id=”A123456”&gt;
+&lt;object id=”1” ...&gt;
+...
+&lt;property id="19" source="raw" cat="descr"&gt;
+&lt;name&gt;ICCProfile&lt;/name&gt;
+&lt;valueSet id="1"&gt;
+&lt;objRel xcdlId=”A123456” objId=”2”/&gt;
+&lt;/valueSet&gt;
+&lt;/property&gt;
+...
+&lt;/object&gt;
+&lt;object id=”2” ...&gt;
+...
+&lt;/object&gt;
+&lt;/xcdl&gt;</programlisting>
+            </example>
+          </section>
+        </section>
+      </section>
+    </section>
+  </chapter>
+
+  <chapter>
+    <title>XCDL Basic Types</title>
+
+    <para>The XCDL core uses a couple of schema types (simple types) which are
+    fundamental to the language. The actual version of the XCDL core includes
+    these types within a separate XML schema ‘XCDLBasicTypes.xsd’. It is
+    likely that these basic types will be extended in future versions of the
+    XCDL along with the increasing XCEL specifications available.</para>
+
+    <section>
+      <title>Union Types</title>
+
+      <para>Union types specify the allowed data type(s) for element contents.
+      Currently there are three union types predefined. For details see the
+      XML schema.</para>
+    </section>
+
+    <section>
+      <title>Identification Number Types</title>
+
+      <para>These types are predefined to determine a vocabulary of allowed ID
+      types. Currently there are two types predefined.</para>
+    </section>
+
+    <section>
+      <title>Information Types</title>
+
+      <para>Information types relate to the XCDL core element
+      &lt;normData&gt;. Compare the accordant section for details.</para>
+    </section>
+
+    <section>
+      <title>Format Identifier Types</title>
+
+      <para>Format identifier types specify the vocabulary for unique format
+      identifiers. Currently the use of the PRONOM format identifiers are
+      recommended.</para>
+    </section>
+
+    <section>
+      <title>Measure Types</title>
+
+      <para>Measure types currently relates to the child element &lt;val&gt;
+      of &lt;labVal&gt;. For details compare the corresponding section.</para>
+    </section>
+
+    <section>
+      <title>Name Type, Labelled Values Type and Fixed Labels Type</title>
+
+      <para>These three types are created to establish an allowed vocabulary
+      for the element contents of &lt;name&gt; and the childs of
+      &lt;labVal&gt; which are &lt;val&gt; and &lt;type&gt;. They all are
+      derived from the vocabulary defined within the name libraries. For more
+      details consult the corresponding sections of the XCDL core
+      specification and the name libraries section.</para>
+    </section>
+  </chapter>
+
+  <chapter>
+    <title>Part D: Shared Schemas: Libraries</title>
+
+    <para>Within the entire architecture of the extensible characterisation
+    language, i.e. for both languages XCDL and XCEL, there are some common
+    namings and usages for properties, symbols and property values’ data
+    types. This shared vocabulary is spread over a couple of separate XML
+    schemas, which are used in common. At the moment, there are four shared
+    schemas outlined in table NL-1.</para>
+
+    <table>
+      <title>Table NL-1: Name libraries currently integrated into the entire
+      architecture.</title>
+
+      <tgroup cols="3">
+        <thead>
+          <row>
+            <entry align="center">File</entry>
+
+            <entry align="center">Includes</entry>
+
+            <entry align="center">Namespaces</entry>
+          </row>
+        </thead>
+
+        <tbody>
+          <row>
+            <entry>XCLNamesLib</entry>
+
+            <entry>XCLBasicNamesLib.xsd
+            <para>XCLImageNamesLib.xsd</para></entry>
+
+            <entry>xmlns:nm=
+            “http://www.planets-project.eu/xcl/schemas/xclnames“</entry>
+          </row>
+
+          <row>
+            <entry>XCLDataTypesLib.xsd</entry>
+
+            <entry></entry>
+
+            <entry>xmlns:nm=
+            “http://www.planets-project.eu/xcl/schemas/xclnames“</entry>
+          </row>
+
+          <row>
+            <entry>XCLBasicNamesLib.xsd</entry>
+
+            <entry>XCLDataTypesLib.xsd</entry>
+
+            <entry>xmlns:nm=
+            “http://www.planets-project.eu/xcl/schemas/xclnames“</entry>
+          </row>
+
+          <row>
+            <entry>XCLImageNamesLib.xsd</entry>
+
+            <entry>XCLBasicNamesLib.xsd</entry>
+
+            <entry>xmlns:nm=
+            “http://www.planets-project.eu/xcl/schemas/xclnames“</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+
+    <para>All libraries are in the same namespace. Schemas which include or
+    import the XCLBasicNamesLib.xsd’ have access to elements defined in the
+    ‘XCLDataTypesLib.xsd’ as well. Schemas which include or import the
+    ‘XCLImageNamesLib.xsd’ have access to elements on the
+    ‘XCLDataTypesLib.xsd’ as well as to the ‘XCLBasicNamesLib.xsd’. The
+    ‘XCLNamesLib.xsd’ includes all specific name libraries. The collection
+    will be successively completed in later versions of the XCL. Currently
+    ‘XCLImageNamesLib.xsd’ is included besides the basic names library. For an
+    overview see figure NL-2. A short description of the single libraries’
+    features is listed here: XCLDataTypesLib.xsd Contains data type
+    definitions as for example:</para>
+
+    <para>−int</para>
+
+    <para>−int8</para>
+
+    <para>−int16</para>
+
+    <para>-...</para>
+
+    <para>−uint8</para>
+
+    <para>−uint16</para>
+
+    <para>−...</para>
+
+    <para>−string</para>
+
+    <para>−fixLabel</para>
+
+    <para>-...</para>
+
+    <para>The list of data types can be extended, if other data types are
+    required. The data types are defined as enumerations and can be referred
+    to as nm:dataTypeDefinition, where „nm“ indicates the namespace
+    „xclnames“. This ensures consistent name assignment in XCEL and
+    XCDL.</para>
+
+    <figure>
+      <title>Fig. NL-2: Structure and dependencies of the Name Libraries
+      bundle</title>
+
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="resources/NS2.jpg" />
+        </imageobject>
+      </mediaobject>
+    </figure>
+  </chapter>
+
+  <chapter>
+    <title>XCLBasicNamesLib.xsd</title>
+
+    <para>- Includes ‘XCLDataTypesLib.xsd’</para>
+
+    <para>- Contains basic name definitions, i.e. names that might occur in
+    every file regardless of the specific file format</para>
+
+    <para>- Enumerations can be extended easily.</para>
+
+    <para>- For shared use of XCEL and XCDL</para>
+
+    <para>- Structured into:</para>
+
+    <para>- Global Element Names: names that occur once per file (i.e.
+    „signature“, „file length“...)</para>
+
+    <para>- Basic Element Names: „byteOrder“, „checksum“.... (included as
+    ‘nm:xclBasicNamesDefinitions’)</para>
+  </chapter>
+
+  <chapter>
+    <title>XCLImageNamesLib.xsd</title>
+
+    <para>- Includes ‘XCLBasicNamesLib.xsd’</para>
+
+    <para>- Contains name definitions that are specific to image files -
+    Enumerations can be extended easily</para>
+
+    <para>- For shared use of XCEL and XCDL</para>
+
+    <para>- Structured into:</para>
+
+    <para>XCLImageBasicNames:</para>
+
+    <para>- width te</para>
+
+    <para>- height</para>
+
+    <para>- colorDepth</para>
+
+    <para>- compression</para>
+
+    <para>- ...</para>
+
+    <para>XCLImageExtendedNames:</para>
+
+    <para>−</para>
+
+    <para>artist</para>
+
+    <para>−</para>
+
+    <para>copyright</para>
+
+    <para>−</para>
+
+    <para>cellHeight</para>
+
+    <para>−</para>
+
+    <para>cellWidth</para>
+
+    <para>−</para>
+
+    <para>...</para>
+
+    <para>XCLImageValueLabels:</para>
+
+    <para>−</para>
+
+    <para>compression methods: zlibDeflateInflate, CCITT_group3,...</para>
+
+    <para>−</para>
+
+    <para>image (colour) types: greyscale, truecolour, palette, ... (included
+    as nm:xclImageNameDefinitions)</para>
+  </chapter>
+
+  <chapter>
+    <title>Literature</title>
+
+    <para><itemizedlist>
+        <listitem>
+          <para>[ESRI98] ESRI shape file technical description (1998).
+          http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf</para>
+        </listitem>
+
+        <listitem>
+          <para>[MS05] Microsoft Office Open XML Formats Overview (2005).
+          http://www.microsoft.com/office/preview/itpro/fileoverview.mspx</para>
+        </listitem>
+
+        <listitem>
+          <para>[OAIS02] Reference Model for an Open Archival Information
+          System (OAIS) (2002).
+          http://public.ccsds.org/publications/archive/650x0b1.pdf</para>
+        </listitem>
+
+        <listitem>
+          <para>[PNG03] PNG specification (second edition) (2003).
+          http://www.w3.org/TR/PNG/</para>
+        </listitem>
+
+        <listitem>
+          <para>[PRO06] The technical registry PRONOM (2006).
+          http://www.nationalarchives.gov.uk/pronom/</para>
+        </listitem>
+
+        <listitem>
+          <para>[RTF01] Rich text format version 1.7 (2001).
+          http://support.microsoft.com/kb/269575/de?spid=3252&amp;sid=global</para>
+        </listitem>
+      </itemizedlist></para>
+  </chapter>
+</book>

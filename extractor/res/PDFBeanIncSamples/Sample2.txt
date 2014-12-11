@@ -1,0 +1,2041 @@
+Version 2 - 04/01/2004
+
+Assignment Workbook for ECDL Office 2000
+
+© Happy Computers 2004 - 04/01/04
+
+Version 2
+
+ECDL Assignment Workbook -
+
+1.1
+1.1 2.1 2.2 2.3 2.4 3.1 3.2 3.3 3.4 3.5 4.1 4.2 4.3 4.4 4.5 4.6 4.7 5.1 5.2 5.3 5.4 5.5 5.6 5.7 5.8 6.1 6.2 6.3 6.4 6.5 Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment Assignment
+
+Contents
+
+2 Module 1 – Basic Concepts........................................... 4
+1 – Getting Started .....................................................................................5 2 – Using Information Technology ............................................................11 3 – Computers in Everyday Life................................................................14 4 – Legal Issues .......................................................................................17 1 – The Desktop.......................................................................................20 2 – Finding Out More................................................................................23 3 – Looking at Files and Folders ...............................................................26 4 – Managing Your Files...........................................................................31 5 – Programs and Printing ........................................................................36 1 – Getting Started with Word 2000 ..........................................................39 2 – Formatting Text ..................................................................................42 3 – Working with Long Documents ...........................................................43 4 – Tables in Word ...................................................................................45 5 – Using Graphics in Word......................................................................46 6 – Working with Files in Word .................................................................47 7 – Mail Merge .........................................................................................48 1 – Getting Started with Excel 2000..........................................................50 2 – Making Simple Calculations................................................................53 3 – Editing a Worksheet ...........................................................................54 4 – Functions and Cell References ...........................................................57 5 - Printing Workbooks .............................................................................58 6 – Formatting Worksheets.......................................................................60 7 - Charts .................................................................................................62 8 – Saving in Other File Formats ..............................................................63 1 – Getting Started with Access................................................................66 2 – Extracting Information from a Database ..............................................70 3 – Inputting Data into a Database............................................................74 4 – Reports – Displaying Information ........................................................77 5 – Creating a Simple Database ...............................................................79
+
+Contents .......................................................................................................................2
+
+3 Module 2 – Using the PC and Managing Files ........... 19
+
+4 Module 3 – Word Processing ...................................... 38
+
+5 Module 4 -Spreadsheets .............................................. 49
+
+6 Module 5 - Database..................................................... 65
+
+Page 2
+
+Version 2
+
+ECDL Assignment Workbook -
+
+7 Module 6 - Presentations............................................. 82
+7.1 7.2 7.3 7.4 7.5 7.6 7.7 7.8 7.9 7.10 7.11 7.12 8.1 8.2 8.3 8.4 8.5 8.6 8.7 8.8 Assignment 1 – Getting started with PowerPoint 2000 .................................................83 Assignment 2 - Formatting...........................................................................................90 Assignment 3 – Masters and Templates ......................................................................92 Assignment 4 – Speaker’s Notes .................................................................................93 Assignment 5 – Graphs and Charts .............................................................................94 Assignment 6 – Drawing Toolbar .................................................................................96 Assignment 7 – ClipArt and Pictures ............................................................................98 Assignment 8 – Moving and Copying ...........................................................................99 Assignment 9 – Spell Checking .................................................................................100 Assignment 10 - Importing .........................................................................................102 Assignment 11 – On-Screen Shows ..........................................................................104 Assignment 12 – File Formats ...................................................................................106 Assignment 1 – Getting Started on the Web...............................................................108 Assignment 2 – Using Search Engines ......................................................................110 Assignment 3 – Viewing and Saving Web Pages .......................................................112 Assignment 4 - Printing..............................................................................................115 Assignment 5 – Getting Started with Outlook .............................................................117 Assignment 6 – Working with Email ...........................................................................119 Assignment 7 – Organising Your Emails ....................................................................123 Assignment 8 – Working with Contacts ......................................................................126
+
+8 Module 7 – Information and Communication .......... 107
+
+Version 2
+
+Page 3
+
+ECDL Assignment Workbook -
+
+2 Module 1 – Basic
+
+Page 4
+
+Version 2
+
+ECDL Assignment Workbook -
+
+2.1 Assignment 1 – Getting Started
+The aim of this assignment is to practise the lessons in the Getting Started section of ECDL Module 1.
+
+Computer Terminology 1. How would you define the term "hardware"? Answer:
+
+2. Think of one example of computer hardware. Answer:
+
+3. In your own words, write a definition of the term "software" below. Answer:
+
+4. What examples of computer software can you think of? Answer:
+
+5. What does PC stand for? Answer:
+
+6. What is a mainframe computer? Answer:
+
+7. Who might use a mainframe or what might it be used for? Answer:
+
+Version 2
+
+Page 5
+
+ECDL Assignment Workbook -
+
+Page 6
+
+Version 2
+
+ECDL Assignment Workbook -
+
+8. What about a minicomputer? Who might use this type of computer, or what would it be used for? Answer:
+
+9. What are the differences between a PC, a minicomputer and a mainframe? Answer:
+
+10. What are the differences between a dumb terminal and an intelligent terminal? Answer:
+
+Computer Hardware 1. Think of one difference between a desktop and a tower computer. Write this below. Answer:
+
+2. Write below the names of five pieces of hardware that make up a computer. Answer:
+
+3. What do you understand by the term "RAM"? Answer:
+
+4. What unit is RAM measured in? Answer:
+
+5. How would having more RAM affect the performance of your computer? Answer:
+
+Version 2
+
+Page 7
+
+ECDL Assignment Workbook -
+
+6. What unit is the processing speed of the computer measured in? Answer:
+
+7. What does the unit you identified in the previous answer measure about the processor? (What is the processor doing?) Answer:
+
+8. What effect does the speed of the processor have on a computer? Answer:
+
+9. Think about what the functions of a hard drive are. Write them below. Answer:
+
+Computer Software 1. What is the difference between system software and application software? Answer:
+
+2. Write below one type of application software. Answer:
+
+3. Think of one example of system software a computer might use and write this below. Answer:
+
+4. Name two of the stages of creating software below. Answer:
+
+Page 8
+
+Version 2
+
+ECDL Assignment Workbook -
+
+5. Give two examples of the type of data that you might find on your computer. Answer:
+
+6. What do you understand by the term "bug" in relation to computers? Answer:
+
+Computer Memory and Storage 1. What is ROM? Answer:
+
+2. What is the difference between RAM and ROM? Answer:
+
+3. What is the smallest unit of measurement for computer memory? Answer:
+
+4. How many bytes are there in a kilobyte? Answer:
+
+5. What would be a shorter way of writing 1000 MB? Answer:
+
+6. How many kilobytes are there in a gigabyte? Answer:
+
+7. How many characters could an 8 GB hard drive store? Answer:
+
+Version 2
+
+Page 9
+
+ECDL Assignment Workbook -
+
+8. How many characters could a PC with 128 MB RAM store in its memory at once? Answer:
+
+Computer Accessories 1. Name two types of printer. Answer:
+
+2. What is the difference between an input and an output device? Answer:
+
+3. Give one example of an input device. Answer:
+
+4. Give one example of an output device. Answer:
+
+5. Name two types of device which allow you to store information for use on a computer. Answer:
+
+Congratulations!
+You have completed the assignment on Getting Started.
+
+Page 10
+
+Version 2
+
+ECDL Assignment Workbook -
+
+2.2 Assignment 2 – Using Information Technology
+The aim of this assignment is to practise the lessons in the Using Information Technology section of ECDL Module 1.
+
+Using Networks 1. What do you understand by the term "network"? In your own words, describe what you understand by this term. Answer:
+
+2. What does LAN stand for? Answer:
+
+3. What is a LAN, what is it used for? Answer:
+
+4. What does WAN stand for? Answer:
+
+5. Where would a WAN be used instead of a LAN? What are the differences between them? Answer:
+
+6. What is the difference between analogue and digital information? Answer:
+
+Version 2
+
+Page 11
+
+ECDL Assignment Workbook -
+
+7. Give an example of analogue information. Answer:
+
+8. Give an example of digital information. Answer:
+
+9. Name two items used in a computer network. Answer:
+
+Internet and Email 1. What do you think the internet is used for? How would you describe it? Answer:
+
+2. Describe in your own words, how the internet works. Answer:
+
+3. What is email? What would you use it for? Answer:
+
+4. Think of what computer hardware you need to use the internet or email. Write the name of one piece of hardware required below. Answer:
+
+Page 12
+
+Version 2
+
+ECDL Assignment Workbook -
+
+5. How about the software you need to connect to the internet? Write the name of a piece of software below. Answer:
+
+Congratulations!
+You have completed the assignment on Using Information Technology.
+
+Version 2
+
+Page 13
+
+ECDL Assignment Workbook -
+
+2.3 Assignment 3 – Computers in Everyday Life
+The aim of this assignment is to practise the lessons in the Computers in Everyday Life section of ECDL Module 1. Working Safely with Computers 1. What does RSI stand for? Answer:
+
+2. What might cause RSI?. Answer:
+
+3. What might cause eyestrain when working with computers? Answer:
+
+4. How could you protect yourself against eyestrain? Answer:
+
+5. What are the things you should consider to ensure you are sitting properly at a PC? Write three things below. Answer:
+
+6. Name two things you should consider to ensure the cables on your computer are safe. Answer:
+
+Page 14
+
+Version 2
+
+ECDL Assignment Workbook -
+
+Computers for Work, Home and Education 1. Name one reason why someone might want to use a computer at home. Answer:
+
+2. What are computers used for in a workplace? Write one example of their use below. Answer:
+
+3. What might a computer be used for in a school? Answer:
+
+4. Describe what you understand by the term "information society". Answer:
+
+Protecting your Work and PC 1. Why should you consider protecting your work with a password?. Answer:
+
+2. What makes good practice when assigning a password to a file? Name two things below. Answer:
+
+3. Explain the purpose of backups below. Answer:
+
+Version 2
+
+Page 15
+
+ECDL Assignment Workbook -
+
+4. What could you use to create a backup? Name one medium below. Answer:
+
+5. In relation to computers, what is a "virus"? Answer:
+
+6. Name one way in which you could prevent a virus on your computer. Answer:
+
+7. Why should you regularly save your work? Answer:
+
+8. Name four ways in which you can protect your PC from damage. Answer:
+
+Congratulations!
+You have completed the assignment on Computers in Everyday Life.
+
+Page 16
+
+Version 2
+
+ECDL Assignment Workbook -
+
+2.4
+Copyright
+
+Assignment 4 – Legal Issues
+
+The aim of this assignment is to practise the lessons in the Legal Issues section of ECDL Module 1.
+
+1. How does copyright apply to software and work published on the internet? Answer:
+
+2. Name one type of software license. Answer:
+
+3. Name two ways in which someone can commit software piracy. Answer:
+
+4. Explain what you understand by the term "freeware". Answer:
+
+5. What is shareware? Answer:
+
+Data Protection 1. Where might information about you be stored? Name one organisation, or type of organisation, that might have your details on computer. Answer:
+
+Version 2
+
+Page 17
+
+ECDL Assignment Workbook -
+
+2. Name two ways that data held about you may be used. Answer:
+
+3. What rights do you have regarding data that is held about you? Answer:
+
+Congratulations!
+You have completed the assignment on Legal Issues.
+
+Page 18
+
+Version 2
+
+ECDL Assignment Workbook -
+
+3 Module 2 – Using Files
+
+Version 2
+
+Page 19
+
+ECDL Assignment Workbook -
+
+3.1
+Desktop Icons
+
+Assignment 1 – The Desktop
+
+The aim of this assignment is to practise the lessons in the The Desktop section of ECDL Module 2.
+
+1. Ensure that the desktop icons will not automatically arrange themselves. List the steps that you took to ensure the desktop icons would not be automatically arranged. Answer:
+
+2. Try moving some of the desktop icons around so that they are no longer neatly positioned. Describe how you move a desktop icon. Answer:
+
+3. What will you do now to make sure that the desktop icons will automatically arrange themselves to the left of the desktop? List the steps you would take. Answer:
+
+4. Make sure that the desktop icons have been automatically arranged. Open a My Computer window using the icon. What did you do to open the My Computer window? Answer:
+
+Page 20
+
+Version 2
+
+ECDL Assignment Workbook -
+
+5. Create a shortcut to the Control Panel on the desktop. How did you create the shortcut to the Control Panel? List the steps that you took. Answer:
+
+6. Close the My Computer window and open the Recycle Bin using the icon on the desktop. In the box below, describe how you opened the Recycle Bin window. Answer:
+
+7. Close the Recycle Bin window. Desktop Settings 1. Imagine that you want to change the desktop background to Fall Memories. How will you ensure that the design is repeated across the whole desktop? List the steps that you took to change the desktop background, and to make it repeat across the whole desktop. Answer:
+
+2. Ensure that you have changed the background to Fall Memories so that it repeats across the screen. Describe what the pattern looks like (for instance, the shape and colour). Answer:
+
+3. Ensure you have set a screen saver for the desktop. List the steps you take to choose a screen saver. Answer:
+
+Version 2
+
+Page 21
+
+ECDL Assignment Workbook -
+
+4. Change the background for your desktop to None. Change the colour scheme to Wheat. What colour has your desktop become? Answer:
+
+5. What other changes have you noticed since changing your colour scheme? (For instance, what else looks a different colour and what colour is it?) Describe two changes that you have noticed. Answer:
+
+Congratulations!
+You have completed the assignment on The Desktop.
+
+Page 22
+
+Version 2
+
+ECDL Assignment Workbook -
+
+3.2
+
+Assignment 2 – More
+
+The aim of this assignment is to practise the lessons in the Finding Out More section of ECDL Module 2. Using Help 1. Open Windows 2000 Help. List the steps you took to open Help (i.e. which menus you clicked on). Answer:
+
+2. Use the Contents tab to find out how to "Print a document". How does the first point tell you how to print a document? Answer:
+
+3. Use the Index tab to find the index entry "undoing actions". Display the help for 'Cancelling last actions.' Which menu does it tell you to use? Which option does it tell you to click on? Answer:
+
+4. Use the Search tab to find out about "switching between programs". Find the most appropriate topic amongst those displayed and display the help for this. What does the last paragraph say here? Summarise this paragraph below. Answer:
+
+5. Close Help. How did you close it? Describe how you did it. Answer:
+
+Version 2
+
+Page 23
+
+ECDL Assignment Workbook -
+
+Viewing System Information 1. What is the name of the dialog box where you can find out information about your computer, such as the operating system, processor and RAM? (The name of the dialog box can be found on the title bar at the top.) Answer:
+
+2. How will you get to the dialog box you answered in the question above? List the steps you would take below. Answer:
+
+3. Which tab do you need to be on in this dialog box to find out the processor your computer has? Answer:
+
+4. Look at the subheadings on the tab you identified in the previous question. Under which subheading will you find the processor type? Close the dialog box when you’ve finished. Answer:
+
+Date & Time and Volume Settings 1. Whereabouts on your computer can you see the time? Answer:
+
+2. How would you see the date on your computer? Answer:
+
+3. What is the name of the dialog box where you can change your date and time settings? (Remember, you can see the name of a dialog box on the title bar at the top.) Answer:
+
+Page 24
+
+Version 2
+
+ECDL Assignment Workbook -
+
+4. How will you get to see the dialog box you identified in the previous question? Answer:
+
+5. Make sure you are looking at the dialog box that shows your data and time settings. Imagine that your clock says 11:41:55 and you want to change it to 12:41:55. List the steps you would take to do this below. Answer:
+
+6. You find that your computer's date is set for the previous year. How would you make it this year's date? List all of the steps you would take to correct it. Close the dialog box when you have finished. Answer:
+
+7. You are about to play a CD-ROM with music and you want to turn the volume down on your computer. How will you do this? Answer:
+
+Congratulations!
+You have completed the assignment on Finding Out More.
+
+Version 2
+
+Page 25
+
+ECDL Assignment Workbook -
+
+3.3
+
+Assignment 3 – Looking at Files and Folders
+
+The aim of this assignment is to practise the lessons in the Looking at Files and Folders section of ECDL Module 2. Drives, Files and Folders 1. Open Windows Explorer. How did you do this? List the steps you took. Answer:
+
+2. Which drive will show you the contents of your hard disk? Answer:
+
+3. Make sure you are looking at the contents of this drive. How did you ensure that you were? Answer:
+
+4. Look in the My Documents folder. How did you do this? Answer:
+
+5. What can you see next to a drive or folder when it has been expanded (so that you can its contents in the left hand pane)? Answer:
+
+6. Try expanding and collapsing the My Documents folder in the left hand pane. What did you do to collapse this folder? Answer:
+
+Page 26
+
+Version 2
+
+ECDL Assignment Workbook -
+
+7. How will you display the contents of the My Documents folder in the right hand pane? Try it and then list the steps you took to do it. Answer:
+
+8. Close Windows Explorer. In the box below explain how you closed the window. Answer:
+
+Using My Computer 1. This time we are going to look at your drives and folders using My Computer. How will you open a My Computer window? Answer:
+
+2. Have a look in your C: drive. How did you do this? Answer:
+
+3. Open the My Documents folder. How did you open this folder? Answer:
+
+4. Try switching the Standard Buttons toolbar off and on a few times. List the steps you took to switch it on below. Answer:
+
+5. Which icon on the Standard Buttons toolbar will take you back to looking at the drive or folder you were viewing before this one? Try using it. What does it look like? Describe its appearance below. Answer:
+
+Version 2
+
+Page 27
+
+ECDL Assignment Workbook -
+
+Page 28
+
+Version 2
+
+ECDL Assignment Workbook -
+
+6. What if you changed your mind about having gone back to look at this drive or folder? Which icon will return you to where you just were? Describe its appearance below. Answer:
+
+7. Open the folder C :\onlinelearning\ecdl\fileman. What type of file is Garden (e.g. Excel, movie, picture file, etc.)? Answer:
+
+8. In this same folder, what type of file is Hamsters? Answer:
+
+9. How about Cheese? What type of file is this? Answer:
+
+10. Display the properties of the Herbs file. How did you do this? List the steps below. Answer:
+
+11. When was this file created? Answer:
+
+12. Close the Properties box for Herbs. View the properties of the Fishy things folder. What does the Properties box say that it contains? Answer:
+
+Version 2
+
+Page 29
+
+ECDL Assignment Workbook -
+
+13. Close the Properties box for the ECDL folder. Close the My Computer window. How did you close it? Explain how you closed the My Computer window below. Answer:
+
+Congratulations!
+You have completed the assignment on Looking at Files and Folders.
+
+Page 30
+
+Version 2
+
+ECDL Assignment Workbook -
+
+3.4
+
+Assignment 4 – Managing Your Files
+
+The aim of this assignment is to practise the lessons in the Managing Your Files section of ECDL Module 2. Recycle Bin 1. Open the folder C :\onlinelearning\ecdl\fileman in either Windows Explorer or My Computer. Delete the file Net.doc. How did you do this? List the steps you took below. Answer:
+
+2. Retrieve the file you deleted from the Recycle Bin. How did you do this? List the steps below. Answer:
+
+3. Where is the file Net.doc now? (eg. in which drive, folder, etc.) Answer:
+
+4. How would you delete one of your folders? List the steps you would take below. Answer:
+
+Version 2
+
+Page 31
+
+ECDL Assignment Workbook -
+
+Finding Files 1. Open the Search dialog box. How did you do this? List the steps you took below. Answer:
+
+2. Search for files named Yoga in C :\onlinelearning\ecdl\fileman. How many did you find? Answer:
+
+3. Where would you click first to get the options for searching for files created in the last three months? What would you click on first from the Search dialog box to get more options? Answer:
+
+4. How many files called Yoga can you find in C :\onlinelearning\ecdl\fileman that were created in the last three months? Answer:
+
+5. Start a new search. Search for all Microsoft Word documents called Report in C :\onlinelearning\ecdl\fileman. How can you ensure that you will only find Word documents? List the steps you took to find only Word documents below. Answer:
+
+6. How many files did you find for this last search? Answer:
+
+Page 32
+
+Version 2
+
+ECDL Assignment Workbook -
+
+7. Start a new search looking for files called Herbs. How will you ensure that you are only looking for files created between the 01/06/2000 and today's date? List the steps you would take below. Answer:
+
+8. See how many files you can find for this last search. You should find at least one. How will you open one of the files you have found? List the steps you would take to open one of the files that you found. Answer:
+
+9. Close Word and then close the Search dialog box. Using Floppy Disks and Managing Your Files 1. Create a new folder called Assignments in C :\onlinelearning\ecdl\fileman. How did you do this? List the steps you took below. Answer:
+
+2. Rename this folder so that it is called Missions. How did you do this? Explain how you did it, listing the steps you took, below. Answer:
+
+Version 2
+
+Page 33
+
+ECDL Assignment Workbook -
+
+3. How will you select two files that are adjacent to each other? Answer:
+
+4. How would you select two files that were not next to each other in a folder? Explain how you would do this, step by step, below. Answer:
+
+5. Move the file Report.doc to the file you created called Missions. List the steps you took to do this below. Answer:
+
+6. Copy the file Report.doc from your Missions folder to the folder called Fishy Things. Explain how you did this, listing the steps you took, below. Answer:
+
+7. Rename this file you just copied to the Fishy Things folder so that it is called The Cod Report. Explain how you did this. Answer:
+
+Page 34
+
+Version 2
+
+ECDL Assignment Workbook -
+
+8. Put a new or blank floppy disk into your floppy drive. How will you format this disk? List the steps you would take below. Answer:
+
+9. Copy the file The Cod Report.doc to the floppy disk. How did you do this? List the steps you took below. Answer:
+
+10. Close all open windows.
+
+Congratulations!
+You have completed the assignment on Managing Your Files.
+
+Version 2
+
+Page 35
+
+ECDL Assignment Workbook -
+
+3.5
+
+Assignment 5 – Programs and Printing
+
+The aim of this assignment is to practise the lessons in the Programs and Printing section of ECDL Module 2. Using Applications and Printing 1. Open Microsoft Word using the Start menu. Which option in the menu did you need to click on to open Microsoft Word? Answer:
+
+2. Where on the screen can you see how many windows you have open and what they are called? Answer:
+
+3. Type a sentence about the weather today in the blank Word document you have open. 4. Save this file as Weather.doc in C :\onlinelearning\ecdl\fileman. 5. Print out this document. How did you print it? Answer:
+
+6. Imagine that you are kept waiting for your document to print out. How would you view the progress of the printing of your document? List the steps you would take below. Answer:
+
+Page 36
+
+Version 2
+
+ECDL Assignment Workbook -
+
+7. Save and close the file Weather.doc but leave Word open. How did you do this? Answer:
+
+8. How will you close Word? Close it using a button on the title bar. Describe the appearance of this button in the box below. Answer:
+
+9. How would you change your default printer? Click in the box below and list the steps you would take. Answer:
+
+10. Close any windows that you have left open.
+
+Congratulations!
+You have completed the assignment on Programs and Printing.
+
+Version 2
+
+Page 37
+
+ECDL Assignment Workbook -
+
+4
+
+– Word Processing
+
+Page 38
+
+Version 2
+
+ECDL Assignment Workbook -
+
+4.1
+
+Assignment 1 – Getting Started with Word 2000
+
+The aim of this assignment is to practise the lessons in the Getting Started with Word section of ECDL Module 3.
+
+Before you start Open the file Chimp.doc from C :\onlinelearning\ecdl\word. Getting Started 1. Underneath the heading, enter the text And Monkeys For All. 2. Save the document. How did you do this? Answer:
+
+3. Close the document but leave Word open. How did you do this? Answer:
+
+4. Open the document called Chimp.doc again. How would you select a word in a document? Answer:
+
+5. Open the Office Assistant. Type in the question "How do I open a document?" What is the first topic the Office Assistant shows you in the list? Answer:
+
+6. Click on this topic. What is the last topic in the list of things Word thinks you might like to know about? Answer:
+
+Version 2
+
+Page 39
+
+ECDL Assignment Workbook -
+
+7. Close Help. Change the word Household to Home. Undo this action using the icon. What does the icon you used look like? Describe it below. Answer:
+
+8. How could you redo the action that you just undone (without having to type it again)? Describe how you could redo the action. Answer:
+
+Views and Printing 1. Which view is the document in at the moment? Answer:
+
+2. Which menu and menu item would you use to change over to Outline view? Answer:
+
+3. How would you display the Web toolbar? Answer:
+
+4. Do a print preview of the document. How do you zoom in and out? Answer:
+
+5. Print one copy of the document. How did you do this? Answer:
+
+Page 40
+
+Version 2
+
+ECDL Assignment Workbook -
+
+6. How would you print 5 copies? Answer:
+
+7. Save and close the document.
+
+Congratulations!
+You have completed the assignment on Getting Started with Word.
+
+Version 2
+
+Page 41
+
+ECDL Assignment Workbook -
+
+4.2
+
+Assignment 2 – Formatting
+
+The aim of this assignment is to practise the lessons in the Formatting Text section of ECDL Module 3. Before you start Open the file Gorilla.doc from C :\onlinelearning\ecdl\word. Formatting 1. Make the top line of the document bold, italic and size 16. Change its font to Times New Roman. 2. Centre the top line. Align the line By Marmaduke Ook to the right of the page. 3. Insert the Copyright symbol (a small c in a circle) before the line that reads Copyright 2001. 4. Put a bullet point on the line that reads Main Points:. Make the 4 lines beginning with Film into a numbered list. 5. Indent the line that starts with Several monkeys by 1 cm on the left, and 2 cm on the right. 6. Put a single line border around the top line, and shade it light blue. More Formatting 1. Use the Format Painter to copy the formatting on the top line onto the line that starts with Let's make. 2. Select the top line, and use it to create a style called Gibbon. Apply the new style to the Copyright line. 3. Switch on automatic hyphenation in the document. 4. Add the page number in the footer of the page, so that it reads Page x of y. 5. Save and close the document.
+
+Congratulations!
+You have completed the assignment on Formatting Text.
+
+Page 42
+
+Version 2
+
+ECDL Assignment Workbook -
+
+4.3
+
+Assignment 3 – Working with Long Documents
+
+The aim of this assignment is to practise the lessons in the Working with Long Documents section of ECDL Module 3. Before you start Open the file Long.doc from C :\onlinelearning\ecdl\word.
+
+Long Documents 1. Move the first paragraph in Section 2 to Section 1. Copy the paragraph you just moved, and paste it into Section 2 again. 2. Insert a page break after the paragraph in Section 1. 3. Change the margins in the document, so that the left and right margins are both 3 cm. 4. Change the line spacing of the paragraph in Section 1 to 1.5 lines. 5. Create a header that says Long Doc. Create a footer that has the page number in it, in the Page x of y style. 6. Change the page orientation to Landscape. 7. Create a tab at 5 cm on the first line of the document. Describe how you did this. Answer:
+
+8. How would you start a spell check using the icon. What does it look like? Answer:
+
+Version 2
+
+Page 43
+
+ECDL Assignment Workbook -
+
+9. Imagine that during a spell check Word finds a misspelling. One of Word's suggestions is the one you want. How would you correct the misspelling to the suggestion you wanted? List the steps you would take below. Answer:
+
+10. Use the Go To function to go to page 3. Describe how you did this. Answer:
+
+11. Use the Replace tool to replace all occurrences of the word monkeys with the word baboons. Describe how you did this. Answer:
+
+12. Save and close the document.
+
+Congratulations!
+You have completed the assignment on Working with Long Documents.
+
+Page 44
+
+Version 2
+
+ECDL Assignment Workbook -
+
+4.4
+
+Assignment 4 – Tables in Word
+
+The aim of this assignment is to practise the lessons in the Tables in Word section of ECDL Module 3. Before you start Open the file Blanket.doc from C :\onlinelearning\ecdl\word. Working with Tables 1. Create a table 4 columns wide and 3 rows high. 2. In the top row of the table, type in the following 4 headings: Monkey, Shatner, Soy, Bassoon. In the 2 rows underneath, type in the following entries: In the first row, type Chimp, Kirk, Dark, Yes. In the last row, type Gibbon, TJ, Light, No. 3. Centre the text in the top row, and add pale blue shading. Remove all the borders from the table so that they do not print. Add a 3pt black border around the outside of the table. 4. Save and close the document.
+
+Congratulations!
+You have completed the assignment on Tables in Word.
+
+Version 2
+
+Page 45
+
+ECDL Assignment Workbook -
+
+4.5
+
+Assignment 5 – Using Graphics in Word
+
+The aim of this assignment is to practise the lessons in the Using Graphics in Word section of ECDL Module 3. Before you start Open the file Orange.doc from C :\onlinelearning\ecdl\word. Graphics 1. Make the orang-utan picture and the heart shape roughly twice the size they are now. Move them halfway down the page. 2. Make the heart shape red, and give it a thick black border. 3. Look in the Animals section of the Clipart Gallery. Insert the first piece of clipart from this section into the document. 4. Insert the smiley face AutoShape. 5. Save and close the document.
+
+Congratulations!
+You have completed the assignment on Using Graphics in Word.
+
+Page 46
+
+Version 2
+
+ECDL Assignment Workbook -
+
+4.6
+
+Assignment 6 – Working with Files in Word
+
+The aim of this assignment is to practise the lessons in the Working with Files in Word section of ECDL Module 3. Before you start Open the file Polo.doc from C :\onlinelearning\ecdl\word. Working with Files 1. Save this document as a template with the name Polo. Save a copy of this template into your C :\onlinelearning\ecdl\word folder as well. Close the file once you have finished. 2. Create a new file using the Polo template. Save it as PoloNew.doc. 3. Using Excel, open the Excel file Polochart.xls from C :\onlinelearning\ecdl\word. Copy the chart from the Excel spreadsheet and paste it into the Word document. Close Excel. 4. Insert an embedded Excel chart into the document, underneath the existing one. 5. Insert a new Excel worksheet into the document, underneath everything else. 6. Save and close the PoloNew.doc document.
+
+Congratulations!
+You have completed the assignment on Working with Files in Word.
+
+Version 2
+
+Page 47
+
+ECDL Assignment Workbook -
+
+4.7
+Before you start
+
+Assignment 7 – Mail Merge
+
+The aim of this assignment is to practise the lessons in the Mail Merge section of ECDL Module 3.
+
+Open the file Data.doc from C :\onlinelearning\ecdl\word. Mail Merge 1. Create a table with 3 columns and 3 rows. Enter the following information into the table: Name Fred Bob 2. Save this document. 3. Open the document Main.doc from your C :\onlinelearning\ecdl\word folder. 4. Use this file to create a standard letter, using Data.doc as the data source. Insert all three merge fields - insert the Name and Address fields under the To heading, and the Monkey field under Subject. It is not necessary to put any other information in the file. Save the file, and keep it open. 5. Carry out the mail merge, merging to a new document. 6. Save the new document as Merge.doc, in your C :\onlinelearning\ecdl\word folder. Close all files. Address London Leeds Monkey Chimp Baboon
+
+Congratulations!
+You have completed the assignment on Working with Files in Word.
+
+Page 48
+
+Version 2
+
+ECDL Assignment Workbook -
+
+5 Spreadsheets
+
+Version 2
+
+Page 49
+
+ECDL Assignment Workbook -
+
+Assignment 1 – Getting Started with Excel 2000
+The aim of this assignment is to practise the lessons in the Getting Started with Excel section of ECDL Module 4. Before you start To complete the exercise: Open the file Grub.xls from C :\onlinelearning\ecdl\excel. Getting Started 1. Underneath the heading, in cell A3, enter the text And Monkeys For All. 2. Select the word Bananas in cell A5, and type Biscuits instead. 3. Save the spreadsheet. How did you do this? List the steps you took below, describing any icons you used. Answer:
+
+4. How could you close the spreadsheet without closing Excel? Describe how you would do this below. Answer:
+
+5. Open the Help function. Using the Index tab, type in the word open. What is the first topic highlighted in the list underneath? Answer:
+
+6. Keeping the Help function open, go to the Contents tab. What is the first item inside the Formatting Worksheets topic? Answer:
+
+Page 50
+
+Version 2
+
+ECDL Assignment Workbook -
+
+7. Close Help. Change the word Peanuts in cell A6 to Spanners. Which icon would you click on to undo this action? Describe the icon you would use below. Answer:
+
+8. Undo your last action. How could you redo this (without typing anything)? Redo your last action. How did you do this? Answer:
+
+9. Describe how you would edit the contents of a cell, without deleting what was already there. Answer:
+
+10. In cells B5 and B6, enter the numbers 27 and 43. 11. Describe one method of changing the zoom on a spreadsheet. Answer:
+
+12. Go to cell Z60. What does this cell contain? Write it below. Answer:
+
+13. Go to Sheet 3 and enter the number 57 into cell A4. Go back to Sheet 1. Close and save this spreadsheet.
+
+Congratulations!
+
+Version 2
+
+Page 51
+
+ECDL Assignment Workbook -
+
+You have completed the assignment on Getting Started with Excel.
+
+Page 52
+
+Version 2
+
+ECDL Assignment Workbook -
+
+5.2
+
+Assignment 2 – Making Simple Calculations
+
+The aim of this assignment is to practise the lessons in the Making Simple Calculations section of ECDL Module 4. Before you start Open the file Calcs.xls from C :\onlinelearning\ecdl\excel. Formulae 1. In cell B8 of Sheet 1, use AutoSum to add up the numbers in cell B5 and B6. What does the icon you used look like? Answer:
+
+2. In cell E8, type in a formula that will add up the numbers in cells E5, E6 and F5, using SUM. 3. In cell D11, type in a formula that will multiply cell B8 by E8. In cell E9, type in a formula that will divide the number of cheeses by the number of biscuits. Edit the formula in cell B9, so that it says B6-B5. 4. Save and close the spreadsheet.
+
+Congratulations!
+You have completed the assignment on Making Simple Calculations.
+
+Version 2
+
+Page 53
+
+ECDL Assignment Workbook -
+
+5.3
+
+Assignment 3 – Editing a Worksheet
+
+The aim of this assignment is to practise the lessons in the Editing a Worksheet section of ECDL Module 4. Before you start Open the file Info.xls from C :\onlinelearning\ecdl\excel. Editing 1. Go to the sheet called Data in the workbook Info.xls. Copy cells A1 to E1 using drag and drop, so that the copied cells occupy cells A10 to E10. How did you do this? Answer:
+
+2. Use AutoFill to copy the formula in cell F2 to cells F3, F4 and F5. Describe how you did this below. Answer:
+
+Page 54
+
+Version 2
+
+ECDL Assignment Workbook -
+
+3. Go to the sheet called Change in the workbook Info.xls. Replace all occurrences of the number 12 with 15, without manually typing it - i.e., use the Replace tool. Describe how you did this. Answer:
+
+4. Check the spelling of this worksheet, correcting and ignoring where necessary. Describe how you did this. Answer:
+
+5. Open the Word document Arrow.doc in your C :\onlinelearning\ecdl\excel folder (open it in Word, not Excel). Copy the double arrow special character from the document and paste it into cell A22 of your Info.xls Excel file (the sheet called Data). If necessary, change the font of cell A22 to Symbol, so that the symbol displays properly.
+
+Sorting 1. Go to the sheet called List in the workbook Info.xls. 2. Sort the list by Drink. What is the first record now? Answer:
+
+3. Sort the list by Age, then by FirstName. 4. Save and close all files.
+
+Congratulations!
+You have completed the assignment on Editing a Worksheet.
+
+Version 2
+
+Page 55
+
+ECDL Assignment Workbook -
+
+Page 56
+
+Version 2
+
+ECDL Assignment Workbook -
+
+5.4
+
+Assignment 4 – Functions
+
+The aim of this assignment is to practise the lessons in the Functions and Cell References section of ECDL Module 4. Before you start Open the file Cheese.xls from C :\onlinelearning\ecdl\excel. Cell References 1. Modify the formula in cell C5 so that cell B1 is an absolute cell reference. AutoFill the formula down through cells C6 to C10. Describe how you did this below. Answer:
+
+Functions 1. In cell C13, type in a formula that will find the average of cells C5 to C10. 2. Save and close the spreadsheet.
+
+Congratulations!
+You have completed the assignment on Functions and Cell References.
+
+Version 2
+
+Page 57
+
+ECDL Assignment Workbook -
+
+5.5
+
+Assignment 5 - Printing Workbooks
+
+The aim of this assignment is to practise the lessons in the Printing Workbooks section of ECDL Module 4. Before you start Open the file Monkey.xls from C :\onlinelearning\ecdl\excel. Printing 1. Which icon would you click on to get a print preview? Describe it below. Answer:
+
+2. Zoom in and out of this print preview. How did you zoom in and out? Describe how below. Answer:
+
+3. Close the print preview. Print one copy of the current spreadsheet using the icon. Describe the icon you used. Answer:
+
+4. Select cells A1 to G5. Print two copies of the selected cells, without setting a print area. Click in the box below and describe how you did this. Answer:
+
+Page 58
+
+Version 2
+
+ECDL Assignment Workbook -
+
+Page Setup 1. Change the margins to 2 cm on each side, and centre the spreadsheet between them. 2. Change the page orientation to Landscape, and make the whole spreadsheet fit correctly onto one page. 3. Create a custom footer on the page, which has your name in the left section, the page number in the middle section, and the file name and date in the right section. Make sure you use the updating fields for these, and don't just type them in (except your name). 4. Save and close the spreadsheet.
+
+Congratulations!
+You have completed the assignment on Printing Workbooks.
+
+Version 2
+
+Page 59
+
+ECDL Assignment Workbook -
+
+5.6
+
+Assignment 6 – Formatting Worksheets
+
+The aim of this assignment is to practise the lessons in the Formatting Worksheets section of ECDL Module 4. Before you start Open the file Chimp.xls from C :\onlinelearning\ecdl\excel. Formatting 1. Go to the sheet called Format. Apply the Currency format to cells B7 to E7. Apply the Fraction format (up to one digit) to cells B8 to E8. Apply the Scientific format (with 2 decimal places) to cells B9 to E9. The numbers in these cells may look a bit strange after you have applied this! 2. Select cell A1, and make the text Times New Roman, with a font size of 14. Merge the cells A1 to E1, and centre the heading. 3. Select cells A14 to E18. Align the contents of these cells to the right, and put a border around them. Select cells A6 to E10. Align the contents of these cells to the centre, and put a border around them with a grid inside. 4. Rotate the text in cell G19 by 90 degrees. Resizing 1. Go to the sheet called Resize. Resize the columns A, B, C and D so that the text they contain is fully visible. How would you use AutoFit to resize a row? Click in the box below and type your answer. Answer:
+
+Page 60
+
+Version 2
+
+ECDL Assignment Workbook -
+
+2. Insert a column between columns A and B, and enter the heading Stapler Sandwich. Resize the column if necessary. Insert a row between rows 5 and 6. 3. Delete the column that starts with the text Fish Sandwich. 4. Save and close the file.
+
+Congratulations!
+You have completed the assignment on Formatting Worksheets.
+
+Version 2
+
+Page 61
+
+ECDL Assignment Workbook -
+
+5.7
+
+Assignment 7 - Charts
+
+The aim of this assignment is to practise the lessons in the Charts section of ECDL Module 4. Before you start Open the file Eats.xls from C :\onlinelearning\ecdl\excel. Charts 1. Go to the sheet called Create. Create a chart from cells A4 to D10. Make it a 3D column chart, with the title Prague Invasion. Call the category Months on the X axis, and the value Fruit on the Z axis. Include a legend. Create it as an object in the current worksheet (Create). Move the chart so that it is in the top left corner of the worksheet, and resize it so that it covers all of the text and numbers in the sheet. 2. Go to the sheet called Delete. Delete the chart to the right of the data called Vague Monthly Report. 3. Display the Chart toolbar. Describe how you did this. Answer:
+
+4. Move the other chart (Fish and Chips Report) so that it is underneath the data on this worksheet, and resize it so that its width is about the same as columns A to F. Resize it again so that its height is about the same as rows 8 to 20. Using the Chart toolbar or other methods, change the chart type to a 3D Area Chart and add minor gridlines to all the axes. Change the font to Arial Narrow. Change the colour of the walls to light blue. Remove the numbers from the value (Z) axis. Add a data table. 5. Print out the chart together with its associated figures. Describe the method you used to do this in the box below. Answer:
+
+6. Save and close the file.
+
+Congratulations!
+You have completed the assignment on Charts.
+
+Page 62
+
+Version 2
+
+ECDL Assignment Workbook -
+
+5.8
+
+Assignment 8 – Saving in Other File Formats
+
+The aim of this assignment is to practise the lessons in the Saving in Other File Formats section of ECDL Module 4. Before you start Open the file Tea.xls from C :\onlinelearning\ecdl\excel. Importing and Exporting 1. Save the spreadsheet as a tab delimited text file called Teatabs into your C :\onlinelearning\ecdl\excel folder. Close the spreadsheet. 2. Create a new spreadsheet ready to import a text file. Import the file teafile.txt as a tab delimited text file. Save this file as a normal Excel file with the name teafile.xls into your C :\onlinelearning\ecdl\excel folder. 3. Save it as an Excel 4 spreadsheet, called Tea4 into your C :\onlinelearning\ecdl\excel folder. 4. Save it as an html file called Teahtml into your C :\onlinelearning\ecdl\excel folder. 5. Save it as a dBASE II file called Teadbase into your C :\onlinelearning\ecdl\excel folder. 6. Close the spreadsheet. Templates and Word 1. Open Tea.xls again from your C :\onlinelearning\ecdl\excel folder, and also open Teaword.doc in Word. Copy the text from the Word document, and paste it into your spreadsheet, starting at cell A5. 2. Insert a new embedded Word document at cell C15. Enter the text Embed a Word Document Today, and go back to the spreadsheet. 3. Save the spreadsheet normally. Save the spreadsheet as a template, called Chips, into your C :\onlinelearning\ecdl\excel folder (not the default folder Excel chooses - you'll have to navigate back to the correct folder). Close the file.
+
+Version 2
+
+Page 63
+
+ECDL Assignment Workbook -
+
+4. Open the spreadsheet template you just saved- open the file itself, don't create a new file from it. Change Egg to Double Egg in cell A1. Save the spreadsheet as a template again, with the name Double into your C :\onlinelearning\ecdl\excel folder). 5. Save and close any files still open.
+
+Congratulations!
+You have completed the assignment on Saving in Other File Formats.
+
+Page 64
+
+Version 2
+
+ECDL Assignment Workbook -
+
+6 Database
+
+-
+
+Version 2
+
+Page 65
+
+ECDL Assignment Workbook -
+
+6.1
+
+Assignment 1 – Getting Started with Access
+
+The aim of this assignment is to practise the lessons in the Getting Started with Access 2000 section of ECDL Module 5. Before you start Open the file Themob.mdb from C :\onlinelearning\ecdl\access. The Parts of an Access Database 1. How many tables does this database have? Answer:
+
+2. What is a database? Write a definition, in your own words, below. Answer:
+
+3. List three advantages of using a computerised database below. Answer:
+
+4. What are the four main parts of a database? Answer:
+
+Page 66
+
+Version 2
+
+ECDL Assignment Workbook -
+
+5. What would you use to extract information from a database? Answer:
+
+6. What type of database object would you use if you wanted a printout of information in your database? Answer:
+
+7. What two types of database objects can you use to enter data into a database? Answer:
+
+8. How many reports does this database have? Answer:
+
+Working with Tables 1. Open the Protection table and add a new record to it with the following details: Surname First name Business Street name Town Money collector Sausage Ashley Bakery 2, Green Street Petersville Angel Face
+
+2. Change the order of the columns so that the Money Collector column comes first.
+
+3. Widen the Business and Street Name columns so that you can see all the data in them.
+
+4. Sort the records by the Money Collector field. Close the table when you've finished, remembering to save your changes. 5. Open the Members table. You want to find out who has the mobile number 07989 456369. How could you find this out without looking through every record? List the steps you would take below. 6. Delete the record for Peter the Great from this table. (He's met with an unfortunate accident!)
+
+Version 2
+
+Page 67
+
+ECDL Assignment Workbook -
+
+7. Change Tony the Claw's mobile number to 07989 232451. Close the table when you've finished.
+
+Using Help and Displaying Toolbars 1. If the Office Assistant is not showing, how would you open it? Answer:
+
+2. Use the Office Assistant to find out how to check the spelling of data in a table (Datasheet view). Briefly list the steps the Office Assistant tells you to take below. Answer:
+
+3. List the steps you would take to print the Help topic you found in the previous question. Answer:
+
+4. How can you see a list of toolbars that are available? Answer:
+
+5. How can you tell which toolbars are switched on using a menu? Explain how they look different. Answer:
+
+Page 68
+
+Version 2
+
+ECDL Assignment Workbook -
+
+6. What would you do to show the Web toolbar? Answer:
+
+7. Close the database you have opened without closing Access. Explain how you closed the database. Answer:
+
+Congratulations!
+You have completed the assignment on Getting Started with Access 2000.
+
+Version 2
+
+Page 69
+
+ECDL Assignment Workbook -
+
+6.2
+
+Assignment 2 – Information from a Database
+
+The aim of this assignment is to practise the lessons in the Queries - Extracting Information from a Database section of ECDL Module 5.
+
+Before you start Open the file Themob.mdb from C :\onlinelearning\ecdl\access. Creating a Query and Adding Criteria 1. Create a new query based on the Protection table. Add the fields Money Collector, Surname, First name and Business. Save this query as QryWhoCollects. 2. Run this query. How did you run it? Explain how below, describing any icons you would use. Answer:
+
+3. How would you delete the Business field from this query? List the steps you would take to do this below. Answer:
+
+4. Move the fields in this query so that First name comes before Surname. How did you do this? Answer:
+
+Page 70
+
+Version 2
+
+ECDL Assignment Workbook -
+
+5. Close QryWhoCollects, saving any changes. Create a new query based on the Protection table. Add the fields Money Collector, Surname and First name. Add a criteria to this query so that you only find records where Frankie the Face is the Money Collector. Run the query. How many records did you find? Answer:
+
+Save the query as QryFrankieCollects. 6. Add the Business field to this query. Use this query to find out when Frankie the Face is collecting from a restaurant. How many records did you find? Answer:
+
+7. Save these changes to the query QryFrankieCollects. Was this last query an AND or an OR? Answer:
+
+8. Close QryFrankieCollects, saving any changes. Create a new query based on the Protection table. Add the fields Money Collector, Business, Surname and First name. Use this query to find the records where either Frankie the Face or Big Tony is the Money Collector. How many records did you find? Answer:
+
+9. Save this query as QryCollectorsTonyFrank. Close the query. Create a new query based on the Protection table. Add all the fields. Use this query to find all the records where High Street is part of the address. How many records did you find? Answer:
+
+Version 2
+
+Page 71
+
+ECDL Assignment Workbook -
+
+10. Save it as QryHighStreetProtection. Close the query. Create a new query to find the blanks in the Money Collector field of the Protection table. Use this query to add Mad Mickey in where there are blanks. Close the query, you don't have to save the changes. 11. Create a new query based on the Protection table. Add all the fields. Use this query to find all the records where the town Little Italy is not part of the address. Save it as QryAllButLittleItaly. Close the query. 12. Create a new query based on the Collections table. Add all the fields to the query and use it to find all the money collected between the 1st of February and the 1st of March 2001. Save this query as QryFebCollections. Close the query.
+
+Sorting Queries and Adding Filters 1. Open your query QryAllButLittleItaly and sort the field Money Collector in ascending order. 2. Hide the Protection ID field in this query and then save the changes. Close the query. 3. Open your query QryCollectorsTonyFrank. Sort the query by the Money Collector field and then the Business field (both ascending). Save and close this query. 4. Open the Protection table. Use filter by selection to find all the records from Little Italy. List all the steps you took to do this, describing any icons you would use. Answer:
+
+Page 72
+
+Version 2
+
+ECDL Assignment Workbook -
+
+5. How would you remove this filter? Explain how you would do this, describing any icons you would use. Answer:
+
+6. Use filter by form to find all records where either Mad Mickey or Tony the Claw are the Money Collectors. Save this filter as a query called QryCollectorsMadClaw. 7. List the steps you took to create the last filter by form below, describing any icons you used. Answer:
+
+8. Which icon did you use to save the filter as a query? Describe the icon below. Answer:
+
+9. Big Tony fancies a night out. Use filter by form to find the records of nightclubs in Little Italy. Save this as a query called QryLittleItalyNightclubs. Close the Protection table, without saving any changes.Close the database.
+
+Congratulations!
+You have completed the assignment on Queries - Extracting Information from a Database.
+
+Version 2
+
+Page 73
+
+ECDL Assignment Workbook -
+
+6.3
+
+Assignment 3 – Inputting Data into a Database
+
+The aim of this assignment is to practise the lessons in the Forms - Inputting Data into a Database section of ECDL Module 5. Before you start Open the file Themob.mdb from C :\onlinelearning\ecdl\access. Creating and Using Forms 1. Open the Members Form. List the steps you took to open this form. Answer:
+
+2. Use the Members Form to add a new member - Harry Hardnut. His mobile number is 07989 254369. 3. Write a description of the button you clicked on to add a new record to the Members Form below. Answer:
+
+4. Close the Members Form. Create a new form based on the Protection table using the Form Wizard. Make sure you add all the fields except Protection ID. Make sure it has a columnar layout and the Standard style. Call the form Protection Form. Close the form once you have finished. 5. Create a columnar AutoForm based on the Collections table. Save the form as Collections AutoForm and then close it. 6. Create a tabular AutoForm based on the Members table. Save it as Members AutoForm and then close it.
+
+Page 74
+
+Version 2
+
+ECDL Assignment Workbook -
+
+Changing the Design of a Form 1. Open the Collections Form. Which view will you need to be in to change the way it looks? Answer:
+
+2. Switch to the view where you can change the way the form looks. How did you switch to this view? Answer:
+
+3. Make the header, footer and detail about 1 cm (a little less than 1/2 inch) deeper. 4. Change the colour of the header and footer to orange and the detail to white. 5. Position the label in the header so that it is in the centre of the header. Resize it so that you can see all the text in the label clearly. Save the changes you have made to the form. 6. Which view will you need to switch to if you want to see how your form now looks? Answer:
+
+7. Switch to the view where you would enter information into your form. Describe how you switched to this view and the location of any icons you used. Answer:
+
+8. Close the Collections Form. Open the Members Form. Ensure you are in the view where you can change the way the form looks. Add a label to the header. In this label type the title Mob Members. 9. Change the text of the title you added to be 18 pts in size. Resize the label if necessary. Ensure that the text is black in colour with a background fill colour of white.
+
+Version 2
+
+Page 75
+
+ECDL Assignment Workbook -
+
+10. Change the border width of the title you added to 4. Make the style of the border shadowed and the colour yellow. Save and close the form. 11. Open the form you created earlier based on the Protection table. Ensure you are in the view where you can change the way the form looks. Add to the detail the field you left out when you created the form - Protection ID. 12. Widen the detail area and add here the picture called Mob Member.bmp from C :\onlinelearning\ecdl\access. Save and close the form.
+
+Close the database.
+
+Congratulations!
+You have completed the assignment on Forms - Inputting Information into a Database.
+
+Page 76
+
+Version 2
+
+ECDL Assignment Workbook -
+
+6.4
+
+Assignment 4 – Reports – Displaying Information
+
+The aim of this assignment is to practise the lessons in the Reports - Displaying Information section of ECDL Module 5.
+
+Before you start Open the file Themob.mdb from C :\onlinelearning\ecdl\access. Creating and Printing Reports 1. Open the report called Mob Members Collections to Date and print it off. Explain how you printed the report, listing any steps that you took and describing any icons you used. Answer:
+
+2. Close Mob Members Collections to Date. Using the Report Wizard, create a new report based on the Protection table. Choose to add all of the fields. Group by the Money Collector and sort ascending by Surname. Ensure that the report will have landscape orientation. Choose the Stepped layout and the Corporate style. Save the report as Protection Report. Close the report you've created and saved. 3. Create a columnar AutoReport based on the Protection table. Save the report as Columnar Protection. Close the report you've created and saved. 4. Create a tabular AutoReport based on the Protection table. Save the report as Tabular Protection. Close the report after saving it. 5. Create a new report, using the Report Wizard, based on the query QryMobCollections. Add all the fields and choose to view your data by Members. Do not add any grouping levels but do choose to sort by the Date collected field (sort in ascending order). Choose to show the average, minimum and maximum values for the money paid in the detail and summary of the report. You can choose the layout and style for the report.
+
+Version 2
+
+Page 77
+
+ECDL Assignment Workbook -
+
+Call the report Mob Collections Summary Report. Close this report. Changing the Design of a Report 1. Open the report Mob Members Collections to Date. Which view will you need to be in to change the way this report looks? Answer:
+
+2. Switch to the view you need to be in to change the way the report looks. How did you switch to this view? Answer:
+
+3. Change the title of the report in the header to Mob Collections - 1st Quarter. 4. Decrease the height of the report header so that the title just fits. Save your changes to the report. 5. Which view will you need to be in to see how this will print out? Answer:
+
+6. Switch to the view that shows you how the report will print out. Describe how you switched to this view, listing any steps that you took and the location of any icons you used. Answer:
+
+7. Close the report and then close the database.
+
+Congratulations!
+You have completed the assignment on Reports - Displaying Information.
+
+Page 78
+
+Version 2
+
+ECDL Assignment Workbook -
+
+6.5
+
+Assignment 5 – Creating a Simple Database
+
+The aim of this assignment is to practise the lessons in the Creating a Simple Database section of ECDL Module 5. Creating Databases 1. What is the key question you need to ask when planning a database? Answer:
+
+2. Create a book collection database using the Database Wizard. Call the database Contact Management.mdb and save it in the folder C :\onlinelearning\ecdl\access. Do not add any extra fields. Choose Standard style for your forms and Compact style for your reports. The title for your database should be Contact Management. Choose not to include any pictures. 3. Enter a new record for a contact. Make up the information you enter (only bother entering information on page 1). Close the form once you have entered the record and then close the database. 4. Create a new database called PopStars.mdb. Save it in the folder C :\onlinelearning\ecdl\access.
+
+Creating and Working with Tables 1. Create a new table in Design view. Enter the following fields: StarID, NameOfGroup, FirstName, Surname, Nickname, DateOfBirth, Address1, Address2, Town, County, Postcode, and VoiceCoach. Save the table with the name TblStars. 2. Set the data types for the fields as follows: StarID DateOfBirth VoiceCoach AutoNumber Date/Time Yes/No
+
+Ensure all the other fields have the Text data type.
+
+Version 2
+
+Page 79
+
+ECDL Assignment Workbook -
+
+3. Which field do you think would be best as the primary key for this table? Write your answer below, giving your reasons for this choice. Answer:
+
+4. Set the primary key for this table using the field you identified in the last question. 5. Change the format property of the DateOfBirth field to be Short Date. 6. Create an input mask for the Postcode field. 7. Make Yes the default value for the VoiceCoach field. 8. Ensure that a value must be entered for the Nickname field. Ensure that a maximum of 20 characters can be entered for the nickname. 9. All the stars in this table must be between certain ages. Make sure that a date of birth can only be entered between 01/06/76 and 01/06/83. Ensure that some suitable text will appear if a birth date is entered that is outside of these dates. 10. Delete the NameOfGroup field from this table. List the steps you took to delete this field. Answer:
+
+11. Change the Nickname field to be called StarName instead. List the steps you took to do this. Answer:
+
+12. Move the StarName field so that it appears immediately after the StarID field. List the steps you took to do this. Answer:
+
+Page 80
+
+Version 2
+
+ECDL Assignment Workbook -
+
+13. Save the table. What is the name of the view you need to be in to add a record to this table? Answer:
+
+14. Switch to the correct view to add data to the table. Add a record to the table - you can make up the data you enter. 15. What is the name of the view you need to be in to add a new field to this table? Answer:
+
+16. Switch to the view you identified in the previous question. Explain how you did this below, describing the location of any icons you used. Answer:
+
+17. Close the table and the database.
+
+Congratulations!
+You have completed the assignment on Creating a Simple Database.
+
+Version 2
+
+Page 81
+
+ECDL Assignment Workbook -
+
+7 Module 6 Presentations
+
+Page 82
+
+Version 2
+
+ECDL Assignment Workbook -
+
+7.1
+
+Assignment 1 – Getting
+
+The aim of this assignment is to practise the lessons in the Getting Started with PowerPoint section of ECDL Module 6. Before you start Open the file Bettystart.ppt from C :\onlinelearning\ecdl\ppoint. Changing the View and Moving Around 1. Using a menu, switch to looking at this presentation in Slide Sorter view. List the steps you took to do this. Answer:
+
+2. Return to Slide view and move to the second slide in this presentation. Which one of the set of buttons pictured on this slide would you use to move between two slides, a), b), c), d) or e)? Answer:
+
+3. What will you press on the keyboard to move to the next slide? Write this below and then use this key to move to the next slide in the presentation! Answer:
+
+4. What will you press on the keyboard to move back to the previous slide? Answer:
+
+5. Which key on the keyboard will take you back to the first slide? Try it in the presentation and write it below. Answer:
+
+Version 2
+
+Page 83
+
+ECDL Assignment Workbook -
+
+6. What will you press on the keyboard to move to the last slide? Write it below and then use this key to move to the last slide! Answer:
+
+7. Move to slide number 3. Which of the set of icons pictured on this slide would you use to switch to Outline view, a), b), c) or d) or e)? Answer:
+
+8. Which of the set of icons pictured on slide number 3 would you use to switch to Normal view, a), b), c) or d) or e)? Answer:
+
+9. How about Slide view? Which of the icons pictured on slide number 3 would you use to get to this view, a), b), c) or d) or e)? Answer:
+
+10. Move to the fourth slide. You can't see your slides very clearly and you want to zoom in so that they fill up more of the screen. Which of the icons pictured on slide number 4 would you use to do this a), b), c) or d)? Answer:
+
+11. Describe how you would choose a magnification of 50 percent. List any steps you would take. Answer:
+
+Creating Presentations 1. Move to the fifth slide in the presentation. Which icon would you use to create a new blank presentation, a), b), c) or d)? Answer:
+
+Page 84
+
+Version 2
+
+ECDL Assignment Workbook -
+
+2. How would you create a new blank presentation using a menu? List the steps you would take below. (Don't actually create a presentation yet!) Answer:
+
+3. Close the presentation Bettystart.ppt without saving it. Create a new blank presentation using either the menu or the icon. Save the presentation with the name Myblanketyblank.ppt in the folder C :\onlinelearning\ecdl\ppoint. Describe how you saved this presentation. Answer:
+
+4. If you wanted to save a new presentation in a folder you had in C :\My Documents\My Presentations how would you do it? List the steps you would take in the Save dialog box. Answer:
+
+Version 2
+
+Page 85
+
+ECDL Assignment Workbook -
+
+Using Help and Displaying Toolbars 1. Close any open presentations and then open the file Bettystart.ppt again. To get a bit more room on the screen, you decide to hide the Standard toolbar. How do you do this? Answer:
+
+2. You now need to show the Standard toolbar again, how do you do this? Answer:
+
+3. Move to slide number 7. Which of the icons pictured on this slide would you use to show the Office Assistant, a), b), c) or d)? Answer:
+
+4. Make sure you can see the Office Assistant. Use it to find out how you would add shadowing to text. Write the steps it tells you to take to add a shadow to text. Answer:
+
+5. Hide the Office Assistant so that you can no longer see it on your screen. Describe how you just did this. Answer:
+
+Page 86
+
+Version 2
+
+ECDL Assignment Workbook -
+
+Adding Text to Slides 1. Move to the last slide in this presentation. Add the text "Bedtime" to the title placeholder and then add the following text to the bulleted list: • • • Pyjamas - £6.99 Nightshirts - £4.99 Slippers - £5.99
+
+2. Move to the first slide and delete the subtitle placeholder. Add a text box to this slide and type the text "Spring Catalogue". 3. Move to the eighth slide. Add "Red" to the list of colours available for the boy's shorts. Select the text "White" from the colours available for T shirts and delete it. 4. How did you select the text "White"? Describe below how you select text. Answer:
+
+5. Switch to Outline view and move the text on the ninth slide "Trainers - £18.99" so that it is above the text "Sweatshirts - £7.99". Add another item to this slide: "Bed socks - 99p". Demote this last point you added so that it becomes a subpoint of "Sweatshirts". 6. Return to Slide view and move to slide number 2. Which of the icons pictured on this slide will collapse and expand selected slides in Outline view, a), b), c), d) or e)? Answer:
+
+7. You have used two views during this section, describe how you have switched your view between Slide and Outline. Answer:
+
+Working with Placeholders 1. Return to the first slide and resize the title placeholder to be about 50% larger. Move this placeholder to the top of the slide. 2. Switch to slide 4 and delete the title placeholder which contains the text "Getting a Closer Look". Close and save this presentation.
+
+Version 2
+
+Page 87
+
+ECDL Assignment Workbook -
+
+Adding Deleting and Moving Slides 1. Open the presentation called SlideBetty. Switch to Slide Sorter view and delete the fourth slide, with the title Slide to Delete. 2. Move the Bedtime slide so that it comes before the Sportswear slide. 3. Return to Slide view and move to the last slide. Insert a new slide at the end of the presentation with a bulleted list layout. 4. In this section you have switched between Slide view and Slide Sorter view. Describe how you have changed your view between Slide and Slide Sorter. Answer:
+
+Slide Setup and Printing 1. Move to slide number 2, Printing Slides. On this slide there is a picture of part of a dialog box. Which menu would you use to get to this dialog box? Answer:
+
+2. Which option from the menu you identified in the previous question would you choose to get to the dialog box on slide number 2? Answer:
+
+3. Look at the dialog box on slide number 2, Printing Slides. How would you ensure that you printed all the slides in a presentation? Answer:
+
+4. How would you choose to print only slide number 1? How would you print 3 copies of this slide? List all of the steps. Answer:
+
+Page 88
+
+Version 2
+
+ECDL Assignment Workbook -
+
+5. How would you print out a set of audience handouts (with 6 slides per page)? Answer:
+
+6. When you print out your slides how could you make sure that there was a frame around each slide on the page? Answer:
+
+7. Imagine you want to print out 3 copies of slide number 1 in pure black and white and not colour. How would you ensure this happens? Answer:
+
+8. Let's say that when you try to print you find there is no available printer. How would you use the dialog box pictured on the second slide to ensure that you created a file you could print from another computer later - whether or not the presentation was on the computer? List the steps you would take below. Answer:
+
+9. Change the size of all the slides in this presentation to be sized for A4 paper. 10. Change the orientation of all the slides to landscape. 11. Save and close this presentation.
+
+Congratulations!
+You have completed the assignment on Getting Started in PowerPoint.
+
+Version 2
+
+Page 89
+
+ECDL Assignment Workbook -
+
+7.2
+
+Assignment 2 - Formatting
+
+The aim of this assignment is to practise the lessons in the Formatting section of the ECDL Module 6 course. Before you start Open the file Forbetty.ppt from C :\onlinelearning\ecdl\ppoint. Formatting Text 1. Make the "TM" at the end of "Betty Bloomer's" superscript. 2. Select the text "Betty Bloomer's" on the first slide and make this bold, italic and left aligned. 3. Change the font for the text "Mail Order Catalogue" to be Arial and 28 pts in size and to have a shadow. 4. Move to the second slide and make the text in the title placeholder the colour blue and underlined. 5. Move to the third slide and change the case of the title "sPORTS wEAR" to be title case. 6. In the box below describe the steps you took to change the case of the title in the previous question. Answer:
+
+7. Move to the fourth slide and change the © at the end of "Betty's Bedtimers" to subscript. Save the presentation.
+
+Formatting Placeholders 1. Move to the sixth slide. Change the alignment of the text in the bulleted list placeholder so that it is aligned vertically and horizontally in the centre of the placeholder. 2. Change the line around this bulleted list placeholder so that it is green, dashed and 3 pts thick.
+
+Page 90
+
+Version 2
+
+ECDL Assignment Workbook -
+
+3. Return to the first slide. Format the title placeholder so that there is a line around it and that it has a peach fill colour. Save the presentation. Changing Colours and Background 1. Change the colour scheme for the slides in this presentation to one with a blue background. 2. Change the background colour for all the slides to a lighter blue. 3. Apply a horizontal gradient fill effect to the background of all the slides. 4. Change the colour scheme for the first slide only back to something with a white background. Change the background colour of this slide to a pale pink and choose to omit the background graphics for this slide. 5. Move to the fifth slide. Create a custom colour scheme for this slide that has orange title text, yellow text and lines and red fills. Add this as a standard scheme and apply to this slide only. Save this presentation.
+
+Changing Bullets and Line Spacing 1. Move to the sixth slide. Change the bullet points to be red and another symbol or character. 2. Increase the spacing between the lines of the bulleted list to double what it is now. 3. Move to the fourth slide. Decrease the line spacing for the bulleted list to be 1.5 lines. 4. Close and save this presentation.
+
+Congratulations!
+You have completed the assignment on Formatting
+
+Version 2
+
+Page 91
+
+ECDL Assignment Workbook -
+
+7.3
+
+Assignment 3 – Masters and Templates
+
+The aim of this assignment is to practise the lessons in the Masters and Templates section of ECDL Module 6.
+
+Before you start Open the file Bondmast.ppt from C :\onlinelearning\ecdl\ppoint. Using the Master Slides 1. Insert Heart.jpg from C :\onlinelearning\ecdl\ppoint as a logo on the Slide Master. Move it to the bottom right of the slide. 2. Insert the Heart.jpg on the Title Master slide also. This time position the picture in the top middle of the slide, above the title.
+
+3. Change the font of the Master title style on the Slide Master to Arial.
+
+4. Change the bullet point of the Master text style to a star or asterisk.
+
+Using Templates 1. Apply the Ribbons design template to this presentation.
+
+2. Close and save this presentation.
+
+Congratulations!
+You have completed the assignment on Masters and Templates.
+
+Page 92
+
+Version 2
+
+ECDL Assignment Workbook -
+
+7.4
+
+Assignment 4 – Speaker’s Notes
+
+The aim of this assignment is to practise the lessons in the Speaker's Notes section of the ECDL Module 6 course. Before you start Open the file Favenote.ppt from C :\onlinelearning\ecdl\ppoint. Speaker's Notes 1. Add some notes about your leisure activities to slide 1 of this presentation.
+
+2. Add some notes to the second slide of this presentation about your holidays.
+
+3. Print out the notes pages for this presentation.
+
+4. Write a list of the steps you took to print out the notes pages. Answer:
+
+5. Save and close this presentation.
+
+Congratulations!
+You have completed the assignment on Speaker's Notes.
+
+Version 2
+
+Page 93
+
+ECDL Assignment Workbook -
+
+7.5
+
+Assignment 5 – Graphs and Charts
+
+The aim of this assignment is to practise the lessons in the Graphs and Charts section of the ECDL Module 6 course.
+
+Before you start Open the file Fishchar.ppt from C :\onlinelearning\ecdl\ppoint. Creating and Working with Charts 1. Create a new slide for this presentation with the chart slide layout. Add a title Sales Results to this slide. 2. Enter the following text into the datasheet for the chart: 1st Qtr 20.4 30.6 45.9 2nd Qtr 27.4 38.6 46.9 3rd Qtr 90 34.6 45 4th Qtr 20.4 31.6 43.9
+
+London Birmingham Manchester
+
+Return to PowerPoint to see how your chart looks. 3. You need to edit some text on the chart on this slide, make sure you are in Microsoft Graph ready to do this. Describe below how you make sure that you are in Microsoft Graph. Answer:
+
+4. Change Manchester to Swansea. Enter a new row for Glasgow with the figures 50.1, 29.5, 65 and 29.8. 5. Return to Microsoft PowerPoint. Resize the chart to make it a little bit larger on the slide. In the box below describe how you made the chart larger. Answer:
+
+Page 94
+
+Version 2
+
+ECDL Assignment Workbook -
+
+6. Move the chart so that the bottom edge of the placeholder lines up with the bottom of the slide. 7. Switch back to Microsoft Graph and change the chart type to a bar chart. 8. Change the way that the information is displayed in this chart to By Column. 9. Hide the legend and gridlines for this chart. 10. Change the colour of all the light blue bars in the chart to bright pink. 11. Use the Chart options to add a title to the chart: Quarterly Sales Results, and show a data label which displays the value for each bar. 12. Move to the 1999 Sales slide and delete the 1999 Sales Results chart
+
+Organisation Charts 1. Add a slide to the end of this presentation with the organization chart layout. 2. Add an organisation chart to this new slide. In the first box, add the name Ivor Goldfish with the title Managing Director. 3. In the first subordinate box on the left, add the name Crystal Bowl with the title Sales Director. 4. Delete the middle subordinate box. On the right hand subordinate box add the name Bob Around with the title Operations Director. 5. Add a subordinate box to the organisation chart underneath Crystal Bowl. The name in the new box should be Sally Mander, who is an Area Sales Manager. 6. Change the style of the boxes for the Operations Director and Sales Director to any style you wish. 7. Change the background of this organisation chart to a paler blue. 8. Return to PowerPoint from the organisation chart. 9. Close and save this presentation.
+
+Congratulations!
+You have completed the assignment on Graphs and Charts.
+
+Version 2
+
+Page 95
+
+ECDL Assignment Workbook -
+
+7.6
+
+Assignment 6 – Drawing Toolbar
+
+The aim of this assignment is to practise the lessons in the Drawing Toolbar section of the ECDL Module 6 course.
+
+Before you start Open the file Drawing.ppt from C :\onlinelearning\ecdl\ppoint. Drawing and Formatting Shapes 1. Ensure that the Drawing toolbar is showing. On the first slide in this presentation, use the Drawing toolbar to draw a rectangle on a blank area of the slide. 2. Change the fill colour of the orange circle to purple, and make this circle a little bigger. 3. Change the line colour of the dark orange square to yellow and make the line style 3 pts wide and dotted. 4. Move this square to the bottom left hand corner of the slide. 5. Delete the green triangle. 6. In a blank area of the slide, draw a circle, a line and a star from the AutoShapes.
+
+Adding 3D and Shadow 1. Apply the 3D Style 1 effect to the circle you have drawn. Use the 3D toolbar to increase the depth of the 3D effect to 144 pts, and change the lighting to dim. 2. Apply the Shadow Style 1 effect to the star you have drawn. Use the Shadow toolbar to give the shadow seven nudges to the right, and change the colour of the shadow to black.
+
+Page 96
+
+Version 2
+
+ECDL Assignment Workbook -
+
+Rotating and Ordering Shapes 1. Change the order of the shapes to bring the yellow rectangle to the front. 2. Rotate the smiley face to the left. Flip the crescent moon horizontally. 3. Save and close this presentation.
+
+Congratulations!
+You have completed the assignment on Drawing.
+
+Version 2
+
+Page 97
+
+ECDL Assignment Workbook -
+
+7.7
+
+Assignment 7 – ClipArt and Pictures
+
+The aim of this assignment is to practise the lessons in the Clipart and Pictures section of the ECDL Module 6 course.
+
+Before you start Open the file Bettypic.ppt from C :\onlinelearning\ecdl\ppoint. Adding Pictures to Slides 1. Add a piece of Clipart to the placeholder on slide 4. 2. Move and resize the picture so that it fills the empty space on the slide. 3. Copy the picture on the fifth slide and paste it back onto the same slide. Move and resize the copied picture so that it is about a quarter of the size of the original and is positioned in the top left hand corner. 4. Delete the original picture of the lorry on the fifth slide. 5. Insert the picture file Lorrypic.jpg from C :\onlinelearning\ecdl\ppoint onto this slide.
+
+Using the Picture Toolbar 1. Move the picture of the child on slide 1 to the bottom left hand corner of the slide. 2. How would you display the Picture toolbar if it didn't automatically display when you clicked on a picture? 3. Make sure the Picture toolbar is displayed and move to slide 3. Change the line style around the picture on slide 3 to double lines, then change the colour of these lines to yellow. 4. Insert a line around one of the pictures on slide 2. 5. Close and save this presentation.
+
+Congratulations!
+You have completed the assignment on Clipart and Pictures.
+
+Page 98
+
+Version 2
+
+ECDL Assignment Workbook -
+
+7.8
+
+Assignment 8 – Moving and Copying
+
+The aim of this assignment is to practise the lessons in the Moving and Copying section of ECDL Module 6.
+
+Before you start Open the file Mover.ppt from C :\onlinelearning\ecdl\ppoint. Moving and Copying Text 1. Describe the four steps you would need to take to move a piece of text using the icons. Enter your answer into the box below. Answer:
+
+2. Copy the text "Betty's Bloomer's" from slide 1 into the title placeholder of slide 4. Close and save this presentation.
+
+Congratulations!
+You have completed the assignment on Moving and Copying.
+
+Version 2
+
+Page 99
+
+ECDL Assignment Workbook -
+
+7.9
+
+Assignment 9 – Spell Checking
+
+The aim of this assignment is to practise the lessons in the Spell Checking section of ECDL Module 6.
+
+Before you start Open the file Spellbond.ppt from C :\onlinelearning\ecdl\ppoint. Spell Checking 1. Start the spell checker to check the spelling in this presentation. Explain how you started the spell check, describing any icons you used. Answer:
+
+2. Correct the first misspelling "pendent" to "pendant". Describe how you corrected this spelling error. Answer:
+
+3. Correct the second misspelling "braclets" to "bracelets". How did you do this? List the steps you took in the box below. Answer:
+
+Page 100
+
+Version 2
+
+ECDL Assignment Workbook -
+
+4. Correct the last spelling error in this presentation, "Weding" to "Wedding". How did you do this? List the steps you took in the box below. Answer:
+
+5. Close and save this presentation.
+
+Congratulations!
+You have completed the assignment on Spell Checking.
+
+Version 2
+
+Page 101
+
+ECDL Assignment Workbook -
+
+7.10
+
+Assignment 10 - Importing
+
+The aim of this assignment is to practise the lessons in the Importing section of ECDL Module 6.
+
+Before you start Open the file Fishimp.ppt from C :\onlinelearning\ecdl\ppoint. Importing and Copying 1. Import the Word document Reports.doc into this presentation. 2. Import the slide from the presentation Targets.ppt. List the steps you took to do this in the box below. Answer:
+
+3. Move to the Sales Results slide. You wish to change the chart on this slide so that is shows your new figures. Import the Excel file Salesdata.xls. The figures you require are on Sheet 1. 4. Open the presentation Copyfish.ppt from C :\onlinelearning\ecdl\ppoint. Copy the last slide with the title Company Report and paste it onto the end of the Fishimp.ppt presentation. How did you copy this slide into Fishimp.ppt? List the steps you took below. Answer:
+
+5. Close the Copyfish.ppt presentation. Save the presentation Fishimp.ppt but leave it open.
+
+Page 102
+
+Version 2
+
+ECDL Assignment Workbook -
+
+Creating Excel Charts 1. Move to the Sales Chart slide. Add a Microsoft Excel Chart Object to this slide.
+
+2. Change the column headings on Sheet 1 to East, West and South. Change the first column of figures to 15, 25, 30, 18, 10 and 25.
+
+3. Save and close this presentation.
+
+Congratulations!
+You have completed the assignment on Importing.
+
+Version 2
+
+Page 103
+
+ECDL Assignment Workbook -
+
+7.11
+
+Assignment 11 – On-Screen Shows
+
+The aim of this assignment is to practise the lessons in the On-Screen Shows section of ECDL Module 6.
+
+Before you start Open the file Bondshow.ppt from C :\onlinelearning\ecdl\ppoint. Running a Show and Animating Slides 1. Add the transition effect Cover Right to all the slides. Change the speed of this transition to slow. 2. Apply the preset animation effect Flash Once to the second slide. Add the animation effect Appear to the third slide of this presentation. 3. Run the slide show. 4. Click in the box below and type a description of how you just ran the slide show, (for example, which icon you clicked on or which menu you used). Answer:
+
+5. Click in the box below and type a description of how you would move to the next or previous slide whilst running a slide show. Answer:
+
+6. Ensure that all the slides will automatically advance after 4 seconds. 7. Add the Gunshot sound to the transition effect on the first slide. 8. Close and save this presentation.
+
+Page 104
+
+Version 2
+
+ECDL Assignment Workbook -
+
+Hiding Slides and Changing the Settings for a Show 1. Open Morebond.ppt from C :\onlinelearning\ecdl\ppoint. Hide the fourth slide in this presentation. 2. Change the preset animation effect on the first slide to Drive-In. 3. Ensure that the slides will only advance in a show when you click your mouse and not automatically. 4. Save and close this presentation.
+
+Congratulations!
+You have completed the assignment on On-Screen Shows.
+
+Version 2
+
+Page 105
+
+ECDL Assignment Workbook -
+
+7.12
+
+Assignment 12 – File Formats
+
+The aim of this assignment is to practise the lessons in the Working with Files section of ECDL Module 6. Before you start Open the file Interfish.ppt from C :\onlinelearning\ecdl\ppoint. Saving for the Internet 1. This presentation needs to be seen by the whole company, so you will need to save it so that it can be shown on the Internet. Ensure it is saved in C :\onlinelearning\ecdl\ppoint. A new folder will be created, once saved, called Interfish_files in C :\onlinelearning\ecdl\ppoint.
+
+Saving as a Different Format 1. Save the presentation so that people with only PowerPoint 4.0 will be able to open it. Call the file Earlyfish.ppt and save it in C :\onlinelearning\ecdl\ppoint.
+
+Congratulations!
+You have completed the assignment on File Formats.
+
+Page 106
+
+Version 2
+
+ECDL Assignment Workbook -
+
+8 Module 7 – Communication
+
+Version 2
+
+Page 107
+
+ECDL Assignment Workbook -
+
+8.1
+
+Assignment 1 – Getting
+
+The aim of this assignment is to practise the lessons in the Getting Started on the Web section of ECDL Module 7. Before you start Open Internet Explorer. Using Help 1. Open the Help box. Which key on the keyboard would you press to call it up?
+
+2. Go to the Contents tab. What is the first topic inside the category Finding the Web Pages You Want? Answer:
+
+3. Go to the Index tab, and type in the word address. What is the first highlighted topic to be displayed? Answer:
+
+Changing the Display 1. Close the Help box. Describe how you would change the screen display to full screen, and then back again. Answer:
+
+Page 108
+
+Version 2
+
+ECDL Assignment Workbook -
+
+2. Which menu and submenu lets you show and hide toolbars? Answer:
+
+3. Display the Radio toolbar. Move it to a different location, and then hide it again. How did you move the toolbar? Answer:
+
+Web Addresses 1. What does URL stand for? Type your answer in the box below. Answer:
+
+2. Go the BBC website at www.bbc.co.uk. How did you get there? Where did you type this address in? Answer:
+
+3. What does the www in www.bbc.co.uk stand for? Answer:
+
+4. What does the .uk part stand for? If the web address ended in .gov, what type of site would it be? Answer:
+
+Congratulations!
+You have completed the assignment on Getting Started on the Web.
+
+Version 2
+
+Page 109
+
+ECDL Assignment Workbook -
+
+8.2
+
+Assignment 2 – Using Search Engines
+
+The aim of this assignment is to practise the lessons in the Using Search Engines section of ECDL Module 7. Before you start Open Internet Explorer. Search Engines 1. What is a search engine for? Answer:
+
+2. Name three search engines. Answer:
+
+3. Suppose you wanted to find information about orange juice, what words would you type into the search box to do a simple search? Answer:
+
+Searching the Web 1. Type in the words what time is it? into the Yahoo search box at www.yahoo.com. What is the first website it finds? Answer:
+
+2. How would you search for information about cheese and pickle? Which symbol would you use to make sure you only find websites with those two words in? Answer:
+
+Page 110
+
+Version 2
+
+ECDL Assignment Workbook -
+
+3. How would you search for the phrase cheese and pickle? What should you enclose the phrase in to make sure you find pages featuring this? Do this search now. How many results do you get from this search? Answer:
+
+4. How would you exclude a word from a search? Which symbol should you use? Do the same search, but make sure it avoids any webpages with the word sandwich on them. How many results do you get now? Answer:
+
+Congratulations!
+You have completed the assignment on Using Search Engines.
+
+Version 2
+
+Page 111
+
+ECDL Assignment Workbook -
+
+8.3
+
+Assignment 3 – Viewing and Saving Web Pages
+
+The aim of this assignment is to practise the lessons in the Viewing and Saving Web Pages section of ECDL Module 7.
+
+Before you start Open Internet Explorer. Favourites 1. Change your default homepage to www.google.co.uk. Describe how you have done this. Answer:
+
+2. Add Google to your Favourites, giving it the name Google Search. Which menu and menu item did you use to do this? Answer:
+
+3. Create a folder in your Favourites list, calling it Spimm. Don't close the dialog box you used to do this just yet. Describe how you created the folder Spimm. Answer:
+
+Page 112
+
+Version 2
+
+ECDL Assignment Workbook -
+
+4. Move your new Google shortcut into the folder you just created. Close the dialog box once you have finished. Describe how you moved the shortcut into the folder. Answer:
+
+5. Go to www.help.com, and add this to the new Spimm folder in your Favourites. How did you do this? Answer:
+
+Saving Pages 1. Go to www.bbc.co.uk. Save this page onto your hard drive, in the C :\onlinelearning folder. How did you do this? Answer:
+
+2. Go to a different website. How would you load the page you just saved into your browser? Answer:
+
+Version 2
+
+Page 113
+
+ECDL Assignment Workbook -
+
+Images 1. Describe how you would stop images appearing on webpages. Answer:
+
+2. Switch off images using the method you described above, and go to www.channel4.com. How would you display just one of the images again? Answer:
+
+3. Switch the images back on, and refresh the page to make sure they are back. Describe how you did this. Answer:
+
+Congratulations!
+You have completed the assignment on Viewing and Saving Web Pages.
+
+Page 114
+
+Version 2
+
+ECDL Assignment Workbook -
+
+8.4
+Before you start Open Internet Explorer. Printing
+
+Assignment 4 - Printing
+
+The aim of this assignment is to practise the lessons in the Printing section of ECDL Module 7.
+
+1. Go to www.imdb.com. Print two copies of the first page of this webpage. How did you do this? Answer:
+
+2. Go to www.museumoflondon.org.uk. Print one copy of the right hand frame. Describe how you did this, including the steps you took. Answer:
+
+Page Setup 1. Go to www.imdb.com again. Change the page orientation to Landscape, and increase every margin by 1 cm. How did you do this? Answer:
+
+Version 2
+
+Page 115
+
+ECDL Assignment Workbook -
+
+2. Print out one copy of this webpage. Describe how you did this. Answer:
+
+Congratulations!
+You have completed the assignment on Printing.
+
+Page 116
+
+Version 2
+
+ECDL Assignment Workbook -
+
+8.5
+
+Assignment 5 – Getting Started with Outlook
+
+The aim of this assignment is to practise the lessons in the Getting Started with Outlook section of ECDL Module 7. Before you start Open Outlook. Getting Started 1. Type in which menu and menu item you used to start up Outlook. Answer:
+
+2. Display the Inbox. How did you do this? Answer:
+
+3. Open the Help box. Go to the Index tab, and type in the word address. What is the first highlighted topic to be displayed when you search? Answer:
+
+4. Go to the Contents tab of the Help box. What is the first Help item inside the Using Inbox topic? Answer:
+
+Version 2
+
+Page 117
+
+ECDL Assignment Workbook -
+
+Toolbars and Views 1.Close the Help box. In the Current View submenu on the View menu, which item would you click on to display the messages with a short preview underneath? Answer:
+
+2. How do you turn off the Standard toolbar? Make sure you turn it back on again if you turn it off. Answer:
+
+Congratulations!
+You have completed the assignment on Getting Started with Outlook.
+
+Page 118
+
+Version 2
+
+ECDL Assignment Workbook -
+
+8.6
+
+Assignment 6 – Working with Email
+
+The aim of this assignment is to practise the lessons in the Working with Email section of ECDL Module 7. Before you start Ensure that you are in the Inbox screen and that you can see the Outlook bar and the Folder List on the left hand side. (See Section 8.5.4 Viewing the Folders List in the manual). Sending and Receiving Emails 1. Create and send an email to outlook@happy.co.uk, with the subject line Hello and the message text You're my friend now. Describe how you did this. Answer:
+
+2. How do you know when you have received a reply to the email you just sent? Answer: Answer:
+
+3. Open up the reply you've been sent. What does it say? Answer:
+
+Version 2
+
+Page 119
+
+ECDL Assignment Workbook -
+
+4. Reply to the email, and add whatever message text you like. List the steps you took to do this, describing any icons you used. Answer:
+
+5. How would you forward the above reply to yourself. Without actually sending it, explain how you would forward the email, describing any icons you would use. Answer:
+
+6. How could you attach a file to an email before sending it? Explain below, describing any icons that you would use. Answer:
+
+7. Ensure you have only one email open. How could you copy some text from this email into a new blank email? List all the steps you would take below. Answer:
+
+Customising Emails 1. Which menu and option would you use to create a signature that could be added to the bottom of every email you send? Answer:
+
+Page 120
+
+Version 2
+
+ECDL Assignment Workbook -
+
+2. Click on the menu and option you identified in the last question. In the dialog box that opens which tab do you need to be on to create a new signature? Answer:
+
+3. From this tab create a signature called Pamela with the words Sincerely, Pamela Doove. How did you create this signature? Answer:
+
+4. Imagine that you don't want this signature (or any other) to be added automatically to every email you send. Ensure that there is no signature added to the email that you send. Describe how you did this, listing all the steps you took. Answer:
+
+5. Create and send a new email to outlook@happy.co.uk, with the subject line Orange Juice, and insert the "Pamela" signature you created earlier. Describe how you added the signature. Answer:
+
+Version 2
+
+Page 121
+
+ECDL Assignment Workbook -
+
+Checking your Spelling 1. Create a new email, and add the following message text (including mistakes): Dear Fred, Please send me some more of that speccial stuff, we've neerly run out of it here, Yours sicnerely, Monty Pim. Which menu and menu option would you use to start checking the spelling of this email? Answer:
+
+2. Check the email for spelling mistakes, and correct/ignore where necessary. In the box below describe how you corrected the misspelling "speccial" to "special". Answer:
+
+3. How would you switch on the automatic spell checker? Make sure it is switched off. Answer:
+
+Congratulations!
+You have completed the assignment on Working with Email.
+
+Page 122
+
+Version 2
+
+ECDL Assignment Workbook -
+
+Assignment 7 – Organising Your Emails
+The aim of this assignment is to practise the lessons in the Organising your Emails section of ECDL Module 7.
+
+Before you start Ensure that you are in the Inbox screen and that you can see the Outlook bar and the Folder List on the left hand side. (See Section 8.5.4 Viewing the Folders List in the manual). Organising and Deleting Emails 1. Create a new folder inside the Inbox, called LocalEmails. If asked, do not create a shortcut to it. How did you do this? Answer:
+
+2. Move your most recent email into the new folder. How did you do this? Answer:
+
+Version 2
+
+Page 123
+
+ECDL Assignment Workbook -
+
+3. Sort the emails by the Subject field. How did you do this? Answer:
+
+4. Delete your next most recent email. How did you do this? Answer:
+
+5. Retrieve the email you just deleted from the Deleted Items folder. Describe how you did this. Answer:
+
+6. Send an email to outlook@happy.co.uk with the subject line Hello. You should soon receive a reply to it. Delete this reply, and make sure it is permanently deleted. Describe how you made sure of this. Answer:
+
+Page 124
+
+Version 2
+
+ECDL Assignment Workbook -
+
+Finding Emails 1. Find all emails in your Inbox that contain the word this. How did you do this? List the steps you took below. Answer:
+
+2. Find all emails in your Inbox containing the word not, which were sent with Low Importance. How did you do this? List the steps you took in the box below. Answer:
+
+Congratulations!
+You have completed the assignment on Organising your Emails.
+
+Version 2
+
+Page 125
+
+ECDL Assignment Workbook -
+
+8.8
+
+Assignment 8 – Working with Contacts
+
+The aim of this assignment is to practise the lessons in the Working with Contacts section of ECDL Module 7.
+
+Before you start Ensure that you are in the Inbox screen and that you can see the Outlook bar and the Folder List on the left hand side. (See Section 8.5.4 Viewing the Folders List in the manual). Creating Contacts 1. Go to your Contacts folder. How did you do this? Answer:
+
+2. Create three new contacts with the following names and email addresses (making sure to save and close them): Alfred Butler, alfred@batcave.com Comic Book Guy, comicbookguy@androidsdungeon.com Cup Jenkins, cup@jenkins.com Describe how you created the Comic Book Guy contact. Answer:
+
+Page 126
+
+Version 2
+
+ECDL Assignment Workbook -
+
+3. Edit Comic Book Guy's details to include the job title Collector, then save and close the contact. Describe how you edited this contact. Answer:
+
+4. Delete the Comic Book Guy contact. Describe how you did this. Answer:
+
+5. Open an email from outlook@happy.co.uk. (If you do not have one already, send an email to outlook@happy.co.uk, with the subject line Hello, and you will shortly receive one in reply.) Use this email to add the outlook@happy.co.uk address to your Contacts. Add any further details you feel are necessary. In the box below, describe how you did this. Answer:
+
+Address Book and Distribution Lists 1. Open a new email. Describe how you would address this email to Outlook @happy.co.uk using the Address Book. Answer:
+
+Version 2
+
+Page 127
+
+ECDL Assignment Workbook -
+
+2. Open the Address Book. Display addresses from the Personal Address Book. In the box below, describe how you did this. Close the Address Book when you have finished. Answer:
+
+3. Open your Contacts folder. Create a personal distribution list called Geezers. Include the new contacts you made earlier as members (Alfred Butler and Cup Jenkins). Describe how you did this. Answer:
+
+4. Open the Personal Address Book. Edit your distribution list to remove Alfred Butler. Describe how you edited your distribution list. Answer:
+
+5. Open a new email. How would you send this email to your distribution list? Answer:
+
+Congratulations!
+You have completed the assignment on Working with Contacts.
+
+Page 128
+
+Version 2
+
+
